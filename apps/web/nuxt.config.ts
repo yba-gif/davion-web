@@ -49,26 +49,24 @@ export default defineNuxtConfig({
 
     app: {
         head: {
-            title: 'Base1',
+            title: 'Davion',
+            titleTemplate: '%s · Davion',
             meta: [
-                { name: 'description', content: 'Market Makers. Capital Allocators On-Chain Operators.' },
+                { name: 'description', content: 'Sovereign software for data intelligence and artificial intelligence. Innovate. Secure. Perform.' },
+                { name: 'theme-color', content: '#0A0B0F' },
 
-                // Twitter Card meta tags
+                // Twitter Card
                 { name: 'twitter:card', content: 'summary_large_image' },
-                { name: 'twitter:site', content: '@base1' },
-                { name: 'twitter:title', content: 'Base1' },
-                { name: 'twitter:description', content: 'Market Makers. Capital Allocators On-Chain Operators.' },
-                { name: 'twitter:image', content: '/cover.jpg' },
+                { name: 'twitter:title', content: 'Davion' },
+                { name: 'twitter:description', content: 'Sovereign software for data intelligence and artificial intelligence.' },
 
-                // Open Graph meta tags (for Telegram and other platforms)
+                // Open Graph
                 { property: 'og:type', content: 'website' },
-                { property: 'og:url', content: 'https://base1.com' },
-                { property: 'og:title', content: 'Base1' },
-                { property: 'og:description', content: 'Market Makers. Capital Allocators On-Chain Operators.' },
-                { property: 'og:image', content: '/cover.jpg' },
+                { property: 'og:title', content: 'Davion' },
+                { property: 'og:description', content: 'Sovereign software for data intelligence and artificial intelligence.' },
             ],
             link: [
-                { rel: 'icon', type: 'svg', href: '/icon.svg' },
+                { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' },
             ],
         },
     },

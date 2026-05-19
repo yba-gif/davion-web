@@ -48,8 +48,8 @@ CREATE TABLE IF NOT EXISTS settings (
 );
 
 -- Insert default settings
-INSERT INTO settings (site_name, site_description, contact_email, maintenance_mode) 
-VALUES ('Base1', 'Market Makers. Capital Allocators On-Chain Operators', 'info@base1.io', false)
+INSERT INTO settings (site_name, site_description, contact_email, maintenance_mode)
+VALUES ('Davion', 'Sovereign software for data intelligence and artificial intelligence.', 'briefings@davion.com', false)
 ON CONFLICT DO NOTHING;
 
 -- Create verified table

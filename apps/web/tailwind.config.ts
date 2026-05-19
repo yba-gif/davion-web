@@ -13,26 +13,44 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                primary: '#60E576',
-                dark: '#212121',
-                drywhite: '#FEFEFE',
-                azure: '#e0f1f3',
-                aliceblue: '#dceff3',
-                honeydew: '#d9efdf',
-                drygray: {
-                    100: '#212121',
-                    200: 'rgba(0, 0, 0, 0.1)',
-                    default: '#979797',
+                // Davion design tokens — sovereign / instrument-grade.
+                // Ink base, single restrained signal accent, cool neutrals.
+                // Mirrored as --davion-* CSS variables in assets/css/main.css.
+                ink: {
+                    DEFAULT: '#0A0B0F', // base background
+                    50: '#13151B',      // subtle layered surface
+                    100: '#1B1E27',     // elevated surface (cards)
+                    200: '#2A2E3A',     // hairline rules, dividers
                 },
-                whitesmoke: {
-                    100: '#f8f8f8',
-                    200: '#f3f3f3',
+                steel: {
+                    DEFAULT: '#6B7384', // secondary text, diagram lines
+                    light: '#9BA3B2',   // tertiary text
+                },
+                bone: {
+                    DEFAULT: '#E8EBF0', // primary text on ink
+                    bright: '#F5F7FA',  // high-emphasis / display text
+                },
+                signal: {
+                    DEFAULT: '#5FB8D1', // the one accent — restrained signal cyan
+                    dim: '#3D7E91',     // pressed / muted accent
                 },
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                degular: ['Degular Display', 'sans-serif'],
-                switzer: ['Switzer', 'sans-serif'],
+                sans: ['Inter', 'system-ui', 'sans-serif'],
+                display: ['Inter Tight', 'Inter', 'system-ui', 'sans-serif'],
+                mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+            },
+            letterSpacing: {
+                'display-tight': '-0.03em',
+                'display-extra-tight': '-0.04em',
+                'mono-wide': '0.08em',
+            },
+            transitionTimingFunction: {
+                davion: 'cubic-bezier(0.2, 0.7, 0.2, 1)',
+            },
+            transitionDuration: {
+                'davion-hover': '120ms',
+                'davion-reveal': '240ms',
             },
         },
     },
