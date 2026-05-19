@@ -1,0 +1,8 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "vueCompilerOptions": {
+    "target": 3.3,
+    "extensions": [".vue"],
+    "vitePressExtensions": [".md"]
+  }
+}

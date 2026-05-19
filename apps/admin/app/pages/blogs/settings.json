@@ -1,0 +1,35 @@
+{
+  "_version": "1",
+  "rootTable": {
+    "table": "blog_posts",
+    "columns": [
+      {
+        "hiddenInTable": true,
+        "column": "published"
+      },
+      {
+        "hiddenInForm": true,
+        "hiddenInTable": true,
+        "column": "id"
+      },
+      {
+        "hiddenInForm": true,
+        "hiddenInTable": true,
+        "column": "published_at"
+      },
+      {
+        "hiddenInForm": true,
+        "hiddenInTable": true,
+        "column": "updated_at"
+      },
+      {
+        "label": "Image",
+        "column": "featured_image"
+      },
+      {
+        "hiddenInForm": true,
+        "column": "created_at"
+      }
+    ]
+  }
+}

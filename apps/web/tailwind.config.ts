@@ -1,0 +1,50 @@
+import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
+
+const config: Config = {
+    content: [
+        './components/**/*.{js,vue,ts}',
+        './layouts/**/*.vue',
+        './pages/**/*.vue',
+        './plugins/**/*.{js,ts}',
+        './nuxt.config.{js,ts}',
+        './app.vue',
+    ],
+    theme: {
+        extend: {
+            colors: {
+                primary: '#60E576',
+                dark: '#212121',
+                drywhite: '#FEFEFE',
+                azure: '#e0f1f3',
+                aliceblue: '#dceff3',
+                honeydew: '#d9efdf',
+                drygray: {
+                    100: '#212121',
+                    200: 'rgba(0, 0, 0, 0.1)',
+                    default: '#979797',
+                },
+                whitesmoke: {
+                    100: '#f8f8f8',
+                    200: '#f3f3f3',
+                },
+            },
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                degular: ['Degular Display', 'sans-serif'],
+                switzer: ['Switzer', 'sans-serif'],
+            },
+        },
+    },
+    plugins: [
+        plugin(({ addVariant }) => {
+            addVariant('data-last', '&[data-last="true"]')
+            addVariant('parent-data-last', '[data-last="true"] &')
+            addVariant('data-first', '&[data-first="true"]')
+            addVariant('data-active', '&[data-active="true"]')
+            addVariant('data-disabled', '&[data-disabled="true"]')
+        }),
+    ],
+}
+
+export default config

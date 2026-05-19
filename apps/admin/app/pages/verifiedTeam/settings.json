@@ -1,0 +1,23 @@
+{
+    "_version": "1",
+    "rootTable": {
+        "table": "verified",
+        "columns": [
+            {
+                "hiddenInTable": true,
+                "hiddenInForm": true,
+                "column": "updated_at"
+            },
+            {
+                "hiddenInTable": true,
+                "hiddenInForm": true,
+                "column": "created_at"
+            },
+            {
+                "hiddenInForm": true,
+                "hiddenInTable": true,
+                "column": "id"
+            }
+        ]
+    }
+}

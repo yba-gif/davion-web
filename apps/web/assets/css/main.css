@@ -1,0 +1,124 @@
+@import url('https://api.fontshare.com/v2/css?f[]=switzer@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,900,901&display=swap');
+
+@font-face {
+  font-family: 'Degular Display';
+  src: url('../fonts/DegularDisplayDemo-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Degular Display';
+  src: url('../fonts/DegularDisplayDemo-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Degular Display';
+  src: url('../fonts/DegularDisplayDemo-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Degular Display';
+  src: url('../fonts/DegularDisplayDemo-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Degular Display';
+  src: url('../fonts/DegularDisplayDemo-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Degular Display';
+  src: url('../fonts/DegularDisplayDemo-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Degular Display';
+  src: url('../fonts/DegularDisplayDemo-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-switzer;
+  }
+  html {
+    font-family: 'Switzer', 'Degular Display', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply antialiased bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .text-h1 {
+    @apply text-[44px] leading-[44px] font-degular font-bold;
+  }
+
+  .text-h2 {
+    @apply text-[36px] leading-[36px] font-degular font-bold;
+  }
+
+  .text-h3 {
+    @apply text-[32px] leading-[32px] font-degular font-bold;
+  }
+
+  .text-b1 {
+    @apply text-[14px] leading-[21px] font-switzer;
+  }
+
+  .text-b2 {
+    @apply text-[15px] leading-[22.5px] font-switzer;
+  }
+
+  /* Mobile specific overrides */
+  @media (max-width: 768px) {
+    .text-h1 {
+      @apply text-[44px] leading-[44px];
+    }
+
+    .text-b1 {
+      @apply text-[14px] leading-[21px];
+    }
+
+    .text-b2 {
+      @apply text-[15px] leading-[22.5px];
+    }
+
+    .text-h2 {
+      @apply text-[36px] leading-[36px];
+    }
+
+    .text-h3 {
+      @apply text-[32px] leading-[32px];
+    }
+  }
+
+  .custom-bullet {
+    @apply w-3 h-3 rounded-full scale-75 bg-gray-300 cursor-pointer transition-all duration-300 opacity-50;
+  }
+
+  .custom-bullet-active {
+    @apply w-4 h-4 bg-drygray-100 opacity-100;
+  }
+
+  .mySwiper {
+    overflow: visible !important;
+  }
+}

@@ -1,0 +1,61 @@
+{
+    "name": "admin",
+    "type": "module",
+    "version": "1.0.0",
+    "private": true,
+    "description": "",
+    "author": "",
+    "license": "ISC",
+    "keywords": [],
+    "sideEffects": false,
+    "main": "index.js",
+    "engines": {
+        "node": ">=20"
+    },
+    "scripts": {
+        "dev": "kottster dev",
+        "dev:add-data-source": "kottster add-data-source",
+        "build": "vite build && kottster build:server",
+        "start": "node dist/server/server.cjs"
+    },
+    "dependencies": {
+        "@base1/database": "workspace:*",
+        "@kottster/cli": "^2.x",
+        "@kottster/common": "^2.x",
+        "@kottster/react": "^2.1.0",
+        "@kottster/server": "^2.x",
+        "@mantine/charts": "^8.2.1",
+        "@mantine/core": "^8.x",
+        "@mantine/dates": "^8.2.1",
+        "@mantine/hooks": "^8.x",
+        "@mantine/modals": "^8.x",
+        "@mantine/notifications": "^8.2.1",
+        "@tabler/icons-react": "^3.34.1",
+        "@uiw/react-md-editor": "^4.0.8",
+        "dayjs": "^1.11.13",
+        "dotenv": "^17.2.0",
+        "drizzle-orm": "^0.44.3",
+        "knex": "^3.1.0",
+        "mime-types": "^2.1.35",
+        "minio": "^8.0.1",
+        "mysql2": "^3.14.2",
+        "pg": "^8.16.3",
+        "react": "^19.x",
+        "react-dom": "^19.x",
+        "react-router-dom": "^7.x",
+        "sharp": "^0.33.2"
+    },
+    "devDependencies": {
+        "@types/mime-types": "^2.1.4",
+        "@types/node": "^20.x",
+        "@types/pg": "^8.15.4",
+        "@types/react": "^19.x",
+        "@types/react-dom": "^19.x",
+        "@vitejs/plugin-react": "^4.7.0",
+        "dotenv-cli": "^9.0.0",
+        "tsx": "^4.x",
+        "typescript": "^5.x",
+        "vite": "^6.3.5",
+        "vite-tsconfig-paths": "^4.x"
+    }
+}

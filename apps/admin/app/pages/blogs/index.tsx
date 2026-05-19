@@ -1,0 +1,357 @@
+import type { Procedures } from '../global/api.server'
+import { TablePage, useCallProcedure } from '@kottster/react'
+import { Badge, Box, Group, Loader, Text, Textarea } from '@mantine/core'
+import React from 'react'
+import { MarkdownEditor } from '../../components/MarkdownEditor'
+import { MinIOImageUpload } from '../../components/MinIOImageUpload'
+import { calculateReadTime, generateExcerpt, generateSlug } from '../../utils/adminHelpers'
+
+export default () => {
+    const callGlobalProcedure = useCallProcedure<Procedures>()
+
+    return (
+        <div style={{ '--mantine-modal-size': '400px' } as any}>
+            <style>
+                {`
+                .kottster-custom-modal .w-full {
+                    width: 600px !important;
+                    max-width: 95vw !important;
+                }
+                `}
+            </style>
+            <TablePage
+                columnOverrides={{
+                    title: column => ({
+                        ...column,
+                        label: 'Title',
+                        required: true,
+                        formFieldSpan: '12',
+                        position: 1,
+                        fieldInput: {
+                            ...column.fieldInput,
+                            type: 'input',
+                            placeholder: 'Enter a compelling blog post title...',
+                            description: 'This will be the main headline of your blog post',
+                            withAsterisk: true,
+                            onChange: (value: string, params: any) => {
+                            // Auto-generate slug when title changes
+                                if (value && params.updateFieldValue) {
+                                    const autoSlug = generateSlug(value)
+                                    console.log('Generated slug:', autoSlug)
+                                    params.updateFieldValue('slug', autoSlug)
+                                }
+                                else if (value && params.setValue) {
+                                    const autoSlug = generateSlug(value)
+                                    console.log('Generated slug (setValue):', autoSlug)
+                                    params.setValue('slug', autoSlug)
+                                }
+                            },
+                        },
+                    }),
+
+                slug: column => ({
+                    ...column,
+                    label: 'URL Slug',
+                    formFieldSpan: '6',
+                    position: 2,
+                    fieldInput: {
+                        type: 'custom',
+                        renderComponent: (params) => {
+                            const { value, updateFieldValue, values } = params
+
+                            // Auto-sync slug with title changes
+                            React.useEffect(() => {
+                                if (values.title && values.title.trim()) {
+                                    const baseSlug = generateSlug(values.title)
+                                    // Add timestamp suffix for uniqueness to prevent duplicates
+                                    const uniqueSlug = `${baseSlug}-${Date.now().toString().slice(-6)}`
+                                    
+                                    if (uniqueSlug !== value) {
+                                        updateFieldValue('slug', uniqueSlug)
+                                    }
+                                }
+                            }, [values.title])
+
+                            return (
+                                <Box>
+                                    <Group justify="space-between">
+                                        <Group gap="xs">
+                                            <Text size="sm" c="dimmed">blog/</Text>
+                                            <Text size="sm" fw={500} c={value ? 'black' : 'dimmed'}>
+                                                {value || 'auto-generated-from-title'}
+                                            </Text>
+                                        </Group>
+                                        <Badge size="sm" color="green" variant="light">
+                                            Auto-synced
+                                        </Badge>
+                                    </Group>
+                                </Box>
+                            )
+                        },
+                    },
+                }),
+
+                    excerpt: column => ({
+                        ...column,
+                        label: 'Excerpt',
+                        formFieldSpan: '12',
+                        position: 5,
+                        fieldInput: {
+                            type: 'custom',
+                            renderComponent: (params) => {
+                                const { value, updateFieldValue, values } = params
+                                const [isAutoGenerated, setIsAutoGenerated] = React.useState(true)
+                                const [initialLoad, setInitialLoad] = React.useState(true)
+                                const [isUpdating, setIsUpdating] = React.useState(false)
+
+                                // Check initial state once when component mounts
+                                React.useEffect(() => {
+                                    if (initialLoad) {
+                                        if (!value) {
+                                            setIsAutoGenerated(true)
+                                        }
+                                        else if (!values.content) {
+                                            setIsAutoGenerated(false)
+                                        }
+                                        else {
+                                        // Generate what the auto excerpt would be and compare
+                                            const autoExcerpt = generateExcerpt(values.content, 160)
+                                            const isAuto = autoExcerpt.trim() === value.trim()
+                                            setIsAutoGenerated(isAuto)
+                                        }
+                                        setInitialLoad(false)
+                                    }
+                                }, [value, values.content, initialLoad])
+
+                                const handleExcerptChange = (newValue: string) => {
+                                    updateFieldValue('excerpt', newValue)
+                                    setIsAutoGenerated(false)
+                                }
+
+                                // Auto-generate excerpt with debounce when content changes
+                                React.useEffect(() => {
+                                // Skip auto-generation during initial load
+                                    if (initialLoad)
+                                        return
+
+                                    if (!values.content?.trim()) {
+                                        if (value && isAutoGenerated) {
+                                            updateFieldValue('excerpt', '')
+                                            setIsAutoGenerated(true)
+                                        }
+                                        return
+                                    }
+
+                                    // Only auto-generate if excerpt is empty or was previously auto-generated
+                                    if (!value || isAutoGenerated) {
+                                        setIsUpdating(true)
+
+                                        const timeoutId = setTimeout(() => {
+                                            const autoExcerpt = generateExcerpt(values.content, 160)
+                                            if (autoExcerpt.trim() && autoExcerpt.trim() !== (value || '').trim()) {
+                                                updateFieldValue('excerpt', autoExcerpt)
+                                                setIsAutoGenerated(true)
+                                            }
+                                            setIsUpdating(false)
+                                        }, 500) // 500ms debounce
+
+                                        return () => {
+                                            clearTimeout(timeoutId)
+                                            setIsUpdating(false)
+                                        }
+                                    }
+                                }, [values.content, isAutoGenerated, initialLoad])
+
+                                const characterCount = (value?.length || 0)
+                                const isNearLimit = characterCount > 140
+                                const isOverLimit = characterCount > 160
+
+                                return (
+                                    <Box>
+
+                                        <div style={{ position: 'relative' }}>
+                                            <Textarea
+                                                value={value || ''}
+                                                onChange={e => handleExcerptChange(e.target.value)}
+                                                placeholder="Auto-generated summary or write your own..."
+                                                maxLength={160}
+                                                rows={3}
+                                                resize="none"
+                                                rightSection={(
+                                                    <Group gap="xs" style={{ marginRight: '8px' }}>
+                                                        {isAutoGenerated && !isUpdating && (
+                                                            <Badge size="sm" color="blue" variant="light">
+                                                                Auto-synced
+                                                            </Badge>
+                                                        )}
+                                                        {isUpdating && (
+                                                            <Badge size="sm" color="yellow" variant="light" leftSection={<Loader size={10} />}>
+                                                                Updating
+                                                            </Badge>
+                                                        )}
+                                                    </Group>
+                                                )}
+                                            />
+                                        </div>
+
+                                        <Group justify="space-between" mt="xs">
+                                            <Text size="xs" c="dimmed">
+                                                {isAutoGenerated ? 'Auto-updating from content' : '120-160 characters recommended'}
+                                            </Text>
+
+                                            <Text
+                                                size="xs"
+                                                fw={500}
+                                                c={isOverLimit ? 'red' : isNearLimit ? 'yellow' : characterCount > 100 ? 'green' : 'dimmed'}
+                                            >
+                                                {characterCount}
+                                                /160
+                                                {isOverLimit && (
+                                                    <Text span c="red" ml={4}>
+                                                        (+
+                                                        {characterCount - 160}
+                                                        )
+                                                    </Text>
+                                                )}
+                                            </Text>
+                                        </Group>
+
+                                        {characterCount > 0 && characterCount < 50 && (
+                                            <Text size="xs" c="orange" mt="xs">
+                                                ⚠️ Too short for good engagement
+                                            </Text>
+                                        )}
+                                    </Box>
+                                )
+                            },
+                        },
+                    }),
+
+                    content: column => ({
+                        ...column,
+                        label: 'Content',
+                        required: true,
+                        formFieldSpan: '12',
+                        position: 10,
+                        fieldInput: {
+                            type: 'custom',
+                            renderComponent: (params) => {
+                                const { value, updateFieldValue, values } = params
+
+                                const handleContentChange = (newValue: string) => {
+                                    updateFieldValue('content', newValue)
+
+                                    if (newValue) {
+                                    // Auto-generate excerpt if not manually set
+                                        if (!values.excerpt || values.excerpt === '') {
+                                            const autoExcerpt = generateExcerpt(newValue)
+                                            updateFieldValue('excerpt', autoExcerpt)
+                                        }
+
+                                        // Auto-calculate read time
+                                        const readTime = calculateReadTime(newValue)
+                                        updateFieldValue('read_time', readTime)
+                                    }
+                                }
+
+                                return (
+                                    <Box>
+                                        <MarkdownEditor
+                                            value={value || ''}
+                                            onChange={handleContentChange}
+                                            placeholder="Write your amazing blog post content here..."
+                                            required={true}
+                                            height={350}
+                                        />
+                                    </Box>
+                                )
+                            },
+                        },
+                    }),
+
+                    author: column => ({
+                        ...column,
+                        label: 'Author',
+                        required: true,
+                        formFieldSpan: '6',
+                        position: 3,
+                        fieldInput: {
+                            ...column.fieldInput,
+                            type: 'input',
+                            placeholder: 'Author name...',
+                            defaultValue: 'Base1 Team',
+                            description: 'The author who wrote this blog post',
+                            withAsterisk: true,
+                        },
+                    }),
+
+                    featured_image: column => ({
+                        ...column,
+                        label: 'Featured Image',
+                        formFieldSpan: '12',
+                        position: 6,
+                        fieldInput: {
+                            type: 'custom',
+                            renderComponent: (params) => {
+                                const { value, updateFieldValue } = params
+                                return (
+                                    <MinIOImageUpload
+                                        value={value}
+                                        onChange={(newValue: string | null) => updateFieldValue('featured_image', newValue)}
+                                        placeholder="Upload a featured image for this blog post"
+                                        folder="blog"
+                                        callProcedure={callGlobalProcedure}
+                                    />
+                                )
+                            },
+                        },
+                    }),
+
+                    read_time: column => ({
+                        ...column,
+                        label: 'Reading Time',
+                        formFieldSpan: '12',
+                        position: 4,
+                        fieldInput: {
+                            ...column.fieldInput,
+                            type: 'input',
+                            placeholder: 'Auto-calculated...',
+                            description: 'Estimated reading time based on content length (auto-calculated)',
+                            readOnly: true,
+                            disabled: true,
+                            rightSection: <Badge size="sm" variant="light" color="blue">Auto</Badge>,
+                        },
+                    }),
+
+                    published: column => ({
+                        ...column,
+                        label: 'Publication Status',
+                        formFieldSpan: '6',
+                        position: 7,
+                        fieldInput: {
+                            ...column.fieldInput,
+                            type: 'checkbox',
+                            description: 'Check this box to make the post visible on your website',
+                            size: 'md',
+                        },
+                    }),
+
+                    published_at: column => ({
+                        ...column,
+                        label: 'Publish Date & Time',
+                        formFieldSpan: '6',
+                        position: 8,
+                        fieldInput: {
+                            ...column.fieldInput,
+                            type: 'datePicker',
+                            withTime: true,
+                            description: 'Schedule when this post should be published. Leave empty to publish immediately when status is set to published.',
+                            placeholder: 'Select publish date and time...',
+                            clearable: true,
+                        },
+                    }),
+                }}
+            />
+        </div>
+    )
+}

@@ -1,0 +1,81 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_DB: base1
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: dev_password_2025
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d base1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+
+  web:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+      target: development
+    container_name: base1-web
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../:/app:cached
+      - /app/node_modules
+      - /app/apps/web/node_modules
+      - /app/apps/admin/node_modules
+    environment:
+      NODE_ENV: development
+      NITRO_HOST: 0.0.0.0
+      NITRO_PORT: 3000
+      DOCKER_CONTAINER: "true"
+      DATABASE_URL: "postgresql://postgres:dev_password_2025@postgres:5432/base1"
+    env_file:
+      - ../.env
+    depends_on:
+      postgres:
+        condition: service_healthy
+    working_dir: /app/apps/web
+    entrypoint: []
+    command: ["pnpm", "run", "dev", "--host", "0.0.0.0"]
+    restart: unless-stopped
+
+  admin:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+      target: development
+    container_name: base1-admin
+    ports:
+      - "5480:5480"
+      - "5481:5481"
+    volumes:
+      - ../:/app:cached
+      - /app/node_modules
+      - /app/apps/web/node_modules
+      - /app/apps/admin/node_modules
+    environment:
+      NODE_ENV: development
+      DOCKER_CONTAINER: "true"
+      DATABASE_URL: "postgresql://postgres:dev_password_2025@postgres:5432/base1"
+    env_file:
+      - ../.env
+    depends_on:
+      postgres:
+        condition: service_healthy
+    working_dir: /app/apps/admin
+    entrypoint: []
+    command: ["pnpm", "run", "dev"]
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

@@ -1,0 +1,50 @@
+{
+  "id": "2865",
+  "meta": {
+    "name": "Admin",
+    "icon": "https://base1.io/_ipx/s_80x80/icon.svg",
+    "description": "Content Management System for Base1",
+    "version": "1.0.0"
+  },
+  "theme": {
+    "primaryColor": "#0066cc",
+    "sidebarColor": "#1a1a1a",
+    "accentColor": "#00aaff"
+  },
+  "navItems": [
+    {
+      "id": "dashboard",
+      "name": "Dashboard",
+      "icon": "pieChart"
+    },
+    {
+      "id": "blogs",
+      "name": "Blogs",
+      "icon": "sliders",
+      "description": "Manage blog content and articles"
+    },
+    {
+      "id": "events",
+      "name": "Events",
+      "icon": "file"
+    },
+    {
+      "id": "verifiedTeam",
+      "name": "Verified Team",
+      "icon": "file"
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "icon": "briefcase"
+    }
+  ],
+  "settings": {
+    "itemsPerPage": 20,
+    "autoSave": true,
+    "confirmDelete": true,
+    "showTimestamps": true,
+    "enableSearch": true,
+    "enableFilters": true
+  }
+}

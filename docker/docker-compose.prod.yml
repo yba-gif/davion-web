@@ -1,0 +1,96 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: base1-postgres-prod
+    environment:
+      POSTGRES_DB: base1
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: prod_secure_password_2025
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5437:5432"
+    volumes:
+      - postgres_prod_data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d base1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+      target: web
+    container_name: base1-web-prod
+    ports:
+      - "3092:3000"
+    environment:
+      NODE_ENV: production
+      NITRO_HOST: 0.0.0.0
+      NITRO_PORT: 3000
+      DOCKER_CONTAINER: "true"
+      DATABASE_URL: "postgresql://postgres:prod_secure_password_2025@base1-postgres-prod:5432/base1"
+    env_file:
+      - ../.env.production
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 60s
+      retries: 3
+
+  admin:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+      target: admin
+    container_name: base1-admin-prod
+    ports:
+      - "5484:5480"
+      - "5485:5481"
+    environment:
+      NODE_ENV: production
+      DOCKER_CONTAINER: "true"
+      DATABASE_URL: "postgresql://postgres:prod_secure_password_2025@postgres:5432/base1"
+    env_file:
+      - ../.env.production
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5480/"]
+      interval: 30s
+      timeout: 10s
+      start_period: 60s
+      retries: 3
+
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: base1-nginx-prod
+    ports:
+      - "98:80"
+      - "446:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - ./nginx/logs:/var/log/nginx
+    depends_on:
+      - web
+      - admin
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "nginx", "-t"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  postgres_prod_data:
