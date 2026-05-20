@@ -89,11 +89,11 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
                 <div class="max-w-3xl">
                     <CommonSup title="Solutions" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        AlpOS<span class="text-primary">.</span> Cybersecurity<span class="text-primary">.</span> Digital Transformation<span class="text-primary">.</span>
+                        The platform<span class="text-primary">.</span> And the solutions built on it<span class="text-primary">.</span>
                     </h2>
                 </div>
                 <p class="text-b2 text-drygray-default max-w-md">
-                    One sovereign platform. Two solution layers applied on top of it. The platform stays constant; the surface adapts to the use case.
+                    AlpOS is the constant. Cybersecurity and Digital Transformation are how it's applied — same sovereignty, same audit, same spine.
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-4">
