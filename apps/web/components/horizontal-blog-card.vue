@@ -40,7 +40,7 @@ defineProps<BlogProps>()
                 <span class="font-medium leading-[150%]">{{ date }}</span>
             </div>
 
-            <h3 class="text-4xl font-degular-display-demo font-semibold tracking-[-0.5px] leading-[100%] text-drygray-100 group-hover:text-drygray-default transition-colors">
+            <h3 class="text-4xl font-degular font-semibold tracking-[-0.5px] leading-[100%] text-drygray-100 group-hover:text-drygray-default transition-colors">
                 <span>{{ title?.replace(/\.$/, '') }}</span><span class="text-primary">.</span>
             </h3>
 

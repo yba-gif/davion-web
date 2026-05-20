@@ -50,7 +50,7 @@ withDefaults(defineProps<BlogProps>(), {
         </div>
 
         <div
-            class="w-full flex flex-col text-4xl transition-colors group-hover:text-drygray-default font-degular-display-demo tracking-[-0.5px] leading-[100%] font-semibold"
+            class="w-full flex flex-col text-4xl transition-colors group-hover:text-drygray-default font-degular tracking-[-0.5px] leading-[100%] font-semibold"
         >
             {{ title.replace(/\.$/, '') }}
         </div>
