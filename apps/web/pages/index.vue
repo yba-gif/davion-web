@@ -86,7 +86,7 @@ const promises = ['Sovereign by design', 'Auditable', 'Air-gapped', 'On-premise'
                         alt=""
                         loading="eager"
                         decoding="async"
-                        class="absolute inset-0 w-full h-full object-cover object-[center_22%] scale-[1.08] select-none"
+                        class="absolute inset-0 w-full h-full object-cover object-[60%_25%] scale-[1.35] select-none"
                     >
                     <div class="absolute bottom-5 right-5 lg:bottom-7 lg:right-7 text-[10px] font-semibold uppercase tracking-[0.22em] text-drygray-100/55 backdrop-blur-sm bg-white/30 px-2.5 py-1 rounded-full">
                         AlpOS · Ontology
