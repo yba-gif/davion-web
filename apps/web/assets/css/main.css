@@ -53,10 +53,20 @@
     @apply antialiased bg-white text-gray-900;
   }
 
-  /* a11y additions on top of base1's base layer */
+  /* P3.12 a11y: focus rings visible against the entire pastel palette
+     (azure / aliceblue / honeydew / whitesmoke) AND on bg-primary fills.
+     Dark outline + offset + light halo ensures contrast in every section. */
   :focus-visible {
-    outline: 2px solid theme('colors.primary');
-    outline-offset: 2px;
+    outline: 2px solid theme('colors.drygray.100');
+    outline-offset: 3px;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.85);
+    border-radius: 4px;
+  }
+  /* Variant for elements on the black sectors-marquee — flip the halo. */
+  .bg-black :focus-visible,
+  .bg-drygray-100 :focus-visible {
+    outline-color: theme('colors.primary');
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.85);
   }
 
   @media (prefers-reduced-motion: reduce) {

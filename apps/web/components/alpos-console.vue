@@ -36,12 +36,15 @@ const sources = [
             :modules="[Autoplay, Pagination]"
             :slides-per-view="1"
             :loop="true"
-            :autoplay="{ delay: 5000, disableOnInteraction: false }"
+            :autoplay="{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }"
             :pagination="{ clickable: true, bulletClass: 'custom-bullet', bulletActiveClass: 'custom-bullet-active' }"
             class="alpos-console-swiper"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="AlpOS console preview — three product stories: Detect, Live data, AI recommendation"
         >
             <!-- Slide 1: Detect — one clear alert with plain-English facts -->
-            <SwiperSlide>
+            <SwiperSlide role="group" aria-roledescription="slide" aria-label="Slide 1 of 3: Detect — suspicious activity alert">
                 <div class="bg-white px-5 py-5">
                     <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-4">
                         <span class="flex items-center gap-1.5">
@@ -84,7 +87,7 @@ const sources = [
             </SwiperSlide>
 
             <!-- Slide 2: Ingest — big number + sparkline + plain-English sources -->
-            <SwiperSlide>
+            <SwiperSlide role="group" aria-roledescription="slide" aria-label="Slide 2 of 3: Live data — 12,400 events per hour across four sources">
                 <div class="bg-white px-5 py-5">
                     <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-4">
                         <span class="flex items-center gap-1.5">
@@ -137,7 +140,7 @@ const sources = [
             </SwiperSlide>
 
             <!-- Slide 3: Decide — plain-English AI recommendation with citations + action -->
-            <SwiperSlide>
+            <SwiperSlide role="group" aria-roledescription="slide" aria-label="Slide 3 of 3: AI recommendation — Davion copilot proposes opening a case">
                 <div class="bg-white px-5 py-5">
                     <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-4">
                         <span class="flex items-center gap-1.5">

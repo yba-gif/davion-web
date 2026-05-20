@@ -7,7 +7,9 @@
         "dev": "nuxt dev",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
-        "postinstall": "echo 'skip nuxt prepare on Cloudflare Pages'"
+        "postinstall": "echo 'skip nuxt prepare on Cloudflare Pages'",
+        "lint:aa": "node scripts/check-aa-contrast.mjs",
+        "build:og": "node scripts/build-og-cover.mjs"
     },
     "dependencies": {
         "@base1/database": "workspace:*",
