@@ -1,9 +1,38 @@
 <script setup lang="ts">
-useSeoMeta({ title: 'Newsroom', description: 'Press releases, announcements, recognition, and selected insight from the Davion team.' })
+useSeoMeta({
+    title: 'Newsroom',
+    description: 'Press releases, announcements, recognition, and selected insight from the Davion team.',
+})
+
+interface Post {
+    id: string
+    title: string
+    slug: string
+    excerpt: string | null
+    author: string
+    readTime: string | null
+    featuredImage: string | null
+    publishedAt: string | null
+    createdAt: string | null
+}
+
+const { data, pending } = await useFetch<{ success: boolean, data: Post[] }>('/api/blog', {
+    default: () => ({ success: true, data: [] }),
+})
+
+const posts = computed<Post[]>(() => data.value?.data ?? [])
+const featured = computed<Post | null>(() => posts.value[0] ?? null)
+const rest = computed<Post[]>(() => posts.value.slice(1))
+
+function formatDate(d: string | null) {
+    if (!d) return ''
+    return new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' })
+}
 </script>
 
 <template>
     <div class="flex flex-col gap-4">
+        <!-- Hero -->
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
             <CommonSup title="Company · Newsroom" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
@@ -12,9 +41,105 @@ useSeoMeta({ title: 'Newsroom', description: 'Press releases, announcements, rec
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 Press releases, announcements, recognition, and selected insight from the Davion team.
             </p>
-            <p class="text-b1 text-drygray-default mt-8">The Newsroom opens with our first dispatch shortly. Index, filters, and article template land in a subsequent slice.</p>
-            <div class="mt-10">
+        </section>
+
+        <!-- Featured dispatch (latest) -->
+        <section v-if="featured" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
+            <CommonSup title="Featured" />
+            <NuxtLink :to="`/company/newsroom/${featured.slug}`" class="block mt-6 group">
+                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+                    <div class="lg:col-span-7">
+                        <NuxtImg
+                            v-if="featured.featuredImage"
+                            :src="featured.featuredImage"
+                            :alt="featured.title"
+                            class="w-full aspect-[16/10] object-cover rounded-2xl"
+                        />
+                        <div v-else class="w-full aspect-[16/10] bg-white rounded-2xl flex items-center justify-center">
+                            <NuxtImg src="/icon.svg" alt="" width="64" height="64" class="size-16 opacity-50" />
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <div class="flex items-center gap-3 text-[13px] text-drygray-default font-medium mb-4">
+                            <span>{{ formatDate(featured.publishedAt) }}</span>
+                            <template v-if="featured.readTime">
+                                <span aria-hidden="true">·</span>
+                                <span>{{ featured.readTime }}</span>
+                            </template>
+                        </div>
+                        <h2 class="font-degular font-bold text-drygray-100 text-[28px] md:text-[40px] lg:text-[44px] leading-[1.05] tracking-tight group-hover:text-primary transition-colors">
+                            {{ featured.title }}
+                        </h2>
+                        <p v-if="featured.excerpt" class="text-b2 text-drygray-default mt-4">{{ featured.excerpt }}</p>
+                        <p class="text-drygray-100 group-hover:text-primary mt-6 inline-flex items-center gap-2 transition-colors font-medium">
+                            Read dispatch
+                            <span aria-hidden="true">→</span>
+                        </p>
+                    </div>
+                </div>
+            </NuxtLink>
+        </section>
+
+        <!-- Index -->
+        <section v-if="rest.length" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <CommonSup title="All dispatches" />
+            <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <NuxtLink
+                    v-for="post in rest"
+                    :key="post.id"
+                    :to="`/company/newsroom/${post.slug}`"
+                    class="bg-whitesmoke-100 hover:bg-whitesmoke-200 rounded-2xl p-6 transition-colors block group"
+                >
+                    <NuxtImg
+                        v-if="post.featuredImage"
+                        :src="post.featuredImage"
+                        :alt="post.title"
+                        class="w-full aspect-[16/10] object-cover rounded-xl mb-5"
+                    />
+                    <div class="flex items-center gap-3 text-[12px] text-drygray-default font-medium mb-3">
+                        <span>{{ formatDate(post.publishedAt) }}</span>
+                        <template v-if="post.readTime">
+                            <span aria-hidden="true">·</span>
+                            <span>{{ post.readTime }}</span>
+                        </template>
+                    </div>
+                    <p class="text-h3 font-degular font-bold text-drygray-100 group-hover:text-primary transition-colors leading-tight">
+                        {{ post.title }}
+                    </p>
+                    <p v-if="post.excerpt" class="text-b1 text-drygray-default mt-3 line-clamp-3">{{ post.excerpt }}</p>
+                </NuxtLink>
+            </div>
+        </section>
+
+        <!-- Empty state -->
+        <section v-if="!pending && !posts.length" class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <CommonSup title="Soon" />
+            <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05] max-w-3xl">
+                The Newsroom opens with our first dispatch shortly.
+            </h2>
+            <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
+                Press releases, recognition, and selected insight will appear here as we publish. For media inquiries today, reach the press desk directly.
+            </p>
+            <div class="mt-8">
                 <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Contact press</CommonButton></NuxtLink>
+            </div>
+        </section>
+
+        <!-- Press kit / media contact block -->
+        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <div class="grid lg:grid-cols-12 gap-10 items-end">
+                <div class="lg:col-span-8">
+                    <CommonSup title="Press kit · Media contact" />
+                    <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
+                        For journalists and analysts.
+                    </h2>
+                    <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
+                        Logos, executive bios, fact sheets, and briefing memos available on request. Embargoed material handled with discretion. Routing through the press desk.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 lg:text-right">
+                    <a href="mailto:press@davion.com"><CommonButton variant="primary" icon="base:arrow">press@davion.com</CommonButton></a>
+                </div>
             </div>
         </section>
     </div>
