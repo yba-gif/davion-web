@@ -55,15 +55,13 @@ const sectors = ['Defense', 'Intelligence', 'Critical infrastructure', 'Governme
                     </div>
                 </div>
                 <div class="relative h-[360px] sm:h-[480px] lg:h-auto lg:min-h-[640px] overflow-hidden">
-                    <NuxtImg
+                    <img
                         src="/section_background.png"
                         alt=""
                         loading="eager"
-                        format="webp"
-                        quality="85"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        decoding="async"
                         class="absolute inset-0 w-full h-full object-cover object-center select-none"
-                    />
+                    >
                     <!-- Mono annotation, bottom-right — editorial, instrument-grade -->
                     <div class="absolute bottom-5 right-5 lg:bottom-7 lg:right-7 text-[10px] font-semibold uppercase tracking-[0.22em] text-drygray-100/55 backdrop-blur-sm bg-white/30 px-2.5 py-1 rounded-full">
                         AlpOS · Ontology
