@@ -26,120 +26,95 @@ const outcomes = [
 </script>
 
 <template>
-    <div class="bg-ink text-bone">
-        <!-- Hero -->
-        <section class="border-b border-ink-200">
-            <div class="mx-auto max-w-7xl px-6 pt-32 pb-20 lg:pt-44 lg:pb-24">
-                <p class="text-eyebrow mb-6">Solutions · Digital Transformation</p>
-                <h1 class="text-display-l text-bone-bright max-w-4xl">From siloed data to a single governed source of truth.</h1>
-                <p class="text-body-l text-steel-light mt-8 max-w-3xl">
-                    Modernization for institutions that cannot trade governance for speed — and cannot afford to keep paying for both. AlpOS becomes the backbone, phased from proof-of-concept to industrial deployment.
+    <div class="flex flex-col gap-4">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+            <CommonSup title="Solutions · Digital Transformation" />
+            <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
+                From siloed data to a single governed source of truth.
+            </h1>
+            <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
+                Modernization for institutions that cannot trade governance for speed — and cannot afford to keep paying for both. AlpOS becomes the backbone, phased from proof-of-concept to industrial deployment.
+            </p>
+            <div class="mt-10">
+                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Talk to our team</CommonButton></NuxtLink>
+            </div>
+        </section>
+
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+            <CommonSup title="The problem" />
+            <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[36px] leading-[1.05] md:text-[56px] md:leading-[1.02] tracking-tight max-w-4xl">
+                Legacy stacks were not designed to be governed.
+            </h2>
+            <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
+                Decades of point tools, fragmented schemas, and migrations-deferred have left institutions with data they cannot trust, models they cannot defend, and decisions that arrive too late. Modernization is not a cosmetic exercise. It is a sovereign one.
+            </p>
+        </section>
+
+        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <div class="max-w-3xl mb-10 md:mb-14">
+                <CommonSup title="Phased journey" />
+                <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
+                    From POC to industrial deployment, without losing the institution.
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div v-for="phase in phases" :key="phase.n" class="bg-white rounded-2xl p-6">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Phase {{ phase.n }}</p>
+                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ phase.name }}</p>
+                    <p class="text-b1 text-drygray-default mt-3">{{ phase.body }}</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+            <div class="mb-10 md:mb-14">
+                <CommonSup title="Underneath" />
+                <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
+                    The AlpOS layers that carry the work.
+                </h2>
+                <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
+                    Digital Transformation engagements lean on the full ingest-to-act spine, but the weight of the work falls on these four.
                 </p>
-                <div class="mt-10">
-                    <NuxtLink to="/contact" class="inline-flex items-center gap-2 px-6 py-3 bg-signal text-ink font-medium hover:bg-signal-dim transition-colors duration-davion-hover">
-                        Talk to our team
-                        <span aria-hidden="true">→</span>
-                    </NuxtLink>
+            </div>
+            <div class="bg-whitesmoke-100 rounded-2xl divide-y divide-drygray-200">
+                <div v-for="layer in layers" :key="layer.name" class="grid lg:grid-cols-12 gap-4 px-6 py-5">
+                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary self-center">{{ layer.name }}</p>
+                    <p class="lg:col-span-9 text-b2 text-drygray-100">{{ layer.body }}</p>
+                </div>
+            </div>
+            <div class="mt-8">
+                <NuxtLink to="/solutions/alpos"><CommonButton variant="outline" size="xs" icon="base:arrow">Explore AlpOS</CommonButton></NuxtLink>
+            </div>
+        </section>
+
+        <section class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <div class="mb-10 md:mb-14">
+                <CommonSup title="Outcomes" />
+                <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
+                    What the institution gets.
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div v-for="o in outcomes" :key="o.label" class="bg-white rounded-2xl p-6">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ o.label }}</p>
+                    <p class="text-b2 text-drygray-100 mt-4 leading-relaxed">{{ o.body }}</p>
                 </div>
             </div>
         </section>
 
-        <!-- The problem -->
-        <section class="border-b border-ink-200">
-            <div class="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-                <div class="grid lg:grid-cols-12 gap-12">
-                    <div class="lg:col-span-3"><p class="text-eyebrow">The problem</p></div>
-                    <div class="lg:col-span-9">
-                        <p class="text-display-m text-bone-bright max-w-4xl">Legacy stacks were not designed to be governed.</p>
-                        <p class="text-body-l text-steel-light mt-8 max-w-3xl">
-                            Decades of point tools, fragmented schemas, and migrations-deferred have left institutions with data they cannot trust, models they cannot defend, and decisions that arrive too late. Modernization is not a cosmetic exercise. It is a sovereign one.
-                        </p>
-                    </div>
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+            <div class="grid lg:grid-cols-12 gap-8 items-end">
+                <div class="lg:col-span-8">
+                    <CommonSup title="Engage" />
+                    <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[40px] leading-[1.05] md:text-[56px] md:leading-[1.02] tracking-tight">
+                        Modernize without trading governance for speed.
+                    </h2>
+                    <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
+                        Briefings start with the highest-value decision in your institution today — and work backwards from there.
+                    </p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Phased journey -->
-        <section class="border-b border-ink-200">
-            <div class="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-                <div class="grid lg:grid-cols-12 gap-12 mb-16">
-                    <div class="lg:col-span-3"><p class="text-eyebrow">Phased journey</p></div>
-                    <div class="lg:col-span-9">
-                        <p class="text-h1 text-bone-bright">From POC to industrial deployment, without losing the institution.</p>
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-ink-200">
-                    <div v-for="phase in phases" :key="phase.n" class="bg-ink p-8">
-                        <p class="text-eyebrow">Phase {{ phase.n }}</p>
-                        <p class="text-h3 text-bone-bright mt-3">{{ phase.name }}</p>
-                        <p class="text-body-s mt-3">{{ phase.body }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- AlpOS layers used -->
-        <section class="border-b border-ink-200">
-            <div class="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-                <div class="grid lg:grid-cols-12 gap-12 mb-16">
-                    <div class="lg:col-span-3"><p class="text-eyebrow">Underneath</p></div>
-                    <div class="lg:col-span-9">
-                        <p class="text-h1 text-bone-bright">The AlpOS layers that carry the work.</p>
-                        <p class="text-body-l text-steel-light mt-6 max-w-3xl">
-                            Digital Transformation engagements lean on the full ingest-to-act spine, but the weight of the work falls on these four.
-                        </p>
-                    </div>
-                </div>
-                <div class="border-t border-ink-200">
-                    <div v-for="layer in layers" :key="layer.name" class="grid lg:grid-cols-12 gap-6 py-6 border-b border-ink-200">
-                        <div class="lg:col-span-3"><p class="text-label">{{ layer.name }}</p></div>
-                        <p class="lg:col-span-9 text-body text-bone">{{ layer.body }}</p>
-                    </div>
-                </div>
-                <div class="mt-8">
-                    <NuxtLink to="/solutions/alpos" class="inline-flex items-center gap-2 text-bone hover:text-signal transition-colors duration-davion-hover">
-                        Explore AlpOS
-                        <span aria-hidden="true">→</span>
-                    </NuxtLink>
-                </div>
-            </div>
-        </section>
-
-        <!-- Outcomes -->
-        <section class="border-b border-ink-200">
-            <div class="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-                <div class="grid lg:grid-cols-12 gap-12 mb-16">
-                    <div class="lg:col-span-3"><p class="text-eyebrow">Outcomes</p></div>
-                    <div class="lg:col-span-9">
-                        <p class="text-h1 text-bone-bright">What the institution gets.</p>
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div v-for="o in outcomes" :key="o.label" class="border-t border-signal pt-6">
-                        <p class="text-eyebrow">{{ o.label }}</p>
-                        <p class="text-body-l text-bone mt-4">{{ o.body }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section>
-            <div class="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-                <div class="grid lg:grid-cols-12 gap-12 items-end">
-                    <div class="lg:col-span-8">
-                        <p class="text-eyebrow mb-6">Engage</p>
-                        <p class="text-display-m text-bone-bright">Modernize without trading governance for speed.</p>
-                        <p class="text-body-l text-steel-light mt-6 max-w-2xl">
-                            Briefings start with the highest-value decision in your institution today — and work backwards from there.
-                        </p>
-                    </div>
-                    <div class="lg:col-span-4 lg:text-right">
-                        <NuxtLink to="/contact" class="inline-flex items-center gap-2 px-6 py-3 bg-signal text-ink font-medium hover:bg-signal-dim transition-colors duration-davion-hover">
-                            Talk to our team
-                            <span aria-hidden="true">→</span>
-                        </NuxtLink>
-                    </div>
+                <div class="lg:col-span-4 lg:text-right">
+                    <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Talk to our team</CommonButton></NuxtLink>
                 </div>
             </div>
         </section>

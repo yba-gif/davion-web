@@ -1,5 +1,8 @@
 <script setup lang="ts">
-useSeoMeta({ title: 'Engage', description: 'Request a briefing or contact Davion. Consultative intake — tell us what you are trying to decide.' })
+useSeoMeta({
+    title: 'Engage',
+    description: 'Request a briefing or contact Davion. Consultative intake — tell us what you are trying to decide.',
+})
 
 const intents = [
     { label: 'Briefing', desc: 'A tailored, consultative session on AlpOS and the Davion approach.' },
@@ -11,36 +14,45 @@ const intents = [
 </script>
 
 <template>
-    <div class="bg-ink text-bone min-h-[calc(100vh-4rem)]">
-        <main class="mx-auto max-w-7xl px-6 pt-32 pb-24 lg:pt-44 lg:pb-32">
-            <p class="text-eyebrow mb-6">Engage</p>
-            <h1 class="text-display-l text-bone-bright max-w-4xl">Tell us what you're trying to decide.</h1>
-            <p class="text-body-l text-steel-light mt-8 max-w-3xl">
+    <div class="flex flex-col gap-4">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+            <CommonSup title="Engage" />
+            <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
+                Tell us what you're trying to decide.
+            </h1>
+            <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 Davion engagements are consultative. We route you to the right team based on what you bring. Tell us your intent, and we will reach out.
             </p>
+        </section>
 
-            <div class="mt-16 border-t border-ink-200">
-                <div v-for="intent in intents" :key="intent.label" class="grid lg:grid-cols-12 gap-6 py-6 border-b border-ink-200">
-                    <div class="lg:col-span-3">
-                        <p class="text-eyebrow">{{ intent.label }}</p>
-                    </div>
-                    <p class="lg:col-span-9 text-body text-bone">{{ intent.desc }}</p>
+        <section class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <CommonSup title="Intents" />
+            <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05] max-w-3xl">
+                Which one applies?
+            </h2>
+            <div class="mt-8 bg-white rounded-2xl divide-y divide-drygray-200">
+                <div v-for="intent in intents" :key="intent.label" class="grid lg:grid-cols-12 gap-4 px-6 md:px-8 py-6">
+                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary self-center">{{ intent.label }}</p>
+                    <p class="lg:col-span-9 text-b2 text-drygray-100">{{ intent.desc }}</p>
                 </div>
             </div>
+        </section>
 
-            <div class="mt-12 grid lg:grid-cols-12 gap-12 items-end">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+            <div class="grid lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-8">
-                    <p class="text-body-l text-steel-light max-w-2xl">
+                    <CommonSup title="Reach us" />
+                    <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[40px] leading-[1.05] md:text-[56px] md:leading-[1.02] tracking-tight">
+                        Write to us.
+                    </h2>
+                    <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
                         A consultative intake form lands in a subsequent slice. For now, write to us directly — and tell us which intent applies.
                     </p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right">
-                    <a href="mailto:briefings@davion.com" class="inline-flex items-center gap-2 px-6 py-3 bg-signal text-ink font-medium hover:bg-signal-dim transition-colors duration-davion-hover">
-                        briefings@davion.com
-                        <span aria-hidden="true">→</span>
-                    </a>
+                    <a href="mailto:briefings@davion.com"><CommonButton variant="primary" icon="base:arrow">briefings@davion.com</CommonButton></a>
                 </div>
             </div>
-        </main>
+        </section>
     </div>
 </template>

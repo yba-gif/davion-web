@@ -3,22 +3,19 @@ useSeoMeta({ title: 'Careers', description: 'Davion hires for the mission. If yo
 </script>
 
 <template>
-    <div class="bg-ink text-bone min-h-[calc(100vh-4rem)]">
-        <main class="mx-auto max-w-7xl px-6 pt-32 pb-24 lg:pt-44 lg:pb-32">
-            <p class="text-eyebrow mb-6">Company · Careers</p>
-            <h1 class="text-display-l text-bone-bright max-w-4xl">Work on consequential problems.</h1>
-            <p class="text-body-l text-steel-light mt-8 max-w-3xl">
+    <div class="flex flex-col gap-4">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+            <CommonSup title="Company · Careers" />
+            <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
+                Work on consequential problems.
+            </h1>
+            <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 Davion hires for the mission. If you build infrastructure that institutions can trust, we want to meet you.
             </p>
-            <div class="mt-12 border-t border-ink-200 pt-8 max-w-2xl">
-                <p class="text-label">Open roles, hiring process, and EVP land in a subsequent slice.</p>
-            </div>
+            <p class="text-b1 text-drygray-default mt-8">Open roles, hiring process, and EVP land in a subsequent slice.</p>
             <div class="mt-10">
-                <NuxtLink to="/contact" class="inline-flex items-center gap-2 px-6 py-3 bg-signal text-ink font-medium hover:bg-signal-dim transition-colors duration-davion-hover">
-                    Get in touch
-                    <span aria-hidden="true">→</span>
-                </NuxtLink>
+                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Get in touch</CommonButton></NuxtLink>
             </div>
-        </main>
+        </section>
     </div>
 </template>
