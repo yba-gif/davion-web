@@ -1,22 +1,17 @@
 <script setup lang="ts">
-// Davion home — gravity layer (build sequence step 3).
-// Mission hero, Innovate/Secure/Perform triad, AlpOS teaser, intelligence-cycle stepper,
-// sovereignty strip, sectors band, Newsroom slot, consultative CTA.
-
+// Davion home — base1 visual language (rounded pastel sections, CommonSup/CommonButton/FeatureCard,
+// Switzer body + Degular Display), Davion content + IA.
 useSeoMeta({
     description: 'Sovereign software for the decisions institutions cannot afford to get wrong. Davion builds the platforms used by defense, intelligence, critical infrastructure, and the public sector.',
     ogTitle: 'Davion',
     ogDescription: 'Sovereign software for data intelligence and artificial intelligence.',
 })
-useHead({
-    title: 'Davion',
-    titleTemplate: '%s',
-})
+useHead({ title: 'Davion', titleTemplate: '%s' })
 
 const pillars = [
-    { n: '01', verb: 'Innovate', body: 'Move from fragmented data and opaque models to a single governed source of truth — and to AI you can defend.' },
-    { n: '02', verb: 'Secure', body: 'Deploy under your jurisdiction, your access controls, your audit. Nothing leaves. Everything is auditable.' },
-    { n: '03', verb: 'Perform', body: 'From signal to action in minutes, not weeks. The decision cycle is the architecture — not a series of integrations.' },
+    { verb: 'Innovate', body: 'Move from fragmented data and opaque models to a single governed source of truth — and to AI you can defend.', icon: 'base:chart-square' },
+    { verb: 'Secure', body: 'Deploy under your jurisdiction, your access controls, your audit. Nothing leaves. Everything is auditable.', icon: 'base:status-verified' },
+    { verb: 'Perform', body: 'From signal to action in minutes, not weeks. The decision cycle is the architecture — not a series of integrations.', icon: 'base:chart-2' },
 ]
 
 const cycle = [
@@ -26,213 +21,149 @@ const cycle = [
     { n: '04', title: 'Action', body: 'Embed the decision into operators and systems of record.' },
 ]
 
-const sectors = ['Defense', 'Intelligence', 'Critical infrastructure', 'Government', 'Financial services', 'Energy']
-
 const sovereignty = [
-    { name: 'On-premise', label: 'Your hardware. Your network.' },
-    { name: 'Air-gapped', label: 'Disconnected operation, signed updates.' },
-    { name: 'Sovereign cloud', label: 'Your provider, your region, bound by contract.' },
+    { name: 'On-premise', body: 'Your hardware. Your network.' },
+    { name: 'Air-gapped', body: 'Disconnected operation, signed updates.' },
+    { name: 'Sovereign cloud', body: 'Your provider, your region, bound by contract.' },
 ]
+
+const sectors = ['Defense', 'Intelligence', 'Critical infrastructure', 'Government', 'Financial services', 'Energy']
 </script>
 
 <template>
-    <div class="bg-ink text-bone">
+    <div class="flex flex-col gap-4">
         <!-- 1. Mission hero -->
-        <section class="relative border-b border-ink-200">
-            <div
-                class="absolute inset-0 pointer-events-none opacity-[0.035]"
-                aria-hidden="true"
-                style="background-image: linear-gradient(var(--davion-bone) 1px, transparent 1px), linear-gradient(90deg, var(--davion-bone) 1px, transparent 1px); background-size: 64px 64px;"
-            />
-            <div class="relative mx-auto max-w-7xl px-6 pt-32 pb-24 lg:pt-48 lg:pb-32">
-                <p class="text-eyebrow mb-6">Davion · Sovereign software</p>
-                <h1 class="text-display-xl text-bone-bright max-w-5xl">
-                    The platforms institutions decide on.
-                </h1>
-                <p class="text-body-l text-steel-light mt-8 max-w-3xl">
-                    Davion builds sovereign software for data intelligence and AI — used by defense, intelligence, critical infrastructure, regulated industry, and the public sector to turn data into meaning and decisions into action, all under their full control.
-                </p>
-                <div class="mt-10 flex flex-wrap items-center gap-6">
-                    <NuxtLink
-                        to="/contact"
-                        class="inline-flex items-center gap-2 px-6 py-3 bg-signal text-ink font-medium hover:bg-signal-dim transition-colors duration-davion-hover"
-                    >
-                        Request a briefing
-                        <span aria-hidden="true">→</span>
-                    </NuxtLink>
-                    <NuxtLink
-                        to="/solutions/alpos"
-                        class="text-bone hover:text-signal transition-colors duration-davion-hover inline-flex items-center gap-2"
-                    >
-                        Explore AlpOS
-                        <span aria-hidden="true">→</span>
-                    </NuxtLink>
-                </div>
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28 lg:py-36">
+            <CommonSup title="Sovereign software" />
+            <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] sm:text-[60px] md:text-[72px] lg:text-[96px] lg:leading-[0.98] tracking-tight max-w-5xl">
+                The platforms institutions decide on.
+            </h1>
+            <p class="text-b2 text-drygray-default mt-8 max-w-2xl">
+                Davion builds sovereign software for data intelligence and AI — used by defense, intelligence, critical infrastructure, regulated industry, and the public sector to turn data into meaning and decisions into action, all under their full control.
+            </p>
+            <div class="mt-10 flex flex-wrap items-center gap-3">
+                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Request a briefing</CommonButton></NuxtLink>
+                <NuxtLink to="/solutions/alpos"><CommonButton variant="outline" icon="base:arrow">Explore AlpOS</CommonButton></NuxtLink>
             </div>
         </section>
 
-        <!-- 2. Innovate · Secure · Perform triad -->
-        <section class="border-b border-ink-200">
-            <div class="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-                <div class="grid lg:grid-cols-12 gap-12 mb-16">
-                    <div class="lg:col-span-3">
-                        <p class="text-eyebrow">Promise</p>
-                    </div>
-                    <div class="lg:col-span-9">
-                        <p class="text-h1 text-bone-bright">Innovate. Secure. Perform.</p>
-                        <p class="text-body-l text-steel-light mt-6 max-w-3xl">
-                            Three verbs. They are not slogans — they are the order in which institutions adopt sovereign software, and the order in which it has to deliver.
-                        </p>
-                    </div>
+        <!-- 2. Innovate / Secure / Perform triad -->
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
+                <div class="max-w-2xl">
+                    <CommonSup title="Promise" />
+                    <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
+                        Innovate. Secure. Perform.
+                    </h2>
                 </div>
-                <div class="grid md:grid-cols-3 gap-px bg-ink-200">
-                    <div v-for="p in pillars" :key="p.verb" class="bg-ink p-8 lg:p-10">
-                        <p class="text-label">{{ p.n }}</p>
-                        <p class="text-h2 text-bone-bright mt-3">{{ p.verb }}</p>
-                        <p class="text-body text-steel-light mt-4">{{ p.body }}</p>
-                    </div>
-                </div>
+                <p class="text-b2 text-drygray-default max-w-md">
+                    Three verbs. Not slogans — they are the order in which institutions adopt sovereign software, and the order in which it has to deliver.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4">
+                <FeatureCard v-for="p in pillars" :key="p.verb" :title="p.verb" :description="p.body" :icon="p.icon" />
             </div>
         </section>
 
         <!-- 3. AlpOS teaser -->
-        <section class="border-b border-ink-200 bg-ink-50/40">
-            <div class="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-                <div class="grid lg:grid-cols-12 gap-12 items-end">
-                    <div class="lg:col-span-7">
-                        <p class="text-eyebrow mb-6">Flagship · AlpOS</p>
-                        <p class="text-display-m text-bone-bright">The operating system underneath every Davion solution.</p>
-                        <p class="text-body-l text-steel-light mt-6 max-w-2xl">
-                            AlpOS is the sovereign platform — ingest, ontology, analytics, AI, decisioning, action — that Digital Transformation, Cybersecurity, and OSINT are all built on. One spine, governed end to end.
-                        </p>
-                        <div class="mt-8">
-                            <NuxtLink to="/solutions/alpos" class="inline-flex items-center gap-2 text-bone hover:text-signal transition-colors duration-davion-hover">
-                                Explore AlpOS
-                                <span aria-hidden="true">→</span>
-                            </NuxtLink>
-                        </div>
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7">
+                    <CommonSup title="Flagship · AlpOS" />
+                    <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
+                        The operating system underneath every Davion solution.
+                    </h2>
+                    <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
+                        AlpOS is the sovereign platform — ingest, ontology, analytics, AI, decisioning, action — that Digital Transformation, Cybersecurity, and OSINT are all built on. One spine, governed end to end.
+                    </p>
+                    <div class="mt-8">
+                        <NuxtLink to="/solutions/alpos"><CommonButton variant="primary" icon="base:arrow">Explore AlpOS</CommonButton></NuxtLink>
                     </div>
-                    <div class="lg:col-span-5">
-                        <div class="border border-ink-200 rounded-sm p-6 bg-ink">
-                            <p class="text-eyebrow mb-4">Spine</p>
-                            <div class="flex items-center gap-1 text-label flex-wrap">
-                                <span class="px-3 py-2 bg-ink-50 border border-ink-200">Ingest</span>
-                                <span class="text-signal">→</span>
-                                <span class="px-3 py-2 bg-ink-50 border border-ink-200">Ontology</span>
-                                <span class="text-signal">→</span>
-                                <span class="px-3 py-2 bg-ink-50 border border-ink-200">Analyze</span>
-                                <span class="text-signal">→</span>
-                                <span class="px-3 py-2 bg-ink-50 border border-ink-200">Decide</span>
-                                <span class="text-signal">→</span>
-                                <span class="px-3 py-2 bg-ink-50 border border-ink-200">Act</span>
-                            </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="bg-whitesmoke-100 rounded-2xl p-6">
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-drygray-default mb-4">Spine</p>
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                            <span class="px-3 py-2 bg-white border border-drygray-200 rounded-lg text-[13px] font-medium text-drygray-100">Ingest</span>
+                            <span class="text-primary text-lg" aria-hidden="true">→</span>
+                            <span class="px-3 py-2 bg-white border border-drygray-200 rounded-lg text-[13px] font-medium text-drygray-100">Ontology</span>
+                            <span class="text-primary text-lg" aria-hidden="true">→</span>
+                            <span class="px-3 py-2 bg-white border border-drygray-200 rounded-lg text-[13px] font-medium text-drygray-100">Analyze</span>
+                            <span class="text-primary text-lg" aria-hidden="true">→</span>
+                            <span class="px-3 py-2 bg-white border border-drygray-200 rounded-lg text-[13px] font-medium text-drygray-100">Decide</span>
+                            <span class="text-primary text-lg" aria-hidden="true">→</span>
+                            <span class="px-3 py-2 bg-white border border-drygray-200 rounded-lg text-[13px] font-medium text-drygray-100">Act</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. Intelligence-cycle stepper -->
-        <section class="border-b border-ink-200">
-            <div class="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-                <div class="grid lg:grid-cols-12 gap-12 mb-16">
-                    <div class="lg:col-span-3">
-                        <p class="text-eyebrow">The cycle</p>
-                    </div>
-                    <div class="lg:col-span-9">
-                        <p class="text-h1 text-bone-bright">Data → Meaning → Decision → Action.</p>
-                        <p class="text-body-l text-steel-light mt-6 max-w-3xl">
-                            Every Davion deployment runs the same sovereign decision cycle. The platform stays constant; the surface adapts to the mission.
-                        </p>
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-4 gap-px bg-ink-200">
-                    <div v-for="step in cycle" :key="step.n" class="bg-ink p-8 lg:p-10">
-                        <p class="text-eyebrow">Step {{ step.n }}</p>
-                        <p class="text-h3 text-bone-bright mt-3">{{ step.title }}</p>
-                        <p class="text-body-s mt-3">{{ step.body }}</p>
-                    </div>
+        <!-- 4. Intelligence cycle -->
+        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <div class="max-w-2xl mb-10 md:mb-14">
+                <CommonSup title="The cycle" />
+                <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
+                    Data → Meaning → Decision → Action.
+                </h2>
+                <p class="text-b2 text-drygray-default mt-6">
+                    Every Davion deployment runs the same sovereign decision cycle. The platform stays constant; the surface adapts to the mission.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div v-for="step in cycle" :key="step.n" class="bg-white rounded-2xl p-6">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Step {{ step.n }}</p>
+                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ step.title }}</p>
+                    <p class="text-b1 text-drygray-default mt-3">{{ step.body }}</p>
                 </div>
             </div>
         </section>
 
         <!-- 5. Sovereignty strip -->
-        <section class="border-b border-ink-200">
-            <div class="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-                <div class="grid lg:grid-cols-12 gap-12">
-                    <div class="lg:col-span-3">
-                        <p class="text-eyebrow">Sovereign by design</p>
-                    </div>
-                    <div class="lg:col-span-9">
-                        <p class="text-h1 text-bone-bright">Run where you require — only where you require.</p>
-                        <div class="mt-10 grid sm:grid-cols-3 gap-px bg-ink-200">
-                            <div v-for="m in sovereignty" :key="m.name" class="bg-ink p-6">
-                                <p class="text-label">{{ m.label }}</p>
-                                <p class="text-h3 text-bone-bright mt-2">{{ m.name }}</p>
-                            </div>
-                        </div>
-                        <div class="mt-8">
-                            <NuxtLink to="/trust" class="inline-flex items-center gap-2 text-bone hover:text-signal transition-colors duration-davion-hover">
-                                Trust &amp; Sovereignty
-                                <span aria-hidden="true">→</span>
-                            </NuxtLink>
-                        </div>
-                    </div>
+        <section class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <div class="max-w-3xl mb-10 md:mb-14">
+                <CommonSup title="Sovereign by design" />
+                <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
+                    Run where you require — only where you require.
+                </h2>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4">
+                <div v-for="m in sovereignty" :key="m.name" class="bg-white rounded-2xl p-6">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Mode</p>
+                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ m.name }}</p>
+                    <p class="text-b1 text-drygray-default mt-3">{{ m.body }}</p>
                 </div>
+            </div>
+            <div class="mt-8">
+                <NuxtLink to="/trust"><CommonButton variant="outline" size="xs" icon="base:arrow">Trust &amp; Sovereignty</CommonButton></NuxtLink>
             </div>
         </section>
 
-        <!-- 6. Sectors band -->
-        <section class="border-b border-ink-200">
-            <div class="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-                <p class="text-eyebrow mb-6">Sectors</p>
-                <div class="flex flex-wrap gap-x-10 gap-y-3 text-body-l text-bone-bright">
-                    <span v-for="(s, i) in sectors" :key="s" class="flex items-center gap-3">
-                        <span class="text-steel font-mono text-sm font-normal">{{ String(i + 1).padStart(2, '0') }}</span>
-                        {{ s }}
-                    </span>
-                </div>
+        <!-- 6. Sectors -->
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
+            <CommonSup title="Sectors" />
+            <div class="mt-6 flex flex-wrap gap-x-10 gap-y-4 text-[22px] md:text-[28px] font-degular font-bold text-drygray-100">
+                <span v-for="(s, i) in sectors" :key="s" class="flex items-baseline gap-3">
+                    <span class="text-primary text-[13px] font-switzer font-semibold">{{ String(i + 1).padStart(2, '0') }}</span>
+                    {{ s }}
+                </span>
             </div>
         </section>
 
-        <!-- 7. Newsroom (empty state until content) -->
-        <section class="border-b border-ink-200">
-            <div class="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-                <div class="grid lg:grid-cols-12 gap-12 items-end mb-12">
-                    <div class="lg:col-span-9">
-                        <p class="text-eyebrow mb-6">Newsroom</p>
-                        <p class="text-h1 text-bone-bright">Dispatches from the work.</p>
-                    </div>
-                    <div class="lg:col-span-3 lg:text-right">
-                        <NuxtLink to="/company/newsroom" class="text-bone hover:text-signal transition-colors duration-davion-hover inline-flex items-center gap-2">
-                            All dispatches
-                            <span aria-hidden="true">→</span>
-                        </NuxtLink>
-                    </div>
+        <!-- 7. Consultative CTA -->
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+            <div class="grid lg:grid-cols-12 gap-8 items-end">
+                <div class="lg:col-span-8">
+                    <CommonSup title="Engage" />
+                    <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[40px] leading-[1.05] md:text-[56px] md:leading-[1.02] lg:text-[64px] tracking-tight">
+                        Tell us what you're trying to decide.
+                    </h2>
+                    <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
+                        Briefings are consultative and tailored. Bring your data architecture, your constraints, and your operational reality. We will bring the right people from our side.
+                    </p>
                 </div>
-                <div class="border-t border-ink-200 pt-10">
-                    <p class="text-body-s">The Newsroom opens with our first dispatch shortly.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 8. Consultative CTA -->
-        <section>
-            <div class="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-                <div class="grid lg:grid-cols-12 gap-12 items-end">
-                    <div class="lg:col-span-8">
-                        <p class="text-eyebrow mb-6">Engage</p>
-                        <p class="text-display-m text-bone-bright">Tell us what you're trying to decide.</p>
-                        <p class="text-body-l text-steel-light mt-6 max-w-2xl">
-                            Briefings are consultative and tailored. Bring your data architecture, your constraints, and your operational reality. We will bring the right people from our side.
-                        </p>
-                    </div>
-                    <div class="lg:col-span-4 lg:text-right">
-                        <NuxtLink to="/contact" class="inline-flex items-center gap-2 px-6 py-3 bg-signal text-ink font-medium hover:bg-signal-dim transition-colors duration-davion-hover">
-                            Request a briefing
-                            <span aria-hidden="true">→</span>
-                        </NuxtLink>
-                    </div>
+                <div class="lg:col-span-4 lg:text-right">
+                    <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Request a briefing</CommonButton></NuxtLink>
                 </div>
             </div>
         </section>
