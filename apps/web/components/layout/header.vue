@@ -18,24 +18,45 @@ const nav = [
             { label: 'OSINT', to: '/solutions/osint' },
         ],
     },
-    // Capabilities dropdown removed — all 6 pages are stubs (P0.7).
-    // Industries dropdown restored with 3 real items (FS / Energy / Defense)
-    // after P1.4 + P1.5 promoted Energy and Defense out of stub status.
-    // Manufacturing / Life Sciences / Government remain stubs and live on the
-    // hub page with a "coming" treatment until P2.1 lands real content.
+    // Capabilities dropdown restored — P2.2 promoted all 6 capability pages
+    // out of stub status. Each links into 2-4 industries that lean on it.
+    {
+        label: 'Capabilities',
+        children: [
+            { label: 'RAG over your ontology', to: '/capabilities/rag', desc: 'AI that cites its sources, grounded in your ontology.' },
+            { label: 'Geospatial analytics', to: '/capabilities/geospatial', desc: 'Map, ground, and reason over location-aware data.' },
+            { label: 'Video intelligence', to: '/capabilities/video-intelligence', desc: 'Search hours of video by content. Chain-of-custody intact.' },
+            { label: 'Audio analysis', to: '/capabilities/audio-analysis', desc: 'Transcribe, diarise, and extract structure at archive scale.' },
+            { label: 'Machine translation', to: '/capabilities/translation', desc: '60+ languages inside your perimeter.' },
+            { label: 'Data acquisition', to: '/capabilities/data-acquisition', desc: 'Connectors, ETL, enrichment from source to ontology.' },
+            { label: 'All capabilities', to: '/capabilities' },
+        ],
+    },
+    // Industries dropdown carries all 6 real playbooks (P2.1 promoted
+    // Manufacturing / Life Sciences / Government out of stub status).
     {
         label: 'Industries',
         children: [
             { label: 'Financial Services', to: '/industries/financial-services', flagship: true, desc: 'Market & risk, compliance, client intelligence, resilience.' },
             { label: 'Energy', to: '/industries/energy', desc: 'Grid, generation, asset reliability, OT-side cyber.' },
             { label: 'Defense & Intelligence', to: '/industries/defense-intelligence', desc: 'Air-gapped sovereign AI inside the enclave.' },
+            { label: 'Manufacturing', to: '/industries/manufacturing', desc: 'Plant operations, quality, supply, OT cyber.' },
+            { label: 'Life Sciences', to: '/industries/life-sciences', desc: 'Discovery, clinical, pharmacovigilance, GxP.' },
+            { label: 'Government', to: '/industries/government', desc: 'Cross-agency entity resolution, fraud, oversight.' },
             { label: 'All industries', to: '/industries' },
         ],
     },
     { label: 'Trust', to: '/trust' },
-    // About re-introduced once it had real depth content (P1.1).
-    { label: 'About', to: '/company/about' },
-    { label: 'Newsroom', to: '/company/newsroom' },
+    // Company dropdown — collapsed from 3 flat top-level links (About / Careers /
+    // Newsroom) once Careers landed in P2.6.
+    {
+        label: 'Company',
+        children: [
+            { label: 'About', to: '/company/about', flagship: true, desc: 'The opinion underneath the product.' },
+            { label: 'Careers', to: '/company/careers', desc: 'Engineers and operators wanted.' },
+            { label: 'Newsroom', to: '/company/newsroom', desc: 'Dispatches from the work.' },
+        ],
+    },
 ] as const
 
 function toggleDropdown(label: string) {

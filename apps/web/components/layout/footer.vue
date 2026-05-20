@@ -25,6 +25,7 @@ const cols = [
         title: 'Company',
         links: [
             { label: 'About', to: '/company/about' },
+            { label: 'Careers', to: '/company/careers' },
             { label: 'Newsroom', to: '/company/newsroom' },
         ],
     },

@@ -2,6 +2,8 @@
 useSeoMeta({
     title: 'AI Capabilities',
     description: 'The AI capabilities bundled in AlpOS — RAG, geospatial, video, audio, translation, and data acquisition — all run inside your perimeter.',
+    ogTitle: 'Davion · Capabilities',
+    ogDescription: 'Six AI capabilities, one sovereign platform. Bundled with AlpOS, governed end to end, run where you require.',
 })
 
 const capabilities = [
