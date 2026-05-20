@@ -34,10 +34,28 @@ function formatDate(d: string | null) {
     return new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' })
 }
 
-const pillars = [
-    { verb: 'Innovate', body: 'Move from fragmented data and untrustworthy AI to a single sovereign platform you can actually build on.', icon: 'base:chart-square' },
-    { verb: 'Secure', body: 'Deploy under your jurisdiction, your access controls, your audit. Nothing leaves. Everything is auditable.', icon: 'base:status-verified' },
-    { verb: 'Perform', body: 'Agentic AI that cites its sources and acts only where authorised. Defensible decisions at scale.', icon: 'base:chart-2' },
+const solutions = [
+    {
+        name: 'AlpOS',
+        label: 'Platform · Flagship',
+        body: 'The sovereign AI platform underneath every Davion solution. Ingest, ontology, analytics, AI, decisioning, action — governed end to end.',
+        to: '/solutions/alpos',
+        icon: 'base:chart-square',
+    },
+    {
+        name: 'Cybersecurity',
+        label: 'Solution',
+        body: 'Defensive intelligence for environments that cannot fail. Detection through pattern, anomaly, and graph analysis — inside your perimeter.',
+        to: '/solutions/cybersecurity',
+        icon: 'base:verified',
+    },
+    {
+        name: 'Digital Transformation',
+        label: 'Solution',
+        body: 'From siloed data to a single governed source of truth — phased from POC to industrial deployment, without losing the institution.',
+        to: '/solutions/digital-transformation',
+        icon: 'base:chart-2',
+    },
 ]
 
 const cycle = [
@@ -65,21 +83,28 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
         <!-- 1.5. Trusted-by strip (placeholder treatment — names withheld) -->
         <TrustedByStrip />
 
-        <!-- 2. Promise triad -->
+        <!-- 2. Solutions triad — AlpOS, Cybersecurity, Digital Transformation -->
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
-                <div class="max-w-2xl">
-                    <CommonSup title="Promise" />
+                <div class="max-w-3xl">
+                    <CommonSup title="Solutions" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        Innovate<span class="text-primary">.</span> Secure<span class="text-primary">.</span> Perform<span class="text-primary">.</span>
+                        AlpOS<span class="text-primary">.</span> Cybersecurity<span class="text-primary">.</span> Digital Transformation<span class="text-primary">.</span>
                     </h2>
                 </div>
                 <p class="text-b2 text-drygray-default max-w-md">
-                    Three verbs. Not slogans — they are the order in which organisations adopt sovereign AI, and the order in which it has to deliver.
+                    One sovereign platform. Two solution layers applied on top of it. The platform stays constant; the surface adapts to the use case.
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-4">
-                <FeatureCard v-for="p in pillars" :key="p.verb" :title="p.verb" :description="p.body" :icon="p.icon" />
+                <FeatureCard
+                    v-for="s in solutions"
+                    :key="s.name"
+                    :title="s.name"
+                    :description="s.body"
+                    :icon="s.icon"
+                    :href="s.to"
+                />
             </div>
         </section>
 
