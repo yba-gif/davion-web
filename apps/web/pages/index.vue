@@ -59,15 +59,10 @@ const promises = ['Sovereign by design', 'Auditable', 'Air-gapped', 'On-premise'
 
 <template>
     <div class="flex flex-col gap-4">
-        <!-- 1. Mission hero — base1's signature spiral motif, text-left composition -->
-        <section class="bg-aliceblue rounded-3xl overflow-hidden relative">
-            <div
-                class="absolute inset-0 pointer-events-none opacity-[0.04] mix-blend-multiply"
-                aria-hidden="true"
-                style="background-image: linear-gradient(to right, currentColor 1px, transparent 1px); background-size: 80px 80px; color: #212121;"
-            />
-            <div class="relative grid lg:grid-cols-2 lg:items-stretch">
-                <div class="relative z-10 px-6 md:px-12 lg:px-16 py-20 md:py-28 lg:py-32 xl:py-36">
+        <!-- 1. Mission hero — base1's signature spiral motif, clean right-bleed composition -->
+        <section class="bg-azure rounded-3xl overflow-hidden">
+            <div class="grid lg:grid-cols-2 lg:items-stretch">
+                <div class="px-6 md:px-12 lg:px-16 py-20 md:py-28 lg:py-32 xl:py-36">
                     <CommonSup title="Sovereign software" />
                     <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.02] sm:text-[56px] md:text-[64px] lg:text-[72px] xl:text-[84px] lg:leading-[0.95] tracking-[-0.02em]">
                         The platforms institutions decide on<span class="text-primary">.</span>
@@ -86,12 +81,8 @@ const promises = ['Sovereign by design', 'Auditable', 'Air-gapped', 'On-premise'
                         alt=""
                         loading="eager"
                         decoding="async"
-                        style="-webkit-mask-image: linear-gradient(to top left, transparent 0%, transparent 18%, black 48%); mask-image: linear-gradient(to top left, transparent 0%, transparent 18%, black 48%);"
-                        class="absolute inset-0 w-full h-full object-cover object-[58%_22%] scale-[1.3] select-none"
+                        class="absolute inset-0 w-full h-full object-cover object-[55%_18%] scale-[1.55] select-none"
                     >
-                    <div class="absolute bottom-5 right-5 lg:bottom-7 lg:right-7 text-[10px] font-semibold uppercase tracking-[0.22em] text-drygray-100/55 backdrop-blur-sm bg-white/30 px-2.5 py-1 rounded-full">
-                        AlpOS · Ontology
-                    </div>
                 </div>
             </div>
         </section>

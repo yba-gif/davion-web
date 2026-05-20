@@ -48,7 +48,7 @@ function navigateToVerify() {
                         :transition="{ duration: 0.8, delay: 0.4, ease: 'easeOut' }"
                         class="m-0"
                     >
-                        <span class="font-degular">Incubators</span>
+                        <span class="font-degular">Defense</span>
                         <span class="text-primary font-degular">.</span>
                     </Motion>
                     <Motion
@@ -58,7 +58,7 @@ function navigateToVerify() {
                         :transition="{ duration: 0.8, delay: 0.6, ease: 'easeOut' }"
                         class="m-0 whitespace-nowrap font-degular"
                     >
-                        Early Capital Partners
+                        Intelligence
                     </Motion>
                     <Motion
                         tag="p"
@@ -67,7 +67,7 @@ function navigateToVerify() {
                         :transition="{ duration: 0.8, delay: 0.8, ease: 'easeOut' }"
                         class="m-0 whitespace-nowrap font-degular"
                     >
-                        On-Chain Builders
+                        Critical Infrastructure
                     </Motion>
                 </div>
             </Motion>
@@ -79,7 +79,7 @@ function navigateToVerify() {
                 class="min-[980px]:w-[492px] flex items-start justify-start h-12 text-base"
             >
                 <div class="leading-[150%] font-medium">
-                    We support founders with early investment, deep incubation, and direct access to a global network of operators, partners, and ecosystem leaders.
+                    Davion builds sovereign software for the institutions that cannot afford to get critical decisions wrong — from ingest to act, under your jurisdiction, your access controls, your audit trail.
                 </div>
             </Motion>
             <Motion
@@ -103,7 +103,7 @@ function navigateToVerify() {
                         class="w-[272px] max-[980px]:w-full"
                         @click="scrollToFeatures"
                     >
-                        Our Services
+                        Our Solutions
                     </Button>
                 </Motion> -->
                 <Motion
@@ -120,7 +120,7 @@ function navigateToVerify() {
                         class="w-[230px] max-[980px]:w-full"
                         @click="navigateToVerify"
                     >
-                        Verify Base1 Team
+                        Verify Davion Team
                     </Button>
                 </Motion>
             </Motion>
