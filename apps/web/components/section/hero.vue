@@ -24,8 +24,8 @@ function scrollToFeatures() {
     }
 }
 
-function navigateToVerify() {
-    router.push('/team-verify')
+function navigateToContact() {
+    router.push('/contact')
 }
 </script>
 
@@ -114,13 +114,13 @@ function navigateToVerify() {
                     class="w-[230px] max-[980px]:w-full"
                 >
                     <Button
-                        variant="outline"
+                        variant="primary"
                         size="sm"
-                        icon="base:verified"
+                        icon="base:arrow"
                         class="w-[230px] max-[980px]:w-full"
-                        @click="navigateToVerify"
+                        @click="navigateToContact"
                     >
-                        Verify Davion Team
+                        Request a briefing
                     </Button>
                 </Motion>
             </Motion>

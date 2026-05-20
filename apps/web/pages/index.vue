@@ -59,33 +59,8 @@ const promises = ['Sovereign by design', 'Auditable', 'Air-gapped', 'On-premise'
 
 <template>
     <div class="flex flex-col gap-4">
-        <!-- 1. Mission hero — base1's signature spiral motif, clean right-bleed composition -->
-        <section class="bg-azure rounded-3xl overflow-hidden">
-            <div class="grid lg:grid-cols-2 lg:items-stretch">
-                <div class="px-6 md:px-12 lg:px-16 py-20 md:py-28 lg:py-32 xl:py-36">
-                    <CommonSup title="Sovereign software" />
-                    <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.02] sm:text-[56px] md:text-[64px] lg:text-[72px] xl:text-[84px] lg:leading-[0.95] tracking-[-0.02em]">
-                        The platforms institutions decide on<span class="text-primary">.</span>
-                    </h1>
-                    <p class="text-b2 text-drygray-default mt-8 max-w-md">
-                        Davion builds sovereign software for data intelligence and AI — used by defense, intelligence, critical infrastructure, regulated industry, and the public sector to turn data into meaning and decisions into action, all under their full control.
-                    </p>
-                    <div class="mt-10 flex flex-wrap items-center gap-3">
-                        <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Request a briefing</CommonButton></NuxtLink>
-                        <NuxtLink to="/solutions/alpos"><CommonButton variant="outline" icon="base:arrow">Explore AlpOS</CommonButton></NuxtLink>
-                    </div>
-                </div>
-                <div class="relative h-[360px] sm:h-[480px] lg:h-auto lg:min-h-[640px] overflow-hidden">
-                    <img
-                        src="/section_background.png"
-                        alt=""
-                        loading="eager"
-                        decoding="async"
-                        class="absolute inset-0 w-full h-full object-cover object-[55%_18%] scale-[1.55] select-none"
-                    >
-                </div>
-            </div>
-        </section>
+        <!-- 1. Mission hero — base1's original SectionHero structure with Davion copy/route -->
+        <SectionHero />
 
         <!-- 2. Promise triad -->
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
