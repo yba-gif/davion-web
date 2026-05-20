@@ -32,18 +32,43 @@ const sectors = ['Defense', 'Intelligence', 'Critical infrastructure', 'Governme
 
 <template>
     <div class="flex flex-col gap-4">
-        <!-- 1. Mission hero -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28 lg:py-36">
-            <CommonSup title="Sovereign software" />
-            <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] sm:text-[60px] md:text-[72px] lg:text-[96px] lg:leading-[0.98] tracking-tight max-w-5xl">
-                The platforms institutions decide on.
-            </h1>
-            <p class="text-b2 text-drygray-default mt-8 max-w-2xl">
-                Davion builds sovereign software for data intelligence and AI — used by defense, intelligence, critical infrastructure, regulated industry, and the public sector to turn data into meaning and decisions into action, all under their full control.
-            </p>
-            <div class="mt-10 flex flex-wrap items-center gap-3">
-                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Request a briefing</CommonButton></NuxtLink>
-                <NuxtLink to="/solutions/alpos"><CommonButton variant="outline" icon="base:arrow">Explore AlpOS</CommonButton></NuxtLink>
+        <!-- 1. Mission hero — text-left composition with base1's signature spiral motif on the right -->
+        <section class="bg-aliceblue rounded-3xl overflow-hidden relative">
+            <!-- Hairline grid baseline (instrument-grade detail under the composition) -->
+            <div
+                class="absolute inset-0 pointer-events-none opacity-[0.04] mix-blend-multiply"
+                aria-hidden="true"
+                style="background-image: linear-gradient(to right, currentColor 1px, transparent 1px); background-size: 80px 80px; color: #212121;"
+            />
+            <div class="relative grid lg:grid-cols-2 lg:items-stretch">
+                <div class="relative z-10 px-6 md:px-12 lg:px-16 py-20 md:py-28 lg:py-32 xl:py-36">
+                    <CommonSup title="Sovereign software" />
+                    <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.02] sm:text-[56px] md:text-[64px] lg:text-[72px] xl:text-[84px] lg:leading-[0.95] tracking-[-0.02em]">
+                        The platforms institutions decide on.
+                    </h1>
+                    <p class="text-b2 text-drygray-default mt-8 max-w-md">
+                        Davion builds sovereign software for data intelligence and AI — used by defense, intelligence, critical infrastructure, regulated industry, and the public sector to turn data into meaning and decisions into action, all under their full control.
+                    </p>
+                    <div class="mt-10 flex flex-wrap items-center gap-3">
+                        <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Request a briefing</CommonButton></NuxtLink>
+                        <NuxtLink to="/solutions/alpos"><CommonButton variant="outline" icon="base:arrow">Explore AlpOS</CommonButton></NuxtLink>
+                    </div>
+                </div>
+                <div class="relative h-[360px] sm:h-[480px] lg:h-auto lg:min-h-[640px] overflow-hidden">
+                    <NuxtImg
+                        src="/section_background.png"
+                        alt=""
+                        loading="eager"
+                        format="webp"
+                        quality="85"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        class="absolute inset-0 w-full h-full object-cover object-center select-none"
+                    />
+                    <!-- Mono annotation, bottom-right — editorial, instrument-grade -->
+                    <div class="absolute bottom-5 right-5 lg:bottom-7 lg:right-7 text-[10px] font-semibold uppercase tracking-[0.22em] text-drygray-100/55 backdrop-blur-sm bg-white/30 px-2.5 py-1 rounded-full">
+                        AlpOS · Ontology
+                    </div>
+                </div>
             </div>
         </section>
 
