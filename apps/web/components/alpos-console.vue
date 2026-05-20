@@ -1,19 +1,22 @@
 <script setup lang="ts">
-// AlpOS Console — a 3-slide product preview carousel for the home AlpOS teaser.
-// Each slide is a fake product window showing a different layer of AlpOS in action:
-// Ontology investigation -> Ingest pipeline -> Decide / agentic copilot.
+// AlpOS Console — 3-slide product preview carousel for the home AlpOS teaser.
+// Each slide tells ONE clear story in plain language:
+//   1. Alert — "we found a suspicious pattern"
+//   2. Pipeline — "we ingest a lot, from these sources, in real time"
+//   3. Copilot — "the AI suggests this action, you approve"
 import { Autoplay, Pagination } from 'swiper/modules'
 
-const slides = [
-    { label: 'Ontology · Investigation', meta: '14 entities · 9 events' },
-    { label: 'Ingest · Pipeline', meta: '8 connectors · live' },
-    { label: 'Decide · Copilot', meta: 'recommendation' },
+const sources = [
+    { name: 'Banking systems', rate: '4.2k / hr' },
+    { name: 'Document archive', rate: '5.6k / hr' },
+    { name: 'Market data feed', rate: '1.8k / hr' },
+    { name: 'Public records', rate: '0.8k / hr' },
 ]
 </script>
 
 <template>
     <div class="bg-white rounded-2xl overflow-hidden shadow-xl ring-1 ring-drygray-200">
-        <!-- Window chrome (shared across all slides for continuity) -->
+        <!-- Window chrome (shared) -->
         <div class="bg-whitesmoke-100 px-4 py-3 border-b border-drygray-200 flex items-center justify-between">
             <div class="flex items-center gap-1.5">
                 <span class="w-2.5 h-2.5 rounded-full bg-drygray-default/30" aria-hidden="true" />
@@ -37,80 +40,66 @@ const slides = [
             :pagination="{ clickable: true, bulletClass: 'custom-bullet', bulletActiveClass: 'custom-bullet-active' }"
             class="alpos-console-swiper"
         >
-            <!-- Slide 1: Ontology · Investigation -->
+            <!-- Slide 1: Detect — one clear alert with plain-English facts -->
             <SwiperSlide>
-                <div class="bg-white px-5 py-4">
-                    <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-3">
-                        <span>{{ slides[0].label }}</span>
-                        <span>{{ slides[0].meta }}</span>
+                <div class="bg-white px-5 py-5">
+                    <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-4">
+                        <span class="flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary" aria-hidden="true" />
+                            Detect
+                        </span>
+                        <span>1 alert</span>
                     </div>
-                    <svg viewBox="0 0 380 220" class="w-full h-auto" role="img" aria-label="AlpOS ontology graph snapshot — flagged entity linked to a transaction across two companies and an account.">
-                        <defs>
-                            <pattern id="alpos-grid-1" width="20" height="20" patternUnits="userSpaceOnUse">
-                                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.04)" stroke-width="1" />
-                            </pattern>
-                        </defs>
-                        <rect width="380" height="220" fill="url(#alpos-grid-1)" />
-                        <g stroke="rgba(0,0,0,0.12)" stroke-width="1" fill="none">
-                            <path d="M 70 50 L 180 100" />
-                            <path d="M 70 50 L 70 130" />
-                            <path d="M 70 130 L 180 100" />
-                            <path d="M 180 100 L 290 170" />
-                            <path d="M 290 170 L 340 100" />
-                            <path d="M 290 50 L 340 100" />
-                        </g>
-                        <path d="M 180 100 L 290 50" stroke="#60E576" stroke-width="2" fill="none" stroke-dasharray="4 3">
-                            <animate attributeName="stroke-dashoffset" from="14" to="0" dur="1.4s" repeatCount="indefinite" />
-                        </path>
-                        <circle cx="290" cy="50" r="22" fill="none" stroke="#60E576" stroke-width="1.5" opacity="0.5">
-                            <animate attributeName="r" from="22" to="38" dur="2s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" from="0.5" to="0" dur="2s" repeatCount="indefinite" />
-                        </circle>
-                        <g font-family="'Switzer', sans-serif">
-                            <circle cx="70" cy="50" r="18" fill="#FFFFFF" stroke="rgba(0,0,0,0.25)" stroke-width="1.2" />
-                            <text x="70" y="54" text-anchor="middle" font-size="10" font-weight="700" fill="#212121">A</text>
-                            <text x="70" y="80" text-anchor="middle" font-size="9" font-weight="500" fill="#979797">Acme Corp</text>
-                            <circle cx="70" cy="130" r="16" fill="#FFFFFF" stroke="rgba(0,0,0,0.25)" stroke-width="1.2" />
-                            <text x="70" y="134" text-anchor="middle" font-size="10" font-weight="700" fill="#212121">B</text>
-                            <text x="70" y="158" text-anchor="middle" font-size="9" font-weight="500" fill="#979797">Beta Hold.</text>
-                            <rect x="158" y="84" width="44" height="32" rx="6" fill="#212121" />
-                            <text x="180" y="104" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">TX</text>
-                            <text x="180" y="134" text-anchor="middle" font-size="9" font-weight="500" fill="#979797">$ 2,400</text>
-                            <circle cx="290" cy="50" r="20" fill="#60E576" />
-                            <text x="290" y="54" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">P</text>
-                            <text x="290" y="82" text-anchor="middle" font-size="9" font-weight="600" fill="#212121">Person · flagged</text>
-                            <circle cx="290" cy="170" r="16" fill="#FFFFFF" stroke="rgba(0,0,0,0.25)" stroke-width="1.2" />
-                            <text x="290" y="174" text-anchor="middle" font-size="11" font-weight="700" fill="#212121">$</text>
-                            <text x="290" y="196" text-anchor="middle" font-size="9" font-weight="500" fill="#979797">Account</text>
-                            <circle cx="340" cy="100" r="10" fill="#FFFFFF" stroke="rgba(0,0,0,0.15)" stroke-width="1" stroke-dasharray="2 2" />
-                        </g>
-                    </svg>
-                    <div class="border-t border-drygray-200 mt-3 pt-3 flex items-start gap-2.5">
-                        <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" aria-hidden="true" />
-                        <p class="text-[12px] font-medium text-drygray-100 leading-snug">
-                            Anomaly · Entity <span class="font-mono">P</span> linked to 3 dormant accounts in 14 days. Recommend case open.
-                        </p>
+
+                    <!-- The alert: big and obvious -->
+                    <p class="font-degular font-bold text-drygray-100 text-[22px] leading-tight">
+                        Suspicious activity detected<span class="text-primary">.</span>
+                    </p>
+                    <p class="text-[13px] text-drygray-default mt-2">
+                        $2,400 transferred between 3 previously dormant accounts.
+                    </p>
+
+                    <!-- The 3 facts behind it -->
+                    <ul class="mt-5 space-y-2.5">
+                        <li class="flex items-start gap-3 text-[12px] text-drygray-100">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" aria-hidden="true" />
+                            <span>Same person on file for all three accounts</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-[12px] text-drygray-100">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" aria-hidden="true" />
+                            <span>Accounts activated within the last 14 days</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-[12px] text-drygray-100">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" aria-hidden="true" />
+                            <span>Matches a known fraud pattern (AML-12)</span>
+                        </li>
+                    </ul>
+
+                    <!-- Recommendation -->
+                    <div class="border-t border-drygray-200 mt-5 pt-3 flex items-center justify-between">
+                        <p class="text-[11px] text-drygray-default">Recommendation</p>
+                        <p class="text-[12px] font-medium text-drygray-100">Open a case for review</p>
                     </div>
                 </div>
             </SwiperSlide>
 
-            <!-- Slide 2: Ingest · Pipeline -->
+            <!-- Slide 2: Ingest — big number + sparkline + plain-English sources -->
             <SwiperSlide>
-                <div class="bg-white px-5 py-4">
-                    <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-3">
-                        <span>{{ slides[1].label }}</span>
-                        <span>{{ slides[1].meta }}</span>
+                <div class="bg-white px-5 py-5">
+                    <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-4">
+                        <span class="flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary" aria-hidden="true" />
+                            Live data
+                        </span>
+                        <span>{{ sources.length }} sources connected</span>
                     </div>
 
-                    <!-- Big number + sparkline -->
-                    <div class="flex items-end justify-between gap-6 mb-4">
+                    <div class="flex items-end justify-between gap-6 mb-5">
                         <div>
                             <p class="font-degular font-bold text-drygray-100 text-[44px] leading-none tracking-tight">
                                 12,400
                             </p>
-                            <p class="text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mt-2">
-                                events / hr
-                            </p>
+                            <p class="text-[11px] text-drygray-default mt-2">events per hour</p>
                         </div>
                         <svg viewBox="0 0 200 60" class="w-1/2 h-12" preserveAspectRatio="none" aria-label="Throughput sparkline" role="img">
                             <g fill="rgba(96, 229, 118, 0.18)">
@@ -130,86 +119,61 @@ const slides = [
                                 <rect x="156" y="8" width="8" height="52" />
                                 <rect x="168" y="16" width="8" height="44" />
                                 <rect x="180" y="12" width="8" height="48" />
-                                <rect x="192" y="6" width="8" height="54" />
                             </g>
-                            <!-- Last bar highlighted -->
                             <rect x="192" y="6" width="8" height="54" fill="#60E576" />
                         </svg>
                     </div>
 
-                    <!-- Connector list -->
-                    <div class="border-t border-drygray-200 pt-3 space-y-2">
-                        <div v-for="c in [
-                            { name: 'SAP · ERP', state: 'live', rate: '4.2k/hr' },
-                            { name: 'Kafka · stream', state: 'live', rate: '5.6k/hr' },
-                            { name: 'S3 · archive', state: 'live', rate: '1.8k/hr' },
-                            { name: 'OSINT · feed', state: 'live', rate: '0.8k/hr' },
-                        ]" :key="c.name" class="flex items-center justify-between text-[11px]">
-                            <div class="flex items-center gap-2.5 min-w-0">
+                    <div class="border-t border-drygray-200 pt-3 space-y-2.5">
+                        <div v-for="s in sources" :key="s.name" class="flex items-center justify-between text-[12px]">
+                            <div class="flex items-center gap-2.5">
                                 <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" aria-hidden="true" />
-                                <span class="font-mono text-drygray-100 truncate">{{ c.name }}</span>
+                                <span class="text-drygray-100">{{ s.name }}</span>
                             </div>
-                            <div class="flex items-center gap-3 flex-shrink-0">
-                                <span class="text-[9px] font-mono uppercase tracking-[0.15em] text-drygray-default">{{ c.rate }}</span>
-                                <span class="text-[9px] font-mono uppercase tracking-[0.15em] text-primary">{{ c.state }}</span>
-                            </div>
+                            <span class="text-[11px] text-drygray-default">{{ s.rate }}</span>
                         </div>
                     </div>
                 </div>
             </SwiperSlide>
 
-            <!-- Slide 3: Decide · Copilot -->
+            <!-- Slide 3: Decide — plain-English AI recommendation with citations + action -->
             <SwiperSlide>
-                <div class="bg-white px-5 py-4">
+                <div class="bg-white px-5 py-5">
                     <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-4">
-                        <span>{{ slides[2].label }}</span>
-                        <span>{{ slides[2].meta }}</span>
+                        <span class="flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary" aria-hidden="true" />
+                            AI recommendation
+                        </span>
+                        <span>Confidence 92%</span>
                     </div>
 
-                    <!-- Copilot message bubble -->
                     <div class="flex items-start gap-3 mb-4">
-                        <div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                            <span class="text-white font-degular font-bold text-[12px]">D</span>
+                        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-degular font-bold text-[13px]">D</span>
                         </div>
-                        <div class="flex-1 min-w-0">
+                        <div class="flex-1 min-w-0 pt-0.5">
                             <p class="text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-1.5">
                                 Davion copilot
                             </p>
-                            <p class="text-[12px] text-drygray-100 leading-relaxed">
-                                Based on 4 entities and 3 transactions in the past 14 days, I recommend opening a case on entity <span class="font-mono font-semibold">P</span>. The pattern matches <span class="font-mono font-semibold">AML-12</span> (dormant-account flow).
+                            <p class="text-[13px] text-drygray-100 leading-relaxed">
+                                I'd recommend opening a case on this person. Three suspicious transactions in 14 days match a known fraud pattern.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Cited sources -->
-                    <div class="bg-whitesmoke-100 rounded-lg p-3 mb-4">
-                        <p class="text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-2">
-                            Cited · 4 sources
-                        </p>
-                        <ul class="space-y-1.5">
-                            <li v-for="src in [
-                                'kyc.persons / id=P-8401',
-                                'tx.movements / 2026-05-08..05-22',
-                                'accounts.dormant / cluster #14',
-                                'policy.aml / pattern AML-12',
-                            ]" :key="src" class="flex items-center gap-2 text-[11px] font-mono text-drygray-100">
-                                <span class="w-1 h-1 rounded-full bg-primary flex-shrink-0" aria-hidden="true" />
-                                <span class="truncate">{{ src }}</span>
-                            </li>
-                        </ul>
+                    <div class="bg-whitesmoke-100 rounded-lg p-3 mb-5 flex items-center justify-between text-[11px]">
+                        <span class="text-drygray-default">Based on</span>
+                        <span class="text-drygray-100 font-medium">4 sources · 3 transactions · 1 policy match</span>
                     </div>
 
-                    <!-- Action buttons -->
                     <div class="flex items-center gap-2">
-                        <button type="button" class="text-[11px] font-medium px-3 py-2 bg-primary text-white rounded-lg" disabled>
+                        <button type="button" class="text-[12px] font-medium px-4 py-2 bg-primary text-white rounded-lg" disabled>
                             Open case
                         </button>
-                        <button type="button" class="text-[11px] font-medium px-3 py-2 bg-white border border-drygray-200 text-drygray-100 rounded-lg" disabled>
+                        <button type="button" class="text-[12px] font-medium px-4 py-2 bg-white border border-drygray-200 text-drygray-100 rounded-lg" disabled>
                             Dismiss
                         </button>
-                        <span class="text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default ml-auto">
-                            HITL required
-                        </span>
+                        <span class="text-[10px] text-drygray-default ml-auto">Needs human approval</span>
                     </div>
                 </div>
             </SwiperSlide>
@@ -219,7 +183,6 @@ const slides = [
 
 <style scoped>
 .alpos-console-swiper {
-    --swiper-pagination-bottom: 14px;
     padding-bottom: 32px;
 }
 
