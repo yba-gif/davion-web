@@ -10,10 +10,32 @@ const nav = [
     {
         label: 'Solutions',
         children: [
-            { label: 'AlpOS', to: '/solutions/alpos', flagship: true, desc: 'The sovereign platform underneath every solution.' },
+            { label: 'AlpOS', to: '/solutions/alpos', flagship: true, desc: 'The sovereign AI platform underneath every solution.' },
             { label: 'Digital Transformation', to: '/solutions/digital-transformation' },
             { label: 'Cybersecurity', to: '/solutions/cybersecurity' },
             { label: 'OSINT', to: '/solutions/osint' },
+        ],
+    },
+    {
+        label: 'Capabilities',
+        children: [
+            { label: 'RAG over your ontology', to: '/capabilities/rag' },
+            { label: 'Geospatial analytics', to: '/capabilities/geospatial' },
+            { label: 'Video intelligence', to: '/capabilities/video-intelligence' },
+            { label: 'Audio analysis', to: '/capabilities/audio-analysis' },
+            { label: 'Machine translation', to: '/capabilities/translation' },
+            { label: 'Data acquisition', to: '/capabilities/data-acquisition' },
+        ],
+    },
+    {
+        label: 'Industries',
+        children: [
+            { label: 'Financial Services', to: '/industries/financial-services', flagship: true, desc: 'Market & risk, compliance, client intelligence, resilience.' },
+            { label: 'Energy', to: '/industries/energy' },
+            { label: 'Manufacturing', to: '/industries/manufacturing' },
+            { label: 'Life Sciences', to: '/industries/life-sciences' },
+            { label: 'Government', to: '/industries/government' },
+            { label: 'Defense & Intelligence', to: '/industries/defense-intelligence' },
         ],
     },
     {

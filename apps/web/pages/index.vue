@@ -62,6 +62,9 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
         <!-- 1. Mission hero — base1's original SectionHero structure with Davion copy/route -->
         <SectionHero />
 
+        <!-- 1.5. Trusted-by strip (placeholder treatment — names withheld) -->
+        <TrustedByStrip />
+
         <!-- 2. Promise triad -->
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
