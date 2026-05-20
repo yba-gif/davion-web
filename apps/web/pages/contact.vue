@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'Engage',
-    description: 'Request a briefing or contact Davion. Consultative intake — tell us what you are trying to decide.',
+    description: 'Book a demo or speak to an expert. Consultative intake — tell us what you are trying to decide.',
 })
 
 const intents = [
@@ -32,7 +32,7 @@ const intents = [
             </h2>
             <div class="mt-8 bg-white rounded-2xl divide-y divide-drygray-200">
                 <div v-for="intent in intents" :key="intent.label" class="grid lg:grid-cols-12 gap-4 px-6 md:px-8 py-6">
-                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary self-center">{{ intent.label }}</p>
+                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text self-center">{{ intent.label }}</p>
                     <p class="lg:col-span-9 text-b2 text-drygray-100">{{ intent.desc }}</p>
                 </div>
             </div>

@@ -26,7 +26,7 @@
                 class="relative text-5xl max-[950px]:text-4xl tracking-[-0.5px] leading-[100%] font-semibold font-degular-display-demo inline-block"
             >
                 <span class="font-degular">Projects We've Invested In</span>
-                <span class="text-primary">.</span>
+                <span class="text-primary-text">.</span>
             </Motion>
             <Motion
                 tag="div"

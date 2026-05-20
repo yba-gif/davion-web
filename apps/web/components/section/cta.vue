@@ -36,7 +36,7 @@ function navigateToVerify() {
                     :transition="{ duration: 0.6, delay: 0.4, ease: 'easeOut' }"
                     class="font-degular"
                 >
-                    Early<span class="text-primary">.</span>
+                    Early<span class="text-primary-text">.</span>
                 </Motion>
                 <Motion
                     tag="span"
@@ -45,7 +45,7 @@ function navigateToVerify() {
                     :transition="{ duration: 0.6, delay: 0.6, ease: 'easeOut' }"
                     class="font-degular"
                 >
-                    Real<span class="text-primary font-degular">.</span>
+                    Real<span class="text-primary-text font-degular">.</span>
                 </Motion>
                 <br>
                 <Motion
@@ -55,7 +55,7 @@ function navigateToVerify() {
                     :transition="{ duration: 0.6, delay: 0.8, ease: 'easeOut' }"
                     class="font-degular"
                 >
-                    Moving<span class="text-primary font-degular">.</span>
+                    Moving<span class="text-primary-text font-degular">.</span>
                 </Motion>
             </Motion>
 

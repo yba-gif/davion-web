@@ -7,7 +7,7 @@ useSeoMeta({ title: 'RAG over your ontology', description: 'Retrieval-augmented 
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
             <CommonSup title="AI capability · RAG" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
-                Retrieval-augmented generation, grounded in your ontology<span class="text-primary">.</span>
+                Retrieval-augmented generation, grounded in your ontology<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 AlpOS RAG runs against your governed ontology and document corpus — never the open web. Every output cites its source. Every retrieval respects access control. AI you can defend in audit.
@@ -21,7 +21,7 @@ useSeoMeta({ title: 'RAG over your ontology', description: 'Retrieval-augmented 
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <CommonSup title="Underneath" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                Bundled with AlpOS<span class="text-primary">.</span>
+                Bundled with AlpOS<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 RAG runs inside AlpOS — grounded against your ontology, audited end to end, deployable on-premise, air-gapped, or in a sovereign cloud.

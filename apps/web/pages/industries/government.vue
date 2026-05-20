@@ -7,7 +7,7 @@ useSeoMeta({ title: 'Government', description: 'Sovereign AI for the public sect
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
             <CommonSup title="Industries · Government" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
-                Public-sector decisioning at population scale<span class="text-primary">.</span>
+                Public-sector decisioning at population scale<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 Davion integrates data across agencies that have historically refused to integrate, with sovereign AI that respects classification, residency, and citizen-data law — audit by design.
@@ -21,7 +21,7 @@ useSeoMeta({ title: 'Government', description: 'Sovereign AI for the public sect
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <CommonSup title="Underneath" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                Built on AlpOS<span class="text-primary">.</span>
+                Built on AlpOS<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 Government deployments run on AlpOS — the sovereign AI platform. Ingest, ontology, analytics, AI, decisioning, action — governed end to end across classification boundaries and inter-agency exchange.

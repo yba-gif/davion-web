@@ -8,8 +8,10 @@ export default defineEventHandler(async (event) => {
         const clientIP = getHeader(event, 'x-forwarded-for') || getHeader(event, 'x-real-ip') || getHeader(event, 'cf-connecting-ip') || 'unknown'
         const userAgent = getHeader(event, 'user-agent') || 'unknown'
 
-        const country = getHeader(event, 'cf-ipcountry') || 'unknown'
-        const city = 'unknown'
+        // country is VARCHAR(2) (ISO 3166-1 alpha-2). Writing 'unknown' (7 chars)
+        // overflows and 500s every page view. Use null when no header is present.
+        const country = getHeader(event, 'cf-ipcountry') || null
+        const city = null
 
         await db.insert(analytics).values({
             eventType: body.eventType,

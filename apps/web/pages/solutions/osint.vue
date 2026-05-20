@@ -35,7 +35,7 @@ const useCases = [
                 Multi-source collection, correlation, and synthesis — anonymous, secure, and compliant — for the public sector and corporate risk. The investigation runs inside your perimeter.
             </p>
             <div class="mt-10">
-                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Request an OSINT demo</CommonButton></NuxtLink>
+                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
             </div>
         </section>
 
@@ -61,7 +61,7 @@ const useCases = [
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div v-for="s in sources" :key="s.name" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Source</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Source</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ s.name }}</p>
                     <p class="text-b1 text-drygray-default mt-3">{{ s.body }}</p>
                 </div>
@@ -77,7 +77,7 @@ const useCases = [
             </div>
             <div class="bg-whitesmoke-100 rounded-2xl divide-y divide-drygray-200">
                 <div v-for="e in engine" :key="e.label" class="grid lg:grid-cols-12 gap-4 px-6 py-5">
-                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary self-center">{{ e.label }}</p>
+                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text self-center">{{ e.label }}</p>
                     <p class="lg:col-span-9 text-b2 text-drygray-100">{{ e.body }}</p>
                 </div>
             </div>
@@ -92,10 +92,10 @@ const useCases = [
             </div>
             <div class="grid md:grid-cols-2 gap-4">
                 <div v-for="u in useCases" :key="u.audience" class="bg-white rounded-2xl p-8">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ u.audience }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ u.audience }}</p>
                     <ul class="mt-4 space-y-3">
                         <li v-for="ex in u.examples" :key="ex" class="text-b2 text-drygray-100 flex items-center gap-3">
-                            <span class="text-primary" aria-hidden="true">·</span>
+                            <span class="text-primary-text" aria-hidden="true">·</span>
                             {{ ex }}
                         </li>
                     </ul>
@@ -115,7 +115,7 @@ const useCases = [
                     </p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right">
-                    <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Request an OSINT demo</CommonButton></NuxtLink>
+                    <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
                 </div>
             </div>
         </section>

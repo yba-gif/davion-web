@@ -80,7 +80,7 @@ function handleClearError() {
             >
                 <div class="text-6xl md:text-7xl font-degular font-semibold leading-none tracking-[-1px] text-drygray-100">
                     <span>{{ errorTitle.first }}</span>
-                    <span class="text-primary">{{ errorTitle.middle }}</span>
+                    <span class="text-primary-text">{{ errorTitle.middle }}</span>
                     <span>{{ errorTitle.last }}</span>
                 </div>
             </Motion>
@@ -93,7 +93,7 @@ function handleClearError() {
                 :transition="{ duration: 0.5, delay: 0.3, ease: 'easeOut' }"
                 class="text-2xl md:text-3xl font-degular font-semibold tracking-[-0.3px] text-drygray-100"
             >
-                {{ errorMessage }}<span class="text-primary">.</span>
+                {{ errorMessage }}<span class="text-primary-text">.</span>
             </Motion>
 
             <!-- Error Description -->

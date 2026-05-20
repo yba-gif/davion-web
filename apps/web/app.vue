@@ -45,7 +45,7 @@ watchEffect(() => {
                 </div>
                 <div class="text-sm text-gray-500">
                     Please check back soon or contact us at
-                    <a :href="`mailto:${settings.contactEmail}`" class="text-primary hover:underline">
+                    <a :href="`mailto:${settings.contactEmail}`" class="text-primary-text hover:underline">
                         {{ settings.contactEmail }}
                     </a>
                 </div>

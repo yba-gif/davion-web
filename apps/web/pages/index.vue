@@ -80,8 +80,9 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
         <!-- 1. Mission hero — base1's original SectionHero structure with Davion copy/route -->
         <SectionHero />
 
-        <!-- 1.5. "We're on the AI journey with" strip (placeholder treatment — names withheld) -->
-        <TrustedByStrip />
+        <!-- TrustedByStrip removed (P0.1) — placeholder proof tiles undermined credibility.
+             Slot reserved for P1.7: a real numbers strip (founding date / languages / connectors). -->
+
 
         <!-- 2. Solutions triad — AlpOS, Cybersecurity, Digital Transformation -->
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
@@ -89,7 +90,7 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
                 <div class="max-w-3xl">
                     <CommonSup title="Solutions" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        The platform<span class="text-primary">.</span> And the solutions built on it<span class="text-primary">.</span>
+                        The platform<span class="text-primary-text">.</span> And the solutions built on it<span class="text-primary-text">.</span>
                     </h2>
                 </div>
                 <p class="text-b2 text-drygray-default max-w-md">
@@ -114,7 +115,7 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
                 <div class="lg:col-span-7">
                     <CommonSup title="Flagship · AlpOS" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        The sovereign AI platform underneath every Davion solution<span class="text-primary">.</span>
+                        The sovereign AI platform underneath every Davion solution<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
                         AlpOS unifies data, ontology, analytics, and agentic AI in one modular platform — ingest to act, governed end to end. Digital Transformation, Cybersecurity, and OSINT are how it is applied.
@@ -135,7 +136,7 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
             <div class="max-w-2xl mb-10 md:mb-14">
                 <CommonSup title="The AI cycle" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    Data → Meaning → Decision → Action<span class="text-primary">.</span>
+                    Data → Meaning → Decision → Action<span class="text-primary-text">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
                     Every Davion deployment runs the same sovereign cycle — from raw data to operational action. The platform stays constant; the surface adapts to the use case.
@@ -143,7 +144,7 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div v-for="step in cycle" :key="step.n" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Step {{ step.n }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Step {{ step.n }}</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ step.title }}</p>
                     <p class="text-b1 text-drygray-default mt-3">{{ step.body }}</p>
                 </div>
@@ -155,12 +156,12 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup title="Sovereign by design" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    Run where you require — only where you require<span class="text-primary">.</span>
+                    Run where you require — only where you require<span class="text-primary-text">.</span>
                 </h2>
             </div>
             <div class="grid sm:grid-cols-3 gap-4">
                 <div v-for="m in sovereignty" :key="m.name" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Mode</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Mode</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ m.name }}</p>
                     <p class="text-b1 text-drygray-default mt-3">{{ m.body }}</p>
                 </div>
@@ -176,13 +177,13 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
                 <div class="lg:col-span-4">
                     <CommonSup title="Industries" />
                     <h2 class="font-degular font-bold text-white mt-4 text-[36px] md:text-[44px] lg:text-[48px] leading-[1.02] tracking-tight">
-                        For every business<span class="text-primary">.</span><br>For every government<span class="text-primary">.</span>
+                        For every business<span class="text-primary-text">.</span><br>For every government<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-white/60 mt-6 max-w-sm">
                         Davion deploys across financial services, energy, manufacturing, life sciences, retail, government, critical infrastructure, and defense — wherever data has to become decisions you can defend.
                     </p>
                     <div class="mt-8">
-                        <NuxtLink to="/industries"><CommonButton variant="outline" size="xs" icon="base:arrow" class="!border-white/30 !text-white hover:!border-primary hover:!text-primary">Explore industries</CommonButton></NuxtLink>
+                        <NuxtLink to="/industries"><CommonButton variant="outline" size="xs" icon="base:arrow" class="!border-white/30 !text-white hover:!border-primary hover:!text-primary-text">Explore industries</CommonButton></NuxtLink>
                     </div>
                 </div>
                 <div class="lg:col-span-8 relative space-y-5">
@@ -210,7 +211,7 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
                 <div>
                     <CommonSup title="Newsroom" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        Dispatches from the work<span class="text-primary">.</span>
+                        Dispatches from the work<span class="text-primary-text">.</span>
                     </h2>
                 </div>
                 <NuxtLink to="/company/newsroom">
@@ -244,8 +245,11 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
 
         <!-- 8. Consultative CTA — frosted-spiral backdrop, massive 3-line headline -->
         <section class="relative rounded-3xl bg-azure overflow-hidden">
+            <!-- P0.6: WebP srcset replaces the 27 MB PNG fallback. Lazy because below fold. -->
             <img
-                src="/section_background.png"
+                src="/section_background-1600.webp"
+                srcset="/section_background-480.webp 480w, /section_background-960.webp 960w, /section_background-1600.webp 1600w, /section_background-2400.webp 2400w"
+                sizes="(min-width: 1024px) 200vw, 100vw"
                 alt=""
                 loading="lazy"
                 decoding="async"
@@ -254,15 +258,15 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
             <div class="relative w-full flex flex-col items-center text-center py-20 md:py-28 lg:py-32 px-6 md:px-12 lg:px-16 backdrop-blur-[80px] bg-gradient-to-b from-azure/30 to-azure/10">
                 <CommonSup title="Engage" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-6 leading-[0.92] tracking-[-0.02em]">
-                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your data<span class="text-primary">.</span></span>
-                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your AI<span class="text-primary">.</span></span>
-                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your decisions<span class="text-primary">.</span></span>
+                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your data<span class="text-primary-text">.</span></span>
+                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your AI<span class="text-primary-text">.</span></span>
+                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your decisions<span class="text-primary-text">.</span></span>
                 </h2>
                 <p class="text-b2 text-drygray-100 mt-10 max-w-xl font-medium">
                     Briefings are consultative and tailored. Bring your data architecture, your constraints, and your operational reality. We will bring the right people from our side.
                 </p>
                 <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
-                    <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Request a briefing</CommonButton></NuxtLink>
+                    <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
                     <a href="mailto:briefings@davion.com"><CommonButton variant="outline" icon="base:arrow">briefings@davion.com</CommonButton></a>
                 </div>
             </div>

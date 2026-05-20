@@ -7,7 +7,7 @@ useSeoMeta({ title: 'Machine translation', description: '60+ languages, with pro
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
             <CommonSup title="AI capability · Translation" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
-                Translation that respects your perimeter<span class="text-primary">.</span>
+                Translation that respects your perimeter<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 AlpOS Translation runs 60+ languages inside your perimeter — text, audio, documents — with provenance for every translation and access control on every source. No third-party API. No leakage.
@@ -21,7 +21,7 @@ useSeoMeta({ title: 'Machine translation', description: '60+ languages, with pro
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <CommonSup title="Underneath" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                Bundled with AlpOS<span class="text-primary">.</span>
+                Bundled with AlpOS<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 Translation runs inside AlpOS — grounded against your ontology, audited end to end, deployable on-premise, air-gapped, or in a sovereign cloud.

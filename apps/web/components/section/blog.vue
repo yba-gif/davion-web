@@ -83,7 +83,7 @@ onMounted(async () => {
             :transition="{ duration: 0.8, delay: 0.2, ease: 'easeOut' }"
             class="text-5xl font-degular text-drygray-100 font-semibold tracking-[-0.5px] leading-[110%]"
         >
-            What We're Seeing<span class="text-primary">.</span>
+            What We're Seeing<span class="text-primary-text">.</span>
         </Motion>
 
         <Motion

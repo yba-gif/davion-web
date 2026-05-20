@@ -14,6 +14,10 @@ const config: Config = {
         extend: {
             colors: {
                 primary: '#60E576',
+                // AA-safe shade for green-on-white TEXT (eyebrows, badges, hovers,
+                // headline `.` accents). Contrast against #FFFFFF is ~5.3:1.
+                // Decoration (dots, fills, borders) keeps `primary` (#60E576).
+                'primary-text': '#2A8B3C',
                 dark: '#212121',
                 drywhite: '#FEFEFE',
                 azure: '#e0f1f3',

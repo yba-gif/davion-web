@@ -88,7 +88,7 @@ const lifecycle = [
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div v-for="p in principles" :key="p.label" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ p.label }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ p.label }}</p>
                     <p class="text-b2 text-drygray-100 mt-3 leading-relaxed">{{ p.body }}</p>
                 </div>
             </div>
@@ -117,7 +117,7 @@ const lifecycle = [
                     </thead>
                     <tbody>
                         <tr v-for="(row, i) in deploymentMatrix" :key="row.attribute" :class="[i % 2 === 0 ? 'bg-white' : 'bg-whitesmoke-100', 'border-t border-drygray-200']">
-                            <td class="px-5 py-4 align-top"><span class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ row.attribute }}</span></td>
+                            <td class="px-5 py-4 align-top"><span class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ row.attribute }}</span></td>
                             <td class="px-5 py-4 text-b1 text-drygray-100">{{ row.onprem }}</td>
                             <td class="px-5 py-4 text-b1 text-drygray-100">{{ row.airgap }}</td>
                             <td class="px-5 py-4 text-b1 text-drygray-100">{{ row.sovereign }}</td>
@@ -137,7 +137,7 @@ const lifecycle = [
             </div>
             <div class="bg-white rounded-2xl divide-y divide-drygray-200">
                 <div v-for="a in accessControl" :key="a.label" class="grid lg:grid-cols-12 gap-4 px-6 py-5">
-                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary self-center">{{ a.label }}</p>
+                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text self-center">{{ a.label }}</p>
                     <p class="lg:col-span-9 text-b2 text-drygray-100">{{ a.body }}</p>
                 </div>
             </div>
@@ -155,7 +155,7 @@ const lifecycle = [
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div v-for="a in auditAttributes" :key="a.label" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ a.label }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ a.label }}</p>
                     <p class="text-b2 text-drygray-100 mt-3 leading-relaxed">{{ a.body }}</p>
                 </div>
             </div>
@@ -173,7 +173,7 @@ const lifecycle = [
             </div>
             <div class="bg-whitesmoke-100 rounded-2xl divide-y divide-drygray-200">
                 <div v-for="s in standards" :key="s.name" class="grid lg:grid-cols-12 gap-4 px-6 py-5">
-                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary self-center">{{ s.name }}</p>
+                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text self-center">{{ s.name }}</p>
                     <p class="lg:col-span-9 text-b2 text-drygray-100">{{ s.body }}</p>
                 </div>
             </div>
@@ -191,7 +191,7 @@ const lifecycle = [
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div v-for="r in responsibleAi" :key="r.label" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ r.label }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ r.label }}</p>
                     <p class="text-b2 text-drygray-100 mt-3 leading-relaxed">{{ r.body }}</p>
                 </div>
             </div>
@@ -209,7 +209,7 @@ const lifecycle = [
             </div>
             <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 <div v-for="step in lifecycle" :key="step.n" class="bg-white rounded-2xl p-5">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ step.n }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ step.n }}</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-2">{{ step.stage }}</p>
                     <p class="text-b1 text-drygray-default mt-3">{{ step.body }}</p>
                 </div>

@@ -14,7 +14,7 @@ useSeoMeta({ title: 'About', description: 'Why Davion exists, what we work on, a
             </p>
             <p class="text-b1 text-drygray-default mt-8">In progress. Full page lands in a subsequent slice.</p>
             <div class="mt-10">
-                <NuxtLink to="/company/careers"><CommonButton variant="primary" icon="base:arrow">Join the mission</CommonButton></NuxtLink>
+                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Speak to an expert</CommonButton></NuxtLink>
             </div>
         </section>
     </div>

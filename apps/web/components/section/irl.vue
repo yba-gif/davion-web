@@ -161,7 +161,7 @@ onUnmounted(() => {
             :transition="{ duration: 0.8, delay: 0.2, ease: 'easeOut' }"
             class="text-2xl md:text-4xl lg:text-5xl font-degular text-drygray-100 font-semibold tracking-[-0.5px] leading-[110%]"
         >
-            We Don't Just Sit Behind Dashboards<span class="text-primary">.</span>
+            We Don't Just Sit Behind Dashboards<span class="text-primary-text">.</span>
         </Motion>
 
         <Motion

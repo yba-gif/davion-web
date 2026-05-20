@@ -22,7 +22,7 @@ const buttonClasses = clsx(
     {
         'rounded-xl bg-primary hover:bg-drygray-100 hover:text-white': props.variant === 'primary',
         'rounded-xl border-drygray-200 hover:border-drygray-100 border-solid border-[1px] hover:border-drygray-300 text-drygray-100': props.variant === 'outline',
-        'text-drygray-100 hover:text-primary whitespace-nowrap': props.variant === 'link',
+        'text-drygray-100 hover:text-primary-text whitespace-nowrap': props.variant === 'link',
         'h-10 py-[11px] px-3 gap-2 text-sm': props.size === 'xs' && props.variant !== 'link',
         'h-[54px] py-[11px] px-3 gap-2 text-base': props.size === 'sm' && props.variant !== 'link',
         'gap-2 text-sm': props.size === 'xs' && props.variant === 'link',

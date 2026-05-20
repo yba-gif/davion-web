@@ -1,6 +1,8 @@
 <script setup lang="ts">
-// Davion header — base1's rounded blurred sticky nav, extended with multi-level dropdowns
-// for the Davion IA (Solutions / Company / Venture).
+// Davion header — base1's rounded blurred sticky nav.
+// P0.7: stub pages pruned from nav. Only pages with real depth are advertised.
+// Routes for the pruned pages remain alive (direct-link traffic still works);
+// they're re-added once content lands per redesign-action-plan §P1–P2.
 const isMobileMenuOpen = ref(false)
 const openDropdown = ref<string | null>(null)
 const headerRef = ref<HTMLElement | null>(null)
@@ -16,38 +18,12 @@ const nav = [
             { label: 'OSINT', to: '/solutions/osint' },
         ],
     },
-    {
-        label: 'Capabilities',
-        children: [
-            { label: 'RAG over your ontology', to: '/capabilities/rag' },
-            { label: 'Geospatial analytics', to: '/capabilities/geospatial' },
-            { label: 'Video intelligence', to: '/capabilities/video-intelligence' },
-            { label: 'Audio analysis', to: '/capabilities/audio-analysis' },
-            { label: 'Machine translation', to: '/capabilities/translation' },
-            { label: 'Data acquisition', to: '/capabilities/data-acquisition' },
-        ],
-    },
-    {
-        label: 'Industries',
-        children: [
-            { label: 'Financial Services', to: '/industries/financial-services', flagship: true, desc: 'Market & risk, compliance, client intelligence, resilience.' },
-            { label: 'Energy', to: '/industries/energy' },
-            { label: 'Manufacturing', to: '/industries/manufacturing' },
-            { label: 'Life Sciences', to: '/industries/life-sciences' },
-            { label: 'Government', to: '/industries/government' },
-            { label: 'Defense & Intelligence', to: '/industries/defense-intelligence' },
-        ],
-    },
-    {
-        label: 'Company',
-        children: [
-            { label: 'About Us', to: '/company/about' },
-            { label: 'Newsroom', to: '/company/newsroom' },
-            { label: 'Careers', to: '/company/careers' },
-            { label: 'Events', to: '/company/events' },
-        ],
-    },
-    { label: 'Venture', to: '/venture' },
+    // Capabilities dropdown removed — all 6 pages are stubs (P0.7).
+    // Industries collapsed to single link → the hub. Sub-pages other than
+    // Financial Services are stubs; surfacing them in nav over-promises.
+    { label: 'Industries', to: '/industries' },
+    { label: 'Trust', to: '/trust' },
+    { label: 'Newsroom', to: '/company/newsroom' },
 ] as const
 
 function toggleDropdown(label: string) {
@@ -96,14 +72,14 @@ onBeforeUnmount(() => {
                     <NuxtLink
                         v-if="'to' in item && item.to"
                         :to="item.to"
-                        class="leading-[150%] font-medium transition-colors hover:text-primary"
+                        class="leading-[150%] font-medium transition-colors hover:text-primary-text"
                     >
                         {{ item.label }}
                     </NuxtLink>
                     <div v-else class="relative">
                         <button
                             type="button"
-                            class="leading-[150%] font-medium transition-colors hover:text-primary inline-flex items-center gap-1.5"
+                            class="leading-[150%] font-medium transition-colors hover:text-primary-text inline-flex items-center gap-1.5"
                             :aria-expanded="openDropdown === item.label"
                             @click.stop="toggleDropdown(item.label)"
                         >
@@ -126,7 +102,7 @@ onBeforeUnmount(() => {
                             >
                                 <div class="flex items-center justify-between gap-4">
                                     <span class="text-drygray-100 font-medium">{{ c.label }}</span>
-                                    <span v-if="'flagship' in c && c.flagship" class="text-primary text-[11px] font-semibold uppercase tracking-wider">Flagship</span>
+                                    <span v-if="'flagship' in c && c.flagship" class="text-primary-text text-[11px] font-semibold uppercase tracking-wider">Flagship</span>
                                 </div>
                                 <p v-if="'desc' in c && c.desc" class="text-drygray-default text-[13px] mt-1">{{ c.desc }}</p>
                             </NuxtLink>
@@ -139,7 +115,7 @@ onBeforeUnmount(() => {
         <!-- Desktop CTA + mobile toggle -->
         <div class="flex items-center gap-3 text-[15px]">
             <NuxtLink to="/contact" class="hidden lg:inline-flex">
-                <CommonButton size="xs" variant="outline" icon="base:arrow">Request a briefing</CommonButton>
+                <CommonButton size="xs" variant="outline" icon="base:arrow">Book a demo</CommonButton>
             </NuxtLink>
             <button
                 type="button"
@@ -161,7 +137,7 @@ onBeforeUnmount(() => {
                     <NuxtLink
                         v-if="'to' in item && item.to"
                         :to="item.to"
-                        class="text-[28px] leading-tight font-degular font-semibold text-drygray-100 hover:text-primary"
+                        class="text-[28px] leading-tight font-degular font-semibold text-drygray-100 hover:text-primary-text"
                         @click="closeAll"
                     >
                         {{ item.label }}
@@ -173,17 +149,17 @@ onBeforeUnmount(() => {
                                 v-for="c in item.children"
                                 :key="c.to"
                                 :to="c.to"
-                                class="text-[22px] font-degular font-semibold text-drygray-100 hover:text-primary inline-flex items-center gap-3"
+                                class="text-[22px] font-degular font-semibold text-drygray-100 hover:text-primary-text inline-flex items-center gap-3"
                                 @click="closeAll"
                             >
                                 {{ c.label }}
-                                <span v-if="'flagship' in c && c.flagship" class="text-primary text-[11px] font-semibold uppercase tracking-wider">Flagship</span>
+                                <span v-if="'flagship' in c && c.flagship" class="text-primary-text text-[11px] font-semibold uppercase tracking-wider">Flagship</span>
                             </NuxtLink>
                         </div>
                     </div>
                 </template>
                 <NuxtLink to="/contact" class="mt-4" @click="closeAll">
-                    <CommonButton variant="primary" icon="base:arrow" class="w-full">Request a briefing</CommonButton>
+                    <CommonButton variant="primary" icon="base:arrow" class="w-full">Book a demo</CommonButton>
                 </NuxtLink>
             </div>
         </div>

@@ -14,7 +14,7 @@ useSeoMeta({ title: 'Venture', description: 'Davion backs and builds in sovereig
             </p>
             <p class="text-b1 text-drygray-default mt-8">Thesis, areas of interest, and intake land in a subsequent slice.</p>
             <div class="mt-10">
-                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Pitch us</CommonButton></NuxtLink>
+                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
             </div>
         </section>
     </div>

@@ -14,7 +14,7 @@ useSeoMeta({ title: 'Careers', description: 'Davion hires for the mission. If yo
             </p>
             <p class="text-b1 text-drygray-default mt-8">Open roles, hiring process, and EVP land in a subsequent slice.</p>
             <div class="mt-10">
-                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Get in touch</CommonButton></NuxtLink>
+                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
             </div>
         </section>
     </div>

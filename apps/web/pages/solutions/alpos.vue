@@ -82,7 +82,7 @@ const outcomes = [
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
             <CommonSup title="Platform · AlpOS" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-5xl">
-                Sovereign AI infrastructure for decisions that can't wait<span class="text-primary">.</span> And can't leak<span class="text-primary">.</span>
+                Sovereign AI infrastructure for decisions that can't wait<span class="text-primary-text">.</span> And can't leak<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 Most organisations can see their data. Few can act on it when it matters. AlpOS closes the gap — one governed environment, from every source to every decision, inside your perimeter.
@@ -97,7 +97,7 @@ const outcomes = [
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
             <CommonSup title="The problem" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[32px] leading-[1.05] md:text-[44px] md:leading-[1.05] tracking-tight max-w-4xl">
-                When data outpaces the capacity to decide, decisions fail<span class="text-primary">.</span>
+                When data outpaces the capacity to decide, decisions fail<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 Institutions today inherit fragmented data, opaque models, and tooling that was not built to be governed. The cost is not abstract — it is missed signals, slow responses, and decisions that cannot be defended after the fact. AlpOS exists to close that gap.
@@ -109,7 +109,7 @@ const outcomes = [
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Architecture" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    Ingest → Ontology → Analyze → Decide → Act<span class="text-primary">.</span> All inside a sovereign perimeter<span class="text-primary">.</span>
+                    Ingest → Ontology → Analyze → Decide → Act<span class="text-primary-text">.</span> All inside a sovereign perimeter<span class="text-primary-text">.</span>
                 </h2>
             </div>
             <div class="bg-whitesmoke-100 rounded-2xl p-4 sm:p-6 lg:p-10 overflow-x-auto">
@@ -162,13 +162,13 @@ const outcomes = [
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Layers" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    Five layers. One spine. Designed to be governed<span class="text-primary">.</span>
+                    Five layers. One spine. Designed to be governed<span class="text-primary-text">.</span>
                 </h2>
             </div>
             <div class="space-y-10">
                 <div v-for="layer in layers" :key="layer.n" class="grid lg:grid-cols-12 gap-8 lg:gap-12 pt-10 border-t border-drygray-200 first:border-t-0 first:pt-0">
                     <div class="lg:col-span-3">
-                        <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Layer {{ layer.n }} · {{ layer.slug }}</p>
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Layer {{ layer.n }} · {{ layer.slug }}</p>
                     </div>
                     <div class="lg:col-span-6">
                         <h3 class="text-h3 font-degular font-bold text-drygray-100">{{ layer.title }}</h3>
@@ -177,7 +177,7 @@ const outcomes = [
                     <div class="lg:col-span-3">
                         <ul class="space-y-2 text-b1 text-drygray-default">
                             <li v-for="s in layer.specifics" :key="s" class="flex items-center gap-2">
-                                <span class="text-primary" aria-hidden="true">·</span> {{ s }}
+                                <span class="text-primary-text" aria-hidden="true">·</span> {{ s }}
                             </li>
                         </ul>
                     </div>
@@ -190,7 +190,7 @@ const outcomes = [
             <div class="mb-10 md:mb-14">
                 <CommonSup title="In the field" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    Three institutions. Three problems. One platform<span class="text-primary">.</span>
+                    Three institutions. Three problems. One platform<span class="text-primary-text">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                     How AlpOS is applied in practice — three concrete deployments across financial services, critical infrastructure, and defense.
@@ -198,7 +198,7 @@ const outcomes = [
             </div>
             <div class="grid md:grid-cols-3 gap-4">
                 <div v-for="story in fieldStories" :key="story.sector" class="bg-white rounded-2xl p-7 flex flex-col">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ story.sector }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ story.sector }}</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-3 leading-tight">{{ story.problem }}</p>
                     <p class="text-b1 text-drygray-default mt-4 flex-1">{{ story.body }}</p>
                     <p class="text-b1 text-drygray-100 font-medium mt-6 pt-4 border-t border-drygray-200">{{ story.outcome }}</p>
@@ -211,7 +211,7 @@ const outcomes = [
             <div class="mb-10 md:mb-14 max-w-3xl">
                 <CommonSup title="Sovereign by design" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    Your data. Your jurisdiction. Your access controls. Your audit<span class="text-primary">.</span>
+                    Your data. Your jurisdiction. Your access controls. Your audit<span class="text-primary-text">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
                     Sovereignty is not a deployment option. It is an architectural commitment. AlpOS runs where you require — and only where you require.
@@ -219,7 +219,7 @@ const outcomes = [
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div v-for="mode in deploymentModes" :key="mode.name" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Mode</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Mode</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ mode.name }}</p>
                     <p class="text-b1 text-drygray-default mt-3">{{ mode.body }}</p>
                 </div>
@@ -230,7 +230,7 @@ const outcomes = [
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <CommonSup title="Modular" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05] max-w-3xl">
-                Compose the platform. Brand the modules<span class="text-primary">.</span>
+                Compose the platform. Brand the modules<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 AlpOS layers are independently deployable and independently brandable. Customers and partners map their own product names onto the same architecture, under the same sovereignty guarantees. The platform is the constant. The surface is yours.
@@ -242,7 +242,7 @@ const outcomes = [
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Capability matrix" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    What AlpOS is, in specifics<span class="text-primary">.</span>
+                    What AlpOS is, in specifics<span class="text-primary-text">.</span>
                 </h2>
             </div>
             <div class="bg-white rounded-2xl overflow-hidden">
@@ -264,7 +264,7 @@ const outcomes = [
             <div class="mb-10 md:mb-14">
                 <CommonSup title="AI capabilities" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    AI capabilities, governed at the layer above<span class="text-primary">.</span>
+                    AI capabilities, governed at the layer above<span class="text-primary-text">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                     AlpOS bundles a stack of AI capabilities that operate inside your perimeter — grounded against your ontology, audited end to end.
@@ -272,9 +272,9 @@ const outcomes = [
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <NuxtLink v-for="cap in aiCapabilities" :key="cap.slug" :to="`/capabilities/${cap.slug}`" class="bg-white hover:bg-whitesmoke-100 rounded-2xl p-6 transition-colors group block">
-                    <p class="text-h3 font-degular font-bold text-drygray-100 group-hover:text-primary transition-colors leading-tight">{{ cap.name }}</p>
+                    <p class="text-h3 font-degular font-bold text-drygray-100 group-hover:text-primary-text transition-colors leading-tight">{{ cap.name }}</p>
                     <p class="text-b1 text-drygray-default mt-3">{{ cap.body }}</p>
-                    <p class="text-drygray-100 group-hover:text-primary mt-5 inline-flex items-center gap-2 transition-colors text-[13px] font-medium">
+                    <p class="text-drygray-100 group-hover:text-primary-text mt-5 inline-flex items-center gap-2 transition-colors text-[13px] font-medium">
                         Explore
                         <span aria-hidden="true">→</span>
                     </p>
@@ -287,12 +287,12 @@ const outcomes = [
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Outcomes" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    Faster decisions. Defensible decisions. Governed at scale<span class="text-primary">.</span>
+                    Faster decisions. Defensible decisions. Governed at scale<span class="text-primary-text">.</span>
                 </h2>
             </div>
             <div class="grid md:grid-cols-3 gap-4">
                 <div v-for="o in outcomes" :key="o.label" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ o.label }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ o.label }}</p>
                     <p class="text-b2 text-drygray-100 mt-4 leading-relaxed">{{ o.body }}</p>
                 </div>
             </div>
@@ -304,7 +304,7 @@ const outcomes = [
                 <div>
                     <CommonSup title="Industries we serve" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        One platform. Many institutions<span class="text-primary">.</span>
+                        One platform. Many institutions<span class="text-primary-text">.</span>
                     </h2>
                 </div>
                 <NuxtLink to="/industries">
@@ -313,8 +313,8 @@ const outcomes = [
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <NuxtLink v-for="industry in industriesServed" :key="industry.slug" :to="`/industries/${industry.slug}`" class="bg-whitesmoke-100 hover:bg-whitesmoke-200 rounded-2xl p-6 transition-colors group block">
-                    <p class="text-h3 font-degular font-bold text-drygray-100 group-hover:text-primary transition-colors leading-tight">{{ industry.name }}</p>
-                    <p class="text-drygray-100 group-hover:text-primary mt-4 inline-flex items-center gap-2 transition-colors text-[13px] font-medium">
+                    <p class="text-h3 font-degular font-bold text-drygray-100 group-hover:text-primary-text transition-colors leading-tight">{{ industry.name }}</p>
+                    <p class="text-drygray-100 group-hover:text-primary-text mt-4 inline-flex items-center gap-2 transition-colors text-[13px] font-medium">
                         Industry detail
                         <span aria-hidden="true">→</span>
                     </p>
@@ -328,7 +328,7 @@ const outcomes = [
                 <div class="lg:col-span-8">
                     <CommonSup title="Engage" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[40px] leading-[1.05] md:text-[56px] md:leading-[1.02] tracking-tight">
-                        Bring AlpOS into your operations<span class="text-primary">.</span>
+                        Bring AlpOS into your operations<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
                         Demos are run against your scenarios. Bring your data architecture, your constraints, and your operational reality — we'll bring the platform and the right people from our side.

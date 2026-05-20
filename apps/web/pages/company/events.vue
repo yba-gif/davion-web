@@ -14,7 +14,7 @@ useSeoMeta({ title: 'Events', description: 'Where Davion shows up: defense expos
             </p>
             <p class="text-b1 text-drygray-default mt-8">Upcoming + past index lands in a subsequent slice.</p>
             <div class="mt-10">
-                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Meet us</CommonButton></NuxtLink>
+                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
             </div>
         </section>
     </div>

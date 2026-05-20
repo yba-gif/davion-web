@@ -17,7 +17,7 @@ defineProps<Props>()
                 {{ title }}
             </div>
 
-            <Icon name="base:arrow" class="w-4 h-4 relative shrink-0 text-primary group-hover:text-drygray-default transition-colors" />
+            <Icon name="base:arrow" class="w-4 h-4 relative shrink-0 text-primary-text group-hover:text-drygray-default transition-colors" />
         </div>
         <div class="h-[1px] w-full bg-drygray-default" />
     </NuxtLink>

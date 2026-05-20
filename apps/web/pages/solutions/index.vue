@@ -44,7 +44,7 @@ const solutions = [
                     </div>
                 </div>
                 <div class="bg-honeydew rounded-xl p-8 text-center border-t-4 border-primary">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Platform</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Platform</p>
                     <p class="font-degular font-bold text-drygray-100 mt-2 text-[44px] md:text-[56px] leading-[1]">AlpOS</p>
                     <p class="text-b1 text-drygray-default mt-3 max-w-2xl mx-auto">
                         Ingest · Ontology · Analyze · Decide · Act — inside a sovereign perimeter.
@@ -62,10 +62,10 @@ const solutions = [
                     :to="`/solutions/${s.slug}`"
                     class="bg-whitesmoke-100 hover:bg-whitesmoke-200 rounded-2xl p-8 transition-colors block group"
                 >
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ s.label }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ s.label }}</p>
                     <p class="text-h2 font-degular font-bold text-drygray-100 mt-3">{{ s.name }}</p>
                     <p class="text-b2 text-drygray-default mt-4">{{ s.body }}</p>
-                    <p class="text-drygray-100 group-hover:text-primary mt-6 inline-flex items-center gap-2 transition-colors font-medium">
+                    <p class="text-drygray-100 group-hover:text-primary-text mt-6 inline-flex items-center gap-2 transition-colors font-medium">
                         Explore
                         <span aria-hidden="true">→</span>
                     </p>

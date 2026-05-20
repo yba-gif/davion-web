@@ -35,7 +35,7 @@ const outcomes = [
                 Cyber is now the defining institutional risk. Davion deploys detection, response, and governance inside the perimeters that cannot send their data anywhere — including air-gapped ones.
             </p>
             <div class="mt-10">
-                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Assess your posture</CommonButton></NuxtLink>
+                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
             </div>
         </section>
 
@@ -61,7 +61,7 @@ const outcomes = [
             </div>
             <div class="grid md:grid-cols-3 gap-4">
                 <div v-for="m in methods" :key="m.name" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Method</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Method</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ m.name }}</p>
                     <p class="text-b1 text-drygray-default mt-3">{{ m.body }}</p>
                 </div>
@@ -77,7 +77,7 @@ const outcomes = [
             </div>
             <div class="bg-whitesmoke-100 rounded-2xl divide-y divide-drygray-200">
                 <div v-for="a in architecture" :key="a.label" class="grid lg:grid-cols-12 gap-4 px-6 py-5">
-                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary self-center">{{ a.label }}</p>
+                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text self-center">{{ a.label }}</p>
                     <p class="lg:col-span-9 text-b2 text-drygray-100">{{ a.body }}</p>
                 </div>
             </div>
@@ -96,12 +96,12 @@ const outcomes = [
                 </div>
                 <div class="lg:col-span-5">
                     <div class="bg-white rounded-2xl p-6">
-                        <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary mb-4">Modes</p>
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text mb-4">Modes</p>
                         <ul class="space-y-3 text-b2 text-drygray-100">
-                            <li class="flex items-center gap-3"><span class="text-primary" aria-hidden="true">·</span> On-premise</li>
-                            <li class="flex items-center gap-3"><span class="text-primary" aria-hidden="true">·</span> Air-gapped</li>
-                            <li class="flex items-center gap-3"><span class="text-primary" aria-hidden="true">·</span> Tactical edge</li>
-                            <li class="flex items-center gap-3"><span class="text-primary" aria-hidden="true">·</span> Sovereign cloud</li>
+                            <li class="flex items-center gap-3"><span class="text-primary-text" aria-hidden="true">·</span> On-premise</li>
+                            <li class="flex items-center gap-3"><span class="text-primary-text" aria-hidden="true">·</span> Air-gapped</li>
+                            <li class="flex items-center gap-3"><span class="text-primary-text" aria-hidden="true">·</span> Tactical edge</li>
+                            <li class="flex items-center gap-3"><span class="text-primary-text" aria-hidden="true">·</span> Sovereign cloud</li>
                         </ul>
                     </div>
                 </div>
@@ -117,7 +117,7 @@ const outcomes = [
             </div>
             <div class="grid md:grid-cols-3 gap-4">
                 <div v-for="o in outcomes" :key="o.label" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ o.label }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ o.label }}</p>
                     <p class="text-b2 text-drygray-100 mt-4 leading-relaxed">{{ o.body }}</p>
                 </div>
             </div>
@@ -135,7 +135,7 @@ const outcomes = [
                     </p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right">
-                    <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Assess your posture</CommonButton></NuxtLink>
+                    <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
                 </div>
             </div>
         </section>

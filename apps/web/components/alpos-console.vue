@@ -53,7 +53,7 @@ const sources = [
 
                     <!-- The alert: big and obvious -->
                     <p class="font-degular font-bold text-drygray-100 text-[22px] leading-tight">
-                        Suspicious activity detected<span class="text-primary">.</span>
+                        Suspicious activity detected<span class="text-primary-text">.</span>
                     </p>
                     <p class="text-[13px] text-drygray-default mt-2">
                         $2,400 transferred between 3 previously dormant accounts.

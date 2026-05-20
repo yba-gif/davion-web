@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const year = new Date().getFullYear()
 
+// P0.7: footer prunes stub pages (About / Careers / Events / Venture).
+// Re-added once content lands per redesign-action-plan §P1–P2.
 const cols = [
     {
         title: 'Solutions',
@@ -12,20 +14,11 @@ const cols = [
         ],
     },
     {
-        title: 'Company',
-        links: [
-            { label: 'About Us', to: '/company/about' },
-            { label: 'Newsroom', to: '/company/newsroom' },
-            { label: 'Careers', to: '/company/careers' },
-            { label: 'Events', to: '/company/events' },
-        ],
-    },
-    {
         title: 'Platform',
         links: [
             { label: 'Industries', to: '/industries' },
             { label: 'Trust & Sovereignty', to: '/trust' },
-            { label: 'Venture', to: '/venture' },
+            { label: 'Newsroom', to: '/company/newsroom' },
             { label: 'Contact', to: '/contact' },
         ],
     },
@@ -51,7 +44,7 @@ const cols = [
                         <p class="text-[11px] font-semibold text-drygray-100 uppercase tracking-[0.15em] mb-4">{{ col.title }}</p>
                         <ul class="space-y-3">
                             <li v-for="l in col.links" :key="l.to">
-                                <NuxtLink :to="l.to" class="text-b2 text-drygray-default hover:text-primary transition-colors">{{ l.label }}</NuxtLink>
+                                <NuxtLink :to="l.to" class="text-b2 text-drygray-default hover:text-primary-text transition-colors">{{ l.label }}</NuxtLink>
                             </li>
                         </ul>
                     </div>

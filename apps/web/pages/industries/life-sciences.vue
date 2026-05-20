@@ -7,7 +7,7 @@ useSeoMeta({ title: 'Life Sciences', description: 'Sovereign AI for life science
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
             <CommonSup title="Industries · Life Sciences" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
-                Accelerate the science. Defend the science<span class="text-primary">.</span>
+                Accelerate the science. Defend the science<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 Davion deploys sovereign AI across discovery, clinical operations, and trial intelligence — accelerating insight while preserving the regulatory traceability life sciences demands.
@@ -21,7 +21,7 @@ useSeoMeta({ title: 'Life Sciences', description: 'Sovereign AI for life science
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <CommonSup title="Underneath" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                Built on AlpOS<span class="text-primary">.</span>
+                Built on AlpOS<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 Life sciences deployments run on AlpOS — the sovereign AI platform. Ingest, ontology, analytics, AI, decisioning, action — governed end to end, audit-ready for regulators by design.

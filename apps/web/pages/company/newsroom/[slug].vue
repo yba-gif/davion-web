@@ -79,7 +79,7 @@ useSeoMeta({
                 </h1>
                 <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] font-medium text-drygray-default">
                     <span class="inline-flex items-center gap-2">
-                        <span class="text-primary" aria-hidden="true">·</span>
+                        <span class="text-primary-text" aria-hidden="true">·</span>
                         By {{ post.author }}
                     </span>
                     <span v-if="formattedDate">{{ formattedDate }}</span>
@@ -121,7 +121,7 @@ useSeoMeta({
                                 <span>{{ r.readTime }}</span>
                             </template>
                         </div>
-                        <p class="text-h3 font-degular font-bold text-drygray-100 group-hover:text-primary transition-colors leading-tight">
+                        <p class="text-h3 font-degular font-bold text-drygray-100 group-hover:text-primary-text transition-colors leading-tight">
                             {{ r.title }}
                         </p>
                         <p v-if="r.excerpt" class="text-b1 text-drygray-default mt-3 line-clamp-3">{{ r.excerpt }}</p>
@@ -161,13 +161,13 @@ useSeoMeta({
 .prose-davion :deep(ul),
 .prose-davion :deep(ol) { @apply my-5 pl-6 text-drygray-100; }
 .prose-davion :deep(li) { @apply mb-2 leading-[1.7]; }
-.prose-davion :deep(li::marker) { @apply text-primary; }
+.prose-davion :deep(li::marker) { @apply text-primary-text; }
 .prose-davion :deep(strong) { @apply font-semibold text-drygray-100; }
 .prose-davion :deep(em) { @apply italic; }
 .prose-davion :deep(blockquote) {
     @apply border-l-4 border-primary pl-6 my-8 italic text-drygray-100/80 bg-whitesmoke-100 py-4 rounded-r-2xl;
 }
-.prose-davion :deep(a) { @apply text-primary hover:text-primary/80 underline decoration-primary/30 hover:decoration-primary underline-offset-4 transition-colors; }
+.prose-davion :deep(a) { @apply text-primary-text hover:text-primary-text/80 underline decoration-primary/30 hover:decoration-primary underline-offset-4 transition-colors; }
 .prose-davion :deep(hr) { @apply border-drygray-200 my-10; }
 .prose-davion :deep(pre) { @apply bg-whitesmoke-100 rounded-2xl p-5 overflow-x-auto my-6 border border-drygray-200; }
 .prose-davion :deep(code) { @apply bg-whitesmoke-100 px-1.5 py-0.5 rounded text-[14px] font-mono; }

@@ -36,7 +36,7 @@ const outcomes = [
                 Modernization for institutions that cannot trade governance for speed — and cannot afford to keep paying for both. AlpOS becomes the backbone, phased from proof-of-concept to industrial deployment.
             </p>
             <div class="mt-10">
-                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Talk to our team</CommonButton></NuxtLink>
+                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
             </div>
         </section>
 
@@ -59,7 +59,7 @@ const outcomes = [
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div v-for="phase in phases" :key="phase.n" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Phase {{ phase.n }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Phase {{ phase.n }}</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ phase.name }}</p>
                     <p class="text-b1 text-drygray-default mt-3">{{ phase.body }}</p>
                 </div>
@@ -78,7 +78,7 @@ const outcomes = [
             </div>
             <div class="bg-whitesmoke-100 rounded-2xl divide-y divide-drygray-200">
                 <div v-for="layer in layers" :key="layer.name" class="grid lg:grid-cols-12 gap-4 px-6 py-5">
-                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary self-center">{{ layer.name }}</p>
+                    <p class="lg:col-span-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text self-center">{{ layer.name }}</p>
                     <p class="lg:col-span-9 text-b2 text-drygray-100">{{ layer.body }}</p>
                 </div>
             </div>
@@ -96,7 +96,7 @@ const outcomes = [
             </div>
             <div class="grid md:grid-cols-3 gap-4">
                 <div v-for="o in outcomes" :key="o.label" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ o.label }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ o.label }}</p>
                     <p class="text-b2 text-drygray-100 mt-4 leading-relaxed">{{ o.body }}</p>
                 </div>
             </div>
@@ -114,7 +114,7 @@ const outcomes = [
                     </p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right">
-                    <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Talk to our team</CommonButton></NuxtLink>
+                    <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
                 </div>
             </div>
         </section>

@@ -58,7 +58,7 @@ const solutions = [
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
             <CommonSup title="Industries · Financial Services" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
-                Turn data into strategic advantage<span class="text-primary">.</span>
+                Turn data into strategic advantage<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 Davion delivers sovereign AI and data intelligence for banks, insurers, asset managers, and payment providers. Where data volume, regulatory complexity, and competitive pressure are growing faster than ever, institutions need trusted, explainable AI that improves decision-making, strengthens compliance, and accelerates operational performance.
@@ -68,13 +68,13 @@ const solutions = [
             </div>
         </section>
 
-        <TrustedByStrip />
+        <!-- TrustedByStrip removed (P0.1) — see action plan; slot reserved for real proof. -->
 
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Where Davion delivers" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    Four problem areas. One sovereign platform<span class="text-primary">.</span>
+                    Four problem areas. One sovereign platform<span class="text-primary-text">.</span>
                 </h2>
             </div>
             <div class="grid md:grid-cols-2 gap-4">
@@ -82,7 +82,7 @@ const solutions = [
                     <p class="text-h3 font-degular font-bold text-drygray-100 leading-tight">{{ area.title }}</p>
                     <ul class="mt-4 space-y-2 text-b1 text-drygray-default">
                         <li v-for="b in area.bullets" :key="b" class="flex items-start gap-3">
-                            <span class="text-primary mt-1.5" aria-hidden="true">·</span>
+                            <span class="text-primary-text mt-1.5" aria-hidden="true">·</span>
                             <span>{{ b }}</span>
                         </li>
                     </ul>
@@ -94,12 +94,12 @@ const solutions = [
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Solutions" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    AlpOS applied to financial services<span class="text-primary">.</span>
+                    AlpOS applied to financial services<span class="text-primary-text">.</span>
                 </h2>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div v-for="s in solutions" :key="s.name" class="bg-whitesmoke-100 rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Solution</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Solution</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-3 leading-tight">{{ s.name }}</p>
                     <p class="text-b1 text-drygray-default mt-3">{{ s.body }}</p>
                 </div>
@@ -114,7 +114,7 @@ const solutions = [
                 <div class="lg:col-span-7">
                     <CommonSup title="In the field" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        Financial crime rarely leaves a single trace<span class="text-primary">.</span>
+                        Financial crime rarely leaves a single trace<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
                         AlpOS maps the full network of entities, accounts, transactions, and behavioural signals across sources — surfacing patterns that flat rules and isolated dashboards miss. Investigations move from alerts to actionable cases, with full lineage from raw transaction to operator decision.
@@ -127,11 +127,11 @@ const solutions = [
                     <div class="bg-white rounded-2xl p-6">
                         <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-drygray-default mb-4">AlpOS layers in play</p>
                         <ul class="space-y-2 text-b1 text-drygray-100">
-                            <li class="flex items-center gap-3"><span class="text-primary" aria-hidden="true">·</span> Ingest — transactions, KYC, communications, OSINT</li>
-                            <li class="flex items-center gap-3"><span class="text-primary" aria-hidden="true">·</span> Ontology — entities, accounts, beneficial owners, events</li>
-                            <li class="flex items-center gap-3"><span class="text-primary" aria-hidden="true">·</span> Analyze — graph queries, anomaly detection, scoring</li>
-                            <li class="flex items-center gap-3"><span class="text-primary" aria-hidden="true">·</span> Decide — case workflow, analyst copilot, evidence</li>
-                            <li class="flex items-center gap-3"><span class="text-primary" aria-hidden="true">·</span> Act — case management, regulatory reporting</li>
+                            <li class="flex items-center gap-3"><span class="text-primary-text" aria-hidden="true">·</span> Ingest — transactions, KYC, communications, OSINT</li>
+                            <li class="flex items-center gap-3"><span class="text-primary-text" aria-hidden="true">·</span> Ontology — entities, accounts, beneficial owners, events</li>
+                            <li class="flex items-center gap-3"><span class="text-primary-text" aria-hidden="true">·</span> Analyze — graph queries, anomaly detection, scoring</li>
+                            <li class="flex items-center gap-3"><span class="text-primary-text" aria-hidden="true">·</span> Decide — case workflow, analyst copilot, evidence</li>
+                            <li class="flex items-center gap-3"><span class="text-primary-text" aria-hidden="true">·</span> Act — case management, regulatory reporting</li>
                         </ul>
                     </div>
                 </div>
@@ -143,7 +143,7 @@ const solutions = [
                 <div class="lg:col-span-8">
                     <CommonSup title="Engage" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[40px] leading-[1.05] md:text-[56px] md:leading-[1.02] tracking-tight">
-                        Defend the decisions your auditors will see<span class="text-primary">.</span>
+                        Defend the decisions your auditors will see<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
                         Briefings are tailored to your environment — bring your data, your regulators, and the decisions you need to defend.

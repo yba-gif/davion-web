@@ -67,11 +67,11 @@ function formatDate(d: string | null) {
                                 <span>{{ featured.readTime }}</span>
                             </template>
                         </div>
-                        <h2 class="font-degular font-bold text-drygray-100 text-[28px] md:text-[40px] lg:text-[44px] leading-[1.05] tracking-tight group-hover:text-primary transition-colors">
+                        <h2 class="font-degular font-bold text-drygray-100 text-[28px] md:text-[40px] lg:text-[44px] leading-[1.05] tracking-tight group-hover:text-primary-text transition-colors">
                             {{ featured.title }}
                         </h2>
                         <p v-if="featured.excerpt" class="text-b2 text-drygray-default mt-4">{{ featured.excerpt }}</p>
-                        <p class="text-drygray-100 group-hover:text-primary mt-6 inline-flex items-center gap-2 transition-colors font-medium">
+                        <p class="text-drygray-100 group-hover:text-primary-text mt-6 inline-flex items-center gap-2 transition-colors font-medium">
                             Read dispatch
                             <span aria-hidden="true">→</span>
                         </p>
@@ -103,7 +103,7 @@ function formatDate(d: string | null) {
                             <span>{{ post.readTime }}</span>
                         </template>
                     </div>
-                    <p class="text-h3 font-degular font-bold text-drygray-100 group-hover:text-primary transition-colors leading-tight">
+                    <p class="text-h3 font-degular font-bold text-drygray-100 group-hover:text-primary-text transition-colors leading-tight">
                         {{ post.title }}
                     </p>
                     <p v-if="post.excerpt" class="text-b1 text-drygray-default mt-3 line-clamp-3">{{ post.excerpt }}</p>
@@ -121,7 +121,7 @@ function formatDate(d: string | null) {
                 Press releases, recognition, and selected insight will appear here as we publish. For media inquiries today, reach the press desk directly.
             </p>
             <div class="mt-8">
-                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Contact press</CommonButton></NuxtLink>
+                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Speak to an expert</CommonButton></NuxtLink>
             </div>
         </section>
 
