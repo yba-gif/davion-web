@@ -70,6 +70,13 @@ Every action is anchored back to an audit-report section so you can re-read the 
 
 ### ⚪ P3 — Backlog (revisit at week 5 planning)
 
+> **Status update — 2026-05-21:** Six P3 items shipped autonomously (P3.2 / P3.3 / P3.4 / P3.5 / P3.10 / P3.12). The remaining six are split between "founder-action items" (P3.6 deploy, P3.7 Trust certs) and "needs-real-device verification" (P3.8 mobile, P3.11 tablet) and "documentation deepening" (P3.1 engineering blog, P3.9 voice-doc v2).
+>
+> **Founder-confirmed deferrals (2026-05-21):**
+> - **P3.7** — defer Trust certification statuses until first audit kickoff is in flight with a real customer. Keep the existing principles language on `/trust`; certifications are claimed only when there's a real audit trail to back them.
+> - **P3.6** — defer production deploy until there's a concrete reason to ship (analyst briefing, customer demo, press release). Site remains on localhost during dev. This is a coherent stance for an early-stage sovereign vendor: deploy when there's an institution to serve, not before.
+
+
 | # | Action | Audit ref | Effort |
 |---|---|---|---|
 | P3.1 | Engineering blog setup — RSS, code blocks with syntax highlighting, code-review reaction emojis | §5 "Add" | 2 days |
