@@ -14,7 +14,7 @@ defineProps<Props>()
 <template>
     <component
         :is="href ? NuxtLink : 'div'" :to="href"
-        class="w-full relative flex flex-col items-start justify-start text-left text-4xl font-degular bg-white" :class="!!href ? 'group cursor-pointer' : ''"
+        class="w-full relative flex flex-col items-start justify-start text-left text-4xl font-degular bg-white" :class="!!href ? 'group cursor-pointer card-hover rounded-xl' : ''"
     >
         <div v-if="href" class="rounded-xl absolute top-5 right-5 border flex items-center justify-center w-10 h-10 bg-white/80 backdrop-blur-sm group-hover:bg-white/90 transition-colors group-hover:border-primary">
             <Icon name="base:arrow" class="h-4 text-drygray-100 group-hover:text-primary-text transition-colors" />

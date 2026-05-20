@@ -90,7 +90,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
 
 
         <!-- 2. Solutions triad — AlpOS, Cybersecurity, Digital Transformation -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
                 <div class="max-w-3xl">
                     <CommonSup title="Solutions" />
@@ -115,7 +115,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         </section>
 
         <!-- 3. AlpOS teaser -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-7">
                     <CommonSup title="Flagship · AlpOS" />
@@ -137,7 +137,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         </section>
 
         <!-- 4. Intelligence cycle -->
-        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="max-w-2xl mb-10 md:mb-14">
                 <CommonSup title="The AI cycle" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -157,7 +157,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         </section>
 
         <!-- 5. Sovereignty strip -->
-        <section class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup title="Sovereign by design" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -177,7 +177,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         </section>
 
         <!-- 6. Sectors marquee — black interlude, dual-row scrolling, edge gradient fades -->
-        <section class="relative rounded-3xl bg-black overflow-hidden">
+        <section v-reveal class="relative rounded-3xl bg-black overflow-hidden">
             <div class="relative grid lg:grid-cols-12 gap-10 items-center px-6 md:px-12 lg:px-16 py-16 md:py-20">
                 <div class="lg:col-span-4">
                     <CommonSup title="Industries" />
@@ -211,7 +211,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         </section>
 
         <!-- 7. Newsroom showcase — Featured (HorizontalBlogCard) + Grid (BlogCard) -->
-        <section v-if="featuredPost" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-if="featuredPost" v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
                 <div>
                     <CommonSup title="Newsroom" />
@@ -249,7 +249,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         </section>
 
         <!-- 8. Consultative CTA — frosted-spiral backdrop, massive 3-line headline -->
-        <section class="relative rounded-3xl bg-azure overflow-hidden">
+        <section v-reveal class="relative rounded-3xl bg-azure overflow-hidden">
             <!-- P0.6: WebP srcset replaces the 27 MB PNG fallback. Lazy because below fold. -->
             <img
                 src="/section_background-1600.webp"

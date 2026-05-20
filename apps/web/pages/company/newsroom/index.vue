@@ -1,9 +1,9 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'Newsroom',
-    description: 'Press releases, announcements, recognition, and selected insight from the Davion team.',
+    description: 'Announcements, insight, and technical notes from the Davion team.',
     ogTitle: 'Davion · Newsroom',
-    ogDescription: 'Dispatches from the work — announcements, recognition, and selected insight.',
+    ogDescription: 'Dispatches from the work — announcements, insight, and technical notes.',
 })
 
 interface Post {
@@ -13,18 +13,50 @@ interface Post {
     excerpt: string | null
     author: string
     readTime: string | null
+    category: string
     featuredImage: string | null
     publishedAt: string | null
     createdAt: string | null
 }
 
+// P2.7: client-side category filter chips. Server supports `?category=` filtering
+// too; we fetch all and filter on the client so chip clicks are instant.
+const categories = [
+    { slug: 'all', label: 'All' },
+    { slug: 'announcement', label: 'Announcements' },
+    { slug: 'insight', label: 'Insight' },
+    { slug: 'technical', label: 'Technical' },
+    { slug: 'recognition', label: 'Recognition' },
+] as const
+
+const activeCategory = ref<string>('all')
+
 const { data, pending } = await useFetch<{ success: boolean, data: Post[] }>('/api/blog', {
     default: () => ({ success: true, data: [] }),
+    query: { limit: 50 },
 })
 
-const posts = computed<Post[]>(() => data.value?.data ?? [])
+const allPosts = computed<Post[]>(() => data.value?.data ?? [])
+const posts = computed<Post[]>(() =>
+    activeCategory.value === 'all'
+        ? allPosts.value
+        : allPosts.value.filter(p => p.category === activeCategory.value),
+)
 const featured = computed<Post | null>(() => posts.value[0] ?? null)
 const rest = computed<Post[]>(() => posts.value.slice(1))
+
+const categoryCount = (slug: string) => {
+    if (slug === 'all') return allPosts.value.length
+    return allPosts.value.filter(p => p.category === slug).length
+}
+
+function categoryLabel(slug: string) {
+    if (slug === 'announcement') return 'Announcement'
+    if (slug === 'insight') return 'Insight'
+    if (slug === 'technical') return 'Technical'
+    if (slug === 'recognition') return 'Recognition'
+    return slug
+}
 
 function formatDate(d: string | null) {
     if (!d) return ''
@@ -38,14 +70,32 @@ function formatDate(d: string | null) {
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
             <CommonSup title="Company · Newsroom" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
-                Dispatches from the work.
+                Dispatches from the work<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Press releases, announcements, recognition, and selected insight from the Davion team.
+                Announcements, insight, and technical notes from the Davion team.
             </p>
+
+            <!-- Category chips -->
+            <div class="mt-10 flex flex-wrap gap-2">
+                <button
+                    v-for="c in categories"
+                    :key="c.slug"
+                    type="button"
+                    class="text-[13px] font-medium px-4 py-2 rounded-full border transition-colors"
+                    :class="activeCategory === c.slug
+                        ? 'bg-drygray-100 text-white border-drygray-100'
+                        : 'bg-white text-drygray-100 border-drygray-200 hover:border-drygray-100'"
+                    :aria-pressed="activeCategory === c.slug"
+                    @click="activeCategory = c.slug"
+                >
+                    {{ c.label }}
+                    <span class="ml-1.5 text-[11px] opacity-60">{{ categoryCount(c.slug) }}</span>
+                </button>
+            </div>
         </section>
 
-        <!-- Featured dispatch (latest) -->
+        <!-- Featured dispatch -->
         <section v-if="featured" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
             <CommonSup title="Featured" />
             <NuxtLink :to="`/company/newsroom/${featured.slug}`" class="block mt-6 group">
@@ -62,6 +112,9 @@ function formatDate(d: string | null) {
                         </div>
                     </div>
                     <div class="lg:col-span-5">
+                        <div class="flex items-center gap-3 text-[12px] font-mono uppercase tracking-[0.15em] text-primary-text mb-3">
+                            <span>{{ categoryLabel(featured.category) }}</span>
+                        </div>
                         <div class="flex items-center gap-3 text-[13px] text-drygray-default font-medium mb-4">
                             <span>{{ formatDate(featured.publishedAt) }}</span>
                             <template v-if="featured.readTime">
@@ -90,7 +143,7 @@ function formatDate(d: string | null) {
                     v-for="post in rest"
                     :key="post.id"
                     :to="`/company/newsroom/${post.slug}`"
-                    class="bg-whitesmoke-100 hover:bg-whitesmoke-200 rounded-2xl p-6 transition-colors block group"
+                    class="bg-whitesmoke-100 hover:bg-whitesmoke-200 rounded-2xl p-6 transition-colors block group card-hover"
                 >
                     <NuxtImg
                         v-if="post.featuredImage"
@@ -98,6 +151,7 @@ function formatDate(d: string | null) {
                         :alt="post.title"
                         class="w-full aspect-[16/10] object-cover rounded-xl mb-5"
                     />
+                    <p class="text-[11px] font-mono uppercase tracking-[0.15em] text-primary-text mb-2">{{ categoryLabel(post.category) }}</p>
                     <div class="flex items-center gap-3 text-[12px] text-drygray-default font-medium mb-3">
                         <span>{{ formatDate(post.publishedAt) }}</span>
                         <template v-if="post.readTime">
@@ -113,17 +167,20 @@ function formatDate(d: string | null) {
             </div>
         </section>
 
-        <!-- Empty state -->
+        <!-- Empty state (filter narrows to zero) -->
         <section v-if="!pending && !posts.length" class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
-            <CommonSup title="Soon" />
+            <CommonSup title="Nothing yet" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05] max-w-3xl">
-                The Newsroom opens with our first dispatch shortly.
+                Nothing in this category yet<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                Press releases, recognition, and selected insight will appear here as we publish. For media inquiries today, reach the press desk directly.
+                The other categories have content. Switch the filter, or write us at the press desk for what you were looking for.
             </p>
-            <div class="mt-8">
-                <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Speak to an expert</CommonButton></NuxtLink>
+            <div class="mt-8 flex gap-3 flex-wrap">
+                <button type="button" class="text-[13px] font-medium px-4 py-2 rounded-full border border-drygray-100 bg-drygray-100 text-white" @click="activeCategory = 'all'">
+                    Show all
+                </button>
+                <a href="mailto:press@davion.com"><CommonButton variant="outline" size="xs" icon="base:arrow">press@davion.com</CommonButton></a>
             </div>
         </section>
 
@@ -133,7 +190,7 @@ function formatDate(d: string | null) {
                 <div class="lg:col-span-8">
                     <CommonSup title="Press kit · Media contact" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        For journalists and analysts.
+                        For journalists and analysts<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
                         Logos, executive bios, fact sheets, and briefing memos available on request. Embargoed material handled with discretion. Routing through the press desk.
