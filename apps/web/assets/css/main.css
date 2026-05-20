@@ -1,17 +1,16 @@
-@import url('https://api.fontshare.com/v2/css?f[]=switzer@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,900,901&display=swap');
+/* P2.5: Switzer trimmed from 18 weight/style variants to the 4 we actually use
+   site-wide (audited: font-medium 47x, font-semibold 108x, font-bold 202x;
+   default 400 for body). Drops ~14 woff2 file fetches on first paint. */
+@import url('https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap');
 
+/* P2.5: Degular trimmed from 7 weights to the 4 we use (audited the same way).
+   Removed: Thin (100), Light (300), Black (900) and italic variants. */
 @font-face {
   font-family: 'Degular Display';
   src: url('../fonts/DegularDisplayDemo-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'Degular Display';
-  src: url('../fonts/DegularDisplayDemo-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -19,6 +18,7 @@
   src: url('../fonts/DegularDisplayDemo-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -26,27 +26,15 @@
   src: url('../fonts/DegularDisplayDemo-Semibold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Degular Display';
-  src: url('../fonts/DegularDisplayDemo-Light.otf') format('opentype');
-  font-weight: 300;
+  src: url('../fonts/DegularDisplayDemo-Bold.otf') format('opentype');
+  font-weight: 700;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'Degular Display';
-  src: url('../fonts/DegularDisplayDemo-Thin.otf') format('opentype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Degular Display';
-  src: url('../fonts/DegularDisplayDemo-Black.otf') format('opentype');
-  font-weight: 900;
-  font-style: normal;
+  font-display: swap;
 }
 
 @tailwind base;

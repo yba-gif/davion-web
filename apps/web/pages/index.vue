@@ -130,8 +130,10 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                     </div>
                 </div>
                 <div class="lg:col-span-5">
-                    <!-- AlpOS console preview — 3-slide carousel (Ontology / Ingest / Decide) -->
-                    <AlposConsole />
+                    <!-- AlpOS console preview — 3-slide carousel (Ontology / Ingest / Decide).
+                         LazyAlposConsole defers Swiper bundle until the component
+                         is needed (it sits below the fold). P2.5 perf. -->
+                    <LazyAlposConsole />
                 </div>
             </div>
         </section>
