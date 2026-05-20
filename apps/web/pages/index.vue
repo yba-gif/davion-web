@@ -3,9 +3,9 @@
 // spiral hero, black Sectors marquee, real Newsroom showcase, frosted-spiral CTA.
 
 useSeoMeta({
-    description: 'Sovereign software for the decisions institutions cannot afford to get wrong. Davion builds the platforms used by defense, intelligence, critical infrastructure, and the public sector.',
+    description: 'Sovereign AI and data platform for organisations that turn data into decisions — across financial services, energy, life sciences, manufacturing, government, and critical industries.',
     ogTitle: 'Davion',
-    ogDescription: 'Sovereign software for data intelligence and artificial intelligence.',
+    ogDescription: 'Sovereign AI and data platform — used across business and government.',
 })
 useHead({ title: 'Davion', titleTemplate: '%s' })
 
@@ -35,9 +35,9 @@ function formatDate(d: string | null) {
 }
 
 const pillars = [
-    { verb: 'Innovate', body: 'Move from fragmented data and opaque models to a single governed source of truth — and to AI you can defend.', icon: 'base:chart-square' },
+    { verb: 'Innovate', body: 'Move from fragmented data and untrustworthy AI to a single sovereign platform you can actually build on.', icon: 'base:chart-square' },
     { verb: 'Secure', body: 'Deploy under your jurisdiction, your access controls, your audit. Nothing leaves. Everything is auditable.', icon: 'base:status-verified' },
-    { verb: 'Perform', body: 'From signal to action in minutes, not weeks. The decision cycle is the architecture — not a series of integrations.', icon: 'base:chart-2' },
+    { verb: 'Perform', body: 'Agentic AI that cites its sources and acts only where authorised. Defensible decisions at scale.', icon: 'base:chart-2' },
 ]
 
 const cycle = [
@@ -53,8 +53,8 @@ const sovereignty = [
     { name: 'Sovereign cloud', body: 'Your provider, your region, bound by contract.' },
 ]
 
-const sectors = ['Defense', 'Intelligence', 'Critical Infrastructure', 'Government', 'Financial Services', 'Energy', 'Public Sector']
-const promises = ['Sovereign by design', 'Auditable', 'Air-gapped', 'On-premise', 'Operator-owned', 'Mission-grade', 'Decision-ready']
+const sectors = ['Financial Services', 'Energy', 'Manufacturing', 'Life Sciences', 'Retail', 'Government', 'Critical Infrastructure', 'Defense & Intelligence']
+const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditable', 'On-premise', 'Operator-owned', 'Decision-ready']
 </script>
 
 <template>
@@ -72,7 +72,7 @@ const promises = ['Sovereign by design', 'Auditable', 'Air-gapped', 'On-premise'
                     </h2>
                 </div>
                 <p class="text-b2 text-drygray-default max-w-md">
-                    Three verbs. Not slogans — they are the order in which institutions adopt sovereign software, and the order in which it has to deliver.
+                    Three verbs. Not slogans — they are the order in which organisations adopt sovereign AI, and the order in which it has to deliver.
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-4">
@@ -86,10 +86,10 @@ const promises = ['Sovereign by design', 'Auditable', 'Air-gapped', 'On-premise'
                 <div class="lg:col-span-7">
                     <CommonSup title="Flagship · AlpOS" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        The operating system underneath every Davion solution<span class="text-primary">.</span>
+                        The sovereign AI platform underneath every Davion solution<span class="text-primary">.</span>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                        AlpOS is the sovereign platform — ingest, ontology, analytics, AI, decisioning, action — that Digital Transformation, Cybersecurity, and OSINT are all built on. One spine, governed end to end.
+                        AlpOS unifies data, ontology, analytics, and agentic AI in one modular platform — ingest to act, governed end to end. Digital Transformation, Cybersecurity, and OSINT are how it is applied.
                     </p>
                     <div class="mt-8">
                         <NuxtLink to="/solutions/alpos"><CommonButton variant="primary" icon="base:arrow">Explore AlpOS</CommonButton></NuxtLink>
@@ -117,12 +117,12 @@ const promises = ['Sovereign by design', 'Auditable', 'Air-gapped', 'On-premise'
         <!-- 4. Intelligence cycle -->
         <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="max-w-2xl mb-10 md:mb-14">
-                <CommonSup title="The cycle" />
+                <CommonSup title="The AI cycle" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
                     Data → Meaning → Decision → Action<span class="text-primary">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
-                    Every Davion deployment runs the same sovereign decision cycle. The platform stays constant; the surface adapts to the mission.
+                    Every Davion deployment runs the same sovereign cycle — from raw data to operational action. The platform stays constant; the surface adapts to the use case.
                 </p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -158,12 +158,12 @@ const promises = ['Sovereign by design', 'Auditable', 'Air-gapped', 'On-premise'
         <section class="relative rounded-3xl bg-black overflow-hidden">
             <div class="relative grid lg:grid-cols-12 gap-10 items-center px-6 md:px-12 lg:px-16 py-16 md:py-20">
                 <div class="lg:col-span-4">
-                    <CommonSup title="Sectors" />
+                    <CommonSup title="Industries" />
                     <h2 class="font-degular font-bold text-white mt-4 text-[36px] md:text-[44px] lg:text-[48px] leading-[1.02] tracking-tight">
-                        Mission-led<span class="text-primary">.</span><br>Sector by sector<span class="text-primary">.</span>
+                        For every business<span class="text-primary">.</span><br>For every government<span class="text-primary">.</span>
                     </h2>
                     <p class="text-b2 text-white/60 mt-6 max-w-sm">
-                        Davion is deployed wherever decisions must be both fast and defensible — across defense, intelligence, critical infrastructure, government, financial services, and energy.
+                        Davion deploys across financial services, energy, manufacturing, life sciences, retail, government, critical infrastructure, and defense — wherever data has to become decisions you can defend.
                     </p>
                     <div class="mt-8">
                         <NuxtLink to="/industries"><CommonButton variant="outline" size="xs" icon="base:arrow" class="!border-white/30 !text-white hover:!border-primary hover:!text-primary">Explore industries</CommonButton></NuxtLink>
@@ -238,9 +238,9 @@ const promises = ['Sovereign by design', 'Auditable', 'Air-gapped', 'On-premise'
             <div class="relative w-full flex flex-col items-center text-center py-20 md:py-28 lg:py-32 px-6 md:px-12 lg:px-16 backdrop-blur-[80px] bg-gradient-to-b from-azure/30 to-azure/10">
                 <CommonSup title="Engage" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-6 leading-[0.92] tracking-[-0.02em]">
-                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Tell us<span class="text-primary">.</span></span>
-                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">What you're</span>
-                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">deciding<span class="text-primary">.</span></span>
+                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your data<span class="text-primary">.</span></span>
+                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your AI<span class="text-primary">.</span></span>
+                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your decisions<span class="text-primary">.</span></span>
                 </h2>
                 <p class="text-b2 text-drygray-100 mt-10 max-w-xl font-medium">
                     Briefings are consultative and tailored. Bring your data architecture, your constraints, and your operational reality. We will bring the right people from our side.

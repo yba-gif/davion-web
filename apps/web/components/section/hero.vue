@@ -24,20 +24,20 @@ function navigateToContact() {
             <div class="flex flex-col items-start justify-start min-[980px]:h-[252px] font-degular">
                 <div class="tracking-[-1px] leading-[95%] font-semibold w-[676px] max-[980px]:w-full">
                     <p class="m-0 font-degular">
-                        <span class="font-degular">Defense</span>
+                        <span class="font-degular">Agentic AI</span>
                         <span class="text-primary font-degular">.</span>
                     </p>
                     <p class="m-0 whitespace-nowrap font-degular">
-                        Intelligence
+                        Sovereign data<span class="text-primary font-degular">.</span>
                     </p>
                     <p class="m-0 whitespace-nowrap font-degular">
-                        Critical Infrastructure
+                        Decisions defended<span class="text-primary font-degular">.</span>
                     </p>
                 </div>
             </div>
             <div class="min-[980px]:w-[492px] flex items-start justify-start text-base">
                 <div class="leading-[150%] font-medium">
-                    Davion builds sovereign software for the institutions that cannot afford to get critical decisions wrong — from ingest to act, under your jurisdiction, your access controls, your audit trail.
+                    Davion builds the sovereign AI and data platform organisations use to turn data into decisions — across financial services, energy, life sciences, manufacturing, government, and critical industries. Run where you require. Defensible end to end.
                 </div>
             </div>
             <div class="w-full flex flex-row max-[980px]:flex-col items-center justify-start gap-[18px] text-center text-[15px]">
