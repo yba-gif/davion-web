@@ -83,8 +83,10 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         <!-- 1. Mission hero — base1's original SectionHero structure with Davion copy/route -->
         <SectionHero />
 
-        <!-- TrustedByStrip removed (P0.1) — placeholder proof tiles undermined credibility.
-             Slot reserved for P1.7: a real numbers strip (founding date / languages / connectors). -->
+        <!-- P1.7 Numbers Strip — replaces the deleted TrustedByStrip with verifiable
+             architectural and presence facts. Founding year omitted by founder direction
+             until legal entity is finalized. -->
+        <NumbersStrip />
 
 
         <!-- 2. Solutions triad — AlpOS, Cybersecurity, Digital Transformation -->

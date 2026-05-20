@@ -135,7 +135,7 @@ const values = [
                     A small team. Operators, not pitchmen<span class="text-primary-text">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
-                    Davion is early-stage. The team is named where named is appropriate; the rest is being built. Press contact and additional executive bios will land once approved for public reference.
+                    Davion is early-stage and operates from <strong class="font-semibold text-drygray-100">Zurich and Istanbul</strong> — Swiss neutrality for the data layer, NATO-perimeter operational depth for the field. The team is named where named is appropriate; the rest is being built. Press contact and additional executive bios will land once approved for public reference.
                 </p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
