@@ -71,6 +71,17 @@ export function useAnalytics() {
         if (!process.client)
             return
 
+        // P3.5: respect cookie consent. Only track if the user has explicitly
+        // opted in via the consent banner. Strictly-necessary mode = no events.
+        try {
+            const consent = window.localStorage.getItem('davion_cookie_consent')
+            if (consent !== 'accept') return
+        }
+        catch {
+            // localStorage unavailable (private mode, etc.) — default to no tracking.
+            return
+        }
+
         try {
             const sessionId = getSessionId()
             const deviceInfo = getDeviceInfo()

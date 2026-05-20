@@ -55,4 +55,8 @@ watchEffect(() => {
         <!-- Normal App -->
         <NuxtPage v-else />
     </NuxtLayout>
+
+    <!-- P3.5: GDPR-compliant cookie consent banner. Mounted globally so it
+         appears on first visit to any route. Self-hides once a choice is made. -->
+    <CookieConsent />
 </template>

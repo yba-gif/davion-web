@@ -59,10 +59,27 @@ const cols = [
             </div>
         </div>
 
+        <!-- Legal bar (P3.4) -->
+        <div class="w-full rounded-2xl bg-whitesmoke-100 px-8 md:px-10 py-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-drygray-default font-medium">
+            <NuxtLink to="/legal/privacy" class="hover:text-primary-text transition-colors">Privacy</NuxtLink>
+            <NuxtLink to="/legal/terms" class="hover:text-primary-text transition-colors">Terms</NuxtLink>
+            <NuxtLink to="/legal/cookies" class="hover:text-primary-text transition-colors">Cookies</NuxtLink>
+            <NuxtLink to="/legal/responsible-ai" class="hover:text-primary-text transition-colors">Responsible AI</NuxtLink>
+            <NuxtLink to="/status" class="hover:text-primary-text transition-colors">Status</NuxtLink>
+            <button
+                type="button"
+                class="hover:text-primary-text transition-colors text-left cursor-pointer"
+                aria-label="Open cookie consent settings"
+                @click="$nuxt?.callHook?.('cookie-consent:open') || (typeof window !== 'undefined' && window.dispatchEvent(new CustomEvent('cookie-consent:open')))"
+            >
+                Cookie preferences
+            </button>
+        </div>
+
         <!-- Copyright bar in whitesmoke rounded inner (base1 footer pattern) -->
         <div class="w-full rounded-2xl bg-whitesmoke-100 px-8 md:px-10 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-[13px]">
             <p class="text-drygray-default font-medium">© {{ year }} Davion. All rights reserved.</p>
-            <p class="text-drygray-default font-medium">Sovereign by design.</p>
+            <p class="text-drygray-default font-medium">Sovereign by deployment.</p>
         </div>
     </div>
 </template>
