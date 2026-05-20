@@ -2,6 +2,8 @@
 useSeoMeta({
     title: 'Trust & Sovereignty',
     description: 'The Davion sovereignty model, deployment matrix, access control, end-to-end auditability, standards alignment, responsible-AI commitments, and data lifecycle.',
+    ogTitle: 'Davion · Trust & Sovereignty',
+    ogDescription: 'Where the data sits, who can see it, what we sign, what we will not sign — and the deployment matrix that backs it.',
 })
 
 const principles = [

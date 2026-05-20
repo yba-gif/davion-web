@@ -2,6 +2,8 @@
 useSeoMeta({
     title: 'AlpOS',
     description: 'Sovereign AI infrastructure for decisions that cannot wait — and cannot leak. AlpOS turns data into operational action inside your perimeter, end to end.',
+    ogTitle: 'Davion · AlpOS',
+    ogDescription: 'The sovereign AI platform: ingest, ontology, analyze, decide, act — governed end to end, deployed inside your perimeter.',
 })
 
 const layers = [
@@ -185,10 +187,10 @@ const outcomes = [
             </div>
         </section>
 
-        <!-- 5. In the field — concrete vertical use cases (NEW) -->
+        <!-- 5. Where it lands — concrete vertical use cases. Eyebrow renamed (was "In the field" — ChapsVision echo per voice doc). -->
         <section class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
             <div class="mb-10 md:mb-14">
-                <CommonSup title="In the field" />
+                <CommonSup title="Where it lands" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
                     Three institutions. Three problems. One platform<span class="text-primary-text">.</span>
                 </h2>

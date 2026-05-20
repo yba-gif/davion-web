@@ -2,10 +2,11 @@
 // Davion home — base1 visual language with the design moves restored:
 // spiral hero, black Sectors marquee, real Newsroom showcase, frosted-spiral CTA.
 
+// Home meta aligned to the P0.3 hero (Variant A — clarity-first).
 useSeoMeta({
-    description: 'Sovereign AI and data platform for organisations that turn data into decisions — across financial services, energy, life sciences, manufacturing, government, and critical industries.',
-    ogTitle: 'Davion',
-    ogDescription: 'Sovereign AI and data platform — used across business and government.',
+    description: 'Sovereign AI for institutions whose data can\'t leave. The platform banks, ministries, and energy operators use when decisions must be defensible, auditable, and made on data that never enters a public cloud.',
+    ogTitle: 'Davion — Sovereign AI for institutions whose data can\'t leave',
+    ogDescription: 'The platform banks, ministries, and energy operators use when decisions must be defensible, auditable, and made on data that never enters a public cloud.',
 })
 useHead({ title: 'Davion', titleTemplate: '%s' })
 
@@ -72,7 +73,9 @@ const sovereignty = [
 ]
 
 const sectors = ['Financial Services', 'Energy', 'Manufacturing', 'Life Sciences', 'Retail', 'Government', 'Critical Infrastructure', 'Defense & Intelligence']
-const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditable', 'On-premise', 'Operator-owned', 'Decision-ready']
+// Marquee promises — pulled from the Davion vocabulary (docs/brand-voice.md §3).
+// No ChapsVision echoes ("Agentic AI", "Modular by design").
+const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-prem', 'Auditable', 'Decision-ready', 'Operator-owned']
 </script>
 
 <template>

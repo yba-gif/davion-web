@@ -2,6 +2,8 @@
 useSeoMeta({
     title: 'OSINT',
     description: 'Sovereign open-source intelligence — multi-source collection, correlation, and synthesis; anonymous, secure, and compliant.',
+    ogTitle: 'Davion · OSINT',
+    ogDescription: 'Multilingual open-source intelligence with provenance. Collection, correlation, and brief generation inside your perimeter.',
 })
 
 const sources = [

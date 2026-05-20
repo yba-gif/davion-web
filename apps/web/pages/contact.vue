@@ -2,6 +2,8 @@
 useSeoMeta({
     title: 'Engage',
     description: 'Book a demo or speak to an expert. Consultative intake — tell us what you are trying to decide.',
+    ogTitle: 'Davion · Engage',
+    ogDescription: 'Briefings are consultative. Tell us what you are trying to decide; we route to the right team.',
 })
 
 const intents = [

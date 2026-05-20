@@ -18,8 +18,14 @@ const cols = [
         links: [
             { label: 'Industries', to: '/industries' },
             { label: 'Trust & Sovereignty', to: '/trust' },
-            { label: 'Newsroom', to: '/company/newsroom' },
             { label: 'Contact', to: '/contact' },
+        ],
+    },
+    {
+        title: 'Company',
+        links: [
+            { label: 'About', to: '/company/about' },
+            { label: 'Newsroom', to: '/company/newsroom' },
         ],
     },
 ]
@@ -36,7 +42,7 @@ const cols = [
                         <span class="font-degular font-bold text-[18px] text-drygray-100">Davion</span>
                     </NuxtLink>
                     <p class="text-b2 text-drygray-default mt-3 max-w-sm">
-                        Sovereign software for data intelligence and artificial intelligence. Innovate. Secure. Perform.
+                        Davion deploys inside your perimeter. The data does not leave. The decisions are auditable.
                     </p>
                 </div>
                 <div class="flex flex-wrap md:flex-nowrap gap-10 md:gap-14">

@@ -2,6 +2,8 @@
 useSeoMeta({
     title: 'Cybersecurity',
     description: 'Defensive intelligence for environments that cannot fail. Detection through pattern, anomaly, and graph analysis; secure-by-design architecture for constrained and air-gapped environments.',
+    ogTitle: 'Davion · Cybersecurity',
+    ogDescription: 'Pattern, anomaly, and graph analysis inside the perimeter. Designed for environments where telemetry cannot leave.',
 })
 
 const methods = [

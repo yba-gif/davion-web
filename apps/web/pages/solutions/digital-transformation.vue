@@ -2,6 +2,8 @@
 useSeoMeta({
     title: 'Digital Transformation',
     description: 'Modernization with sovereignty intact — from siloed data to a single governed source of truth, phased from POC to industrial deployment.',
+    ogTitle: 'Davion · Digital Transformation',
+    ogDescription: 'Modernize the data layer without losing the institution. Phased POC → industrial deployment, sovereignty intact end to end.',
 })
 
 const phases = [

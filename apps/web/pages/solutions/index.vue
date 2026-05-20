@@ -2,6 +2,8 @@
 useSeoMeta({
     title: 'Solutions',
     description: 'Davion solutions: AlpOS, Digital Transformation, Cybersecurity, OSINT — built on one sovereign platform.',
+    ogTitle: 'Davion · Solutions',
+    ogDescription: 'AlpOS is the constant. Cybersecurity, Digital Transformation, and OSINT are how it is applied.',
 })
 
 const solutions = [

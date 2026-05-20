@@ -1,7 +1,9 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'Financial Services',
-    description: 'Sovereign AI for banks, insurers, asset managers, and payment providers — market & risk intelligence, regulatory compliance, client intelligence, and operational resilience.',
+    description: 'Banks, insurers, asset managers, and payment providers use Davion when their decisions must be defensible — and made on data that never leaves the bank.',
+    ogTitle: 'Davion · Financial Services',
+    ogDescription: 'Sovereign AI for AML, surveillance, market intelligence, and resilience. Audit-grade lineage, never out of perimeter.',
 })
 
 const problemAreas = [
@@ -55,16 +57,18 @@ const solutions = [
 
 <template>
     <div class="flex flex-col gap-4">
+        <!-- Hero — Move A from voice doc; replaces the generic "Turn data into strategic advantage." -->
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
             <CommonSup title="Industries · Financial Services" />
-            <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
-                Turn data into strategic advantage<span class="text-primary-text">.</span>
+            <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[68px] tracking-tight max-w-5xl">
+                Banks use Davion when their decisions must be defensible — and made on data that never leaves the bank<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Davion delivers sovereign AI and data intelligence for banks, insurers, asset managers, and payment providers. Where data volume, regulatory complexity, and competitive pressure are growing faster than ever, institutions need trusted, explainable AI that improves decision-making, strengthens compliance, and accelerates operational performance.
+                AML and CFT, market and risk intelligence, regulatory surveillance, client intelligence, fraud, and operational resilience — built on AlpOS and deployed inside the institution's perimeter. The data does not leave. The decisions are reproducible. Every alert points back to the transactions, communications, and counterparties it was made on.
             </p>
-            <div class="mt-10">
+            <div class="mt-10 flex flex-wrap gap-3">
                 <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
+                <NuxtLink to="/solutions/alpos"><CommonButton variant="outline" icon="base:arrow">See AlpOS</CommonButton></NuxtLink>
             </div>
         </section>
 
@@ -112,7 +116,7 @@ const solutions = [
         <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-7">
-                    <CommonSup title="In the field" />
+                    <CommonSup title="Where it lands" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
                         Financial crime rarely leaves a single trace<span class="text-primary-text">.</span>
                     </h2>

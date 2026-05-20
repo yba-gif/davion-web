@@ -63,11 +63,18 @@ export default defineNuxtConfig({
                 { name: 'twitter:card', content: 'summary_large_image' },
                 { name: 'twitter:title', content: 'Davion — Sovereign AI for institutions whose data can\'t leave' },
                 { name: 'twitter:description', content: 'The platform banks, ministries, and energy operators use when decisions must be defensible, auditable, and made on data that never enters a public cloud.' },
+                { name: 'twitter:image', content: '/og-cover.png' },
 
-                // Open Graph
+                // Open Graph (P1.6: default OG card lives at /og-cover.png — placeholder
+                // until P2.3 identity refresh; per-page cards via Satori land in P2.)
                 { property: 'og:type', content: 'website' },
                 { property: 'og:title', content: 'Davion — Sovereign AI for institutions whose data can\'t leave' },
                 { property: 'og:description', content: 'The platform banks, ministries, and energy operators use when decisions must be defensible, auditable, and made on data that never enters a public cloud.' },
+                { property: 'og:image', content: '/og-cover.png' },
+                { property: 'og:image:width', content: '1200' },
+                { property: 'og:image:height', content: '630' },
+                { property: 'og:image:alt', content: 'Davion — Sovereign AI for institutions whose data can\'t leave.' },
+                { property: 'og:site_name', content: 'Davion' },
             ],
             link: [
                 { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' },

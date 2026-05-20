@@ -19,10 +19,22 @@ const nav = [
         ],
     },
     // Capabilities dropdown removed — all 6 pages are stubs (P0.7).
-    // Industries collapsed to single link → the hub. Sub-pages other than
-    // Financial Services are stubs; surfacing them in nav over-promises.
-    { label: 'Industries', to: '/industries' },
+    // Industries dropdown restored with 3 real items (FS / Energy / Defense)
+    // after P1.4 + P1.5 promoted Energy and Defense out of stub status.
+    // Manufacturing / Life Sciences / Government remain stubs and live on the
+    // hub page with a "coming" treatment until P2.1 lands real content.
+    {
+        label: 'Industries',
+        children: [
+            { label: 'Financial Services', to: '/industries/financial-services', flagship: true, desc: 'Market & risk, compliance, client intelligence, resilience.' },
+            { label: 'Energy', to: '/industries/energy', desc: 'Grid, generation, asset reliability, OT-side cyber.' },
+            { label: 'Defense & Intelligence', to: '/industries/defense-intelligence', desc: 'Air-gapped sovereign AI inside the enclave.' },
+            { label: 'All industries', to: '/industries' },
+        ],
+    },
     { label: 'Trust', to: '/trust' },
+    // About re-introduced once it had real depth content (P1.1).
+    { label: 'About', to: '/company/about' },
     { label: 'Newsroom', to: '/company/newsroom' },
 ] as const
 
