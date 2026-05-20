@@ -4,7 +4,7 @@ interface Props {
     sub?: string
 }
 withDefaults(defineProps<Props>(), {
-    title: 'Trusted by',
+    title: 'We\'re on the AI journey with',
     sub: 'Davion engagements are sovereign by contract. Customer names are withheld unless explicitly approved for press.',
 })
 

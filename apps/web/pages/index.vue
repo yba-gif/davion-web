@@ -80,7 +80,7 @@ const promises = ['Agentic AI', 'Sovereign data', 'Modular by design', 'Auditabl
         <!-- 1. Mission hero — base1's original SectionHero structure with Davion copy/route -->
         <SectionHero />
 
-        <!-- 1.5. Trusted-by strip (placeholder treatment — names withheld) -->
+        <!-- 1.5. "We're on the AI journey with" strip (placeholder treatment — names withheld) -->
         <TrustedByStrip />
 
         <!-- 2. Solutions triad — AlpOS, Cybersecurity, Digital Transformation -->
