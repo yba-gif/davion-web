@@ -173,22 +173,21 @@ function categoryLabel(slug: string) {
             </div>
         </section>
 
-        <!-- Empty state (filter narrows to zero) -->
-        <section v-if="!pending && !posts.length" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
-            <CommonSup title="Nothing yet" />
-            <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05] max-w-3xl">
-                Nothing in this category yet<span class="text-primary-text">.</span>
-            </h2>
-            <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                The other categories have content. Switch the filter, or write us at the press desk for what you were looking for.
-            </p>
-            <div class="mt-8 flex gap-3 flex-wrap">
-                <button type="button" class="text-[13px] font-medium px-4 py-2 rounded-full border border-drygray-100 bg-drygray-100 text-white" @click="activeCategory = 'all'">
-                    Show all
-                </button>
+        <!-- Empty state (filter narrows to zero), uses shared EmptyState pattern (P2.U6). -->
+        <EmptyState
+            v-if="!pending && !posts.length"
+            variant="soft"
+            eyebrow="Nothing yet"
+            headline="Nothing in this category yet"
+            body="The other categories have content. Switch the filter, or write us at the press desk for what you were looking for."
+        >
+            <button type="button" class="text-[13px] font-medium px-5 py-3 rounded-full border border-drygray-100 bg-drygray-100 text-white min-h-[44px]" @click="activeCategory = 'all'">
+                Show all
+            </button>
+            <template #extra>
                 <a href="mailto:press@davion.com"><CommonButton variant="outline" size="xs" icon="base:arrow">press@davion.com</CommonButton></a>
-            </div>
-        </section>
+            </template>
+        </EmptyState>
 
         <!-- Press kit / media contact block -->
         <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">

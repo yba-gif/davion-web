@@ -76,6 +76,23 @@ const outcomes = [
     { label: 'Defensibility', body: 'Every output traceable to its source data and the operator who acted on it. Auditable by design, before, during, and after.' },
     { label: 'Trust', body: 'Deployable in environments where "send the data to a vendor" is not an option. Sovereignty as a precondition, not a feature.' },
 ]
+
+// P2.U1: Table of contents. IDs match the `id` attributes added to each
+// section element in the template below.
+const tocSections = [
+    { id: 'problem', label: 'The problem' },
+    { id: 'architecture', label: 'Architecture' },
+    { id: 'demo', label: 'See it in motion' },
+    { id: 'layers', label: 'Layers' },
+    { id: 'field', label: 'Where it lands' },
+    { id: 'sovereign', label: 'Sovereign by design' },
+    { id: 'modular', label: 'Modular' },
+    { id: 'capability-matrix', label: 'Capability matrix' },
+    { id: 'ai-capabilities', label: 'AI capabilities' },
+    { id: 'outcomes', label: 'Outcomes' },
+    { id: 'industries-served', label: 'Industries we serve' },
+    { id: 'engage', label: 'Engage' },
+]
 </script>
 
 <template>
@@ -95,8 +112,17 @@ const outcomes = [
             </div>
         </section>
 
+        <!-- Mobile-only "Jump to" TOC select. Hidden on lg+ where the right-rail TOC renders. -->
+        <div class="lg:hidden">
+            <TableOfContents :sections="tocSections" />
+        </div>
+
+        <!-- Body sections in a 12-col grid with sticky right-rail TOC on lg+. -->
+        <div class="lg:grid lg:grid-cols-[1fr_220px] lg:gap-10 flex flex-col gap-4">
+            <div class="flex flex-col gap-4 min-w-0">
+
         <!-- 2. Problem -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section id="problem" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
             <CommonSup title="The problem" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[32px] leading-[1.05] md:text-[44px] md:leading-[1.05] tracking-tight max-w-4xl">
                 When data outpaces the capacity to decide, decisions fail<span class="text-primary-text">.</span>
@@ -159,8 +185,13 @@ const outcomes = [
             </div>
         </section>
 
+        <!-- P2.U5: product-demo video embed. Activates once DEMO_EMBED_URL env is set. -->
+        <section id="demo" class="scroll-mt-20">
+            <DemoEmbed />
+        </section>
+
         <!-- 4. Layer deep-dives -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section id="layers" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Layers" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -188,7 +219,7 @@ const outcomes = [
         </section>
 
         <!-- 5. Where it lands, concrete vertical use cases. Eyebrow renamed (was "In the field", ChapsVision echo per voice doc). -->
-        <section class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section id="field" class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Where it lands" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -209,7 +240,7 @@ const outcomes = [
         </section>
 
         <!-- 6. Sovereign by design -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section id="sovereign" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
             <div class="mb-10 md:mb-14 max-w-3xl">
                 <CommonSup title="Sovereign by design" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -229,7 +260,7 @@ const outcomes = [
         </section>
 
         <!-- 7. Modularity -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section id="modular" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20 scroll-mt-20">
             <CommonSup title="Modular" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05] max-w-3xl">
                 Compose the platform. Brand the modules<span class="text-primary-text">.</span>
@@ -240,7 +271,7 @@ const outcomes = [
         </section>
 
         <!-- 8. Capability matrix -->
-        <section class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section id="capability-matrix" class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Capability matrix" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -262,7 +293,7 @@ const outcomes = [
         </section>
 
         <!-- 9. AI capabilities tiles (NEW) -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section id="ai-capabilities" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20 scroll-mt-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="AI capabilities" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -285,7 +316,7 @@ const outcomes = [
         </section>
 
         <!-- 10. Outcomes -->
-        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section id="outcomes" class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Outcomes" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -301,7 +332,7 @@ const outcomes = [
         </section>
 
         <!-- 11. Industries we serve (NEW) -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section id="industries-served" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20 scroll-mt-20">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
                 <div>
                     <CommonSup title="Industries we serve" />
@@ -325,7 +356,7 @@ const outcomes = [
         </section>
 
         <!-- 12. CTA -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section id="engage" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
             <div class="grid lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-8">
                     <CommonSup title="Engage" />
@@ -342,5 +373,13 @@ const outcomes = [
                 </div>
             </div>
         </section>
+
+            </div><!-- /body sections wrapper -->
+
+            <!-- Right-rail TOC, sticky on lg+. Hidden on mobile (the inline select handles that). -->
+            <aside class="hidden lg:block">
+                <TableOfContents :sections="tocSections" />
+            </aside>
+        </div><!-- /body grid -->
     </div>
 </template>

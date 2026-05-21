@@ -59,6 +59,15 @@ const nav = [
     },
 ] as const
 
+// P1.U4: WAI-ARIA menubar pattern.
+// - Trigger button: aria-haspopup="menu", aria-expanded toggles on open/close.
+// - Menu panel: role="menu" with role="menuitem" links.
+// - Keyboard: ↓/↑ navigate items inside an open menu (wraparound), Home/End
+//   jump to first/last, Enter activates focused item (NuxtLink follows href),
+//   Escape closes menu and returns focus to its trigger, Tab closes and
+//   moves focus naturally.
+// - Roving tabindex: only the currently-focused menu item has tabindex="0".
+
 function toggleDropdown(label: string) {
     openDropdown.value = openDropdown.value === label ? null : label
 }
@@ -68,6 +77,71 @@ function closeAll() {
 }
 
 watch(() => route.path, closeAll)
+
+// Refs for trigger buttons + menu items, keyed by item label.
+const triggerRefs = ref<Record<string, HTMLButtonElement | null>>({})
+const menuItemRefs = ref<Record<string, HTMLAnchorElement[]>>({})
+
+function registerTrigger(label: string, el: HTMLElement | null) {
+    triggerRefs.value[label] = el as HTMLButtonElement | null
+}
+function registerMenuItem(label: string, index: number, el: HTMLElement | null) {
+    if (!menuItemRefs.value[label]) menuItemRefs.value[label] = []
+    if (el) menuItemRefs.value[label][index] = el as HTMLAnchorElement
+}
+
+async function openAndFocusFirst(label: string) {
+    openDropdown.value = label
+    await nextTick()
+    menuItemRefs.value[label]?.[0]?.focus()
+}
+async function openAndFocusLast(label: string) {
+    openDropdown.value = label
+    await nextTick()
+    const items = menuItemRefs.value[label] || []
+    items[items.length - 1]?.focus()
+}
+
+function onTriggerKeydown(e: KeyboardEvent, label: string) {
+    if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault()
+        openAndFocusFirst(label)
+    }
+    else if (e.key === 'ArrowUp') {
+        e.preventDefault()
+        openAndFocusLast(label)
+    }
+}
+
+function onMenuKeydown(e: KeyboardEvent, label: string, idx: number) {
+    const items = menuItemRefs.value[label] || []
+    if (items.length === 0) return
+    if (e.key === 'ArrowDown') {
+        e.preventDefault()
+        items[(idx + 1) % items.length]?.focus()
+    }
+    else if (e.key === 'ArrowUp') {
+        e.preventDefault()
+        items[(idx - 1 + items.length) % items.length]?.focus()
+    }
+    else if (e.key === 'Home') {
+        e.preventDefault()
+        items[0]?.focus()
+    }
+    else if (e.key === 'End') {
+        e.preventDefault()
+        items[items.length - 1]?.focus()
+    }
+    else if (e.key === 'Escape') {
+        e.preventDefault()
+        openDropdown.value = null
+        triggerRefs.value[label]?.focus()
+    }
+    else if (e.key === 'Tab') {
+        // Tab closes the menu and lets focus move naturally to the next focusable.
+        openDropdown.value = null
+    }
+}
 
 const onClickOutside = (e: MouseEvent) => {
     if (headerRef.value && !headerRef.value.contains(e.target as Node)) {
@@ -111,10 +185,14 @@ onBeforeUnmount(() => {
                     </NuxtLink>
                     <div v-else class="relative">
                         <button
+                            :ref="(el) => registerTrigger(item.label, el as HTMLElement | null)"
                             type="button"
                             class="leading-[150%] font-medium transition-colors hover:text-primary-text inline-flex items-center gap-1.5"
                             :aria-expanded="openDropdown === item.label"
+                            aria-haspopup="menu"
+                            :aria-controls="`menu-${item.label}`"
                             @click.stop="toggleDropdown(item.label)"
+                            @keydown="onTriggerKeydown($event, item.label)"
                         >
                             {{ item.label }}
                             <span
@@ -125,13 +203,20 @@ onBeforeUnmount(() => {
                         </button>
                         <div
                             v-if="openDropdown === item.label && 'children' in item"
+                            :id="`menu-${item.label}`"
+                            role="menu"
+                            :aria-label="item.label"
                             class="absolute top-full left-0 mt-3 min-w-[340px] bg-white rounded-2xl shadow-xl border border-drygray-200 overflow-hidden"
                         >
                             <NuxtLink
-                                v-for="c in item.children"
+                                v-for="(c, idx) in item.children"
                                 :key="c.to"
+                                :ref="(el) => registerMenuItem(item.label, idx, el as unknown as HTMLElement | null)"
                                 :to="c.to"
+                                role="menuitem"
+                                :tabindex="idx === 0 ? 0 : -1"
                                 class="block px-5 py-4 hover:bg-whitesmoke-100 transition-colors border-t border-drygray-200 first:border-t-0"
+                                @keydown="onMenuKeydown($event, item.label, idx)"
                             >
                                 <div class="flex items-center justify-between gap-4">
                                     <span class="text-drygray-100 font-medium">{{ c.label }}</span>

@@ -16,6 +16,11 @@ export default defineNuxtConfig({
             // page renders a fallback message + mailto.
             schedulingUrl: process.env.SCHEDULING_URL || '',
             schedulingEmail: process.env.SCHEDULING_EMAIL || 'briefings@davion.com',
+            // P2.U5: Loom (or other) demo video URL. Iframe activates on AlpOS when
+            // set; honest fallback otherwise. Use the embed-friendly Loom share URL,
+            // e.g. https://www.loom.com/embed/<id>
+            demoEmbedUrl: process.env.DEMO_EMBED_URL || '',
+            demoLength: process.env.DEMO_LENGTH || '90 seconds',
         },
     },
 
