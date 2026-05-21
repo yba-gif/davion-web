@@ -92,8 +92,17 @@ function categoryLabel(slug: string) {
             </div>
         </section>
 
+        <!-- Loading state (P1.U2) -->
+        <section v-if="pending" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <CommonSup title="Loading" />
+            <h2 class="sr-only">Loading dispatches</h2>
+            <div class="mt-10">
+                <SkeletonBlock variant="card" :count="3" />
+            </div>
+        </section>
+
         <!-- Featured dispatch -->
-        <section v-if="featured" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
+        <section v-else-if="featured" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
             <CommonSup title="Featured" />
             <NuxtLink :to="`/company/newsroom/${featured.slug}`" class="block mt-6 group">
                 <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
