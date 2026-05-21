@@ -27,8 +27,14 @@ const intents = [
             </p>
         </section>
 
-        <!-- P0.U3: scheduling embed, the destination every site-wide "Book a demo"
-             CTA routes to. Single source of scheduling truth (runtimeConfig). -->
+        <!-- P2.U3: real engagement form (backed by Postgres). Primary intake.
+             Replaces the mailto-only experience; mailto and scheduler still
+             work as alternates below. -->
+        <EngagementForm />
+
+        <!-- P0.U3: scheduling embed, alternative to the form for visitors who
+             want a calendar slot directly. Single source of scheduling truth
+             (runtimeConfig). -->
         <SchedulingEmbed />
 
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// P2.U5 — Inline product-demo video embed. Mirrors the SchedulingEmbed pattern
+// P2.U5: Inline product-demo video embed. Mirrors the SchedulingEmbed pattern
 // (P0.U3): reads runtimeConfig, renders iframe when set, honest fallback
 // otherwise.
 //

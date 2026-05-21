@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// P2.U6 — Reusable empty-state pattern. Used anywhere a list, table, or
+// P2.U6: Reusable empty-state pattern. Used anywhere a list, table, or
 // filter narrows to zero. Replaces ad-hoc "nothing here" markup with a
 // consistent eyebrow / headline / body / CTA structure.
 //
@@ -16,7 +16,7 @@ interface Props {
     headline: string
     body?: string
     /**
-     * Visual variant — chooses the section background and tone.
+     * Visual variant: chooses the section background and tone.
      * - 'neutral'  → bg-whitesmoke-100 (default, fits in any context)
      * - 'soft'     → bg-azure          (light, gentle; paired with the P1.U6 palette)
      * - 'card'     → bg-white border    (drops into a card layout)

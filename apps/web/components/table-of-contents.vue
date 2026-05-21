@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// P2.U1 — Right-rail Table of Contents for long pages.
+// P2.U1: Right-rail Table of Contents for long pages.
 // Pass `:sections="[{ id: 'problem', label: 'The problem' }, ...]"`.
 // IntersectionObserver picks the currently-visible section. Scroll-anchor
 // links use smooth scrolling (honours prefers-reduced-motion). Mobile collapses
