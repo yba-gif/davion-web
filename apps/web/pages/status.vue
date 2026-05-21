@@ -30,7 +30,7 @@ const services = [
     {
         name: 'Per-customer AlpOS deployments',
         status: 'per-deployment',
-        detail: 'Customer deployments run inside the customer\'s perimeter. Their status is reported under their engagement contract — not on this public page.',
+        detail: 'Customer deployments run inside the customer\'s perimeter. Their status is reported under their engagement contract, not on this public page.',
     },
 ]
 
@@ -50,7 +50,7 @@ const statusLabel = (s: string) =>
                 Operational status<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                The public surfaces — this site, the engagement intake, the newsroom API. Customer-deployment status is reported under the engagement contract, not here; sovereignty by deployment cuts both ways.
+                The public surfaces, this site, the engagement intake, the newsroom API. Customer-deployment status is reported under the engagement contract, not here; sovereignty by deployment cuts both ways.
             </p>
             <p class="text-[13px] font-mono uppercase tracking-[0.15em] text-drygray-default mt-8">
                 Last checked · {{ lastChecked }}

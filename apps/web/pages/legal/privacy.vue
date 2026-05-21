@@ -12,7 +12,7 @@ const sections = [
     {
         n: '01',
         title: 'Who this applies to',
-        body: 'This Privacy Policy applies to visitors of davion.com and Davion-operated subdomains. It does not describe how Davion handles data inside customer deployments — those are governed by the Master Services Agreement with the relevant institution, the Data Processing Agreement, and the deployment posture (on-prem / air-gapped / sovereign cloud).',
+        body: 'This Privacy Policy applies to visitors of davion.com and Davion-operated subdomains. It does not describe how Davion handles data inside customer deployments, those are governed by the Master Services Agreement with the relevant institution, the Data Processing Agreement, and the deployment posture (on-prem / air-gapped / sovereign cloud).',
     },
     {
         n: '02',
@@ -42,7 +42,7 @@ const sections = [
     {
         n: '07',
         title: 'Where the data lives',
-        body: 'Davion operates from Zurich and Istanbul. Website operational data is processed in EU/Swiss jurisdictions. Customer-deployment data lives where you specify in your engagement contract — inside your perimeter for on-prem and air-gapped postures; in your contracted sovereign-cloud region otherwise.',
+        body: 'Davion operates from Zurich and Istanbul. Website operational data is processed in EU/Swiss jurisdictions. Customer-deployment data lives where you specify in your engagement contract, inside your perimeter for on-prem and air-gapped postures; in your contracted sovereign-cloud region otherwise.',
     },
     {
         n: '08',

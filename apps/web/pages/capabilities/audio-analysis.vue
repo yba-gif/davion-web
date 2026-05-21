@@ -2,9 +2,9 @@
 // Refactored to <CapabilityLayout> in P1.U7.
 useSeoMeta({
     title: 'Audio analysis & transcription',
-    description: 'Transcribe, diarise, and extract structure from calls, interviews, and broadcasts — with speaker identification, sentiment, and topic modelling. Inside your perimeter.',
+    description: 'Transcribe, diarise, and extract structure from calls, interviews, and broadcasts, with speaker identification, sentiment, and topic modelling. Inside your perimeter.',
     ogTitle: 'Davion · Audio analysis',
-    ogDescription: 'Speaker, sentiment, and semantic structure from audio at scale. Trading floors, contact centres, broadcasts — inside the perimeter.',
+    ogDescription: 'Speaker, sentiment, and semantic structure from audio at scale. Trading floors, contact centres, broadcasts, inside the perimeter.',
 })
 
 const data = {
@@ -16,7 +16,7 @@ const data = {
         'Transcribes and diarises calls, interviews, and broadcasts at archive scale.',
         'Identifies speakers, sentiment shifts, and topic boundaries.',
         'Surfaces compliance-relevant events: market-abuse phrases, escalation patterns, distress signals.',
-        'Runs against your audio infrastructure — no third-party API, no recordings leave the perimeter.',
+        'Runs against your audio infrastructure, no third-party API, no recordings leave the perimeter.',
     ],
 
     howItWorksTitle: 'Ingest · Transcribe · Structure · Cite',

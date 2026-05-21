@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// P1.U7 — Shared layout for /capabilities/* pages.
+// P1.U7, Shared layout for /capabilities/* pages.
 //
 // Same refactor pattern as IndustryLayout, lighter template. 6 capability
 // pages each shrink from ~150 lines of inline template to ~30 lines of

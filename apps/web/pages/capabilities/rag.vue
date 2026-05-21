@@ -2,21 +2,21 @@
 // Refactored to <CapabilityLayout> in P1.U7.
 useSeoMeta({
     title: 'RAG over your ontology',
-    description: 'Retrieval-augmented generation grounded in your domain ontology and document corpus — never the open web. Every output cites its source, every retrieval respects access control.',
+    description: 'Retrieval-augmented generation grounded in your domain ontology and document corpus, never the open web. Every output cites its source, every retrieval respects access control.',
     ogTitle: 'Davion · RAG over your ontology',
-    ogDescription: 'AI that cites its sources. RAG grounded against your governed ontology — inside your perimeter, audit-ready.',
+    ogDescription: 'AI that cites its sources. RAG grounded against your governed ontology, inside your perimeter, audit-ready.',
 })
 
 const data = {
     eyebrow: 'Capability · RAG',
     headline: 'AI that cites its sources. Grounded in your ontology, not the open web',
-    body: 'Retrieval-augmented generation that runs against your governed ontology and document corpus — inside your perimeter, with access control on every retrieval and provenance on every claim.',
+    body: 'Retrieval-augmented generation that runs against your governed ontology and document corpus, inside your perimeter, with access control on every retrieval and provenance on every claim.',
 
     whatItDoes: [
         'Answers analyst questions against your governed document corpus, not the open web.',
-        'Cites the exact passage and source for every claim — no unsupported sentences.',
+        'Cites the exact passage and source for every claim, no unsupported sentences.',
         'Respects per-document and per-cell access control on every retrieval.',
-        'Runs entirely inside your perimeter — no third-party API, no leakage.',
+        'Runs entirely inside your perimeter, no third-party API, no leakage.',
     ],
 
     howItWorksTitle: 'Ground · Retrieve · Reason · Cite',

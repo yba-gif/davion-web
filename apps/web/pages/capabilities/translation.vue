@@ -2,7 +2,7 @@
 // Refactored to <CapabilityLayout> in P1.U7.
 useSeoMeta({
     title: 'Machine translation',
-    description: 'High-quality translation across 60+ languages, run entirely inside your perimeter — with provenance for every translation and access control on every source.',
+    description: 'High-quality translation across 60+ languages, run entirely inside your perimeter, with provenance for every translation and access control on every source.',
     ogTitle: 'Davion · Machine translation',
     ogDescription: 'Translation that respects your perimeter. 60+ languages, no third-party API, provenance for every translation.',
 })
@@ -10,13 +10,13 @@ useSeoMeta({
 const data = {
     eyebrow: 'Capability · Translation',
     headline: 'Translation that respects your perimeter',
-    body: 'AlpOS Translation runs 60+ language pairs inside your perimeter — text, documents, audio transcripts — with provenance for every passage and access control on every source. No third-party API. No cross-border transit.',
+    body: 'AlpOS Translation runs 60+ language pairs inside your perimeter, text, documents, audio transcripts, with provenance for every passage and access control on every source. No third-party API. No cross-border transit.',
 
     whatItDoes: [
         'Translates text, documents, and transcribed audio across 60+ language pairs.',
         'Preserves layout, formatting, and embedded metadata through the translation.',
         'Records source-to-target provenance for every passage, every sentence.',
-        'Runs entirely on operator hardware — no third-party API, no cross-border data transit.',
+        'Runs entirely on operator hardware, no third-party API, no cross-border data transit.',
     ],
 
     howItWorksTitle: 'Detect · Translate · Preserve · Cite',

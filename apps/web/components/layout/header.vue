@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// Davion header — base1's rounded blurred sticky nav.
+// Davion header, base1's rounded blurred sticky nav.
 // P0.7: stub pages pruned from nav. Only pages with real depth are advertised.
 // Routes for the pruned pages remain alive (direct-link traffic still works);
 // they're re-added once content lands per redesign-action-plan §P1–P2.
@@ -18,7 +18,7 @@ const nav = [
             { label: 'OSINT', to: '/solutions/osint' },
         ],
     },
-    // Capabilities dropdown restored — P2.2 promoted all 6 capability pages
+    // Capabilities dropdown restored, P2.2 promoted all 6 capability pages
     // out of stub status. Each links into 2-4 industries that lean on it.
     {
         label: 'Capabilities',
@@ -47,7 +47,7 @@ const nav = [
         ],
     },
     { label: 'Trust', to: '/trust' },
-    // Company dropdown — collapsed from 3 flat top-level links (About / Careers /
+    // Company dropdown, collapsed from 3 flat top-level links (About / Careers /
     // Newsroom) once Careers landed in P2.6.
     {
         label: 'Company',

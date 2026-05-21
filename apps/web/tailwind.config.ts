@@ -21,7 +21,7 @@ const config: Config = {
                 dark: '#212121',
                 drywhite: '#FEFEFE',
                 azure: '#e0f1f3',
-                // aliceblue removed P1.U6 — collapsed to 3 pastels (azure /
+                // aliceblue removed P1.U6, collapsed to 3 pastels (azure /
                 // honeydew / whitesmoke). All previous `bg-aliceblue` swapped
                 // to `bg-azure`.
                 honeydew: '#d9efdf',

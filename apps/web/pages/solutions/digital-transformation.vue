@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'Digital Transformation',
-    description: 'Modernization with sovereignty intact — from siloed data to a single governed source of truth, phased from POC to industrial deployment.',
+    description: 'Modernization with sovereignty intact, from siloed data to a single governed source of truth, phased from POC to industrial deployment.',
     ogTitle: 'Davion · Digital Transformation',
     ogDescription: 'Modernize the data layer without losing the institution. Phased POC → industrial deployment, sovereignty intact end to end.',
 })
@@ -10,12 +10,12 @@ const phases = [
     { n: '01', name: 'Discover', body: 'Audit the data, the workflows, and the operational reality. Identify the single highest-value decision to govern first.' },
     { n: '02', name: 'POC', body: 'Stand up AlpOS against the proof-of-concept dataset. Demonstrate the ingest-to-act spine end to end, inside the sovereign perimeter.' },
     { n: '03', name: 'Industrialize', body: 'Expand from POC to operational deployment. Connect remaining sources, formalize the ontology, embed decisions into workflows of record.' },
-    { n: '04', name: 'Enable', body: 'Train operators, hand off ownership, and instrument the platform for ongoing change. The work continues — without the contractor.' },
+    { n: '04', name: 'Enable', body: 'Train operators, hand off ownership, and instrument the platform for ongoing change. The work continues, without the contractor.' },
 ]
 
 const layers = [
     { name: 'Ingest', body: 'Bring fragmented data into a single governed pipeline; lineage tracked from source.' },
-    { name: 'Ontology', body: 'Establish the shared vocabulary across the institution — analysts, engineers, operators reason against the same model.' },
+    { name: 'Ontology', body: 'Establish the shared vocabulary across the institution, analysts, engineers, operators reason against the same model.' },
     { name: 'Decide', body: 'Replace report-and-meeting cycles with operator-grade decisioning, with AI that cites its sources.' },
     { name: 'Act', body: 'Write decisions back to the systems of record the institution already runs.' },
 ]
@@ -23,7 +23,7 @@ const layers = [
 const outcomes = [
     { label: 'Time to insight', body: 'Decisions in days, not quarterly reviews. The platform absorbs the speed gap legacy stacks create.' },
     { label: 'Governance', body: 'Every decision is traceable. Modernization arrives with audit, not at its expense.' },
-    { label: 'Operator ownership', body: 'The institution owns the platform after deployment — not a vendor relationship in perpetuity.' },
+    { label: 'Operator ownership', body: 'The institution owns the platform after deployment, not a vendor relationship in perpetuity.' },
 ]
 </script>
 
@@ -35,7 +35,7 @@ const outcomes = [
                 From siloed data to a single governed source of truth.
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Modernization for institutions that cannot trade governance for speed — and cannot afford to keep paying for both. AlpOS becomes the backbone, phased from proof-of-concept to industrial deployment.
+                Modernization for institutions that cannot trade governance for speed, and cannot afford to keep paying for both. AlpOS becomes the backbone, phased from proof-of-concept to industrial deployment.
             </p>
             <div class="mt-10">
                 <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
@@ -112,7 +112,7 @@ const outcomes = [
                         Modernize without trading governance for speed.
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                        Briefings start with the highest-value decision in your institution today — and work backwards from there.
+                        Briefings start with the highest-value decision in your institution today, and work backwards from there.
                     </p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right">

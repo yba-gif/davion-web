@@ -3,7 +3,7 @@ useSeoMeta({
     title: 'Newsroom',
     description: 'Announcements, insight, and technical notes from the Davion team.',
     ogTitle: 'Davion · Newsroom',
-    ogDescription: 'Dispatches from the work — announcements, insight, and technical notes.',
+    ogDescription: 'Dispatches from the work, announcements, insight, and technical notes.',
 })
 
 interface Post {

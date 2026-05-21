@@ -32,7 +32,7 @@ const sections = [
     {
         n: '05',
         title: 'No warranty on the marketing site',
-        body: 'davion.com is provided "as is." Davion does not warrant that the site is uninterrupted, error-free, or that linked third-party resources will remain available. This disclaimer is limited to the marketing site — production deployments are warranted under the MSA.',
+        body: 'davion.com is provided "as is." Davion does not warrant that the site is uninterrupted, error-free, or that linked third-party resources will remain available. This disclaimer is limited to the marketing site, production deployments are warranted under the MSA.',
     },
     {
         n: '06',

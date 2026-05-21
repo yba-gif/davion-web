@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// P1.U7 — Shared layout for /industries/* pages.
+// P1.U7, Shared layout for /industries/* pages.
 //
 // Before: each of 6 industry pages inlined ~150 lines of structurally
 // identical template with capability-specific content. Total ~900 lines
@@ -59,7 +59,7 @@ interface IndustryData {
 
 const props = defineProps<{ data: IndustryData }>()
 
-// Defaults — keep the FS template as the canonical source of truth for labels.
+// Defaults, keep the FS template as the canonical source of truth for labels.
 const primaryCta = computed<Cta>(() => props.data.primaryCta ?? { label: 'Book a demo', to: '/contact' })
 const secondaryCta = computed<Cta>(() => props.data.secondaryCta ?? { label: 'See AlpOS', to: '/solutions/alpos' })
 const problemAreasEyebrow = computed(() => props.data.problemAreasEyebrow ?? 'Where Davion delivers')
@@ -72,7 +72,7 @@ const ctaSecondary = computed<Cta>(() => props.data.ctaSecondary ?? { label: 'Sp
 
 // Split a headline on ". " boundaries so each declarative segment gets a green
 // dot accent (Davion punctuation signature per docs/brand-voice.md §5 rule 7).
-// "Banks use Davion when X — and Y" → one segment, one trailing dot.
+// "Banks use Davion when X, and Y" → one segment, one trailing dot.
 // "Sovereignty isn't a feature. It's where the work happens" → two segments, two dots.
 function splitHeadlineSegments(h: string): string[] {
     return h.split(/\.\s+/).filter(Boolean)

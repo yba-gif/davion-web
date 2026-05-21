@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useSeoMeta({ title: 'Venture', description: 'Davion backs and builds in sovereign data, AI, and defense-adjacent technology — capital, access, and platform together.' })
+useSeoMeta({ title: 'Venture', description: 'Davion backs and builds in sovereign data, AI, and defense-adjacent technology, capital, access, and platform together.' })
 </script>
 
 <template>
@@ -10,7 +10,7 @@ useSeoMeta({ title: 'Venture', description: 'Davion backs and builds in sovereig
                 Capital and platform for the sovereign-tech ecosystem.
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Davion backs and builds in sovereign data, AI, and defense-adjacent technology — capital, access, and platform together. Restrained, serious, founder-first.
+                Davion backs and builds in sovereign data, AI, and defense-adjacent technology, capital, access, and platform together. Restrained, serious, founder-first.
             </p>
             <p class="text-b1 text-drygray-default mt-8">Thesis, areas of interest, and intake land in a subsequent slice.</p>
             <div class="mt-10">

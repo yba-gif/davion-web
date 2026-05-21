@@ -2,15 +2,15 @@
 // Refactored to <IndustryLayout> in P1.U7.
 useSeoMeta({
     title: 'Government',
-    description: 'Government agencies use Davion when cross-departmental data has to stay within the perimeter — and decisions have to be defensible at audit. Sovereign AI for public-service delivery, fraud, critical infrastructure, and oversight.',
+    description: 'Government agencies use Davion when cross-departmental data has to stay within the perimeter, and decisions have to be defensible at audit. Sovereign AI for public-service delivery, fraud, critical infrastructure, and oversight.',
     ogTitle: 'Davion · Government',
     ogDescription: 'Sovereign AI for public-service delivery, benefit-fraud detection, critical infrastructure, and procurement oversight. Audit by design.',
 })
 
 const data = {
     eyebrow: 'Industries · Government',
-    headline: 'Government agencies use Davion when cross-departmental data has to stay within the perimeter — and decisions have to be defensible at audit',
-    body: 'Citizen data, classified records, and inter-ministerial exchange are governed by law that does not permit a vendor-cloud round-trip. Davion deploys inside the agency perimeter — air-gapped, on-prem, or in a sovereign cloud bound by contract — so the data stays under the agency\'s governance and every decision traces back to the source, the policy, and the version of the model that produced it.',
+    headline: 'Government agencies use Davion when cross-departmental data has to stay within the perimeter, and decisions have to be defensible at audit',
+    body: 'Citizen data, classified records, and inter-ministerial exchange are governed by law that does not permit a vendor-cloud round-trip. Davion deploys inside the agency perimeter, air-gapped, on-prem, or in a sovereign cloud bound by contract, so the data stays under the agency\'s governance and every decision traces back to the source, the policy, and the version of the model that produced it.',
 
     secondaryCta: { label: 'Deployment matrix', to: '/trust' },
 
@@ -68,11 +68,11 @@ const data = {
     storyBody: 'It surfaces as a shared director across two suppliers, a procurement award uncorrelated with apparent capacity, a benefits claim cross-referenced with an employment record in another ministry, a tax filing that doesn\'t match a customs movement. AlpOS resolves the entity under explicit policy across agency systems and proposes the case with cited evidence. The inspector reads the case. The decision stays with the inspector.',
     storyOutcome: 'Earlier irregularity detection. Defensible inter-agency cooperation. Audit lineage from raw record to final ruling.',
     storyLayers: [
-        'Ingest — tax, customs, procurement, benefits, public registry',
-        'Ontology — citizens, organisations, contracts, events',
-        'Analyze — network analysis, anomaly scoring, link discovery',
-        'Decide — inspector copilot, evidence chain, policy check',
-        'Act — case file, inter-agency tasking, audit log',
+        'Ingest: tax, customs, procurement, benefits, public registry',
+        'Ontology: citizens, organisations, contracts, events',
+        'Analyze: network analysis, anomaly scoring, link discovery',
+        'Decide: inspector copilot, evidence chain, policy check',
+        'Act: case file, inter-agency tasking, audit log',
     ],
 
     ctaHeadline: 'Decisions defensible at audit and in court',

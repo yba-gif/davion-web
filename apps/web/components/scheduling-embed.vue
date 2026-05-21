@@ -1,11 +1,11 @@
 <script setup lang="ts">
-// P0.U3 — Inline scheduling embed for the "Book a demo" conversion event.
+// P0.U3, Inline scheduling embed for the "Book a demo" conversion event.
 //
 // Behaviour:
 //   - When SCHEDULING_URL env var is configured (Cal.com / Calendly URL),
 //     this renders an inline iframe scheduler. Modern Cal.com / Calendly
 //     URLs both support iframe embeds without extra JS.
-//   - When SCHEDULING_URL is empty (current state — pending founder
+//   - When SCHEDULING_URL is empty (current state, pending founder
 //     provisioning), this renders an honest fallback that surfaces the
 //     reason and routes to mailto.
 //
@@ -25,14 +25,14 @@ const hasScheduler = computed(() => !!schedulingUrl.value)
             Pick a time<span class="text-primary-text">.</span> 30 minutes<span class="text-primary-text">.</span> Consultative<span class="text-primary-text">.</span>
         </h2>
         <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
-            The first conversation is a briefing, not a pitch. We listen first — to your data architecture, your regulatory constraints, your operational reality. If Davion is not the right answer, we will say so.
+            The first conversation is a briefing, not a pitch. We listen first, to your data architecture, your regulatory constraints, your operational reality. If Davion is not the right answer, we will say so.
         </p>
 
         <!-- Live scheduler (when configured) -->
         <div v-if="hasScheduler" class="mt-10 rounded-2xl overflow-hidden border border-drygray-200 bg-white">
             <iframe
                 :src="schedulingUrl"
-                title="Davion scheduling — pick a 30-minute briefing slot"
+                title="Davion scheduling, pick a 30-minute briefing slot"
                 class="w-full"
                 style="height: 720px; border: 0;"
                 loading="lazy"

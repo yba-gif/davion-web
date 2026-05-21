@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'Careers',
-    description: 'Davion hires for the mission. Senior engineers and operators who have lived inside regulated institutions — banks, ministries, defense — not just sold to them.',
+    description: 'Davion hires for the mission. Senior engineers and operators who have lived inside regulated institutions, banks, ministries, defense, not just sold to them.',
     ogTitle: 'Davion · Careers',
     ogDescription: 'Sovereign AI is operator work. Roles for engineers and field operators who have lived the mission.',
 })
@@ -11,10 +11,10 @@ const roles = [
         title: 'Founding Engineer · Platform',
         team: 'Engineering',
         location: 'Zurich · Istanbul · Remote (CET ±2)',
-        body: 'Build AlpOS — the sovereign AI platform. Distributed systems, ontology, retrieval, agentic reasoning. You write the architecture documents and the production code that lands them.',
+        body: 'Build AlpOS, the sovereign AI platform. Distributed systems, ontology, retrieval, agentic reasoning. You write the architecture documents and the production code that lands them.',
         signals: [
             'Distributed-systems depth (Kafka / Postgres / Flink class)',
-            'Comfort owning a system end to end — from on-call to interview pipeline',
+            'Comfort owning a system end to end, from on-call to interview pipeline',
             'Has shipped AI/ML in production against real adversarial inputs',
         ],
     },
@@ -47,7 +47,7 @@ const roles = [
         body: 'Own the retrieval and RAG stack inside AlpOS. Index design, embedding strategy, access-controlled retrieval, evaluation against real institutional corpora. You ship the system; you also defend it in a customer audit.',
         signals: [
             'Has shipped retrieval at scale (≥ 100M docs) in production',
-            'Strong evaluation discipline — golden sets, retrieval@k, faithfulness',
+            'Strong evaluation discipline, golden sets, retrieval@k, faithfulness',
             'Reads adversarial-prompt research and applies it to customer environments',
         ],
     },
@@ -73,7 +73,7 @@ const process = [
     {
         n: '02',
         title: 'Work session',
-        body: 'A real working session against a real Davion problem — usually 2-4 hours, paid. You see how we think; we see how you think. We do not believe in unpaid take-homes.',
+        body: 'A real working session against a real Davion problem, usually 2-4 hours, paid. You see how we think; we see how you think. We do not believe in unpaid take-homes.',
     },
     {
         n: '03',
@@ -92,11 +92,11 @@ const process = [
                 Sovereign AI is operator work<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Davion hires people who have lived inside regulated institutions — banks, ministries, defense, energy, critical infrastructure — not just sold to them. We are early. The work is consequential. Compensation includes meaningful equity and is benchmarked against top-decile institutional vendors.
+                Davion hires people who have lived inside regulated institutions, banks, ministries, defense, energy, critical infrastructure, not just sold to them. We are early. The work is consequential. Compensation includes meaningful equity and is benchmarked against top-decile institutional vendors.
             </p>
         </section>
 
-        <!-- EVP — what working here actually looks like -->
+        <!-- EVP, what working here actually looks like -->
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10">
                 <div class="lg:col-span-4">

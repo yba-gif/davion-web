@@ -1,35 +1,35 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'AlpOS',
-    description: 'Sovereign AI infrastructure for decisions that cannot wait — and cannot leak. AlpOS turns data into operational action inside your perimeter, end to end.',
+    description: 'Sovereign AI infrastructure for decisions that cannot wait, and cannot leak. AlpOS turns data into operational action inside your perimeter, end to end.',
     ogTitle: 'Davion · AlpOS',
-    ogDescription: 'The sovereign AI platform: ingest, ontology, analyze, decide, act — governed end to end, deployed inside your perimeter.',
+    ogDescription: 'The sovereign AI platform: ingest, ontology, analyze, decide, act, governed end to end, deployed inside your perimeter.',
 })
 
 const layers = [
-    { n: '01', slug: 'Ingest', title: 'Data integration & preparation', body: 'Pull every relevant signal — structured, unstructured, real-time, archival — through a single governed pipeline. Native connectors, schema-on-read or schema-on-write, lineage tracked from source. Nothing is collected blindly. Nothing is collected outside policy.', specifics: ['200+ connectors', 'Streaming + batch ingest', 'Lineage + provenance', 'PII-aware transforms'] },
-    { n: '02', slug: 'Ontology', title: 'Semantic model of your domain', body: 'Entities, events, and relationships modeled to your domain — not a generic schema. The ontology becomes the shared vocabulary across analysts, engineers, and operators. Queries and AI reason against it, not against raw tables.', specifics: ['Entities · Events · Relationships', 'Versioned model', 'Role-aware visibility', 'Domain vocabularies'] },
-    { n: '03', slug: 'Analyze', title: 'Analytics, knowledge graphs, weak-signal detection', body: 'Run the analytic load where the data lives. Knowledge graphs surface relationships flat queries miss. Statistical and ML methods detect the patterns — and the weak signals that precede them.', specifics: ['Graph queries', 'Anomaly + weak-signal detection', 'Behavioral analytics', 'Geospatial · time-series'] },
+    { n: '01', slug: 'Ingest', title: 'Data integration & preparation', body: 'Pull every relevant signal, structured, unstructured, real-time, archival, through a single governed pipeline. Native connectors, schema-on-read or schema-on-write, lineage tracked from source. Nothing is collected blindly. Nothing is collected outside policy.', specifics: ['200+ connectors', 'Streaming + batch ingest', 'Lineage + provenance', 'PII-aware transforms'] },
+    { n: '02', slug: 'Ontology', title: 'Semantic model of your domain', body: 'Entities, events, and relationships modeled to your domain, not a generic schema. The ontology becomes the shared vocabulary across analysts, engineers, and operators. Queries and AI reason against it, not against raw tables.', specifics: ['Entities · Events · Relationships', 'Versioned model', 'Role-aware visibility', 'Domain vocabularies'] },
+    { n: '03', slug: 'Analyze', title: 'Analytics, knowledge graphs, weak-signal detection', body: 'Run the analytic load where the data lives. Knowledge graphs surface relationships flat queries miss. Statistical and ML methods detect the patterns, and the weak signals that precede them.', specifics: ['Graph queries', 'Anomaly + weak-signal detection', 'Behavioral analytics', 'Geospatial · time-series'] },
     { n: '04', slug: 'Decide', title: 'AI copilot with traceability', body: 'An agentic copilot that argues from the ontology, cites the data, and shows its work. Every recommendation is traceable to its source. Hallucinations do not survive contact with auditable evidence.', specifics: ['RAG over your ontology', 'Reasoning traces', 'Human-in-the-loop gating', 'Model provenance', 'Refusal under uncertainty'] },
-    { n: '05', slug: 'Act', title: 'Operational decisioning & workflow', body: 'Decisions only matter when they reach the operator and the system. Workflows, dispatch, case management, and write-back to systems of record are embedded — so AlpOS does not stop at insight.', specifics: ['Workflow engine', 'Case / ticket integration', 'Write-back to systems of record', 'SLA + escalation', 'Post-action review'] },
+    { n: '05', slug: 'Act', title: 'Operational decisioning & workflow', body: 'Decisions only matter when they reach the operator and the system. Workflows, dispatch, case management, and write-back to systems of record are embedded, so AlpOS does not stop at insight.', specifics: ['Workflow engine', 'Case / ticket integration', 'Write-back to systems of record', 'SLA + escalation', 'Post-action review'] },
 ]
 
 const fieldStories = [
     {
         sector: 'Financial Services · AML',
         problem: 'Financial crime rarely leaves a single trace.',
-        body: 'AlpOS maps the full network of entities, accounts, transactions, and behavioural signals across sources — surfacing the patterns flat rules and isolated dashboards miss. Investigations move from alerts to actionable cases, with full lineage from raw transaction to operator decision.',
+        body: 'AlpOS maps the full network of entities, accounts, transactions, and behavioural signals across sources, surfacing the patterns flat rules and isolated dashboards miss. Investigations move from alerts to actionable cases, with full lineage from raw transaction to operator decision.',
         outcome: 'Faster case adjudication. Fewer false positives. Audit by design.',
     },
     {
         sector: 'Energy & Critical Infrastructure · Asset health',
         problem: 'Fleet-wide defects, hidden in the variance.',
-        body: 'AlpOS correlates telemetry across distributed assets, finds the weak signals that precede failure, and routes the response to the operators who can act — without telemetry leaving the perimeter. The same spine handles unplanned outages and planned maintenance windows.',
+        body: 'AlpOS correlates telemetry across distributed assets, finds the weak signals that precede failure, and routes the response to the operators who can act, without telemetry leaving the perimeter. The same spine handles unplanned outages and planned maintenance windows.',
         outcome: 'Anomaly response in minutes. Defensible runbooks. Post-incident review without losing the institution.',
     },
     {
         sector: 'Defense & Intelligence · Signals fusion',
-        problem: 'Decisions in classified environments cannot wait — and cannot leak.',
+        problem: 'Decisions in classified environments cannot wait, and cannot leak.',
         body: 'AlpOS unifies signal streams inside the perimeter, lets analysts pivot across them with cited evidence, and produces traceable outputs the after-action can defend. Deployable on-premise and air-gapped, with cell-level access control and a full audit trail.',
         outcome: 'Mission cycle compressed. Every action defensible.',
     },
@@ -54,9 +54,9 @@ const capabilities = [
 ]
 
 const aiCapabilities = [
-    { name: 'RAG over your ontology', body: 'Retrieval-augmented generation grounded in your domain model — not the open web.', slug: 'rag' },
+    { name: 'RAG over your ontology', body: 'Retrieval-augmented generation grounded in your domain model, not the open web.', slug: 'rag' },
     { name: 'Geospatial analytics', body: 'Map, ground, and reason over location-aware data at operational scale.', slug: 'geospatial' },
-    { name: 'Video intelligence', body: 'Detect, classify, and search across video corpora — inside your perimeter.', slug: 'video-intelligence' },
+    { name: 'Video intelligence', body: 'Detect, classify, and search across video corpora, inside your perimeter.', slug: 'video-intelligence' },
     { name: 'Audio analysis & transcription', body: 'Speaker, sentiment, and semantic structure from audio at scale.', slug: 'audio-analysis' },
     { name: 'Machine translation', body: '60+ languages, with provenance, run inside your perimeter.', slug: 'translation' },
     { name: 'Data acquisition & preparation', body: 'Connectors, ETL, enrichment, and governance from source to ontology.', slug: 'data-acquisition' },
@@ -73,21 +73,21 @@ const industriesServed = [
 
 const outcomes = [
     { label: 'Speed', body: 'From signal to first action in minutes, not weeks. The cycle is the architecture, not a series of integrations.' },
-    { label: 'Defensibility', body: 'Every output traceable to its source data and the operator who acted on it. Auditable by design — before, during, and after.' },
+    { label: 'Defensibility', body: 'Every output traceable to its source data and the operator who acted on it. Auditable by design, before, during, and after.' },
     { label: 'Trust', body: 'Deployable in environments where "send the data to a vendor" is not an option. Sovereignty as a precondition, not a feature.' },
 ]
 </script>
 
 <template>
     <div class="flex flex-col gap-4">
-        <!-- 1. Platform hero — pain-first construction -->
+        <!-- 1. Platform hero, pain-first construction -->
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
             <CommonSup title="Platform · AlpOS" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-5xl">
                 Sovereign AI infrastructure for decisions that can't wait<span class="text-primary-text">.</span> And can't leak<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Most organisations can see their data. Few can act on it when it matters. AlpOS closes the gap — one governed environment, from every source to every decision, inside your perimeter.
+                Most organisations can see their data. Few can act on it when it matters. AlpOS closes the gap, one governed environment, from every source to every decision, inside your perimeter.
             </p>
             <div class="mt-10 flex flex-wrap items-center gap-3">
                 <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
@@ -102,7 +102,7 @@ const outcomes = [
                 When data outpaces the capacity to decide, decisions fail<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
-                Institutions today inherit fragmented data, opaque models, and tooling that was not built to be governed. The cost is not abstract — it is missed signals, slow responses, and decisions that cannot be defended after the fact. AlpOS exists to close that gap.
+                Institutions today inherit fragmented data, opaque models, and tooling that was not built to be governed. The cost is not abstract, it is missed signals, slow responses, and decisions that cannot be defended after the fact. AlpOS exists to close that gap.
             </p>
         </section>
 
@@ -115,7 +115,7 @@ const outcomes = [
                 </h2>
             </div>
             <div class="bg-whitesmoke-100 rounded-2xl p-4 sm:p-6 lg:p-10 overflow-x-auto">
-                <svg viewBox="0 0 1200 320" class="w-full h-auto min-w-[820px]" role="img" aria-label="AlpOS architecture: Ingest, Ontology, Analyze and AI, Decide, Act — all inside a sovereign perimeter.">
+                <svg viewBox="0 0 1200 320" class="w-full h-auto min-w-[820px]" role="img" aria-label="AlpOS architecture: Ingest, Ontology, Analyze and AI, Decide, Act, all inside a sovereign perimeter.">
                     <text x="40" y="38" fill="#60E576" font-family="'Switzer', sans-serif" font-size="11" font-weight="700" letter-spacing="3">SOVEREIGN PERIMETER</text>
                     <rect x="20" y="56" width="1160" height="200" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="1" stroke-dasharray="3 4" rx="12"/>
                     <g>
@@ -187,7 +187,7 @@ const outcomes = [
             </div>
         </section>
 
-        <!-- 5. Where it lands — concrete vertical use cases. Eyebrow renamed (was "In the field" — ChapsVision echo per voice doc). -->
+        <!-- 5. Where it lands, concrete vertical use cases. Eyebrow renamed (was "In the field", ChapsVision echo per voice doc). -->
         <section class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Where it lands" />
@@ -195,7 +195,7 @@ const outcomes = [
                     Three institutions. Three problems. One platform<span class="text-primary-text">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
-                    How AlpOS is applied in practice — three concrete deployments across financial services, critical infrastructure, and defense.
+                    How AlpOS is applied in practice, three concrete deployments across financial services, critical infrastructure, and defense.
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-4">
@@ -216,7 +216,7 @@ const outcomes = [
                     Your data. Your jurisdiction. Your access controls. Your audit<span class="text-primary-text">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
-                    Sovereignty is not a deployment option. It is an architectural commitment. AlpOS runs where you require — and only where you require.
+                    Sovereignty is not a deployment option. It is an architectural commitment. AlpOS runs where you require, and only where you require.
                 </p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -269,7 +269,7 @@ const outcomes = [
                     AI capabilities, governed at the layer above<span class="text-primary-text">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
-                    AlpOS bundles a stack of AI capabilities that operate inside your perimeter — grounded against your ontology, audited end to end.
+                    AlpOS bundles a stack of AI capabilities that operate inside your perimeter, grounded against your ontology, audited end to end.
                 </p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -333,7 +333,7 @@ const outcomes = [
                         Bring AlpOS into your operations<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                        Demos are run against your scenarios. Bring your data architecture, your constraints, and your operational reality — we'll bring the platform and the right people from our side.
+                        Demos are run against your scenarios. Bring your data architecture, your constraints, and your operational reality, we'll bring the platform and the right people from our side.
                     </p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">

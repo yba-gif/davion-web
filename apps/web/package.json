@@ -9,6 +9,8 @@
         "preview": "nuxt preview",
         "postinstall": "echo 'skip nuxt prepare on Cloudflare Pages'",
         "lint:aa": "node scripts/check-aa-contrast.mjs",
+        "lint:dashes": "node scripts/check-no-em-dashes.mjs",
+        "lint:brand": "pnpm lint:aa && pnpm lint:dashes",
         "build:og": "node scripts/build-og-cover.mjs"
     },
     "dependencies": {

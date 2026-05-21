@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'Press kit',
-    description: 'Davion press kit — logos, brand colours, executive bio placeholders, contact for journalists and analysts.',
+    description: 'Davion press kit, logos, brand colours, executive bio placeholders, contact for journalists and analysts.',
     ogTitle: 'Davion · Press kit',
     ogDescription: 'Logos, colours, factsheet, executive bios, media contact.',
 })
@@ -12,10 +12,10 @@ const colours = [
     { name: 'Primary-text (AA-safe)', hex: '#2A8B3C', usage: 'Green-on-white text: eyebrows, badges, link hovers, headline `.` punctuation. Contrast against white ≥ 5.3:1.' },
     { name: 'Drygray-100 (text)', hex: '#212121', usage: 'Body text, headings, the wordmark.' },
     { name: 'Drygray-default (muted)', hex: '#979797', usage: 'Secondary text, captions, metadata.' },
-    { name: 'Azure (section)', hex: '#E0F1F3', usage: 'Section background — primary pastel.' },
-    { name: 'Aliceblue (section)', hex: '#DCEFF3', usage: 'Section background — secondary pastel.' },
-    { name: 'Honeydew (section)', hex: '#D9EFDF', usage: 'Section background — narrative-story pastel.' },
-    { name: 'Whitesmoke-100 (card)', hex: '#F8F8F8', usage: 'Card background — neutral.' },
+    { name: 'Azure (section)', hex: '#E0F1F3', usage: 'Section background, primary pastel.' },
+    { name: 'Aliceblue (section)', hex: '#DCEFF3', usage: 'Section background, secondary pastel.' },
+    { name: 'Honeydew (section)', hex: '#D9EFDF', usage: 'Section background, narrative-story pastel.' },
+    { name: 'Whitesmoke-100 (card)', hex: '#F8F8F8', usage: 'Card background, neutral.' },
 ]
 
 const assets = [
@@ -85,7 +85,7 @@ const facts = [
                 Download-ready files<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
-                These are the placeholder assets shipped with the current site. The full identity package — mark, wordmark, lockups, type system — lands with the P2.3 identity refresh.
+                These are the placeholder assets shipped with the current site. The full identity package, mark, wordmark, lockups, type system, lands with the P2.3 identity refresh.
             </p>
             <div class="mt-10 space-y-3">
                 <a

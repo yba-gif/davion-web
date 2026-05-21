@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// Numbers Strip — P1.7. Replaces the deleted TrustedByStrip slot with verifiable
+// Numbers Strip, P1.7. Replaces the deleted TrustedByStrip slot with verifiable
 // architectural / presence facts. Acceptance: "No invented metrics. Each card is
 // a noun + a verifiable number." (redesign-action-plan §P1.7)
 //

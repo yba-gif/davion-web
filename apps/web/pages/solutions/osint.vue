@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'OSINT',
-    description: 'Sovereign open-source intelligence — multi-source collection, correlation, and synthesis; anonymous, secure, and compliant.',
+    description: 'Sovereign open-source intelligence, multi-source collection, correlation, and synthesis; anonymous, secure, and compliant.',
     ogTitle: 'Davion · OSINT',
     ogDescription: 'Multilingual open-source intelligence with provenance. Collection, correlation, and brief generation inside your perimeter.',
 })
@@ -9,13 +9,13 @@ useSeoMeta({
 const sources = [
     { name: 'Open web', body: 'Indexed sites, public records, official statements, sectoral databases.' },
     { name: 'Deep + dark', body: 'Forums, marketplaces, and channels not addressable by standard search.' },
-    { name: 'Signals', body: 'Public telemetry — leaks, repos, image data, social streams, geospatial.' },
+    { name: 'Signals', body: 'Public telemetry, leaks, repos, image data, social streams, geospatial.' },
     { name: 'Internal', body: 'Your own corpus, governed and ontology-aligned alongside open sources.' },
 ]
 
 const engine = [
     { label: 'Correlation', body: 'Cross-source matching with confidence scoring. Identity pivots, alias resolution, timeline reconstruction.' },
-    { label: 'Knowledge graphs', body: 'Entities, relationships, and events accumulate into an investigable graph — not a pile of search results.' },
+    { label: 'Knowledge graphs', body: 'Entities, relationships, and events accumulate into an investigable graph, not a pile of search results.' },
     { label: 'AI co-pilot', body: 'Research, analysis, correlation, synthesis. Every conclusion cites its sources; nothing is asserted without provenance.' },
     { label: 'Compliance', body: 'Collection respects local law and operator policy. Every query and every action is logged.' },
 ]
@@ -34,7 +34,7 @@ const useCases = [
                 Sovereign open-source intelligence.
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Multi-source collection, correlation, and synthesis — anonymous, secure, and compliant — for the public sector and corporate risk. The investigation runs inside your perimeter.
+                Multi-source collection, correlation, and synthesis, anonymous, secure, and compliant, for the public sector and corporate risk. The investigation runs inside your perimeter.
             </p>
             <div class="mt-10">
                 <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
@@ -44,7 +44,7 @@ const useCases = [
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
             <CommonSup title="The problem" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[36px] leading-[1.05] md:text-[56px] md:leading-[1.02] tracking-tight max-w-4xl">
-                More public information than ever — and less signal than ever.
+                More public information than ever, and less signal than ever.
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 Investigators have access to more sources than they can read, more dashboards than they can watch, and more AI than they can trust. The work is not collection. It is correlation, synthesis, and defensible conclusion.
@@ -58,7 +58,7 @@ const useCases = [
                     Every source. Inside your perimeter.
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
-                    Davion connects across the surface, the deep, the dark, and your own corpus — without sending the query, the analyst behavior, or the result to a vendor.
+                    Davion connects across the surface, the deep, the dark, and your own corpus, without sending the query, the analyst behavior, or the result to a vendor.
                 </p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -113,7 +113,7 @@ const useCases = [
                         Investigate without exfiltrating.
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                        Demos are run against your scenarios. We do not need your data — we need your hardest open question.
+                        Demos are run against your scenarios. We do not need your data, we need your hardest open question.
                     </p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right">

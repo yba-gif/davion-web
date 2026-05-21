@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'Solutions',
-    description: 'Davion solutions: AlpOS, Digital Transformation, Cybersecurity, OSINT — built on one sovereign platform.',
+    description: 'Davion solutions: AlpOS, Digital Transformation, Cybersecurity, OSINT, built on one sovereign platform.',
     ogTitle: 'Davion · Solutions',
     ogDescription: 'AlpOS is the constant. Cybersecurity, Digital Transformation, and OSINT are how it is applied.',
 })
@@ -10,7 +10,7 @@ const solutions = [
     { slug: 'alpos', label: 'Platform · Flagship', name: 'AlpOS', body: 'The sovereign operating system underneath every Davion solution. Ingest, ontology, analytics, AI, decisioning, action.' },
     { slug: 'digital-transformation', label: 'Solution', name: 'Digital Transformation', body: 'From siloed data to a single governed source of truth, phased from POC to industrial deployment.' },
     { slug: 'cybersecurity', label: 'Solution', name: 'Cybersecurity', body: 'Defensive intelligence for environments that cannot fail. Detection through pattern, anomaly, and graph analysis.' },
-    { slug: 'osint', label: 'Solution', name: 'OSINT', body: 'Sovereign open-source intelligence — multi-source collection, correlation, and synthesis; anonymous and compliant.' },
+    { slug: 'osint', label: 'Solution', name: 'OSINT', body: 'Sovereign open-source intelligence, multi-source collection, correlation, and synthesis; anonymous and compliant.' },
 ]
 </script>
 
@@ -49,7 +49,7 @@ const solutions = [
                     <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Platform</p>
                     <p class="font-degular font-bold text-drygray-100 mt-2 text-[44px] md:text-[56px] leading-[1]">AlpOS</p>
                     <p class="text-b1 text-drygray-default mt-3 max-w-2xl mx-auto">
-                        Ingest · Ontology · Analyze · Decide · Act — inside a sovereign perimeter.
+                        Ingest · Ontology · Analyze · Decide · Act, inside a sovereign perimeter.
                     </p>
                 </div>
             </div>
@@ -92,7 +92,7 @@ const solutions = [
                     <CommonSup title="Industries" />
                     <h2 class="text-h2 font-degular font-bold text-drygray-100 mt-4">Buyers identify by mission, not feature.</h2>
                     <p class="text-b2 text-drygray-default mt-4">
-                        Davion is deployed in defense, intelligence, critical infrastructure, government, financial services, and energy — wherever decisions must be both fast and defensible.
+                        Davion is deployed in defense, intelligence, critical infrastructure, government, financial services, and energy, wherever decisions must be both fast and defensible.
                     </p>
                     <div class="mt-6">
                         <NuxtLink to="/industries"><CommonButton variant="outline" size="xs" icon="base:arrow">Industries</CommonButton></NuxtLink>

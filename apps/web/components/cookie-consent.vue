@@ -1,6 +1,6 @@
 <script setup lang="ts">
-// P3.5: GDPR-compliant cookie consent — consent-first, no pre-checked boxes,
-// dismissable, persists choice. Honours the existing useAnalytics — only fires
+// P3.5: GDPR-compliant cookie consent, consent-first, no pre-checked boxes,
+// dismissable, persists choice. Honours the existing useAnalytics, only fires
 // page_view events after consent is "accept".
 //
 // Storage:
@@ -12,7 +12,7 @@
 const STORAGE_KEY = 'davion_cookie_consent'
 
 const visible = ref(false)
-// Track whether we've checked storage yet — avoids flash on first paint.
+// Track whether we've checked storage yet, avoids flash on first paint.
 const ready = ref(false)
 
 function readConsent(): 'accept' | 'essential' | null {

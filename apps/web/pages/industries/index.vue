@@ -1,22 +1,22 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'Industries',
-    description: 'Davion deployments by sector: Financial Services, Energy, Defense & Intelligence, Manufacturing, Life Sciences, Government — six sovereign-AI playbooks built on AlpOS.',
+    description: 'Davion deployments by sector: Financial Services, Energy, Defense & Intelligence, Manufacturing, Life Sciences, Government, six sovereign-AI playbooks built on AlpOS.',
     ogTitle: 'Davion · Industries',
     ogDescription: 'Sovereign AI across the institutions that run the world. Six industry playbooks built on AlpOS.',
 })
 
-// Industries hub — P2.1 promoted Manufacturing, Life Sciences, and Government
+// Industries hub, P2.1 promoted Manufacturing, Life Sciences, and Government
 // out of stub status. All 6 industries now have real depth playbooks. The
 // `coming: true` treatment was used as a temporary honesty mechanism in P1 and
 // is now retired.
 const industries = [
-    { slug: 'financial-services', name: 'Financial Services', body: 'AML, market & risk intelligence, surveillance, client engagement, fraud, and operational resilience — regulator-grade lineage.' },
-    { slug: 'energy', name: 'Energy', body: 'Grid, generation, asset reliability, and OT-side cyber — telemetry stays in your perimeter.' },
+    { slug: 'financial-services', name: 'Financial Services', body: 'AML, market & risk intelligence, surveillance, client engagement, fraud, and operational resilience, regulator-grade lineage.' },
+    { slug: 'energy', name: 'Energy', body: 'Grid, generation, asset reliability, and OT-side cyber, telemetry stays in your perimeter.' },
     { slug: 'defense-intelligence', name: 'Defense & Intelligence', body: 'Air-gapped sovereign AI for mission planning, all-source fusion, and OSINT. Decisions stay inside the enclave.' },
-    { slug: 'manufacturing', name: 'Manufacturing', body: 'Plant operations, quality, supply visibility, and industrial cybersecurity — production telemetry stays inside.' },
-    { slug: 'life-sciences', name: 'Life Sciences', body: 'Discovery, clinical operations, pharmacovigilance, and GxP process intelligence — audit-ready for regulators by design.' },
-    { slug: 'government', name: 'Government', body: 'Cross-agency entity resolution, benefits fraud, critical infrastructure, and procurement oversight — citizen-data law respected by design.' },
+    { slug: 'manufacturing', name: 'Manufacturing', body: 'Plant operations, quality, supply visibility, and industrial cybersecurity, production telemetry stays inside.' },
+    { slug: 'life-sciences', name: 'Life Sciences', body: 'Discovery, clinical operations, pharmacovigilance, and GxP process intelligence, audit-ready for regulators by design.' },
+    { slug: 'government', name: 'Government', body: 'Cross-agency entity resolution, benefits fraud, critical infrastructure, and procurement oversight, citizen-data law respected by design.' },
 ]
 </script>
 
@@ -28,11 +28,11 @@ const industries = [
                 Sovereign AI across the institutions that run the world<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Davion is deployed across financial services, energy, manufacturing, life sciences, government, and defense — wherever data has to become decisions that can be defended.
+                Davion is deployed across financial services, energy, manufacturing, life sciences, government, and defense, wherever data has to become decisions that can be defended.
             </p>
         </section>
 
-        <!-- TrustedByStrip removed (P0.1) — see action plan; slot reserved for real proof. -->
+        <!-- TrustedByStrip removed (P0.1), see action plan; slot reserved for real proof. -->
 
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

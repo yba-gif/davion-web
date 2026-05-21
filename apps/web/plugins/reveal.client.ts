@@ -1,4 +1,4 @@
-// `v-reveal` — section-level reveal-on-scroll directive.
+// `v-reveal`, section-level reveal-on-scroll directive.
 // Spec lives at docs/motion.md §2. Plays once per page load, then unobserves.
 // Respects prefers-reduced-motion via the CSS `[data-reveal-on-scroll]` block.
 export default defineNuxtPlugin((nuxtApp) => {

@@ -2,21 +2,21 @@
 // Refactored to <CapabilityLayout> in P1.U7.
 useSeoMeta({
     title: 'Geospatial analytics',
-    description: 'Map, ground, and reason over location-aware data at operational scale. Assets, events, trajectories — anchored in space, inside your perimeter.',
+    description: 'Map, ground, and reason over location-aware data at operational scale. Assets, events, trajectories, anchored in space, inside your perimeter.',
     ogTitle: 'Davion · Geospatial analytics',
-    ogDescription: 'Reasoning over location-aware data — assets, events, trajectories. Inside the perimeter, with raster, vector, and trajectory data fused into one ontology.',
+    ogDescription: 'Reasoning over location-aware data, assets, events, trajectories. Inside the perimeter, with raster, vector, and trajectory data fused into one ontology.',
 })
 
 const data = {
     eyebrow: 'Capability · Geospatial',
     headline: 'Where matters. Reason over location-aware data inside your perimeter',
-    body: 'AlpOS Geospatial fuses raster, vector, and trajectory data — satellites, sensors, GIS — into one location-aware ontology. Anomalies, patterns of life, and tactical change become first-class signals on the operator\'s map.',
+    body: 'AlpOS Geospatial fuses raster, vector, and trajectory data, satellites, sensors, GIS, into one location-aware ontology. Anomalies, patterns of life, and tactical change become first-class signals on the operator\'s map.',
 
     whatItDoes: [
         'Fuses raster, vector, and trajectory data into one location-aware ontology.',
         'Resolves and tracks entities across satellite, aerial, and ground sensors.',
         'Detects anomalies on patterns of life, asset behaviour, and tactical change.',
-        'Runs against your tile servers and geo-data infrastructure — no third-party cloud.',
+        'Runs against your tile servers and geo-data infrastructure, no third-party cloud.',
     ],
 
     howItWorksTitle: 'Ingest · Ground · Reason · Render',

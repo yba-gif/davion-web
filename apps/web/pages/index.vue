@@ -1,11 +1,11 @@
 <script setup lang="ts">
-// Davion home — base1 visual language with the design moves restored:
+// Davion home, base1 visual language with the design moves restored:
 // spiral hero, black Sectors marquee, real Newsroom showcase, frosted-spiral CTA.
 
-// Home meta aligned to the P0.3 hero (Variant A — clarity-first).
+// Home meta aligned to the P0.3 hero (Variant A, clarity-first).
 useSeoMeta({
     description: 'Sovereign AI for institutions whose data can\'t leave. The platform banks, ministries, and energy operators use when decisions must be defensible, auditable, and made on data that never enters a public cloud.',
-    ogTitle: 'Davion — Sovereign AI for institutions whose data can\'t leave',
+    ogTitle: 'Davion, Sovereign AI for institutions whose data can\'t leave',
     ogDescription: 'The platform banks, ministries, and energy operators use when decisions must be defensible, auditable, and made on data that never enters a public cloud.',
 })
 useHead({ title: 'Davion', titleTemplate: '%s' })
@@ -30,28 +30,27 @@ const posts = computed<Post[]>(() => blogData.value?.data ?? [])
 const featuredPost = computed<Post | null>(() => posts.value[0] ?? null)
 const gridPosts = computed<Post[]>(() => posts.value.slice(1, 3))
 
-// P1.U5: formatDate is auto-imported from composables/useFormatDate.ts —
-// shared ISO-format util. Previous inline `en-US` short-month formatter retired.
+// P1.U5: formatDate is auto-imported from composables/useFormatDate.ts, // shared ISO-format util. Previous inline `en-US` short-month formatter retired.
 
 const solutions = [
     {
         name: 'AlpOS',
         label: 'Platform · Flagship',
-        body: 'The sovereign AI platform underneath every Davion solution. Ingest, ontology, analytics, AI, decisioning, action — governed end to end.',
+        body: 'The sovereign AI platform underneath every Davion solution. Ingest, ontology, analytics, AI, decisioning, action, governed end to end.',
         to: '/solutions/alpos',
         icon: 'base:chart-square',
     },
     {
         name: 'Cybersecurity',
         label: 'Solution',
-        body: 'Defensive intelligence for environments that cannot fail. Detection through pattern, anomaly, and graph analysis — inside your perimeter.',
+        body: 'Defensive intelligence for environments that cannot fail. Detection through pattern, anomaly, and graph analysis, inside your perimeter.',
         to: '/solutions/cybersecurity',
         icon: 'base:verified',
     },
     {
         name: 'Digital Transformation',
         label: 'Solution',
-        body: 'From siloed data to a single governed source of truth — phased from POC to industrial deployment, without losing the institution.',
+        body: 'From siloed data to a single governed source of truth, phased from POC to industrial deployment, without losing the institution.',
         to: '/solutions/digital-transformation',
         icon: 'base:chart-2',
     },
@@ -71,23 +70,23 @@ const sovereignty = [
 ]
 
 const sectors = ['Financial Services', 'Energy', 'Manufacturing', 'Life Sciences', 'Retail', 'Government', 'Critical Infrastructure', 'Defense & Intelligence']
-// Marquee promises — pulled from the Davion vocabulary (docs/brand-voice.md §3).
+// Marquee promises, pulled from the Davion vocabulary (docs/brand-voice.md §3).
 // No ChapsVision echoes ("Agentic AI", "Modular by design").
 const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-prem', 'Auditable', 'Decision-ready', 'Operator-owned']
 </script>
 
 <template>
     <div class="flex flex-col gap-4">
-        <!-- 1. Mission hero — base1's original SectionHero structure with Davion copy/route -->
+        <!-- 1. Mission hero, base1's original SectionHero structure with Davion copy/route -->
         <SectionHero />
 
-        <!-- P1.7 Numbers Strip — replaces the deleted TrustedByStrip with verifiable
+        <!-- P1.7 Numbers Strip, replaces the deleted TrustedByStrip with verifiable
              architectural and presence facts. Founding year omitted by founder direction
              until legal entity is finalized. -->
         <NumbersStrip />
 
 
-        <!-- 2. Solutions triad — AlpOS, Cybersecurity, Digital Transformation -->
+        <!-- 2. Solutions triad, AlpOS, Cybersecurity, Digital Transformation -->
         <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
                 <div class="max-w-3xl">
@@ -97,7 +96,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                     </h2>
                 </div>
                 <p class="text-b2 text-drygray-default max-w-md">
-                    AlpOS is the constant. Cybersecurity and Digital Transformation are how it's applied — same sovereignty, same audit, same spine.
+                    AlpOS is the constant. Cybersecurity and Digital Transformation are how it's applied, same sovereignty, same audit, same spine.
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-4">
@@ -121,14 +120,14 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                         The sovereign AI platform underneath every Davion solution<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                        AlpOS unifies data, ontology, analytics, and agentic AI in one modular platform — ingest to act, governed end to end. Digital Transformation, Cybersecurity, and OSINT are how it is applied.
+                        AlpOS unifies data, ontology, analytics, and agentic AI in one modular platform, ingest to act, governed end to end. Digital Transformation, Cybersecurity, and OSINT are how it is applied.
                     </p>
                     <div class="mt-8">
                         <NuxtLink to="/solutions/alpos"><CommonButton variant="primary" icon="base:arrow">Explore AlpOS</CommonButton></NuxtLink>
                     </div>
                 </div>
                 <div class="lg:col-span-5">
-                    <!-- AlpOS console preview — 3-slide carousel (Ontology / Ingest / Decide).
+                    <!-- AlpOS console preview, 3-slide carousel (Ontology / Ingest / Decide).
                          LazyAlposConsole defers Swiper bundle until the component
                          is needed (it sits below the fold). P2.5 perf. -->
                     <LazyAlposConsole />
@@ -144,7 +143,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                     Data → Meaning → Decision → Action<span class="text-primary-text">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
-                    Every Davion deployment runs the same sovereign cycle — from raw data to operational action. The platform stays constant; the surface adapts to the use case.
+                    Every Davion deployment runs the same sovereign cycle, from raw data to operational action. The platform stays constant; the surface adapts to the use case.
                 </p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -161,7 +160,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup title="Sovereign by design" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    Run where you require — only where you require<span class="text-primary-text">.</span>
+                    Run where you require, only where you require<span class="text-primary-text">.</span>
                 </h2>
             </div>
             <div class="grid sm:grid-cols-3 gap-4">
@@ -176,7 +175,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
             </div>
         </section>
 
-        <!-- 5.5 P1.U8 — "What is sovereign AI?" anchor. Catches novice-buyer paths
+        <!-- 5.5 P1.U8, "What is sovereign AI?" anchor. Catches novice-buyer paths
              (CFOs, board members, anyone outside the CIO/CISO core) without slowing
              the expert flow. Links to /company/about §1 for full POV. -->
         <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
@@ -189,13 +188,13 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                 </div>
                 <div class="lg:col-span-8 space-y-5 text-[17px] leading-[1.6] text-drygray-100 font-medium">
                     <p>
-                        Sovereign AI is AI that runs <strong class="font-semibold">where the data lives</strong>, under the institution's own governance — not in a vendor's cloud.
+                        Sovereign AI is AI that runs <strong class="font-semibold">where the data lives</strong>, under the institution's own governance, not in a vendor's cloud.
                     </p>
                     <p>
                         Most platforms calling themselves "sovereign AI" today are hosted services with European billing addresses. The data still crosses the vendor's network, the inference still runs on the vendor's hardware, and the audit trail still belongs to the vendor. That is regulatory residency, not operational sovereignty.
                     </p>
                     <p>
-                        Davion is operationally sovereign: deployments run inside the customer's perimeter — air-gapped, on-prem, or in a sovereign cloud bound by contract. The data does not leave. The weights are auditable on-prem. Every decision traces back to the source it was made on.
+                        Davion is operationally sovereign: deployments run inside the customer's perimeter, air-gapped, on-prem, or in a sovereign cloud bound by contract. The data does not leave. The weights are auditable on-prem. Every decision traces back to the source it was made on.
                     </p>
                     <p class="pt-2">
                         <NuxtLink to="/company/about" class="text-primary-text underline underline-offset-4 hover:no-underline font-semibold">
@@ -206,7 +205,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
             </div>
         </section>
 
-        <!-- 6. Sectors marquee — black interlude, dual-row scrolling, edge gradient fades -->
+        <!-- 6. Sectors marquee, black interlude, dual-row scrolling, edge gradient fades -->
         <section v-reveal class="relative rounded-3xl bg-black overflow-hidden">
             <div class="relative grid lg:grid-cols-12 gap-10 items-center px-6 md:px-12 lg:px-16 py-16 md:py-20">
                 <div class="lg:col-span-4">
@@ -215,7 +214,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                         For every business<span class="text-primary-text">.</span><br>For every government<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-white/60 mt-6 max-w-sm">
-                        Davion deploys across financial services, energy, manufacturing, life sciences, retail, government, critical infrastructure, and defense — wherever data has to become decisions you can defend.
+                        Davion deploys across financial services, energy, manufacturing, life sciences, retail, government, critical infrastructure, and defense, wherever data has to become decisions you can defend.
                     </p>
                     <div class="mt-8">
                         <NuxtLink to="/industries"><CommonButton variant="outline" size="xs" icon="base:arrow" class="!border-white/30 !text-white hover:!border-primary hover:!text-primary-text">Explore industries</CommonButton></NuxtLink>
@@ -240,7 +239,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
             </div>
         </section>
 
-        <!-- 7. Newsroom showcase — Featured (HorizontalBlogCard) + Grid (BlogCard) -->
+        <!-- 7. Newsroom showcase, Featured (HorizontalBlogCard) + Grid (BlogCard) -->
         <section v-if="featuredPost" v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
                 <div>
@@ -278,7 +277,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
             </div>
         </section>
 
-        <!-- 8. Consultative CTA — frosted-spiral backdrop, massive 3-line headline -->
+        <!-- 8. Consultative CTA, frosted-spiral backdrop, massive 3-line headline -->
         <section v-reveal class="relative rounded-3xl bg-azure overflow-hidden">
             <!-- P0.6: WebP srcset replaces the 27 MB PNG fallback. Lazy because below fold. -->
             <img

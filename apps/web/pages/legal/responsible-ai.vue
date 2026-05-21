@@ -12,7 +12,7 @@ const commitments = [
     {
         n: '01',
         title: 'Data sovereignty by deployment',
-        body: 'AlpOS deploys inside the customer\'s perimeter — on-prem, air-gapped, or in a sovereign cloud bound by contract. Customer data, weights, and audit logs stay where the customer specifies. We do not train central foundation models on customer data; what runs inside a customer deployment stays in that deployment.',
+        body: 'AlpOS deploys inside the customer\'s perimeter, on-prem, air-gapped, or in a sovereign cloud bound by contract. Customer data, weights, and audit logs stay where the customer specifies. We do not train central foundation models on customer data; what runs inside a customer deployment stays in that deployment.',
     },
     {
         n: '02',
@@ -22,7 +22,7 @@ const commitments = [
     {
         n: '03',
         title: 'Human in the loop',
-        body: 'AlpOS is a platform, not an autonomous agent. It proposes, cites its sources, and waits for approval. The platform does not move money, does not move people, does not move troops. The decisions belong to the operators accountable for them — analyst, compliance officer, commander.',
+        body: 'AlpOS is a platform, not an autonomous agent. It proposes, cites its sources, and waits for approval. The platform does not move money, does not move people, does not move troops. The decisions belong to the operators accountable for them, analyst, compliance officer, commander.',
     },
     {
         n: '04',
@@ -42,7 +42,7 @@ const commitments = [
     {
         n: '07',
         title: 'No third-party model API calls without explicit consent',
-        body: 'AlpOS deployments run against models hosted inside the customer\'s perimeter by default. If a deployment integrates a hosted model API (OpenAI, Anthropic, etc.), it is a per-engagement decision documented in the deployment architecture and the DPA — never a hidden default.',
+        body: 'AlpOS deployments run against models hosted inside the customer\'s perimeter by default. If a deployment integrates a hosted model API (OpenAI, Anthropic, etc.), it is a per-engagement decision documented in the deployment architecture and the DPA, never a hidden default.',
     },
     {
         n: '08',
@@ -55,7 +55,7 @@ const alignment = [
     { name: 'EU AI Act', status: 'Engineered to', detail: 'High-risk AI obligations, transparency, human oversight, data quality, log retention.' },
     { name: 'NIST AI RMF', status: 'Engineered to', detail: 'Govern / Map / Measure / Manage functions with deployment-level evidence.' },
     { name: 'ISO/IEC 42001 (AI management)', status: 'Engineered to', detail: 'Formal certification target. Status: scoping. Date: TBD pending entity finalisation.' },
-    { name: 'ISO/IEC 27001 (information security)', status: 'In progress for', detail: 'Target Q4 2026 — placeholder pending founder confirmation on commit/legal entity.' },
+    { name: 'ISO/IEC 27001 (information security)', status: 'In progress for', detail: 'Target Q4 2026, placeholder pending founder confirmation on commit/legal entity.' },
 ]
 </script>
 

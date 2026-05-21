@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// P1.U3 — Sticky scroll-progress bar. Thin (2px), top of viewport, fills with
+// P1.U3, Sticky scroll-progress bar. Thin (2px), top of viewport, fills with
 // primary-text colour as the reader scrolls. Disabled in prefers-reduced-
 // motion via CSS so no JS branch needed.
 //

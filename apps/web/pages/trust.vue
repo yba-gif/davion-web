@@ -3,14 +3,14 @@ useSeoMeta({
     title: 'Trust & Sovereignty',
     description: 'The Davion sovereignty model, deployment matrix, access control, end-to-end auditability, standards alignment, responsible-AI commitments, and data lifecycle.',
     ogTitle: 'Davion · Trust & Sovereignty',
-    ogDescription: 'Where the data sits, who can see it, what we sign, what we will not sign — and the deployment matrix that backs it.',
+    ogDescription: 'Where the data sits, who can see it, what we sign, what we will not sign, and the deployment matrix that backs it.',
 })
 
 const principles = [
     { label: 'Residency', body: 'Data stays in the jurisdiction you specify. No cross-border transit without explicit policy.' },
     { label: 'Nothing leaves', body: 'No telemetry, no analyst behavior, no model gradients, no query content exit the perimeter unless you authorize it.' },
-    { label: 'National control', body: 'For sovereign deployments, operational control rests with the institution — not with Davion or any third party.' },
-    { label: 'Provable', body: 'Sovereignty is not asserted. It is auditable — by your team, your regulators, and any party with a legitimate interest.' },
+    { label: 'National control', body: 'For sovereign deployments, operational control rests with the institution, not with Davion or any third party.' },
+    { label: 'Provable', body: 'Sovereignty is not asserted. It is auditable, by your team, your regulators, and any party with a legitimate interest.' },
 ]
 
 const deploymentMatrix = [
@@ -24,22 +24,22 @@ const deploymentMatrix = [
 ]
 
 const accessControl = [
-    { label: 'RBAC', body: 'Role-based access for analysts, operators, administrators, and auditors — defined to your org structure, not ours.' },
+    { label: 'RBAC', body: 'Role-based access for analysts, operators, administrators, and auditors, defined to your org structure, not ours.' },
     { label: 'ABAC', body: 'Attribute-based policy on top of RBAC. Visibility at the entity, event, and cell level, conditioned on context, clearance, and purpose.' },
-    { label: 'Federation', body: 'Plug into your identity provider — SAML, OIDC, mTLS — with attestable session binding.' },
+    { label: 'Federation', body: 'Plug into your identity provider, SAML, OIDC, mTLS, with attestable session binding.' },
     { label: 'Privileged access', body: 'Just-in-time elevation, dual-control on sensitive actions, full session recording. No standing admin.' },
 ]
 
 const auditAttributes = [
-    { label: 'Who', body: 'Every operator, every analyst, every system identity is named — no anonymous actions.' },
-    { label: 'What', body: 'The action, the query, the input, the AI output, the workflow transition — captured in full.' },
+    { label: 'Who', body: 'Every operator, every analyst, every system identity is named, no anonymous actions.' },
+    { label: 'What', body: 'The action, the query, the input, the AI output, the workflow transition, captured in full.' },
     { label: 'When', body: 'Trusted timestamps, write-once log, tamper-evident chain.' },
-    { label: 'Why', body: 'Purpose tags carry through every action — supporting after-action review and regulatory inquiry.' },
+    { label: 'Why', body: 'Purpose tags carry through every action, supporting after-action review and regulatory inquiry.' },
 ]
 
 const standards = [
     { name: 'ISO 27001', body: 'Information security management system aligned to the platform and to operator practice.' },
-    { name: 'SOC 2', body: 'Security, availability, processing integrity, confidentiality, and privacy — engineered for; audited where applicable.' },
+    { name: 'SOC 2', body: 'Security, availability, processing integrity, confidentiality, and privacy, engineered for; audited where applicable.' },
     { name: 'NIS2-class', body: 'Critical-infrastructure cyber regulation as a deployment baseline in EU jurisdictions.' },
     { name: 'GDPR', body: 'Lawful basis, data-subject rights, and DPA-ready by design.' },
     { name: 'Sector-specific', body: 'Defense, financial-services, healthcare, and public-sector regimes addressed per engagement.' },
@@ -47,7 +47,7 @@ const standards = [
 
 const responsibleAi = [
     { label: 'Sovereign inference', body: 'Models run inside your perimeter. No training data, no gradients, no outputs cross into Davion or any vendor without explicit policy.' },
-    { label: 'Provenance', body: 'Every model used, every version, every input — recorded against every output.' },
+    { label: 'Provenance', body: 'Every model used, every version, every input, recorded against every output.' },
     { label: 'Citation', body: 'Outputs cite their source data. An AI conclusion you cannot trace is one you cannot defend.' },
     { label: 'Refusal under uncertainty', body: 'When confidence is low or evidence is missing, the system says so. Defensible over confident.' },
     { label: 'Human-in-the-loop', body: 'Consequential actions require a named operator. The AI does not act unilaterally.' },
@@ -55,7 +55,7 @@ const responsibleAi = [
 ]
 
 const lifecycle = [
-    { n: '01', stage: 'Ingest', body: 'Data enters under policy — sources, purposes, and retention declared at the source.' },
+    { n: '01', stage: 'Ingest', body: 'Data enters under policy, sources, purposes, and retention declared at the source.' },
     { n: '02', stage: 'Process', body: 'Lineage tracked through transforms, joins, and enrichments. Every derived datum is traceable to its origin.' },
     { n: '03', stage: 'Use', body: 'Access governed by RBAC + ABAC. Queries logged. AI outputs cited.' },
     { n: '04', stage: 'Retain', body: 'Retention policy enforced per-source, per-purpose. Customer-defined, contractually bound.' },
@@ -71,7 +71,7 @@ const lifecycle = [
                 Your data. Your jurisdiction. Your audit.
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Sovereignty is not asserted at Davion. It is engineered. This page is the one a CIO opens before approving anything — the model, the deployment matrix, access control, audit, the standards we design to, and the AI commitments.
+                Sovereignty is not asserted at Davion. It is engineered. This page is the one a CIO opens before approving anything, the model, the deployment matrix, access control, audit, the standards we design to, and the AI commitments.
             </p>
             <div class="mt-10">
                 <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Speak with our security team</CommonButton></NuxtLink>
@@ -85,7 +85,7 @@ const lifecycle = [
                     Four principles. Auditable, not asserted.
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
-                    Sovereignty in software is a claim that has to be redeemable. These are the principles Davion engineers to — and the principles your security team can validate independently.
+                    Sovereignty in software is a claim that has to be redeemable. These are the principles Davion engineers to, and the principles your security team can validate independently.
                 </p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -188,7 +188,7 @@ const lifecycle = [
                     Sovereign inference. Cited outputs. Refusal when warranted.
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
-                    AI inside AlpOS is governed the same way every other layer is — with provenance, citation, audit, and the right to refuse. We do not ship AI that the institution cannot defend.
+                    AI inside AlpOS is governed the same way every other layer is, with provenance, citation, audit, and the right to refuse. We do not ship AI that the institution cannot defend.
                 </p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -226,7 +226,7 @@ const lifecycle = [
                         Bring your security team to the table.
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                        We answer security questionnaires in full, run technical deep-dives against your environment, and provide the evidence your audit team will ask for — before you commit.
+                        We answer security questionnaires in full, run technical deep-dives against your environment, and provide the evidence your audit team will ask for, before you commit.
                     </p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right">

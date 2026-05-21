@@ -20,12 +20,12 @@ const values = [
     {
         n: '03',
         title: 'The hard cases are not edge cases',
-        body: 'Air-gapped. On-prem. Inside a perimeter you control. These are not exceptions to the category — they are the operational reality of every institution where decisions actually matter. We design for the hard case first; the easier deployments are downstream.',
+        body: 'Air-gapped. On-prem. Inside a perimeter you control. These are not exceptions to the category, they are the operational reality of every institution where decisions actually matter. We design for the hard case first; the easier deployments are downstream.',
     },
     {
         n: '04',
         title: 'Modular replaces lock-in',
-        body: 'Davion is composable end to end and replaceable end to end. Ingestion, ontology, analytics, agentic layer, action — each is replaceable. We intend to be a vendor you can leave. That is how vendors who deserve to stay get to stay.',
+        body: 'Davion is composable end to end and replaceable end to end. Ingestion, ontology, analytics, agentic layer, action, each is replaceable. We intend to be a vendor you can leave. That is how vendors who deserve to stay get to stay.',
     },
     {
         n: '05',
@@ -44,7 +44,7 @@ const values = [
                 Sovereignty isn't a feature<span class="text-primary-text">.</span><br>It's where the work happens<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                A conviction-led note from the team building Davion — the opinion underneath the product, the values that decide what we build next, and the people accountable for it.
+                A conviction-led note from the team building Davion, the opinion underneath the product, the values that decide what we build next, and the people accountable for it.
             </p>
         </section>
 
@@ -68,7 +68,7 @@ const values = [
                         Davion exists because the gap between <em>hosted with EU billing</em> and <em>operationally sovereign</em> is the gap between a platform a defense ministry can use and a platform it cannot. We build for the second.
                     </p>
                     <p>
-                        Our deployments run inside the customer's perimeter. The data does not leave. The weights are auditable on-prem. The inference runs where the work runs — air-gapped, on-prem, or in a sovereign cloud bound by contract. Every decision is traceable to the data it was made on, the policy it applied, and the version of the model that produced it.
+                        Our deployments run inside the customer's perimeter. The data does not leave. The weights are auditable on-prem. The inference runs where the work runs, air-gapped, on-prem, or in a sovereign cloud bound by contract. Every decision is traceable to the data it was made on, the policy it applied, and the version of the model that produced it.
                     </p>
                     <p>
                         This is not marketing copy. It is the operational difference between a platform that can be used and one that cannot.
@@ -77,7 +77,7 @@ const values = [
             </div>
         </section>
 
-        <!-- What we believe — 5 values written as sentences, not nouns -->
+        <!-- What we believe, 5 values written as sentences, not nouns -->
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
             <div class="mb-12 md:mb-16 max-w-3xl">
                 <CommonSup title="What we believe" />
@@ -85,7 +85,7 @@ const values = [
                     Five claims we will defend in public<span class="text-primary-text">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
-                    Every product decision Davion makes traces back to one of these. If you read them and disagree, we're probably not the right vendor — and that's a useful thing to learn early.
+                    Every product decision Davion makes traces back to one of these. If you read them and disagree, we're probably not the right vendor, and that's a useful thing to learn early.
                 </p>
             </div>
             <ol class="space-y-8">
@@ -101,7 +101,7 @@ const values = [
             </ol>
         </section>
 
-        <!-- How we work — engagement model -->
+        <!-- How we work, engagement model -->
         <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
             <div class="grid lg:grid-cols-12 gap-10 items-start">
                 <div class="lg:col-span-4">
@@ -112,16 +112,16 @@ const values = [
                 </div>
                 <div class="lg:col-span-8 space-y-6 text-[17px] leading-[1.55] text-drygray-100">
                     <p>
-                        <strong class="font-semibold">Engagements begin with a briefing, not a pitch.</strong> We listen first — to your data architecture, your regulatory constraints, your operational reality, the decisions you actually need to defend. The first conversation is consultative; if Davion isn't the right answer, we will say so.
+                        <strong class="font-semibold">Engagements begin with a briefing, not a pitch.</strong> We listen first, to your data architecture, your regulatory constraints, your operational reality, the decisions you actually need to defend. The first conversation is consultative; if Davion isn't the right answer, we will say so.
                     </p>
                     <p>
-                        <strong class="font-semibold">Pilots are bounded.</strong> Most engagements start with a 6 to 12 week pilot scoped against a specific, measurable outcome — typically a single decision class (e.g. AML alert triage, anomaly detection on operational telemetry, OSINT brief generation). The deliverable is a working deployment inside your perimeter, plus the operational evidence to decide whether to expand.
+                        <strong class="font-semibold">Pilots are bounded.</strong> Most engagements start with a 6 to 12 week pilot scoped against a specific, measurable outcome, typically a single decision class (e.g. AML alert triage, anomaly detection on operational telemetry, OSINT brief generation). The deliverable is a working deployment inside your perimeter, plus the operational evidence to decide whether to expand.
                     </p>
                     <p>
-                        <strong class="font-semibold">Deployment matches the deployment posture.</strong> On-prem, air-gapped, or sovereign cloud — your choice. Davion's job is to make all three operationally identical from the surface. The deployment matrix lives on <NuxtLink to="/trust" class="text-primary-text underline underline-offset-4 hover:no-underline">the Trust page</NuxtLink>.
+                        <strong class="font-semibold">Deployment matches the deployment posture.</strong> On-prem, air-gapped, or sovereign cloud, your choice. Davion's job is to make all three operationally identical from the surface. The deployment matrix lives on <NuxtLink to="/trust" class="text-primary-text underline underline-offset-4 hover:no-underline">the Trust page</NuxtLink>.
                     </p>
                     <p>
-                        <strong class="font-semibold">We intend to be a vendor you can leave.</strong> Davion is modular end to end. Ingestion, ontology, analytics, agentic layer, action — each is a replaceable component. The data, the weights, and the audit log are yours from day one. That is how vendors who deserve to stay get to stay.
+                        <strong class="font-semibold">We intend to be a vendor you can leave.</strong> Davion is modular end to end. Ingestion, ontology, analytics, agentic layer, action, each is a replaceable component. The data, the weights, and the audit log are yours from day one. That is how vendors who deserve to stay get to stay.
                     </p>
                 </div>
             </div>
@@ -135,7 +135,7 @@ const values = [
                     A small team. Operators, not pitchmen<span class="text-primary-text">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
-                    Davion is early-stage and operates from <strong class="font-semibold text-drygray-100">Zurich and Istanbul</strong> — Swiss neutrality for the data layer, NATO-perimeter operational depth for the field. The team is named where named is appropriate; the rest is being built. Press contact and additional executive bios will land once approved for public reference.
+                    Davion is early-stage and operates from <strong class="font-semibold text-drygray-100">Zurich and Istanbul</strong>, Swiss neutrality for the data layer, NATO-perimeter operational depth for the field. The team is named where named is appropriate; the rest is being built. Press contact and additional executive bios will land once approved for public reference.
                 </p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -157,7 +157,7 @@ const values = [
                     <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default">Hiring · Field</p>
                     <p class="font-degular font-bold text-drygray-100 text-h3 mt-3">Open</p>
                     <p class="text-b1 text-drygray-default mt-3">
-                        Solutions architects and field engineers who have lived the mission — banks, ministries, defense — not just sold to it.
+                        Solutions architects and field engineers who have lived the mission, banks, ministries, defense, not just sold to it.
                     </p>
                 </div>
             </div>

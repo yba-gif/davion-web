@@ -78,7 +78,7 @@ export function useAnalytics() {
             if (consent !== 'accept') return
         }
         catch {
-            // localStorage unavailable (private mode, etc.) — default to no tracking.
+            // localStorage unavailable (private mode, etc.), default to no tracking.
             return
         }
 

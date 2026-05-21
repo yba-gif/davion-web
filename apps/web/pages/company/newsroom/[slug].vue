@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// Davion Newsroom article template — also intended to power Events detail.
+// Davion Newsroom article template, also intended to power Events detail.
 const route = useRoute()
 const slug = route.params.slug as string
 const { trackBlogRead } = useAnalytics()
@@ -36,7 +36,7 @@ const renderedContent = computed(() => {
     return renderMarkdown(post.value.content)
 })
 
-// Related dispatches — excluding current
+// Related dispatches, excluding current
 const { data: relatedData } = await useFetch<{ success: boolean, data: Post[] }>('/api/blog', { query: { limit: 4 } })
 const related = computed<Post[]>(() =>
     (relatedData.value?.data ?? []).filter(p => p.slug !== slug).slice(0, 3),

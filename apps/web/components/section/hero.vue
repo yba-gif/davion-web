@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-// Davion hero — Variant A (clarity-first): one positioning statement, one promise,
+// Davion hero, Variant A (clarity-first): one positioning statement, one promise,
 // one primary CTA + one secondary. Replaces three stacked slogans with a single
 // sentence a stranger can recite after 10 seconds. See redesign-action-plan §P0.3.
-// P0.6: NuxtImg dropped here — IPX dev pipeline was shipping a broken w_2 variant
+// P0.6: NuxtImg dropped here, IPX dev pipeline was shipping a broken w_2 variant
 // and prod was falling back to the raw 27 MB PNG. Plain <img> + srcset wired to
 // pre-processed WebP variants under /public.
 import Button from '~/components/common/button.vue'

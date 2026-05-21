@@ -1,7 +1,7 @@
 <script setup lang="ts">
-// P0.U2 — Branded error page. Davion voice, 4 status branches (404 / 500 /
+// P0.U2, Branded error page. Davion voice, 4 status branches (404 / 500 /
 // 403 / other), return-to-home + recovery suggestions, AA-safe contrast.
-// Motion wrappers stripped — they previously caused opacity:0 hangs in
+// Motion wrappers stripped, they previously caused opacity:0 hangs in
 // this Nuxt + Motion setup (see P0 baseline notes).
 
 interface ErrorProps {
@@ -17,7 +17,7 @@ const props = defineProps<ErrorProps>()
 
 const errorCode = computed(() => props.error?.statusCode || 500)
 
-// Branded per-status copy. Davion voice — declarative, no exclamation marks,
+// Branded per-status copy. Davion voice, declarative, no exclamation marks,
 // no buzzwords. Each variant has a heading + a one-sentence body.
 const copy = computed(() => {
     switch (errorCode.value) {
@@ -31,7 +31,7 @@ const copy = computed(() => {
             return {
                 eyebrow: 'Error · 403',
                 heading: 'Inside the perimeter, but not inside this room',
-                body: 'You are authenticated, but this resource is gated. If you should have access, contact your operations lead — they can adjust the policy.',
+                body: 'You are authenticated, but this resource is gated. If you should have access, contact your operations lead, they can adjust the policy.',
             }
         case 500:
             return {
@@ -105,7 +105,7 @@ function handleClearError() {
                     <NuxtLink to="/solutions/alpos" class="bg-white card-hover rounded-2xl p-6 block group">
                         <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">The product</p>
                         <p class="text-h3 font-degular font-bold text-drygray-100 mt-2 leading-tight group-hover:text-primary-text transition-colors">AlpOS</p>
-                        <p class="text-b1 text-drygray-default mt-3">The sovereign AI platform — ingest, ontology, analyse, decide, act.</p>
+                        <p class="text-b1 text-drygray-default mt-3">The sovereign AI platform, ingest, ontology, analyse, decide, act.</p>
                     </NuxtLink>
                     <NuxtLink to="/trust" class="bg-white card-hover rounded-2xl p-6 block group">
                         <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">The proof</p>
@@ -120,7 +120,7 @@ function handleClearError() {
                 </div>
             </section>
 
-            <!-- Report block — only visible on 5xx errors -->
+            <!-- Report block, only visible on 5xx errors -->
             <section v-if="errorCode >= 500" class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
                 <div class="grid lg:grid-cols-12 gap-8 items-end">
                     <div class="lg:col-span-8">

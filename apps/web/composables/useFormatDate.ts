@@ -1,6 +1,6 @@
-// P1.U5 — Single source of truth for date formatting site-wide.
+// P1.U5, Single source of truth for date formatting site-wide.
 // ISO format (YYYY-MM-DD) reads institutional and is internationally
-// unambiguous — picked over the previous `en-US` short-month style.
+// unambiguous, picked over the previous `en-US` short-month style.
 //
 // Used by: home (Newsroom showcase), Newsroom hub, Newsroom post pages,
 // any future surface that surfaces a date.

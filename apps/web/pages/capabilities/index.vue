@@ -1,15 +1,15 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'AI Capabilities',
-    description: 'The AI capabilities bundled in AlpOS — RAG, geospatial, video, audio, translation, and data acquisition — all run inside your perimeter.',
+    description: 'The AI capabilities bundled in AlpOS, RAG, geospatial, video, audio, translation, and data acquisition, all run inside your perimeter.',
     ogTitle: 'Davion · Capabilities',
     ogDescription: 'Six AI capabilities, one sovereign platform. Bundled with AlpOS, governed end to end, run where you require.',
 })
 
 const capabilities = [
-    { slug: 'rag', name: 'RAG over your ontology', body: 'Retrieval-augmented generation grounded in your domain model — not the open web.' },
+    { slug: 'rag', name: 'RAG over your ontology', body: 'Retrieval-augmented generation grounded in your domain model, not the open web.' },
     { slug: 'geospatial', name: 'Geospatial analytics', body: 'Map, ground, and reason over location-aware data at operational scale.' },
-    { slug: 'video-intelligence', name: 'Video intelligence', body: 'Detect, classify, and search across video corpora — inside your perimeter.' },
+    { slug: 'video-intelligence', name: 'Video intelligence', body: 'Detect, classify, and search across video corpora, inside your perimeter.' },
     { slug: 'audio-analysis', name: 'Audio analysis & transcription', body: 'Speaker, sentiment, and semantic structure from audio at scale.' },
     { slug: 'translation', name: 'Machine translation', body: '60+ languages, with provenance, run inside your perimeter.' },
     { slug: 'data-acquisition', name: 'Data acquisition & preparation', body: 'Connectors, ETL, enrichment, and governance from source to ontology.' },
@@ -24,7 +24,7 @@ const capabilities = [
                 AI capabilities, governed at the layer above<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                AlpOS bundles a stack of AI capabilities that operate inside your perimeter — grounded against your ontology, audited end to end, run where you require.
+                AlpOS bundles a stack of AI capabilities that operate inside your perimeter, grounded against your ontology, audited end to end, run where you require.
             </p>
         </section>
 
@@ -50,7 +50,7 @@ const capabilities = [
                         Bundle the capabilities you need<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                        AlpOS lets you turn on what you need, when you need it — modular by design, sovereign by default.
+                        AlpOS lets you turn on what you need, when you need it, modular by design, sovereign by default.
                     </p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right">

@@ -10,7 +10,7 @@ useSeoMeta({
 const data = {
     eyebrow: 'Industries · Life Sciences',
     headline: 'Life sciences teams use Davion when discovery, trial, and post-market data can\'t leave the regulatory envelope',
-    body: 'Patient identifiers, omics, clinical observations, and post-market safety signals are regulated end to end. Davion deploys inside your perimeter so the data stays under your governance — and every derived insight points back to the source it was made on, the policy it applied, and the version of the model that produced it.',
+    body: 'Patient identifiers, omics, clinical observations, and post-market safety signals are regulated end to end. Davion deploys inside your perimeter so the data stays under your governance, and every derived insight points back to the source it was made on, the policy it applied, and the version of the model that produced it.',
 
     problemAreas: [
         {
@@ -62,18 +62,18 @@ const data = {
     ],
 
     storyHeadline: 'Adverse signals don\'t arrive labelled',
-    storyBody: 'They surface as a cluster of case reports across markets, a drift in social listening, a co-occurrence pattern in real-world data, a quiet shift in a periodic safety update report that earlier filtering would have missed. AlpOS fuses the sources into one ontology and proposes the signal — with causality assessment, source provenance, and the evidence chain a regulator will read. The safety officer reviews the case. The decision stays with the safety officer.',
+    storyBody: 'They surface as a cluster of case reports across markets, a drift in social listening, a co-occurrence pattern in real-world data, a quiet shift in a periodic safety update report that earlier filtering would have missed. AlpOS fuses the sources into one ontology and proposes the signal, with causality assessment, source provenance, and the evidence chain a regulator will read. The safety officer reviews the case. The decision stays with the safety officer.',
     storyOutcome: 'Earlier signal detection. Defensible causality. Reproducible lineage from raw source to regulator submission.',
     storyLayers: [
-        'Ingest — case reports, RWD, literature, social, PSUR',
-        'Ontology — products, populations, events, regions',
-        'Analyze — signal scoring, disproportionality, RWD cohort',
-        'Decide — causality copilot, evidence chain, sign-off',
-        'Act — submission packet, audit log, follow-up tasking',
+        'Ingest: case reports, RWD, literature, social, PSUR',
+        'Ontology: products, populations, events, regions',
+        'Analyze: signal scoring, disproportionality, RWD cohort',
+        'Decide: causality copilot, evidence chain, sign-off',
+        'Act: submission packet, audit log, follow-up tasking',
     ],
 
     ctaHeadline: 'Defend the science the regulator will read',
-    ctaBody: 'Briefings are scoped to your regulatory envelope — bring your data, your authorities, and the decisions you need to defend at submission and audit.',
+    ctaBody: 'Briefings are scoped to your regulatory envelope, bring your data, your authorities, and the decisions you need to defend at submission and audit.',
 }
 </script>
 

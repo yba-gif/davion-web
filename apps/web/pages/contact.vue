@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'Engage',
-    description: 'Book a demo or speak to an expert. Consultative intake — tell us what you are trying to decide.',
+    description: 'Book a demo or speak to an expert. Consultative intake, tell us what you are trying to decide.',
     ogTitle: 'Davion · Engage',
     ogDescription: 'Briefings are consultative. Tell us what you are trying to decide; we route to the right team.',
 })
@@ -27,7 +27,7 @@ const intents = [
             </p>
         </section>
 
-        <!-- P0.U3: scheduling embed — the destination every site-wide "Book a demo"
+        <!-- P0.U3: scheduling embed, the destination every site-wide "Book a demo"
              CTA routes to. Single source of scheduling truth (runtimeConfig). -->
         <SchedulingEmbed />
 

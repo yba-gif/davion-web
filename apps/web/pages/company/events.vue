@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useSeoMeta({ title: 'Events', description: 'Where Davion shows up: defense expos, summits, forums — and bilateral briefings.' })
+useSeoMeta({ title: 'Events', description: 'Where Davion shows up: defense expos, summits, forums, and bilateral briefings.' })
 </script>
 
 <template>
@@ -10,7 +10,7 @@ useSeoMeta({ title: 'Events', description: 'Where Davion shows up: defense expos
                 Where Davion shows up.
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Defense expos, summits, forums — and bilateral briefings on the margins of those rooms.
+                Defense expos, summits, forums, and bilateral briefings on the margins of those rooms.
             </p>
             <p class="text-b1 text-drygray-default mt-8">Upcoming + past index lands in a subsequent slice.</p>
             <div class="mt-10">

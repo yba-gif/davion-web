@@ -1,9 +1,9 @@
 <script setup lang="ts">
-// AlpOS Console — 3-slide product preview carousel for the home AlpOS teaser.
+// AlpOS Console, 3-slide product preview carousel for the home AlpOS teaser.
 // Each slide tells ONE clear story in plain language:
-//   1. Alert — "we found a suspicious pattern"
-//   2. Pipeline — "we ingest a lot, from these sources, in real time"
-//   3. Copilot — "the AI suggests this action, you approve"
+//   1. Alert, "we found a suspicious pattern"
+//   2. Pipeline, "we ingest a lot, from these sources, in real time"
+//   3. Copilot, "the AI suggests this action, you approve"
 import { Autoplay, Pagination } from 'swiper/modules'
 
 const sources = [
@@ -13,7 +13,7 @@ const sources = [
     { name: 'Public records', rate: '0.8k / hr' },
 ]
 
-// P0.U5 — pause-on-focus + aria-live. Swiper's `pauseOnMouseEnter` handles
+// P0.U5, pause-on-focus + aria-live. Swiper's `pauseOnMouseEnter` handles
 // pointer users; this wiring handles keyboard users who Tab into the carousel.
 // `aria-live="polite"` is on the root region so slide changes are announced.
 function getSwiperFromEvent(e: FocusEvent) {
@@ -62,13 +62,13 @@ function onFocusOut(e: FocusEvent) {
             class="alpos-console-swiper"
             role="region"
             aria-roledescription="carousel"
-            aria-label="AlpOS console preview — three product stories: Detect, Live data, AI recommendation"
+            aria-label="AlpOS console preview, three product stories: Detect, Live data, AI recommendation"
             aria-live="polite"
             @focusin="onFocusIn"
             @focusout="onFocusOut"
         >
-            <!-- Slide 1: Detect — one clear alert with plain-English facts -->
-            <SwiperSlide role="group" aria-roledescription="slide" aria-label="Slide 1 of 3: Detect — suspicious activity alert">
+            <!-- Slide 1: Detect, one clear alert with plain-English facts -->
+            <SwiperSlide role="group" aria-roledescription="slide" aria-label="Slide 1 of 3: Detect, suspicious activity alert">
                 <div class="bg-white px-5 py-5">
                     <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-4">
                         <span class="flex items-center gap-1.5">
@@ -110,8 +110,8 @@ function onFocusOut(e: FocusEvent) {
                 </div>
             </SwiperSlide>
 
-            <!-- Slide 2: Ingest — big number + sparkline + plain-English sources -->
-            <SwiperSlide role="group" aria-roledescription="slide" aria-label="Slide 2 of 3: Live data — 12,400 events per hour across four sources">
+            <!-- Slide 2: Ingest, big number + sparkline + plain-English sources -->
+            <SwiperSlide role="group" aria-roledescription="slide" aria-label="Slide 2 of 3: Live data, 12,400 events per hour across four sources">
                 <div class="bg-white px-5 py-5">
                     <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-4">
                         <span class="flex items-center gap-1.5">
@@ -163,8 +163,8 @@ function onFocusOut(e: FocusEvent) {
                 </div>
             </SwiperSlide>
 
-            <!-- Slide 3: Decide — plain-English AI recommendation with citations + action -->
-            <SwiperSlide role="group" aria-roledescription="slide" aria-label="Slide 3 of 3: AI recommendation — Davion copilot proposes opening a case">
+            <!-- Slide 3: Decide, plain-English AI recommendation with citations + action -->
+            <SwiperSlide role="group" aria-roledescription="slide" aria-label="Slide 3 of 3: AI recommendation, Davion copilot proposes opening a case">
                 <div class="bg-white px-5 py-5">
                     <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.15em] text-drygray-default mb-4">
                         <span class="flex items-center gap-1.5">

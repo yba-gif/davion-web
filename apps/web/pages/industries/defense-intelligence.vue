@@ -23,7 +23,7 @@ const data = {
             bullets: [
                 'Multi-source intelligence fusion under classification',
                 'Course-of-action analysis with cited evidence',
-                'Commander\'s copilot — proposes, never decides',
+                'Commander\'s copilot, proposes, never decides',
                 'After-action lineage from raw source to recommendation',
             ],
         },
@@ -58,11 +58,11 @@ const data = {
 
     solutionsTitle: 'AlpOS applied to defense and intelligence',
     solutions: [
-        { name: 'All-source fusion', body: 'Geospatial, signals, OSINT, and HUMINT into one ontology — with classification handling and per-source provenance.' },
+        { name: 'All-source fusion', body: 'Geospatial, signals, OSINT, and HUMINT into one ontology, with classification handling and per-source provenance.' },
         { name: 'Analyst copilot', body: 'Drafts briefs, surfaces weak signals, and cites every source. Never decides; the analyst owns the call.' },
         { name: 'OSINT collection', body: 'Continuous, multilingual collection with adversary-aware bias controls and provenance to original source.' },
         { name: 'Pattern-of-life', body: 'Cross-sensor pattern detection with anomaly scoring, suitable for both tactical and counter-intelligence missions.' },
-        { name: 'Mission planning', body: 'Course-of-action analysis with explainable drivers and weighted constraints — auditable end to end.' },
+        { name: 'Mission planning', body: 'Course-of-action analysis with explainable drivers and weighted constraints, auditable end to end.' },
         { name: 'Air-gap deployment', body: 'Designed to run disconnected. Updates are signed, logged, and reviewable inside the perimeter.' },
     ],
 
@@ -70,11 +70,11 @@ const data = {
     storyBody: 'It surfaces as a fragment of geospatial change, a shift in adversary media, a movement in commercial telemetry, a quiet day on a channel that is rarely quiet. AlpOS fuses the fragments into one ontology, weighs them against the analyst\'s evidentiary standard, and proposes the brief. The analyst reads the proposal. The analyst sees the lineage. The analyst makes the call.',
     storyOutcome: 'Earlier indication. Defensible attribution. Reproducible reasoning that survives an after-action review.',
     storyLayers: [
-        'Ingest — geospatial, SIGINT, OSINT, HUMINT, internal',
-        'Ontology — entities, locations, events, capabilities',
-        'Analyze — pattern-of-life, anomaly, cross-source confirm',
-        'Decide — analyst copilot, evidence, classification',
-        'Act — brief generation, dissemination, audit log',
+        'Ingest: geospatial, SIGINT, OSINT, HUMINT, internal',
+        'Ontology: entities, locations, events, capabilities',
+        'Analyze: pattern-of-life, anomaly, cross-source confirm',
+        'Decide: analyst copilot, evidence, classification',
+        'Act: brief generation, dissemination, audit log',
     ],
 
     ctaHeadline: 'Briefings on this side of the air-gap',

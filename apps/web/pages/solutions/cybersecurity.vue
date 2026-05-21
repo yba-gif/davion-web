@@ -8,21 +8,21 @@ useSeoMeta({
 
 const methods = [
     { name: 'Pattern', body: 'Behavioral baselines across users, systems, and traffic. Departures from the known surface fast.' },
-    { name: 'Anomaly', body: 'Statistical and ML methods catch what rule-based detection cannot — including weak signals that precede the breach.' },
+    { name: 'Anomaly', body: 'Statistical and ML methods catch what rule-based detection cannot, including weak signals that precede the breach.' },
     { name: 'Graph', body: 'Relationship analysis across entities, sessions, and events. Lateral movement and adversary tradecraft made visible.' },
 ]
 
 const architecture = [
     { label: 'Segmentation', body: 'Per-zone deployment with controlled inter-zone exchange. Compromise contained by design.' },
     { label: 'Controlled exchange', body: 'Signed, audited data flow between perimeters. No covert channels.' },
-    { label: 'Traceability', body: 'Every action, every operator, every signal — logged and reviewable end to end.' },
-    { label: 'Standards alignment', body: 'ISO 27001, NIS2-class, and sector-specific certifications respected — not retrofitted.' },
+    { label: 'Traceability', body: 'Every action, every operator, every signal, logged and reviewable end to end.' },
+    { label: 'Standards alignment', body: 'ISO 27001, NIS2-class, and sector-specific certifications respected, not retrofitted.' },
 ]
 
 const outcomes = [
-    { label: 'Detection', body: 'Adversary tradecraft surfaced inside your perimeter — not from a third-party feed.' },
+    { label: 'Detection', body: 'Adversary tradecraft surfaced inside your perimeter, not from a third-party feed.' },
     { label: 'Response', body: 'From signal to operator action in minutes. The investigation cycle is the architecture.' },
-    { label: 'Defensibility', body: 'Every action, every detection, every analyst keystroke — reviewable for regulators and the after-action.' },
+    { label: 'Defensibility', body: 'Every action, every detection, every analyst keystroke, reviewable for regulators and the after-action.' },
 ]
 </script>
 
@@ -34,7 +34,7 @@ const outcomes = [
                 Defensive intelligence for environments that cannot fail.
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Cyber is now the defining institutional risk. Davion deploys detection, response, and governance inside the perimeters that cannot send their data anywhere — including air-gapped ones.
+                Cyber is now the defining institutional risk. Davion deploys detection, response, and governance inside the perimeters that cannot send their data anywhere, including air-gapped ones.
             </p>
             <div class="mt-10">
                 <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
@@ -58,7 +58,7 @@ const outcomes = [
                     Three methods. One analytic surface.
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
-                    Davion detection runs on AlpOS. Pattern, anomaly, and graph analysis share the same ontology — and the same audit trail.
+                    Davion detection runs on AlpOS. Pattern, anomaly, and graph analysis share the same ontology, and the same audit trail.
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-4">

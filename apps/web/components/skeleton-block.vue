@@ -1,12 +1,12 @@
 <script setup lang="ts">
-// P1.U2 — Skeleton-loader primitive. Three variants cover every loading
+// P1.U2, Skeleton-loader primitive. Three variants cover every loading
 // surface we have today; extend as new ones appear.
 //
 // Usage:
-//   <SkeletonBlock variant="card" />        — full card with image + 2 lines + 3 lines body
-//   <SkeletonBlock variant="line" />        — single text line
-//   <SkeletonBlock variant="image" />       — 16:10 image placeholder
-//   <SkeletonBlock variant="card" :count="3" />  — grid of 3
+//   <SkeletonBlock variant="card" />, full card with image + 2 lines + 3 lines body
+//   <SkeletonBlock variant="line" />, single text line
+//   <SkeletonBlock variant="image" />, 16:10 image placeholder
+//   <SkeletonBlock variant="card" :count="3" />, grid of 3
 //
 // Behaviour:
 //   - Subtle pulse animation (1500ms, ease-in-out, infinite alternate).
