@@ -49,7 +49,7 @@ const values = [
         </section>
 
         <!-- Why Davion exists -->
-        <section class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
             <div class="grid lg:grid-cols-12 gap-10 items-start">
                 <div class="lg:col-span-4">
                     <CommonSup title="Why Davion exists" />

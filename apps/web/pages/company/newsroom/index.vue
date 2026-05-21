@@ -58,10 +58,7 @@ function categoryLabel(slug: string) {
     return slug
 }
 
-function formatDate(d: string | null) {
-    if (!d) return ''
-    return new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' })
-}
+// P1.U5: formatDate auto-imported from composables/useFormatDate.ts.
 </script>
 
 <template>
@@ -168,7 +165,7 @@ function formatDate(d: string | null) {
         </section>
 
         <!-- Empty state (filter narrows to zero) -->
-        <section v-if="!pending && !posts.length" class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-if="!pending && !posts.length" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <CommonSup title="Nothing yet" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05] max-w-3xl">
                 Nothing in this category yet<span class="text-primary-text">.</span>

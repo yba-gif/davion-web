@@ -26,6 +26,8 @@ onBeforeUnmount(() => {
         >
             Skip to content
         </a>
+        <!-- P1.U3: thin scroll-progress bar. Fixed top, primary-text colour. -->
+        <ScrollProgress />
         <LayoutHeader />
         <main id="main-content" class="py-2 max-w-7xl mx-auto " tabindex="-1">
             <slot />

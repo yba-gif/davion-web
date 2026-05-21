@@ -28,12 +28,8 @@ if (error.value) {
 
 const post = computed<Post | null>(() => data.value?.data ?? null)
 
-const formattedDate = computed(() => {
-    if (!post.value?.publishedAt) return ''
-    return new Date(post.value.publishedAt).toLocaleDateString('en-US', {
-        year: 'numeric', month: 'short', day: '2-digit',
-    })
-})
+// P1.U5: ISO format via shared composables/useFormatDate.ts
+const formattedDate = computed(() => formatDate(post.value?.publishedAt))
 
 const renderedContent = computed(() => {
     if (!post.value?.content) return ''
@@ -115,7 +111,7 @@ useSeoMeta({
                         class="bg-white card-hover hover:bg-whitesmoke-200 rounded-2xl p-6 transition-colors block group"
                     >
                         <div class="flex items-center gap-3 text-[12px] text-drygray-default font-medium mb-3">
-                            <span>{{ r.publishedAt ? new Date(r.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' }) : '' }}</span>
+                            <span>{{ formatDate(r.publishedAt) }}</span>
                             <template v-if="r.readTime">
                                 <span aria-hidden="true">·</span>
                                 <span>{{ r.readTime }}</span>

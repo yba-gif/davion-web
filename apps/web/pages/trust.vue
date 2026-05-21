@@ -145,7 +145,7 @@ const lifecycle = [
             </div>
         </section>
 
-        <section class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup title="Auditability" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -199,7 +199,7 @@ const lifecycle = [
             </div>
         </section>
 
-        <section class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup title="Data lifecycle" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">

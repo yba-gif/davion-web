@@ -32,15 +32,15 @@ const solutions = [
             <CommonSup title="Stack" />
             <div class="mt-8 bg-white rounded-2xl p-4 sm:p-6 lg:p-8">
                 <div class="grid grid-cols-3 gap-3 mb-3">
-                    <div class="bg-aliceblue rounded-xl p-5 text-center">
+                    <div class="bg-azure rounded-xl p-5 text-center">
                         <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-drygray-default">Solution</p>
                         <p class="text-h3 font-degular font-bold text-drygray-100 mt-2 text-[22px] sm:text-[28px] leading-tight">Digital Transformation</p>
                     </div>
-                    <div class="bg-aliceblue rounded-xl p-5 text-center">
+                    <div class="bg-azure rounded-xl p-5 text-center">
                         <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-drygray-default">Solution</p>
                         <p class="text-h3 font-degular font-bold text-drygray-100 mt-2 text-[22px] sm:text-[28px] leading-tight">Cybersecurity</p>
                     </div>
-                    <div class="bg-aliceblue rounded-xl p-5 text-center">
+                    <div class="bg-azure rounded-xl p-5 text-center">
                         <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-drygray-default">Solution</p>
                         <p class="text-h3 font-degular font-bold text-drygray-100 mt-2 text-[22px] sm:text-[28px] leading-tight">OSINT</p>
                     </div>
@@ -76,7 +76,7 @@ const solutions = [
         </section>
 
         <!-- Deployment + Industries -->
-        <section class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="grid lg:grid-cols-2 gap-10 lg:gap-14">
                 <div>
                     <CommonSup title="Deployment" />

@@ -67,7 +67,7 @@ const sections = [
             </p>
         </section>
 
-        <section class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <ol class="space-y-8 max-w-4xl">
                 <li v-for="s in sections" :key="s.n" class="grid md:grid-cols-12 gap-4 md:gap-8 border-t border-drygray-200 pt-8 first:border-t-0 first:pt-0">
                     <div class="md:col-span-3">

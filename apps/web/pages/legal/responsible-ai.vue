@@ -75,7 +75,7 @@ const alignment = [
         </section>
 
         <!-- Commitments -->
-        <section class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <CommonSup title="Commitments" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
                 Eight engineering commitments<span class="text-primary-text">.</span>

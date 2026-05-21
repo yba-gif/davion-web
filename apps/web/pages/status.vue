@@ -99,7 +99,7 @@ const statusLabel = (s: string) =>
         </section>
 
         <!-- Incident history -->
-        <section class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
             <CommonSup title="Incident history" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[32px] md:leading-[1.05] max-w-3xl">
                 No incidents on record<span class="text-primary-text">.</span>

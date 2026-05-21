@@ -30,10 +30,8 @@ const posts = computed<Post[]>(() => blogData.value?.data ?? [])
 const featuredPost = computed<Post | null>(() => posts.value[0] ?? null)
 const gridPosts = computed<Post[]>(() => posts.value.slice(1, 3))
 
-function formatDate(d: string | null) {
-    if (!d) return ''
-    return new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' })
-}
+// P1.U5: formatDate is auto-imported from composables/useFormatDate.ts —
+// shared ISO-format util. Previous inline `en-US` short-month formatter retired.
 
 const solutions = [
     {
@@ -159,7 +157,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         </section>
 
         <!-- 5. Sovereignty strip -->
-        <section v-reveal class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup title="Sovereign by design" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -175,6 +173,36 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
             </div>
             <div class="mt-8">
                 <NuxtLink to="/trust"><CommonButton variant="outline" size="xs" icon="base:arrow">Trust &amp; Sovereignty</CommonButton></NuxtLink>
+            </div>
+        </section>
+
+        <!-- 5.5 P1.U8 — "What is sovereign AI?" anchor. Catches novice-buyer paths
+             (CFOs, board members, anyone outside the CIO/CISO core) without slowing
+             the expert flow. Links to /company/about §1 for full POV. -->
+        <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <div class="grid lg:grid-cols-12 gap-10 items-start">
+                <div class="lg:col-span-4">
+                    <CommonSup title="If you are new to the term" />
+                    <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
+                        What is sovereign AI<span class="text-primary-text">?</span>
+                    </h2>
+                </div>
+                <div class="lg:col-span-8 space-y-5 text-[17px] leading-[1.6] text-drygray-100 font-medium">
+                    <p>
+                        Sovereign AI is AI that runs <strong class="font-semibold">where the data lives</strong>, under the institution's own governance — not in a vendor's cloud.
+                    </p>
+                    <p>
+                        Most platforms calling themselves "sovereign AI" today are hosted services with European billing addresses. The data still crosses the vendor's network, the inference still runs on the vendor's hardware, and the audit trail still belongs to the vendor. That is regulatory residency, not operational sovereignty.
+                    </p>
+                    <p>
+                        Davion is operationally sovereign: deployments run inside the customer's perimeter — air-gapped, on-prem, or in a sovereign cloud bound by contract. The data does not leave. The weights are auditable on-prem. Every decision traces back to the source it was made on.
+                    </p>
+                    <p class="pt-2">
+                        <NuxtLink to="/company/about" class="text-primary-text underline underline-offset-4 hover:no-underline font-semibold">
+                            Read the full worldview →
+                        </NuxtLink>
+                    </p>
+                </div>
             </div>
         </section>
 
