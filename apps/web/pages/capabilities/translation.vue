@@ -104,7 +104,7 @@ const industries = [
                 Where translation earns its keep<span class="text-primary-text">.</span>
             </h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-8">
-                <NuxtLink v-for="i in industries" :key="i.slug" :to="`/industries/${i.slug}`" class="bg-whitesmoke-100 hover:bg-whitesmoke-200 rounded-2xl p-5 transition-colors block group">
+                <NuxtLink v-for="i in industries" :key="i.slug" :to="`/industries/${i.slug}`" class="bg-whitesmoke-100 card-hover hover:bg-whitesmoke-200 rounded-2xl p-5 transition-colors block group">
                     <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Industry</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-2 group-hover:text-primary-text transition-colors leading-tight">{{ i.name }}</p>
                 </NuxtLink>

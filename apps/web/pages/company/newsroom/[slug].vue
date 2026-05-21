@@ -112,7 +112,7 @@ useSeoMeta({
                         v-for="r in related"
                         :key="r.id"
                         :to="`/company/newsroom/${r.slug}`"
-                        class="bg-white hover:bg-whitesmoke-200 rounded-2xl p-6 transition-colors block group"
+                        class="bg-white card-hover hover:bg-whitesmoke-200 rounded-2xl p-6 transition-colors block group"
                     >
                         <div class="flex items-center gap-3 text-[12px] text-drygray-default font-medium mb-3">
                             <span>{{ r.publishedAt ? new Date(r.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit' }) : '' }}</span>

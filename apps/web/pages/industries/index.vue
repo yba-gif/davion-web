@@ -40,7 +40,7 @@ const industries = [
                     v-for="industry in industries"
                     :key="industry.slug"
                     :to="`/industries/${industry.slug}`"
-                    class="bg-whitesmoke-100 hover:bg-whitesmoke-200 rounded-2xl p-8 transition-colors block group"
+                    class="bg-whitesmoke-100 card-hover hover:bg-whitesmoke-200 rounded-2xl p-8 transition-colors block group"
                 >
                     <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Industry</p>
                     <p class="text-h2 font-degular font-bold text-drygray-100 mt-3 group-hover:text-primary-text transition-colors leading-tight">{{ industry.name }}</p>

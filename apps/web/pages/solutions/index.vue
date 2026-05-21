@@ -62,7 +62,7 @@ const solutions = [
                     v-for="s in solutions"
                     :key="s.slug"
                     :to="`/solutions/${s.slug}`"
-                    class="bg-whitesmoke-100 hover:bg-whitesmoke-200 rounded-2xl p-8 transition-colors block group"
+                    class="bg-whitesmoke-100 card-hover hover:bg-whitesmoke-200 rounded-2xl p-8 transition-colors block group"
                 >
                     <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ s.label }}</p>
                     <p class="text-h2 font-degular font-bold text-drygray-100 mt-3">{{ s.name }}</p>

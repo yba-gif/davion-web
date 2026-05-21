@@ -26,7 +26,7 @@ withDefaults(defineProps<BlogProps>(), {
 <template>
     <NuxtLink
         :to="slug"
-        class="group w-full h-full flex flex-col items-start gap-5 text-left text-sm text-drygray-100 bg-whitesmoke-100 font-switzer rounded-xl p-5 transition-all duration-300"
+        class="group card-hover w-full h-full flex flex-col items-start gap-5 text-left text-sm text-drygray-100 bg-whitesmoke-100 font-switzer rounded-xl p-5 transition-all duration-300"
     >
         <NuxtImg
             class="w-full h-[170px] object-cover rounded-lg transition-transform duration-300 group-hover:opacity-80"
@@ -64,7 +64,7 @@ withDefaults(defineProps<BlogProps>(), {
             size="sm"
             class="w-full mt-auto transition-colors duration-300 group-hover:border-drygray-100"
         >
-            Read more
+            Read dispatch
         </CommonButton>
     </NuxtLink>
 </template>

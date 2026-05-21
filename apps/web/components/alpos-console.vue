@@ -12,6 +12,27 @@ const sources = [
     { name: 'Market data feed', rate: '1.8k / hr' },
     { name: 'Public records', rate: '0.8k / hr' },
 ]
+
+// P0.U5 — pause-on-focus + aria-live. Swiper's `pauseOnMouseEnter` handles
+// pointer users; this wiring handles keyboard users who Tab into the carousel.
+// `aria-live="polite"` is on the root region so slide changes are announced.
+function getSwiperFromEvent(e: FocusEvent) {
+    const root = (e.currentTarget as HTMLElement | null)
+    // The Swiper component exposes its instance via the .swiper property on
+    // the root DOM element it renders.
+    return (root as any)?.swiper as { autoplay?: { pause: () => void; resume: () => void } } | undefined
+}
+function onFocusIn(e: FocusEvent) {
+    getSwiperFromEvent(e)?.autoplay?.pause?.()
+}
+function onFocusOut(e: FocusEvent) {
+    // FocusEvent.relatedTarget tells us where focus is going. If still inside
+    // the carousel, don't resume yet.
+    const root = e.currentTarget as HTMLElement | null
+    const next = e.relatedTarget as Node | null
+    if (root && next && root.contains(next)) return
+    getSwiperFromEvent(e)?.autoplay?.resume?.()
+}
 </script>
 
 <template>
@@ -42,6 +63,9 @@ const sources = [
             role="region"
             aria-roledescription="carousel"
             aria-label="AlpOS console preview — three product stories: Detect, Live data, AI recommendation"
+            aria-live="polite"
+            @focusin="onFocusIn"
+            @focusout="onFocusOut"
         >
             <!-- Slide 1: Detect — one clear alert with plain-English facts -->
             <SwiperSlide role="group" aria-roledescription="slide" aria-label="Slide 1 of 3: Detect — suspicious activity alert">

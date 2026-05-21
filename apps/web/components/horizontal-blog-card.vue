@@ -15,7 +15,7 @@ defineProps<BlogProps>()
 <template>
     <NuxtLink
         :to="slug"
-        class="group w-full relative rounded-xl bg-white flex flex-row items-stretch p-[23px] gap-[49px] transition-all duration-300 shadow-[0px_9px_80px_rgba(0,_0,_0,_0.07),_0px_1.1269396543502808px_10.02px_rgba(0,_0,_0,_0.04)]"
+        class="group card-hover w-full relative rounded-xl bg-white flex flex-row items-stretch p-[23px] gap-[49px] transition-all duration-300 shadow-[0px_9px_80px_rgba(0,_0,_0,_0.07),_0px_1.1269396543502808px_10.02px_rgba(0,_0,_0,_0.04)]"
     >
         <div class="w-[440.2px] flex-shrink-0 flex" v-if="image">
             <NuxtImg
@@ -53,7 +53,7 @@ defineProps<BlogProps>()
                 size="sm"
                 class="w-[170px] transition-colors duration-300 text-white !bg-drygray-100 hover:!bg-primary group-hover:!bg-primary"
             >
-                Read more
+                Read dispatch
             </CommonButton>
         </div>
     </NuxtLink>

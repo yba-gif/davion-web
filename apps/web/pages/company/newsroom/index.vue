@@ -82,7 +82,7 @@ function formatDate(d: string | null) {
                     v-for="c in categories"
                     :key="c.slug"
                     type="button"
-                    class="text-[13px] font-medium px-4 py-2 rounded-full border transition-colors"
+                    class="text-[13px] font-medium px-5 py-3 rounded-full border transition-colors min-h-[44px]"
                     :class="activeCategory === c.slug
                         ? 'bg-drygray-100 text-white border-drygray-100'
                         : 'bg-white text-drygray-100 border-drygray-200 hover:border-drygray-100'"

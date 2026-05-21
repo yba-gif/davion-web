@@ -93,7 +93,7 @@ const facts = [
                     :key="a.file"
                     :href="a.file"
                     :download="a.file.split('/').pop()"
-                    class="bg-whitesmoke-100 hover:bg-whitesmoke-200 rounded-2xl p-6 transition-colors block group"
+                    class="bg-whitesmoke-100 card-hover hover:bg-whitesmoke-200 rounded-2xl p-6 transition-colors block group"
                 >
                     <div class="grid md:grid-cols-12 gap-4 items-center">
                         <div class="md:col-span-5">

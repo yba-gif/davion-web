@@ -20,12 +20,16 @@ const intents = [
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
             <CommonSup title="Engage" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
-                Tell us what you're trying to decide.
+                Tell us what you're trying to decide<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 Davion engagements are consultative. We route you to the right team based on what you bring. Tell us your intent, and we will reach out.
             </p>
         </section>
+
+        <!-- P0.U3: scheduling embed — the destination every site-wide "Book a demo"
+             CTA routes to. Single source of scheduling truth (runtimeConfig). -->
+        <SchedulingEmbed />
 
         <section class="bg-aliceblue rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
             <CommonSup title="Intents" />
@@ -40,20 +44,32 @@ const intents = [
             </div>
         </section>
 
+        <!-- Per-team email routing. Generic intake handled by SchedulingEmbed above. -->
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
-            <div class="grid lg:grid-cols-12 gap-8 items-end">
-                <div class="lg:col-span-8">
-                    <CommonSup title="Reach us" />
-                    <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[40px] leading-[1.05] md:text-[56px] md:leading-[1.02] tracking-tight">
-                        Write to us.
-                    </h2>
-                    <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                        A consultative intake form lands in a subsequent slice. For now, write to us directly — and tell us which intent applies.
-                    </p>
-                </div>
-                <div class="lg:col-span-4 lg:text-right">
-                    <a href="mailto:briefings@davion.com"><CommonButton variant="primary" icon="base:arrow">briefings@davion.com</CommonButton></a>
-                </div>
+            <CommonSup title="Direct email · per team" />
+            <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
+                Or write to the right team directly<span class="text-primary-text">.</span>
+            </h2>
+            <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
+                If your enquiry is not a briefing, these inboxes route faster than the generic intake.
+            </p>
+            <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <a href="mailto:engagement@davion.com" class="bg-white card-hover rounded-2xl p-6 block group">
+                    <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">Engagement · Partnership</p>
+                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-2 leading-tight group-hover:text-primary-text transition-colors">engagement@</p>
+                </a>
+                <a href="mailto:press@davion.com" class="bg-white card-hover rounded-2xl p-6 block group">
+                    <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">Press · Analyst</p>
+                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-2 leading-tight group-hover:text-primary-text transition-colors">press@</p>
+                </a>
+                <a href="mailto:careers@davion.com" class="bg-white card-hover rounded-2xl p-6 block group">
+                    <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">Careers</p>
+                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-2 leading-tight group-hover:text-primary-text transition-colors">careers@</p>
+                </a>
+                <a href="mailto:ops@davion.com" class="bg-white card-hover rounded-2xl p-6 block group">
+                    <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">Operations · Status</p>
+                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-2 leading-tight group-hover:text-primary-text transition-colors">ops@</p>
+                </a>
             </div>
         </section>
     </div>

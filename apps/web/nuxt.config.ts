@@ -11,6 +11,11 @@ export default defineNuxtConfig({
         public: {
             apiBase: '/api',
             minioPublicUrl: process.env.MINIO_PUBLIC_URL,
+            // P0.U3: scheduling URL. Replaced via SCHEDULING_URL env var once a
+            // Cal.com / Calendly link is provisioned. Until then, the contact
+            // page renders a fallback message + mailto.
+            schedulingUrl: process.env.SCHEDULING_URL || '',
+            schedulingEmail: process.env.SCHEDULING_EMAIL || 'briefings@davion.com',
         },
     },
 
