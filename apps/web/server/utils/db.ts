@@ -19,6 +19,8 @@ function isEdgeRuntime(): boolean {
     }
     const preset = process.env.NITRO_PRESET || ''
     const target = process.env.NUXT_DEPLOY_TARGET || ''
+    // Matches both 'cloudflare_module' (Workers) and 'cloudflare-pages' (legacy Pages),
+    // since both run inside the Workers runtime and need the Neon HTTP driver.
     return preset.startsWith('cloudflare') || target === 'cloudflare'
 }
 

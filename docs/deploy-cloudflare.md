@@ -1,8 +1,8 @@
-# Davion, Cloudflare Pages + Neon Postgres deploy guide
+# Davion, Cloudflare Workers + Neon Postgres deploy guide
 
-**Status:** v1 (2026-05-21). First production deploy. davion.com.tr already lives on Cloudflare DNS; this guide wires the Nuxt 3 SSR + Postgres backend to Cloudflare Pages and Neon.
+**Status:** v2 (2026-05-22). Targets Cloudflare's new Workers + Static Assets path (deployed via `wrangler deploy`), not the legacy Pages Functions path. davion.com.tr already lives on Cloudflare DNS; this guide wires the Nuxt 3 SSR + Postgres backend to a Cloudflare Worker and Neon.
 
-**Total time:** ~90 minutes if everything goes smoothly. Most of that is Neon signup + DB migration + first build.
+**Total time:** ~60 minutes if everything goes smoothly. Most of that is Neon signup + DB migration + first build.
 
 ---
 
@@ -10,197 +10,223 @@
 
 | Surface | Where it runs |
 |---|---|
-| Nuxt 3 SSR + all `/api/*` endpoints | Cloudflare Pages Functions (Workers runtime), `nodejs_compat` flag on |
+| Nuxt 3 SSR + all `/api/*` endpoints | Cloudflare Worker (Nitro `cloudflare_module` preset), `nodejs_compat` flag on |
 | Postgres (blog, engagement_intake, analytics, settings) | Neon serverless Postgres |
-| Static assets (images, CSS, JS bundles) | Cloudflare Pages edge network |
+| Static assets (images, CSS, JS bundles) | Cloudflare Workers Static Assets at the edge |
 | `davion.com.tr` DNS + SSL + WAF | Cloudflare DNS (already configured) |
 
-Cost: Neon free tier (10 GB storage, no idle limits for projects <190h/mo) + Cloudflare Pages free tier (500 builds/mo, unlimited bandwidth). **€0 / month** to launch.
+Cost: Neon free tier (10 GB, no idle limits for projects under 190h/mo) + Cloudflare Workers free tier (100,000 requests/day, unlimited bandwidth). **€0 / month** to launch.
 
 ---
 
-## Step 1, Provision Neon
+## Step 1, Provision Neon (DONE if you already ran `neonctl init`)
 
 1. Sign up at https://neon.tech with your `yba-gif` GitHub.
-2. **Create project** named `davion`. Pick the Frankfurt or Helsinki region (closest to Zurich / Istanbul + sovereign-EU coherent).
-3. After provisioning, copy the **connection string**. It looks like:
+2. **Create project** named `davion`. Pick Frankfurt or Helsinki for EU/sovereign coherence (the default us-east-1 works too if speed matters more than data residency right now).
+3. After provisioning, copy the **connection string**. Looks like:
    ```
    postgresql://neondb_owner:XXX@ep-something-12345678-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require
    ```
-4. Save it somewhere safe, you'll paste it into Cloudflare Pages env vars in Step 4.
+4. Save it somewhere safe, you paste it into the Worker secrets in Step 4.
 
 ---
 
 ## Step 2, Migrate the local dev DB to Neon
 
-Your local `davion` database has 6 newsroom posts, settings, and any engagement test rows. Move them now.
+Your local `davion` database has the seeded newsroom posts, settings, and any engagement test rows. Move them now.
 
 ```bash
 # Dump the local schema + data
-pg_dump --no-owner --no-acl \
+pg_dump --no-owner --no-acl --clean --if-exists \
   postgresql://bek@localhost:5432/davion \
   > /tmp/davion-snapshot.sql
 
-# Push to Neon (substitute your Neon connection string)
-psql "postgresql://neondb_owner:...@ep-...neon.tech/neondb?sslmode=require" \
-  < /tmp/davion-snapshot.sql
+# Push to Neon (substitute your real Neon connection string)
+export NEON_URL='postgresql://neondb_owner:...@ep-...neon.tech/neondb?sslmode=require'
+psql "$NEON_URL" --quiet -v ON_ERROR_STOP=1 < /tmp/davion-snapshot.sql
+
+# Verify
+psql "$NEON_URL" -tA -c "
+  SELECT 'blog_posts:        ' || COUNT(*) FROM blog_posts UNION ALL
+  SELECT 'engagement_intake: ' || COUNT(*) FROM engagement_intake;
+"
 ```
 
-If `pg_dump` complains about extensions, edit `/tmp/davion-snapshot.sql` and remove any `CREATE EXTENSION` lines for `plpgsql` (Neon has it pre-installed).
+Optional sanity check: confirm the edge driver can talk to Neon over HTTP (the same code path the Worker uses at runtime):
 
-Verify:
 ```bash
-psql "postgresql://...neon.tech/neondb?sslmode=require" \
-  -c "SELECT COUNT(*) FROM blog_posts; SELECT COUNT(*) FROM engagement_intake;"
+cd packages/database
+NEON_URL='postgresql://...' pnpm db:test:neon
 ```
-You should see 6 blog posts + however many engagement_intake rows you have.
 
 ---
 
-## Step 3, Create the Cloudflare Pages project
+## Step 3, Choose your deploy mechanism
+
+You have two equivalent paths. Pick one.
+
+### A. Git-connected (auto-deploy on push), recommended
 
 1. https://dash.cloudflare.com → **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
-2. Authorise Cloudflare to access `yba-gif/davion-web`.
-3. Pick the repo. Branch: `rebrand/davion` (or `main` once you merge).
-4. **Build configuration**:
-   - Framework preset: **Nuxt.js**
+2. Authorise Cloudflare to access `yba-gif/davion-web`. Pick it.
+3. **Production branch:** `rebrand/davion` (or `main` once you merge).
+4. **Build configuration:**
+   - Framework preset: **Nuxt.js** (Cloudflare may also offer "Nuxt (Workers)", pick that one if shown).
    - Build command: `cd apps/web && pnpm install --frozen-lockfile && pnpm build:cloudflare`
-     - The `build:cloudflare` script sets `NITRO_PRESET=cloudflare-pages` + `NUXT_DEPLOY_TARGET=cloudflare` so the Neon driver kicks in.
-   - Build output directory: `apps/web/dist`
-   - Root directory: `/` (the repo root, not `apps/web`)
-   - Node version: **20** (use the `.nvmrc` at the repo root, or set `NODE_VERSION=20` env var)
-5. **Don't deploy yet**, env vars first (Step 4).
+   - Build output directory: `apps/web/.output`
+   - Root directory: `/` (repo root, not `apps/web`)
+   - **Deploy command** (the one Cloudflare shows by default): `cd apps/web && npx wrangler deploy`
+5. **Don't deploy yet**, finish secrets + flags first.
+
+### B. Manual deploy from your laptop
+
+```bash
+cd apps/web
+pnpm install
+pnpm build:cloudflare       # NITRO_PRESET=cloudflare_module nuxt build
+npx wrangler login          # one-time, opens browser
+npx wrangler deploy         # uses ./wrangler.toml
+```
+
+You still need to configure secrets + custom domain in the dashboard. Use this path if you want one-off deploys before the Git integration is set up.
 
 ---
 
-## Step 4, Set environment variables in Cloudflare Pages
+## Step 4, Set secrets and env vars
 
-In the Pages project: **Settings → Environment variables** → **Production**.
+Open the Worker in the dashboard: **Workers & Pages → davion-web → Settings → Variables and Secrets**.
 
-| Variable | Value | Notes |
+| Type | Name | Value |
 |---|---|---|
-| `DATABASE_URL` | The Neon connection string from Step 1 | Don't quote it. |
-| `IP_HASH_SALT` | A random 32-char string | Generate via `openssl rand -hex 16`. Used for engagement-intake IP hashing. |
-| `SCHEDULING_URL` | (optional) Cal.com / Calendly URL | When set, P0.U3 SchedulingEmbed activates. |
-| `SCHEDULING_EMAIL` | (optional, default `briefings@davion.com`) | Override the engagement intake email if you want. |
-| `DEMO_EMBED_URL` | (optional) Loom / Vimeo URL | When set, P2.U5 DemoEmbed activates on AlpOS. |
-| `NODE_VERSION` | `20` | Belt-and-braces; the `.nvmrc` already sets this. |
+| **Secret** | `DATABASE_URL` | Your Neon connection string from Step 1. |
+| **Secret** | `IP_HASH_SALT` | A random 32-char string. Generate via `openssl rand -hex 16`. Used for engagement-intake IP hashing. |
+| Plain | `SCHEDULING_URL` | (optional) Cal.com / Calendly URL. When set, the home/contact SchedulingEmbed iframe activates. |
+| Plain | `SCHEDULING_EMAIL` | (optional, defaults to `briefings@davion.com`) |
+| Plain | `DEMO_EMBED_URL` | (optional) Loom / Vimeo URL. When set, the AlpOS demo embed activates. |
 
-Hit **Save**.
+Use **Secret** for `DATABASE_URL` and `IP_HASH_SALT` (encrypted at rest, masked in the UI). Plain text for the optional scheduling/demo URLs.
+
+CLI alternative for secrets:
+```bash
+cd apps/web
+echo "postgresql://neondb_owner:...@neon.tech/neondb?sslmode=require" | npx wrangler secret put DATABASE_URL
+openssl rand -hex 16 | npx wrangler secret put IP_HASH_SALT
+```
 
 ---
 
-## Step 5, Enable `nodejs_compat`
+## Step 5, Compatibility flags
 
-In the Pages project: **Settings → Functions → Compatibility flags**.
+In the Worker: **Settings → Compatibility → Compatibility flags**.
 
-- **Production**: add `nodejs_compat` (and set the compatibility date to `2024-11-01` or later).
-- **Preview**: same.
+- Add `nodejs_compat`.
+- Set Compatibility date to `2024-11-01` or later.
+- Apply for both Production and Preview environments.
 
-`nodejs_compat` is needed because:
-- `engagement-form` POST endpoint uses `node:crypto` for IP hashing.
-- Drizzle's `neon-http` adapter expects Web Fetch + a few Node compatibility shims.
-- `@nuxt/image` IPX uses Buffer internally.
-
-Save.
+`nodejs_compat` is required because:
+- The engagement-form intake uses `node:crypto` for IP hashing.
+- Drizzle's `neon-http` adapter expects a few Node compatibility shims.
+- @nuxt/image / IPX uses Buffer internally.
 
 ---
 
 ## Step 6, First deploy
 
-Back in **Deployments**, click **Retry deployment** (or push a new commit). The build runs:
+If you used path **A** (Git-connected): trigger a deploy from the dashboard ("Retry deployment" or push any commit to the branch). The build runs:
+1. `pnpm install --frozen-lockfile`
+2. `pnpm build:cloudflare`, Nuxt builds with NITRO_PRESET=cloudflare_module. Output lands in `.output/server/index.mjs` + `.output/public/`.
+3. Cloudflare runs `npx wrangler deploy`, which uses `apps/web/wrangler.toml` to register the Worker and bind the assets.
 
-1. `pnpm install --frozen-lockfile`, installs deps.
-2. `pnpm build:cloudflare`, runs Nuxt build with the Cloudflare preset. Output lands in `apps/web/dist`.
-3. Cloudflare Pages uploads static assets + worker bundle.
+If you used path **B** (manual): the `npx wrangler deploy` you ran already pushed it.
 
-If the build fails, check:
-- **Build log shows "TCP not supported"**: the Neon driver isn't being picked. Confirm `NITRO_PRESET=cloudflare-pages` is in the build command (it's in `build:cloudflare`, but if you override the build command, set it manually).
-- **"Cannot find module postgres"**: the build is trying to bundle the Node TCP driver. The `isEdgeRuntime()` check in `server/utils/db.ts` should prevent that. Force it with `NUXT_DEPLOY_TARGET=cloudflare`.
-- **"Module not found: pg-native"**: this is a `pg` dep; safe to ignore (Workers bundling reports it as a warning).
+If the build fails, common fixes:
+- **"Cannot find preset cloudflare_module"**, the build is using an old Nitro version. Confirm `nuxt` and `nitropack` are recent (Nuxt ≥ 3.17, Nitro ≥ 2.10).
+- **"Module not found: pg-native"**, safe to ignore (warning, not error).
+- **Worker bundle too large (>1 MiB on free tier)**, increase via the paid plan or trim deps. Davion's bundle should sit well under the limit.
 
-When successful, you get a URL like `davion-web.pages.dev`. Visit it. Confirm:
+When successful, the Worker is live at `davion-web.<your-subdomain>.workers.dev`. Visit. Confirm:
 - Home renders.
 - `/api/health` returns `{ ok: true }`.
-- `/company/newsroom` lists the 6 posts (proves Neon connection works).
-- Submit the engagement form → ticket code returned, row in Neon DB.
+- `/company/newsroom` lists the migrated posts (proves Neon connection works).
+- Submit the engagement form, ticket code returned, row in Neon.
 
 ---
 
-## Step 7, Wire `davion.com.tr` → Pages
+## Step 7, Wire `davion.com.tr`
 
-In the Pages project: **Custom domains** → **Set up a custom domain**.
+In the Worker: **Settings → Domains & Routes → Add → Custom domain**.
 
-1. Enter `davion.com.tr` (apex / root domain).
-2. Cloudflare detects the domain is on the same account, prompts to add a CNAME flattening record automatically. Confirm.
+1. Enter `davion.com.tr` (apex / root).
+2. Cloudflare detects the domain is on the same account and offers to wire it automatically. Confirm.
 3. Wait ~1 minute. SSL provisions automatically (Cloudflare Universal SSL).
-4. Test: `curl -I https://davion.com.tr/`, should return HTTP 200.
+4. Test:
+   ```bash
+   curl -I https://davion.com.tr/
+   ```
+   Should return HTTP 200.
 
-Also add `www.davion.com.tr` if you want the www variant (CNAME → davion-web.pages.dev).
+Also add `www.davion.com.tr` if you want the www variant.
 
 ---
 
 ## Step 8, Smoke test in production
 
 Walk these paths in a real browser:
-- `/`, hero, spiral, navigation, footer.
-- `/solutions/alpos`, long page, sticky right-rail TOC, demo embed (fallback if no DEMO_EMBED_URL), AlpOS console carousel.
+- `/`, hero, spiral, nav, footer.
+- `/solutions/alpos`, long page, right-rail TOC, demo embed fallback, console carousel.
 - `/industries/financial-services`, depth page.
-- `/company/newsroom`, filter chips work, 6 posts render.
-- `/contact`, engagement form. Submit a test entry. Confirm row in Neon.
+- `/company/newsroom`, filter chips, real posts.
+- `/contact`, engagement form. Submit a test entry, confirm row in Neon.
 - `/legal/privacy`, accessible.
 - Mobile (iPhone), hero spiral crop fits.
 
-Then:
+Then clean up the test submission:
 ```bash
-psql "postgresql://...neon.tech/neondb?sslmode=require" \
-  -c "DELETE FROM engagement_intake WHERE email = 'your-test-email';"
+psql "$NEON_URL" -c "DELETE FROM engagement_intake WHERE email = 'your-test-email';"
 ```
-Clean up the test submission.
 
 ---
 
 ## Operational notes
 
-**Logs.** Cloudflare Pages → Deployment → Functions → Real-time logs. Or use `wrangler tail` from the CLI for live tailing. Configure log push to R2 / Datadog at scale.
+**Logs.** `npx wrangler tail` from `apps/web/` for live streaming, or open the Worker dashboard → Logs.
 
-**Rollback.** Pages keeps every deployment. Click any past deploy → "Rollback to this deployment". Instant.
+**Rollback.** Workers keeps every version. Workers dashboard → Deployments → pick a past version → Rollback. Instant.
 
-**Database migrations.** When the schema changes, generate a Drizzle migration and apply it manually to Neon:
+**Database migrations.** When the schema changes, generate a Drizzle migration and apply manually to Neon:
 ```bash
 cd packages/database
 pnpm db:generate              # creates drizzle/NNNN_<name>.sql
-psql "$DATABASE_URL_NEON" < drizzle/NNNN_<name>.sql
+psql "$NEON_URL" < drizzle/NNNN_<name>.sql
 ```
-Automate this in CI later (Cloudflare doesn't run migrations for you).
+Automate in CI later; Cloudflare does not run migrations for you.
 
-**Status page (P3.3).** Once production is up, swap the static status page for a real per-component status. Cloudflare doesn't have a built-in status page; Better Stack or Statuspage.io work. Or build one against Cloudflare Analytics API + the engagement_intake table.
+**Status page (P3.3).** Once live, swap the static status page for real per-component data. Better Stack or Statuspage.io are easiest; or build a custom one against Cloudflare Analytics API + the engagement_intake table.
 
-**Cookie consent + analytics (P3.5).** The cookie banner already respects opt-in. Server-side analytics in `useAnalytics` only fires after consent. No extra Cloudflare setup needed.
+**Email notifications.** When a new engagement_intake lands, send a notification. Cloudflare Email Workers, Resend, or Postmark all work. Wire a post-insert hook in `server/api/engagement/intake.post.ts`.
 
-**Custom OG image generation.** Per-page OG cards via Satori (P2 backlog) work in Workers, Satori has zero Node deps. When you implement, mount as an edge endpoint at `/api/og/[slug]`.
+**Cookie consent + analytics.** The cookie banner already gates analytics. No extra Cloudflare setup needed; if you want server-side analytics, add Cloudflare Web Analytics (cookie-less) via the dashboard.
 
 ---
 
 ## What this guide doesn't cover
 
-- **Admin app** (`apps/admin`, Kottster), that's a separate deploy (admin tools should not be public). Run on Hetzner or keep local. Connection string to the same Neon DB.
-- **Email sending** (engagement-intake notifications to your inbox), Cloudflare Email Workers or Resend / Postmark. Wire a `defineEventHandler` post-insert hook to fire an email when a new submission lands.
-- **Image transforms beyond static assets**, Cloudflare Images service or move IPX to `@nuxt/image` Cloudflare provider.
+- **Admin app** (`apps/admin`, Kottster). Run on Hetzner or keep local. Connect to the same Neon DB.
+- **Image transforms beyond static assets**. Cloudflare Images service or `@nuxt/image` Cloudflare provider.
+- **Multi-environment** (staging vs prod). Use `wrangler --env staging` and a `[env.staging]` block in wrangler.toml.
 
-These are P3 backlog items; deploy first, polish after.
+These are P3 backlog items; ship first, polish after.
 
 ---
 
-## Decision-readiness checklist before deploy
+## Decision-readiness checklist
 
-- [ ] Neon project created, connection string copied somewhere safe.
-- [ ] Local DB dumped and restored to Neon (verify row counts match).
-- [ ] `yba-gif/davion-web` GitHub repo created and `rebrand/davion` pushed.
-- [ ] Cloudflare account has davion.com.tr DNS already.
-- [ ] You have access to add Pages projects on the Cloudflare account.
-- [ ] IP_HASH_SALT generated (`openssl rand -hex 16`) and saved.
-- [ ] Optional: SCHEDULING_URL provisioned (Cal.com).
-- [ ] Optional: DEMO_EMBED_URL provisioned (Loom).
+- [x] Neon project created, connection string saved.
+- [x] Local DB dumped and restored to Neon (`pnpm db:test:neon` passed).
+- [x] `yba-gif/davion-web` GitHub repo created and `rebrand/davion` pushed.
+- [x] Cloudflare account has `davion.com.tr` DNS already.
+- [ ] You have access to add Workers projects on the Cloudflare account.
+- [ ] `IP_HASH_SALT` generated and saved.
+- [ ] Optional: `SCHEDULING_URL` and `DEMO_EMBED_URL` provisioned.
 
-Walk Steps 1–8 in order. Stop at any step that errors; the failure mode usually has a one-line fix.
+Walk Steps 3 to 8 in order. Stop at any step that errors; the failure mode usually has a one-line fix.
