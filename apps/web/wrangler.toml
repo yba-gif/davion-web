@@ -2,16 +2,19 @@
 #
 # Targets the new Workers + Static Assets path (not classic Pages Functions).
 # Deployed via `npx wrangler deploy` from the apps/web directory after
-# `pnpm build:cloudflare` produces .output/.
+# `pnpm build:cloudflare` produces dist/.
+#
+# NOTE: NuxtHub's cloudflare-module preset outputs to dist/ (not .output/),
+# which is why main and [assets].directory below use dist/* paths.
 #
 # Env vars (DATABASE_URL, IP_HASH_SALT, SCHEDULING_URL, DEMO_EMBED_URL) live in
-# the Cloudflare dashboard under Workers & Pages → davion-web → Settings →
-# Variables → Production. They are NOT committed here.
+# the Cloudflare dashboard under Workers & Pages, davion-web, Settings,
+# Variables, Production. They are NOT committed here.
 #
 # Full setup walkthrough: docs/deploy-cloudflare.md.
 
 name = "davion-web"
-main = ".output/server/index.mjs"
+main = "dist/server/index.mjs"
 compatibility_date = "2024-11-01"
 
 # nodejs_compat is required because:
@@ -20,15 +23,15 @@ compatibility_date = "2024-11-01"
 #   - drizzle-orm's neon-http transport needs a few Node shims
 compatibility_flags = ["nodejs_compat"]
 
-# Workers Static Assets binding. Nuxt's cloudflare_module preset writes the
-# built static files (HTML / CSS / JS / images / fonts) to .output/public/.
-# Cloudflare serves them at the edge before any Worker invocation. The Worker
-# handles only the SSR + API routes.
+# Workers Static Assets binding. NuxtHub writes the built static files
+# (HTML / CSS / JS / images / fonts) to dist/public/. Cloudflare serves
+# them at the edge before any Worker invocation. The Worker handles only
+# the SSR + API routes.
 [assets]
-directory = ".output/public"
+directory = "dist/public"
 binding = "ASSETS"
 
-# Observability — enable Workers Logs (free tier supports it; retention varies).
+# Observability: enable Workers Logs (free tier supports it; retention varies).
 # Inspect via `npx wrangler tail` or in the dashboard.
 [observability]
 enabled = true
