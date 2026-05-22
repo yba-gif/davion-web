@@ -26,7 +26,17 @@ export default defineNuxtConfig({
 
     css: ['~/assets/css/main.css'],
 
-    modules: ['@nuxt/image', '@nuxt/icon', '@nuxtjs/tailwindcss'],
+    modules: ['@nuxt/image', '@nuxt/icon', '@nuxtjs/tailwindcss', '@nuxthub/core'],
+
+    // P3.6: NuxtHub is the official Cloudflare integration for Nuxt 3. It
+    // configures Nitro for the modern Workers + Static Assets path
+    // automatically, sidestepping Nitro 2.12's cloudflare-module preset
+    // aliasing back to cloudflare-module-legacy (which imports the
+    // deprecated __STATIC_CONTENT_MANIFEST global and fails at the
+    // Cloudflare API validation step). All hub-* features (database, kv,
+    // blob, ai, browser, vectorize) are intentionally left disabled.
+    // Davion uses Neon Postgres via drizzle, not NuxtHub's D1 wrapper.
+    hub: {},
 
     image: {
         dir: 'public',
@@ -53,37 +63,24 @@ export default defineNuxtConfig({
 
     ssr: true,
 
-    // P3.6: Cloudflare Workers target. Activated when NITRO_PRESET is set in
-    // the build env; locally `pnpm dev` falls through to the default Node preset.
-    // `nodejs_compat` flag must be enabled on the Cloudflare Worker (set via
-    // wrangler.toml here, or in the dashboard's Compatibility flags panel).
-    // See docs/deploy-cloudflare.md.
+    // P3.6: Cloudflare Workers target.
+    // NuxtHub (above) selects the right Nitro preset automatically when
+    // building on Cloudflare. Locally `pnpm dev` falls through to the
+    // default Node preset; the NITRO_PRESET env var is still honored as
+    // an escape hatch if someone needs to force a specific preset.
+    //
+    // Rollup externals: postgres-js pulls in `cloudflare:sockets` from its
+    // CF polyfill stub; @neondatabase/serverless and a few others can hit
+    // the other cloudflare:* runtime built-ins. The Workers runtime
+    // provides each at execution time, so we just need Rollup to leave
+    // the import statements alone instead of trying to bundle them.
     nitro: {
         preset: process.env.NITRO_PRESET || undefined,
-        // Modern Workers + Static Assets path. Without `deployConfig: true`,
-        // Nitro falls back to `cloudflare-module-legacy` which uses the
-        // deprecated `__STATIC_CONTENT_MANIFEST` binding from Workers Sites.
-        // We want the new `[assets]` binding configured in wrangler.toml.
-        // `nodeCompat: true` mirrors the wrangler.toml compatibility_flags
-        // entry so the Nitro bundler treats Node builtins (crypto, buffer,
-        // etc) as available.
-        cloudflare: {
-            deployConfig: true,
-            nodeCompat: true,
-        },
-        // Rollup externals. The Workers runtime provides each of these at
-        // execution time; we just need Rollup to leave the import statements
-        // alone instead of trying to bundle them.
-        //   - cloudflare:* are runtime built-ins exposed via nodejs_compat.
-        //   - __STATIC_CONTENT_MANIFEST is the legacy Workers Sites magic
-        //     global. Nitro 2.12 imports it from its cloudflare-module-legacy
-        //     runtime; bundling fails without this entry.
         rollupConfig: {
             external: [
                 'cloudflare:sockets',
                 'cloudflare:workers',
                 'cloudflare:email',
-                '__STATIC_CONTENT_MANIFEST',
             ],
         },
     },
