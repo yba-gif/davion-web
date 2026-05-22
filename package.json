@@ -12,6 +12,8 @@
         "dev:admin": "turbo run dev --filter=admin",
         "dev:admin:add-data-source": "turbo run dev:add-data-source --filter=admin",
         "build": "turbo run build",
+        "build:cloudflare": "pnpm --filter web build:cloudflare",
+        "deploy:cloudflare": "pnpm --filter web exec wrangler deploy",
         "test": "turbo run test",
         "lint": "turbo run lint",
         "db:generate": "turbo run db:generate --filter=database",
