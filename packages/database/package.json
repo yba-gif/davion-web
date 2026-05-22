@@ -12,7 +12,8 @@
         "db:push": "drizzle-kit push",
         "db:push:prod": "dotenv -e ../../.env -- drizzle-kit push",
         "db:studio": "drizzle-kit studio",
-        "db:studio:prod": "dotenv -e ../../.env -- drizzle-kit studio"
+        "db:studio:prod": "dotenv -e ../../.env -- drizzle-kit studio",
+        "db:test:neon": "tsx src/test-neon.ts"
     },
     "dependencies": {
         "@neondatabase/serverless": "^1.1.0",
