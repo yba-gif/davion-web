@@ -60,7 +60,18 @@ export default defineNuxtConfig({
     // See docs/deploy-cloudflare.md.
     nitro: {
         preset: process.env.NITRO_PRESET || undefined,
-        // The `postgres` package has a Cloudflare-aware code path that imports
+        // Modern Workers + Static Assets path. Without `deployConfig: true`,
+        // Nitro falls back to `cloudflare-module-legacy` which uses the
+        // deprecated `__STATIC_CONTENT_MANIFEST` binding from Workers Sites.
+        // We want the new `[assets]` binding configured in wrangler.toml.
+        // `nodeCompat: true` mirrors the wrangler.toml compatibility_flags
+        // entry so the Nitro bundler treats Node builtins (crypto, buffer,
+        // etc) as available.
+        cloudflare: {
+            deployConfig: true,
+            nodeCompat: true,
+        },
+        // `postgres` package has a Cloudflare-aware code path that imports
         // `cloudflare:sockets` (a Workers-runtime built-in available with
         // nodejs_compat). Tell Rollup not to try to bundle it; leave it as an
         // external import the runtime resolves itself.
