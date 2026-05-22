@@ -1,4 +1,4 @@
-// P2.U3 — Engagement intake POST endpoint.
+// P2.U3: Engagement intake POST endpoint.
 //
 // Accepts a structured form submission, validates server-side, persists to
 // the engagement_intake table, returns a public ticket code the user can
@@ -67,7 +67,7 @@ interface SubmitBody {
 export default defineEventHandler(async (event) => {
     const body = await readBody<SubmitBody>(event)
 
-    // Honeypot — pretend-success for bots.
+    // Honeypot: pretend-success for bots.
     if (typeof body.companyName === 'string' && body.companyName.trim().length > 0) {
         // No DB write. Wait a small random delay to mimic real processing.
         await new Promise(r => setTimeout(r, 250 + Math.random() * 400))

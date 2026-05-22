@@ -53,6 +53,14 @@ export default defineNuxtConfig({
 
     ssr: true,
 
+    // P3.6: Cloudflare Pages target. Activated when NITRO_PRESET is set in the
+    // build env; locally `pnpm dev` falls through to the default Node preset.
+    // `nodejs_compat` flag must be enabled on the Cloudflare Pages project
+    // (Settings → Functions → Compatibility flags). See docs/deploy-cloudflare.md.
+    nitro: {
+        preset: process.env.NITRO_PRESET || undefined,
+    },
+
     build: {
         transpile: ['@base1/database', 'swiper'],
     },

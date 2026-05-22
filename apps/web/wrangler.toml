@@ -1,0 +1,22 @@
+# P3.6 — Cloudflare Pages config for the Davion marketing site.
+#
+# This file is the source of truth for compatibility flags + the build output
+# directory. The actual env vars (DATABASE_URL, SCHEDULING_URL, DEMO_EMBED_URL,
+# IP_HASH_SALT) are set in the Cloudflare Pages dashboard, not here, so they
+# don't leak through commits.
+#
+# Setup steps live in docs/deploy-cloudflare.md.
+
+name = "davion-web"
+pages_build_output_dir = "dist"
+compatibility_date = "2024-11-01"
+
+# nodejs_compat is required because we use:
+#   - node:crypto (engagement form IP hashing)
+#   - node:buffer (sharp / image build steps)
+#   - drizzle-orm's neon-http transport (which uses Web Fetch, not Node net)
+compatibility_flags = ["nodejs_compat"]
+
+# Static assets — Nuxt's cloudflare-pages preset writes to dist/ by default.
+# (Build output is generated at deploy time; this path is consumed by the
+# Cloudflare Pages build step.)

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// P2.U3 — Engagement form. Real backed-by-Postgres intake. Replaces the
+// P2.U3: Engagement form. Real backed-by-Postgres intake. Replaces the
 // mailto-only path with a structured form, validates server-side, returns a
 // ticket code on success.
 //

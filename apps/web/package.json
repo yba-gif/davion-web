@@ -4,6 +4,7 @@
     "private": true,
     "scripts": {
         "build": "nuxt build",
+        "build:cloudflare": "NITRO_PRESET=cloudflare-pages NUXT_DEPLOY_TARGET=cloudflare nuxt build",
         "dev": "nuxt dev",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
