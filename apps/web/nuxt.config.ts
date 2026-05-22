@@ -71,12 +71,20 @@ export default defineNuxtConfig({
             deployConfig: true,
             nodeCompat: true,
         },
-        // `postgres` package has a Cloudflare-aware code path that imports
-        // `cloudflare:sockets` (a Workers-runtime built-in available with
-        // nodejs_compat). Tell Rollup not to try to bundle it; leave it as an
-        // external import the runtime resolves itself.
+        // Rollup externals. The Workers runtime provides each of these at
+        // execution time; we just need Rollup to leave the import statements
+        // alone instead of trying to bundle them.
+        //   - cloudflare:* are runtime built-ins exposed via nodejs_compat.
+        //   - __STATIC_CONTENT_MANIFEST is the legacy Workers Sites magic
+        //     global. Nitro 2.12 imports it from its cloudflare-module-legacy
+        //     runtime; bundling fails without this entry.
         rollupConfig: {
-            external: ['cloudflare:sockets', 'cloudflare:workers', 'cloudflare:email'],
+            external: [
+                'cloudflare:sockets',
+                'cloudflare:workers',
+                'cloudflare:email',
+                '__STATIC_CONTENT_MANIFEST',
+            ],
         },
     },
 
