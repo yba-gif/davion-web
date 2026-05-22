@@ -53,12 +53,20 @@ export default defineNuxtConfig({
 
     ssr: true,
 
-    // P3.6: Cloudflare Pages target. Activated when NITRO_PRESET is set in the
-    // build env; locally `pnpm dev` falls through to the default Node preset.
-    // `nodejs_compat` flag must be enabled on the Cloudflare Pages project
-    // (Settings → Functions → Compatibility flags). See docs/deploy-cloudflare.md.
+    // P3.6: Cloudflare Workers target. Activated when NITRO_PRESET is set in
+    // the build env; locally `pnpm dev` falls through to the default Node preset.
+    // `nodejs_compat` flag must be enabled on the Cloudflare Worker (set via
+    // wrangler.toml here, or in the dashboard's Compatibility flags panel).
+    // See docs/deploy-cloudflare.md.
     nitro: {
         preset: process.env.NITRO_PRESET || undefined,
+        // The `postgres` package has a Cloudflare-aware code path that imports
+        // `cloudflare:sockets` (a Workers-runtime built-in available with
+        // nodejs_compat). Tell Rollup not to try to bundle it; leave it as an
+        // external import the runtime resolves itself.
+        rollupConfig: {
+            external: ['cloudflare:sockets', 'cloudflare:workers', 'cloudflare:email'],
+        },
     },
 
     build: {
