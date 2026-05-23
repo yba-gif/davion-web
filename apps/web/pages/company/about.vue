@@ -251,7 +251,8 @@ const values = [
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby="berkan-altun-bio-title"
-                    class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
+                    data-lenis-prevent
+                    class="fixed inset-0 z-[70] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
                     @click.self="closeBio"
                 >
                     <div

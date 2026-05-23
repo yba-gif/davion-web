@@ -74,7 +74,8 @@ onBeforeUnmount(() => {
                 role="dialog"
                 aria-labelledby="cookie-consent-title"
                 aria-describedby="cookie-consent-body"
-                class="fixed bottom-3 inset-x-3 md:bottom-6 md:right-6 md:left-auto md:max-w-md z-[60] bg-white rounded-2xl shadow-xl border border-drygray-200 p-6"
+                data-lenis-prevent
+                class="fixed bottom-3 inset-x-3 md:bottom-6 md:right-6 md:left-auto md:max-w-md z-[80] bg-white rounded-2xl shadow-xl border border-drygray-200 p-6 pointer-events-auto"
             >
                 <p id="cookie-consent-title" class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text mb-2">
                     Cookies

@@ -47,10 +47,18 @@
   }
   html {
     font-family: 'Switzer', 'Degular Display', system-ui, -apple-system, sans-serif;
+    /* Mobile responsiveness: clip horizontal overflow at the root so any
+       scaled hero art, marquee, or wide table can never push the document
+       past viewport width. Without this, iOS Safari/Brave render at 980px
+       and let users pinch-zoom, which surfaces as "zoom out turns to
+       desktop". `clip` is preferred over `hidden` because it doesn't
+       create a new scroll container, so `position: sticky` still works. */
+    overflow-x: clip;
   }
 
   body {
     @apply antialiased bg-white text-gray-900;
+    overflow-x: clip;
   }
 
   /* P3.12 a11y: focus rings visible against the entire pastel palette
