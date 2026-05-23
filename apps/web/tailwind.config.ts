@@ -37,13 +37,14 @@ const config: Config = {
             },
             fontFamily: {
                 sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-                // P4.4: Degular Display Demo only ships Latin Basic glyphs.
-                // Falling back through Switzer (which has full Latin
-                // Extended-A from Fontshare) so Turkish (ş ğ ı İ) and
-                // strict German (ß) render correctly inside font-degular
-                // headlines. See main.css for the matching unicode-range
-                // restriction on the @font-face entries.
-                degular: ['Degular Display', 'Switzer', 'system-ui', '-apple-system', 'sans-serif'],
+                // P4.4: `font-degular` now maps to Bricolage Grotesque from
+                // Google Fonts. The class name kept as `degular` so the
+                // existing 600+ usages across the site don't have to be
+                // touched; only the underlying typeface changed. Bricolage
+                // Grotesque ships full Latin Extended-A from Google Fonts,
+                // so Turkish ş ğ ı İ and German ß render natively without
+                // any fallback chain gymnastics.
+                degular: ['Bricolage Grotesque', 'Switzer', 'system-ui', '-apple-system', 'sans-serif'],
                 switzer: ['Switzer', 'system-ui', '-apple-system', 'sans-serif'],
             },
         },

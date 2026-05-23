@@ -1,49 +1,16 @@
-/* P2.5: Switzer trimmed from 18 weight/style variants to the 4 we actually use
-   site-wide (audited: font-medium 47x, font-semibold 108x, font-bold 202x;
-   default 400 for body). Drops ~14 woff2 file fetches on first paint. */
+/* P2.5: Switzer (body font), trimmed from 18 weight/style variants to the
+   4 we actually use site-wide. Has full Latin Extended-A coverage from
+   Fontshare so Turkish + German body text renders correctly. */
 @import url('https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap');
 
-/* P2.5: Degular trimmed from 7 weights to the 4 we use (audited the same way).
-   Removed: Thin (100), Light (300), Black (900) and italic variants. */
-@font-face {
-  font-family: 'Degular Display';
-  src: url('../fonts/DegularDisplayDemo-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  /* P4.4: Degular Display Demo ships only Latin Basic glyphs (ASCII).
-     Restrict the @font-face to that range so the browser falls back
-     through the Tailwind font-degular chain (Switzer) for anything
-     outside, including Turkish ş ğ ı İ and German ß. */
-  unicode-range: U+0020-007E;
-}
-
-@font-face {
-  font-family: 'Degular Display';
-  src: url('../fonts/DegularDisplayDemo-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0020-007E;
-}
-
-@font-face {
-  font-family: 'Degular Display';
-  src: url('../fonts/DegularDisplayDemo-Semibold.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0020-007E;
-}
-
-@font-face {
-  font-family: 'Degular Display';
-  src: url('../fonts/DegularDisplayDemo-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0020-007E;
-}
+/* P4.4: Replaced Degular Display Demo (Latin Basic only, no Turkish/German
+   glyphs) with Bricolage Grotesque from Google Fonts. Same expressive,
+   slightly-organic geometric character as Degular; ships full Latin
+   Extended-A out of the box. The Tailwind `font-degular` class name is
+   kept for now so no template churn; it maps to Bricolage Grotesque
+   under the hood (see tailwind.config.ts). The local DegularDisplayDemo
+   font files remain in apps/web/assets/fonts/ but are no longer loaded. */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&display=swap');
 
 @tailwind base;
 @tailwind components;
