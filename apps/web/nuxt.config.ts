@@ -33,7 +33,19 @@ export default defineNuxtConfig({
     // locales get prefixed (/tr/about, /de/about). First-visit browser
     // language detection happens only on the root path, then a cookie
     // (davion_lang) remembers the pick. Manual switch from the header
-    // always wins. Lazy-loaded translations keep the bundle lean.
+    // always wins.
+    //
+    // Cloudflare Workers + NuxtHub specifics:
+    // - lazy: false bundles all three locale files into the worker. The
+    //   dynamic-import path of `lazy: true` doesn't reliably resolve
+    //   under the Workers runtime + NuxtHub's nitro preset, and the
+    //   delta in bundle size for three small JSON files is negligible.
+    // - bundle.optimizeTranslationDirective: false disables the build
+    //   step that tries to rewrite <i18n-t> at compile time, which is
+    //   another path that uses eval-ish features Workers can't run.
+    // - compilation.strictMessage: false keeps the message format
+    //   permissive so we can carry brand HTML (<strong>, <em>) inside
+    //   translated strings on the about page.
     i18n: {
         locales: [
             { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
@@ -42,7 +54,7 @@ export default defineNuxtConfig({
         ],
         defaultLocale: 'en',
         strategy: 'prefix_except_default',
-        lazy: true,
+        lazy: false,
         langDir: 'locales/',
         detectBrowserLanguage: {
             useCookie: true,
@@ -50,11 +62,10 @@ export default defineNuxtConfig({
             redirectOn: 'root',
             fallbackLocale: 'en',
         },
+        bundle: {
+            optimizeTranslationDirective: false,
+        },
         compilation: {
-            // Required for Cloudflare Workers preset: avoids bundling
-            // the message-compiler runtime (which depends on `eval`
-            // and breaks under Workers CSP). Translations are
-            // pre-compiled at build time instead.
             strictMessage: false,
         },
     },
