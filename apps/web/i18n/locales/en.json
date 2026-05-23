@@ -30,7 +30,7 @@
     "subnav": {
         "solutions": {
             "alpos": "AlpOS",
-            "alposDesc": "The sovereign AI platform underneath every solution.",
+            "alposDesc": "The sovereign platform underneath every solution.",
             "digital": "Digital Transformation",
             "cybersecurity": "Cybersecurity",
             "osint": "OSINT"
@@ -56,7 +56,7 @@
             "energy": "Energy",
             "energyDesc": "Grid, generation, asset reliability, OT-side cyber.",
             "defense": "Defense & Intelligence",
-            "defenseDesc": "Air-gapped sovereign AI inside the enclave.",
+            "defenseDesc": "Air-gapped sovereign infrastructure inside the enclave.",
             "manufacturing": "Manufacturing",
             "manufacturingDesc": "Plant operations, quality, supply, OT cyber.",
             "lifeSciences": "Life Sciences",
@@ -164,7 +164,7 @@
             "headline1": "The platform",
             "headline2": "And the solutions built on it",
             "body": "AlpOS is the constant. Cybersecurity and Digital Transformation are how it's applied, same sovereignty, same audit, same spine.",
-            "alposBody": "The sovereign AI platform underneath every Davion solution. Ingest, ontology, analytics, AI, decisioning, action, governed end to end.",
+            "alposBody": "The sovereign platform underneath every Davion solution. Ingest, ontology, analytics, AI, decisioning, action, governed end to end.",
             "alposLabel": "Platform · Flagship",
             "cyberBody": "Defensive intelligence for environments that cannot fail. Detection through pattern, anomaly, and graph analysis, inside your perimeter.",
             "cyberLabel": "Solution",
@@ -173,7 +173,7 @@
         },
         "alposTeaser": {
             "sup": "Flagship · AlpOS",
-            "headline": "The sovereign AI platform underneath every Davion solution",
+            "headline": "The sovereign platform underneath every Davion solution",
             "body": "AlpOS unifies data, ontology, analytics, and agentic AI in one modular platform, ingest to act, governed end to end. Digital Transformation, Cybersecurity, and OSINT are how it is applied.",
             "cta": "Explore AlpOS"
         },
@@ -384,7 +384,7 @@
                 "stage": "Stage",
                 "stageValue": "Early-stage; first engagements under contract",
                 "categories": "Categories",
-                "categoriesValue": "Sovereign AI · Data intelligence · Decision support",
+                "categoriesValue": "Sovereign infrastructure · Data intelligence · Decision support",
                 "buyers": "Buyers we serve",
                 "buyersValue": "Banks, ministries, defense, energy, life sciences, manufacturing, government, critical infrastructure",
                 "postures": "Deployment postures",
@@ -461,13 +461,13 @@
             "alpos": {
                 "meta": {
                     "title": "AlpOS",
-                    "description": "Sovereign AI infrastructure for decisions that cannot wait, and cannot leak. AlpOS turns data into operational action inside your perimeter, end to end.",
+                    "description": "Sovereign infrastructure for decisions that cannot wait, and cannot leak. AlpOS turns data into operational action inside your perimeter, end to end.",
                     "ogTitle": "Davion · AlpOS",
-                    "ogDescription": "The sovereign AI platform: ingest, ontology, analyze, decide, act, governed end to end, deployed inside your perimeter."
+                    "ogDescription": "The sovereign platform: ingest, ontology, analyze, decide, act, governed end to end, deployed inside your perimeter."
                 },
                 "hero": {
                     "sup": "Platform · AlpOS",
-                    "headlinePart1": "Sovereign AI infrastructure for decisions that can't wait",
+                    "headlinePart1": "Sovereign infrastructure for decisions that can't wait",
                     "headlinePart2": " And can't leak",
                     "body": "Most organisations can see their data. Few can act on it when it matters. AlpOS closes the gap, one governed environment, from every source to every decision, inside your perimeter.",
                     "ctaPrimary": "Book a demo",
@@ -876,13 +876,13 @@
             "index": {
                 "meta": {
                     "title": "Industries",
-                    "description": "Davion deployments by sector: Financial Services, Energy, Defense & Intelligence, Manufacturing, Life Sciences, Government, six sovereign-AI playbooks built on AlpOS.",
+                    "description": "Davion deployments by sector: Financial Services, Energy, Defense & Intelligence, Manufacturing, Life Sciences, Government, six sovereign playbooks built on AlpOS.",
                     "ogTitle": "Davion · Industries",
-                    "ogDescription": "Sovereign AI across the institutions that run the world. Six industry playbooks built on AlpOS."
+                    "ogDescription": "Sovereign infrastructure across the institutions that run the world. Six industry playbooks built on AlpOS."
                 },
                 "hero": {
                     "sup": "Industries",
-                    "headline": "Sovereign AI across the institutions that run the world",
+                    "headline": "Sovereign infrastructure across the institutions that run the world",
                     "body": "Davion is deployed across financial services, energy, manufacturing, life sciences, government, and defense, wherever data has to become decisions that can be defended."
                 },
                 "list": {
@@ -893,7 +893,7 @@
                     "energyName": "Energy",
                     "energyBody": "Grid, generation, asset reliability, and OT-side cyber, telemetry stays in your perimeter.",
                     "defName": "Defense & Intelligence",
-                    "defBody": "Air-gapped sovereign AI for mission planning, all-source fusion, and OSINT. Decisions stay inside the enclave.",
+                    "defBody": "Air-gapped sovereign infrastructure for mission planning, all-source fusion, and OSINT. Decisions stay inside the enclave.",
                     "mfgName": "Manufacturing",
                     "mfgBody": "Plant operations, quality, supply visibility, and industrial cybersecurity, production telemetry stays inside.",
                     "lsName": "Life Sciences",
@@ -927,7 +927,7 @@
                     "title": "Financial Services",
                     "description": "Banks, insurers, asset managers, and payment providers use Davion when their decisions must be defensible, and made on data that never leaves the bank.",
                     "ogTitle": "Davion · Financial Services",
-                    "ogDescription": "Sovereign AI for AML, surveillance, market intelligence, and resilience. Audit-grade lineage, never out of perimeter."
+                    "ogDescription": "Sovereign infrastructure for AML, surveillance, market intelligence, and resilience. Audit-grade lineage, never out of perimeter."
                 },
                 "eyebrow": "Industries · Financial Services",
                 "headline": "Banks use Davion when their decisions must be defensible, and made on data that never leaves the bank",
@@ -979,13 +979,13 @@
             "def": {
                 "meta": {
                     "title": "Defense & Intelligence",
-                    "description": "Defense and intelligence organisations use Davion when decisions run on classified data that cannot leave the perimeter. Air-gapped sovereign AI with audit-grade lineage.",
+                    "description": "Defense and intelligence organisations use Davion when decisions run on classified data that cannot leave the perimeter. Air-gapped sovereign infrastructure with audit-grade lineage.",
                     "ogTitle": "Davion · Defense & Intelligence",
-                    "ogDescription": "Air-gapped sovereign AI for mission planning, signals fusion, and OSINT. Decisions stay inside the perimeter."
+                    "ogDescription": "Air-gapped sovereign infrastructure for mission planning, signals fusion, and OSINT. Decisions stay inside the perimeter."
                 },
                 "eyebrow": "Industries · Defense & Intelligence",
                 "headline": "Defense and intelligence organisations use Davion when decisions run on data that cannot leave the perimeter",
-                "body": "Air-gapped sovereign AI for mission planning, all-source fusion, and OSINT. The data, the weights, and the audit log stay inside the enclave. Every decision is traceable to the sources it was made on; every model run is reproducible. Davion proposes; the commander, analyst, or operator decides.",
+                "body": "Air-gapped sovereign infrastructure for mission planning, all-source fusion, and OSINT. The data, the weights, and the audit log stay inside the enclave. Every decision is traceable to the sources it was made on; every model run is reproducible. Davion proposes; the commander, analyst, or operator decides.",
                 "primaryCtaLabel": "Connect confidentially",
                 "secondaryCtaLabel": "Deployment matrix",
                 "problemAreasTitle": "Four mission domains. One sovereign platform",
@@ -1038,9 +1038,9 @@
             "energy": {
                 "meta": {
                     "title": "Energy",
-                    "description": "Energy operators use Davion when grid decisions can't wait for the cloud. Sovereign AI across upstream, midstream, transmission, and distribution, telemetry stays in your perimeter.",
+                    "description": "Energy operators use Davion when grid decisions can't wait for the cloud. Sovereign infrastructure across upstream, midstream, transmission, and distribution, telemetry stays in your perimeter.",
                     "ogTitle": "Davion · Energy",
-                    "ogDescription": "Sovereign AI for grid, generation, and trading. Telemetry stays in your perimeter; decisions stay defensible."
+                    "ogDescription": "Sovereign infrastructure for grid, generation, and trading. Telemetry stays in your perimeter; decisions stay defensible."
                 },
                 "eyebrow": "Industries · Energy",
                 "headline": "Energy operators use Davion when grid decisions can't wait for the cloud",
@@ -1092,9 +1092,9 @@
             "mfg": {
                 "meta": {
                     "title": "Manufacturing",
-                    "description": "Manufacturers use Davion when production decisions can't wait for the cloud. Sovereign AI across plant, fleet, and supply chain, telemetry stays in your perimeter.",
+                    "description": "Manufacturers use Davion when production decisions can't wait for the cloud. Sovereign infrastructure across plant, fleet, and supply chain, telemetry stays in your perimeter.",
                     "ogTitle": "Davion · Manufacturing",
-                    "ogDescription": "Sovereign AI for plant operations, quality, supply visibility, and OT cybersecurity. Decisions stay defensible; telemetry stays inside."
+                    "ogDescription": "Sovereign infrastructure for plant operations, quality, supply visibility, and OT cybersecurity. Decisions stay defensible; telemetry stays inside."
                 },
                 "eyebrow": "Industries · Manufacturing",
                 "headline": "Manufacturers use Davion when production decisions can't wait for the cloud",
@@ -1146,9 +1146,9 @@
             "gov": {
                 "meta": {
                     "title": "Government",
-                    "description": "Government agencies use Davion when cross-departmental data has to stay within the perimeter, and decisions have to be defensible at audit. Sovereign AI for public-service delivery, fraud, critical infrastructure, and oversight.",
+                    "description": "Government agencies use Davion when cross-departmental data has to stay within the perimeter, and decisions have to be defensible at audit. Sovereign infrastructure for public-service delivery, fraud, critical infrastructure, and oversight.",
                     "ogTitle": "Davion · Government",
-                    "ogDescription": "Sovereign AI for public-service delivery, benefit-fraud detection, critical infrastructure, and procurement oversight. Audit by design."
+                    "ogDescription": "Sovereign infrastructure for public-service delivery, benefit-fraud detection, critical infrastructure, and procurement oversight. Audit by design."
                 },
                 "eyebrow": "Industries · Government",
                 "headline": "Government agencies use Davion when cross-departmental data has to stay within the perimeter, and decisions have to be defensible at audit",
@@ -1202,9 +1202,9 @@
             "ls": {
                 "meta": {
                     "title": "Life Sciences",
-                    "description": "Life sciences teams use Davion when discovery, trial, and post-market signals can't leave the regulatory envelope. Sovereign AI with audit-grade lineage end to end.",
+                    "description": "Life sciences teams use Davion when discovery, trial, and post-market signals can't leave the regulatory envelope. Sovereign infrastructure with audit-grade lineage end to end.",
                     "ogTitle": "Davion · Life Sciences",
-                    "ogDescription": "Sovereign AI across R&D, clinical operations, pharmacovigilance, and process. Audit-ready for regulators by design."
+                    "ogDescription": "Sovereign infrastructure across R&D, clinical operations, pharmacovigilance, and process. Audit-ready for regulators by design."
                 },
                 "eyebrow": "Industries · Life Sciences",
                 "headline": "Life sciences teams use Davion when discovery, trial, and post-market data can't leave the regulatory envelope",
@@ -1625,7 +1625,7 @@
             "empty": {
                 "eyebrow": "Thesis pending",
                 "headline": "The public venture thesis and intake process land once they are signed off",
-                "body": "In the meantime, founders building in sovereign data, sovereign AI, defense-adjacent technology, or institutional-decision infrastructure can route a one-page summary through the engagement page with the Venture intent. The right person reads it.",
+                "body": "In the meantime, founders building in sovereign data, sovereign infrastructure, defense-adjacent technology, or institutional-decision infrastructure can route a one-page summary through the engagement page with the Venture intent. The right person reads it.",
                 "ctaPrimary": "Pitch us",
                 "ctaSecondary": "Read About"
             }
@@ -1823,11 +1823,11 @@
                 "title": "Careers",
                 "description": "Davion hires for the mission. Senior engineers and operators who have lived inside regulated institutions, banks, ministries, defense, not just sold to them.",
                 "ogTitle": "Davion · Careers",
-                "ogDescription": "Sovereign AI is operator work. Roles for engineers and field operators who have lived the mission."
+                "ogDescription": "Sovereign infrastructure is operator work. Roles for engineers and field operators who have lived the mission."
             },
             "hero": {
                 "sup": "Company · Careers",
-                "headline": "Sovereign AI is operator work",
+                "headline": "Sovereign infrastructure is operator work",
                 "body": "Davion hires people who have lived inside regulated institutions, banks, ministries, defense, energy, critical infrastructure, not just sold to them. We are early. The work is consequential. Compensation includes meaningful equity and is benchmarked against top-decile institutional vendors."
             },
             "evp": {
@@ -1847,7 +1847,7 @@
                 "r1Title": "Founding Engineer · Platform",
                 "r1Team": "Engineering",
                 "r1Location": "Zurich · Istanbul · Remote (CET ±2)",
-                "r1Body": "Build AlpOS, the sovereign AI platform. Distributed systems, ontology, retrieval, agentic reasoning. You write the architecture documents and the production code that lands them.",
+                "r1Body": "Build AlpOS, the sovereign platform. Distributed systems, ontology, retrieval, agentic reasoning. You write the architecture documents and the production code that lands them.",
                 "r1s1": "Distributed-systems depth (Kafka / Postgres / Flink class)",
                 "r1s2": "Comfort owning a system end to end, from on-call to interview pipeline",
                 "r1s3": "Has shipped AI/ML in production against real adversarial inputs",

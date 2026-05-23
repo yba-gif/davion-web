@@ -30,7 +30,7 @@
     "subnav": {
         "solutions": {
             "alpos": "AlpOS",
-            "alposDesc": "Die souveräne KI-Plattform unter jeder Lösung.",
+            "alposDesc": "Die souveräne Plattform unter jeder Lösung.",
             "digital": "Digitale Transformation",
             "cybersecurity": "Cybersicherheit",
             "osint": "OSINT"
@@ -56,7 +56,7 @@
             "energy": "Energie",
             "energyDesc": "Netz, Erzeugung, Anlagenzuverlässigkeit, OT-Cyber.",
             "defense": "Verteidigung und Nachrichtendienste",
-            "defenseDesc": "Air-gapped souveräne KI innerhalb der Enklave.",
+            "defenseDesc": "Air-gapped souveräne Infrastruktur innerhalb der Enklave.",
             "manufacturing": "Fertigung",
             "manufacturingDesc": "Anlagenbetrieb, Qualität, Lieferkette, OT-Cyber.",
             "lifeSciences": "Life Sciences",
@@ -164,7 +164,7 @@
             "headline1": "Die Plattform",
             "headline2": "Und die Lösungen, die darauf aufbauen",
             "body": "AlpOS ist die Konstante. Cybersicherheit und Digitale Transformation sind ihre Anwendungen: gleiche Souveränität, gleiches Audit, gleiches Rückgrat.",
-            "alposBody": "Die souveräne KI-Plattform unter jeder Davion-Lösung. Erfassung, Ontologie, Analyse, KI, Entscheidung, Aktion, durchgängig kontrolliert.",
+            "alposBody": "Die souveräne Plattform unter jeder Davion-Lösung. Erfassung, Ontologie, Analyse, KI, Entscheidung, Aktion, durchgängig kontrolliert.",
             "alposLabel": "Plattform · Flaggschiff",
             "cyberBody": "Defensive Intelligenz für Umgebungen, die nicht ausfallen dürfen. Erkennung über Muster-, Anomalie- und Graphanalyse, innerhalb Ihres Perimeters.",
             "cyberLabel": "Lösung",
@@ -173,7 +173,7 @@
         },
         "alposTeaser": {
             "sup": "Flaggschiff · AlpOS",
-            "headline": "Die souveräne KI-Plattform unter jeder Davion-Lösung",
+            "headline": "Die souveräne Plattform unter jeder Davion-Lösung",
             "body": "AlpOS vereint Daten, Ontologie, Analyse und agentische KI in einer modularen Plattform, von der Erfassung bis zur Aktion, durchgängig kontrolliert. Digitale Transformation, Cybersicherheit und OSINT sind ihre Anwendungen.",
             "cta": "AlpOS erkunden"
         },
@@ -384,7 +384,7 @@
                 "stage": "Phase",
                 "stageValue": "Frühphase; erste Engagements unter Vertrag",
                 "categories": "Kategorien",
-                "categoriesValue": "Souveräne KI · Datenintelligenz · Entscheidungsunterstützung",
+                "categoriesValue": "Souveräne Infrastruktur · Datenintelligenz · Entscheidungsunterstützung",
                 "buyers": "Käufer, die wir bedienen",
                 "buyersValue": "Banken, Ministerien, Verteidigung, Energie, Life Sciences, Fertigung, Behörden, kritische Infrastruktur",
                 "postures": "Einsatzhaltungen",
@@ -461,13 +461,13 @@
             "alpos": {
                 "meta": {
                     "title": "AlpOS",
-                    "description": "Souveräne KI-Infrastruktur für Entscheidungen, die nicht warten und nicht durchsickern dürfen. AlpOS verwandelt Daten in operative Aktion innerhalb Ihres Perimeters — durchgängig.",
+                    "description": "Souveräne Infrastruktur für Entscheidungen, die nicht warten und nicht durchsickern dürfen. AlpOS verwandelt Daten in operative Aktion innerhalb Ihres Perimeters — durchgängig.",
                     "ogTitle": "Davion · AlpOS",
-                    "ogDescription": "Die souveräne KI-Plattform: Erfassung, Ontologie, Analyse, Entscheidung, Aktion — durchgängig kontrolliert, eingesetzt innerhalb Ihres Perimeters."
+                    "ogDescription": "Die souveräne Plattform: Erfassung, Ontologie, Analyse, Entscheidung, Aktion — durchgängig kontrolliert, eingesetzt innerhalb Ihres Perimeters."
                 },
                 "hero": {
                     "sup": "Plattform · AlpOS",
-                    "headlinePart1": "Souveräne KI-Infrastruktur für Entscheidungen, die nicht warten können",
+                    "headlinePart1": "Souveräne Infrastruktur für Entscheidungen, die nicht warten können",
                     "headlinePart2": " Und nicht durchsickern dürfen",
                     "body": "Die meisten Organisationen können ihre Daten sehen. Wenige können in entscheidenden Momenten handeln. AlpOS schließt diese Lücke — eine kontrollierte Umgebung von jeder Quelle zu jeder Entscheidung, innerhalb Ihres Perimeters.",
                     "ctaPrimary": "Demo buchen",
@@ -876,13 +876,13 @@
             "index": {
                 "meta": {
                     "title": "Branchen",
-                    "description": "Davion-Einsätze nach Branche: Finanzdienstleistungen, Energie, Verteidigung und Nachrichtendienste, Fertigung, Life Sciences, Verwaltung — sechs souveräne-KI-Playbooks auf AlpOS.",
+                    "description": "Davion-Einsätze nach Branche: Finanzdienstleistungen, Energie, Verteidigung und Nachrichtendienste, Fertigung, Life Sciences, Verwaltung — sechs souveräne Playbooks auf AlpOS.",
                     "ogTitle": "Davion · Branchen",
-                    "ogDescription": "Souveräne KI über die Institutionen, die die Welt betreiben. Sechs Branchen-Playbooks auf AlpOS."
+                    "ogDescription": "Souveräne Infrastruktur über die Institutionen, die die Welt betreiben. Sechs Branchen-Playbooks auf AlpOS."
                 },
                 "hero": {
                     "sup": "Branchen",
-                    "headline": "Souveräne KI über die Institutionen, die die Welt betreiben",
+                    "headline": "Souveräne Infrastruktur über die Institutionen, die die Welt betreiben",
                     "body": "Davion ist im Einsatz in Finanzdienstleistungen, Energie, Fertigung, Life Sciences, Verwaltung und Verteidigung — überall dort, wo Daten zu Entscheidungen werden müssen, die verteidigt werden können."
                 },
                 "list": {
@@ -893,7 +893,7 @@
                     "energyName": "Energie",
                     "energyBody": "Netz, Erzeugung, Asset-Zuverlässigkeit und OT-Cybersicherheit — Telemetrie bleibt in Ihrem Perimeter.",
                     "defName": "Verteidigung und Nachrichtendienste",
-                    "defBody": "Air-gapped souveräne KI für Einsatzplanung, All-Source-Fusion und OSINT. Entscheidungen bleiben innerhalb der Enklave.",
+                    "defBody": "Air-gapped souveräne Infrastruktur für Einsatzplanung, All-Source-Fusion und OSINT. Entscheidungen bleiben innerhalb der Enklave.",
                     "mfgName": "Fertigung",
                     "mfgBody": "Anlagenbetrieb, Qualität, Supply-Visibilität und industrielle Cybersicherheit — Produktionstelemetrie bleibt drinnen.",
                     "lsName": "Life Sciences",
@@ -927,7 +927,7 @@
                     "title": "Finanzdienstleistungen",
                     "description": "Banken, Versicherer, Vermögensverwalter und Zahlungsdienstleister setzen Davion ein, wenn ihre Entscheidungen verteidigbar sein müssen — und auf Daten, die die Bank nie verlassen, getroffen werden.",
                     "ogTitle": "Davion · Finanzdienstleistungen",
-                    "ogDescription": "Souveräne KI für AML, Überwachung, Marktintelligenz und Resilienz. Lineage in Audit-Klasse — nie außerhalb des Perimeters."
+                    "ogDescription": "Souveräne Infrastruktur für AML, Überwachung, Marktintelligenz und Resilienz. Lineage in Audit-Klasse — nie außerhalb des Perimeters."
                 },
                 "eyebrow": "Branchen · Finanzdienstleistungen",
                 "headline": "Banken setzen Davion ein, wenn ihre Entscheidungen verteidigbar sein müssen — auf Daten, die die Bank nie verlassen",
@@ -979,13 +979,13 @@
             "def": {
                 "meta": {
                     "title": "Verteidigung und Nachrichtendienste",
-                    "description": "Verteidigungs- und Nachrichtenorganisationen setzen Davion ein, wenn Entscheidungen auf eingestuften Daten laufen, die den Perimeter nicht verlassen dürfen. Air-gapped souveräne KI mit Lineage in Audit-Klasse.",
+                    "description": "Verteidigungs- und Nachrichtenorganisationen setzen Davion ein, wenn Entscheidungen auf eingestuften Daten laufen, die den Perimeter nicht verlassen dürfen. Air-gapped souveräne Infrastruktur mit Lineage in Audit-Klasse.",
                     "ogTitle": "Davion · Verteidigung und Nachrichtendienste",
-                    "ogDescription": "Air-gapped souveräne KI für Einsatzplanung, Signalfusion und OSINT. Entscheidungen bleiben innerhalb des Perimeters."
+                    "ogDescription": "Air-gapped souveräne Infrastruktur für Einsatzplanung, Signalfusion und OSINT. Entscheidungen bleiben innerhalb des Perimeters."
                 },
                 "eyebrow": "Branchen · Verteidigung und Nachrichtendienste",
                 "headline": "Verteidigungs- und Nachrichtenorganisationen setzen Davion ein, wenn Entscheidungen auf Daten laufen, die den Perimeter nicht verlassen dürfen",
-                "body": "Air-gapped souveräne KI für Einsatzplanung, All-Source-Fusion und OSINT. Daten, Gewichte und Audit-Log bleiben innerhalb der Enklave. Jede Entscheidung ist auf die Quellen, auf denen sie getroffen wurde, nachvollziehbar; jeder Modelllauf ist reproduzierbar. Davion schlägt vor — der Befehlshaber, Analyst oder Operator entscheidet.",
+                "body": "Air-gapped souveräne Infrastruktur für Einsatzplanung, All-Source-Fusion und OSINT. Daten, Gewichte und Audit-Log bleiben innerhalb der Enklave. Jede Entscheidung ist auf die Quellen, auf denen sie getroffen wurde, nachvollziehbar; jeder Modelllauf ist reproduzierbar. Davion schlägt vor — der Befehlshaber, Analyst oder Operator entscheidet.",
                 "primaryCtaLabel": "Vertraulich Kontakt aufnehmen",
                 "secondaryCtaLabel": "Einsatzmatrix",
                 "problemAreasTitle": "Vier Einsatzdomänen. Eine souveräne Plattform",
@@ -1038,9 +1038,9 @@
             "energy": {
                 "meta": {
                     "title": "Energie",
-                    "description": "Energieversorger setzen Davion ein, wenn Netzentscheidungen nicht auf die Cloud warten können. Souveräne KI über Upstream, Midstream, Übertragung und Verteilung — Telemetrie bleibt in Ihrem Perimeter.",
+                    "description": "Energieversorger setzen Davion ein, wenn Netzentscheidungen nicht auf die Cloud warten können. Souveräne Infrastruktur über Upstream, Midstream, Übertragung und Verteilung — Telemetrie bleibt in Ihrem Perimeter.",
                     "ogTitle": "Davion · Energie",
-                    "ogDescription": "Souveräne KI für Netz, Erzeugung und Handel. Telemetrie bleibt in Ihrem Perimeter; Entscheidungen bleiben verteidigbar."
+                    "ogDescription": "Souveräne Infrastruktur für Netz, Erzeugung und Handel. Telemetrie bleibt in Ihrem Perimeter; Entscheidungen bleiben verteidigbar."
                 },
                 "eyebrow": "Branchen · Energie",
                 "headline": "Energieversorger setzen Davion ein, wenn Netzentscheidungen nicht auf die Cloud warten können",
@@ -1092,9 +1092,9 @@
             "mfg": {
                 "meta": {
                     "title": "Fertigung",
-                    "description": "Hersteller setzen Davion ein, wenn Produktionsentscheidungen nicht auf die Cloud warten können. Souveräne KI über Anlage, Flotte und Lieferkette — Telemetrie bleibt in Ihrem Perimeter.",
+                    "description": "Hersteller setzen Davion ein, wenn Produktionsentscheidungen nicht auf die Cloud warten können. Souveräne Infrastruktur über Anlage, Flotte und Lieferkette — Telemetrie bleibt in Ihrem Perimeter.",
                     "ogTitle": "Davion · Fertigung",
-                    "ogDescription": "Souveräne KI für Anlagenbetrieb, Qualität, Supply-Visibilität und OT-Cybersicherheit. Entscheidungen bleiben verteidigbar; Telemetrie bleibt drinnen."
+                    "ogDescription": "Souveräne Infrastruktur für Anlagenbetrieb, Qualität, Supply-Visibilität und OT-Cybersicherheit. Entscheidungen bleiben verteidigbar; Telemetrie bleibt drinnen."
                 },
                 "eyebrow": "Branchen · Fertigung",
                 "headline": "Hersteller setzen Davion ein, wenn Produktionsentscheidungen nicht auf die Cloud warten können",
@@ -1146,9 +1146,9 @@
             "gov": {
                 "meta": {
                     "title": "Verwaltung",
-                    "description": "Behörden setzen Davion ein, wenn ressortübergreifende Daten innerhalb des Perimeters bleiben müssen und Entscheidungen im Audit verteidigbar sein müssen. Souveräne KI für öffentliche Leistungserbringung, Betrug, kritische Infrastruktur und Aufsicht.",
+                    "description": "Behörden setzen Davion ein, wenn ressortübergreifende Daten innerhalb des Perimeters bleiben müssen und Entscheidungen im Audit verteidigbar sein müssen. Souveräne Infrastruktur für öffentliche Leistungserbringung, Betrug, kritische Infrastruktur und Aufsicht.",
                     "ogTitle": "Davion · Verwaltung",
-                    "ogDescription": "Souveräne KI für öffentliche Leistungserbringung, Sozialleistungsbetrug-Erkennung, kritische Infrastruktur und Vergabe-Oversight. Audit per Design."
+                    "ogDescription": "Souveräne Infrastruktur für öffentliche Leistungserbringung, Sozialleistungsbetrug-Erkennung, kritische Infrastruktur und Vergabe-Oversight. Audit per Design."
                 },
                 "eyebrow": "Branchen · Verwaltung",
                 "headline": "Behörden setzen Davion ein, wenn ressortübergreifende Daten innerhalb des Perimeters bleiben müssen und Entscheidungen im Audit verteidigbar sein müssen",
@@ -1202,9 +1202,9 @@
             "ls": {
                 "meta": {
                     "title": "Life Sciences",
-                    "description": "Life-Sciences-Teams setzen Davion ein, wenn Discovery-, Studien- und Post-Market-Signale die regulatorische Hülle nicht verlassen können. Souveräne KI mit Lineage in Audit-Klasse durchgängig.",
+                    "description": "Life-Sciences-Teams setzen Davion ein, wenn Discovery-, Studien- und Post-Market-Signale die regulatorische Hülle nicht verlassen können. Souveräne Infrastruktur mit Lineage in Audit-Klasse durchgängig.",
                     "ogTitle": "Davion · Life Sciences",
-                    "ogDescription": "Souveräne KI über F&E, klinische Operationen, Pharmakovigilanz und Prozess. Audit-fähig für Regulierer per Design."
+                    "ogDescription": "Souveräne Infrastruktur über F&E, klinische Operationen, Pharmakovigilanz und Prozess. Audit-fähig für Regulierer per Design."
                 },
                 "eyebrow": "Branchen · Life Sciences",
                 "headline": "Life-Sciences-Teams setzen Davion ein, wenn Discovery-, Studien- und Post-Market-Daten die regulatorische Hülle nicht verlassen können",
@@ -1625,7 +1625,7 @@
             "empty": {
                 "eyebrow": "These ausstehend",
                 "headline": "Die öffentliche Venture-These und der Intake-Prozess landen, sobald sie freigegeben sind",
-                "body": "In der Zwischenzeit können Gründer, die in souveränen Daten, souveräner KI, verteidigungsangrenzender Technologie oder institutioneller Entscheidungsinfrastruktur bauen, eine einseitige Zusammenfassung über die Engagement-Seite mit der Venture-Absicht einreichen. Die richtige Person liest sie.",
+                "body": "In der Zwischenzeit können Gründer, die in souveränen Daten, souveräner Infrastruktur, verteidigungsangrenzender Technologie oder institutioneller Entscheidungsinfrastruktur bauen, eine einseitige Zusammenfassung über die Engagement-Seite mit der Venture-Absicht einreichen. Die richtige Person liest sie.",
                 "ctaPrimary": "Pitchen Sie uns",
                 "ctaSecondary": "Über uns lesen"
             }
@@ -1823,11 +1823,11 @@
                 "title": "Karriere",
                 "description": "Davion stellt für die Mission ein. Senior-Ingenieure und Operatoren, die in regulierten Institutionen gelebt haben — Banken, Ministerien, Verteidigung —, nicht nur an sie verkauft haben.",
                 "ogTitle": "Davion · Karriere",
-                "ogDescription": "Souveräne KI ist Operator-Arbeit. Rollen für Ingenieure und Feld-Operatoren, die die Mission gelebt haben."
+                "ogDescription": "Souveräne Infrastruktur ist Operator-Arbeit. Rollen für Ingenieure und Feld-Operatoren, die die Mission gelebt haben."
             },
             "hero": {
                 "sup": "Unternehmen · Karriere",
-                "headline": "Souveräne KI ist Operator-Arbeit",
+                "headline": "Souveräne Infrastruktur ist Operator-Arbeit",
                 "body": "Davion stellt Personen ein, die in regulierten Institutionen gelebt haben — Banken, Ministerien, Verteidigung, Energie, kritische Infrastruktur —, nicht nur an sie verkauft haben. Wir sind in einer frühen Phase. Die Arbeit ist folgenreich. Die Vergütung beinhaltet sinnvolle Equity und ist gegen Top-Dezil institutioneller Anbieter benchmarked."
             },
             "evp": {
@@ -1847,7 +1847,7 @@
                 "r1Title": "Founding Engineer · Plattform",
                 "r1Team": "Engineering",
                 "r1Location": "Zürich · Istanbul · Remote (CET ±2)",
-                "r1Body": "AlpOS bauen — die souveräne KI-Plattform. Verteilte Systeme, Ontologie, Retrieval, agentisches Reasoning. Sie schreiben die Architekturdokumente und den Produktions-Code, der sie umsetzt.",
+                "r1Body": "AlpOS bauen — die souveräne Plattform. Verteilte Systeme, Ontologie, Retrieval, agentisches Reasoning. Sie schreiben die Architekturdokumente und den Produktions-Code, der sie umsetzt.",
                 "r1s1": "Tiefe in verteilten Systemen (Kafka- / Postgres- / Flink-Klasse)",
                 "r1s2": "Komfort mit End-to-End-Verantwortung für ein System — von On-Call bis Interview-Pipeline",
                 "r1s3": "Hat KI/ML in Produktion gegen echte adversarielle Eingaben ausgeliefert",
