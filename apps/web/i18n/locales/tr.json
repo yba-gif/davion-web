@@ -1480,6 +1480,198 @@
                 "wtu4": "Ham kaynaktan türetilen içgörüye düzenleyici sınıfında köken bilgisini koruyun",
                 "ctaHeadline": "Ham satırdan nihai karara köken bilgisi"
             }
+        },
+        "trust": {
+            "meta": {
+                "title": "Güven ve Egemenlik",
+                "description": "Davion egemenlik modeli, konuşlanma matrisi, erişim denetimi, uçtan uca denetlenebilirlik, standart uyumu, sorumlu-YZ taahhütleri ve veri yaşam döngüsü.",
+                "ogTitle": "Davion · Güven ve Egemenlik",
+                "ogDescription": "Verinin nerede olduğu, kimin görebileceği, neyi imzaladığımız, neyi imzalamayacağımız ve bunu destekleyen konuşlanma matrisi."
+            },
+            "hero": {
+                "sup": "Güven ve Egemenlik",
+                "headline": "Veriniz. Yargı yetkiniz. Denetiminiz.",
+                "body": "Davion'da egemenlik öne sürülmez; mühendislik edilir. Bu sayfa, bir CIO'nun herhangi bir şeyi onaylamadan önce açtığı sayfadır: model, konuşlanma matrisi, erişim denetimi, denetim, tasarladığımız standartlar ve YZ taahhütleri.",
+                "cta": "Güvenlik ekibimizle konuşun"
+            },
+            "principles": {
+                "sup": "Egemenlik modeli",
+                "headline": "Dört ilke. Öne sürülmüş değil, denetlenebilir.",
+                "body": "Yazılımda egemenlik; itfa edilebilir bir iddia olmak zorundadır. Bunlar Davion'un mühendislik ettiği ilkelerdir; güvenlik ekibinizin bağımsız olarak doğrulayabileceği ilkelerdir.",
+                "residencyLabel": "İkametgâh",
+                "residencyBody": "Veri, belirttiğiniz yargı yetkisinde kalır. Açık politika olmadan sınır-aşan transit yok.",
+                "nothingLeavesLabel": "Hiçbir şey çıkmaz",
+                "nothingLeavesBody": "Yetkilendirmediğiniz sürece; telemetri, analist davranışı, model gradyanları veya sorgu içeriği çevreden çıkmaz.",
+                "nationalLabel": "Ulusal denetim",
+                "nationalBody": "Egemen konuşlanmalar için operasyonel denetim; Davion veya herhangi bir üçüncü tarafa değil, kuruma aittir.",
+                "provableLabel": "Kanıtlanabilir",
+                "provableBody": "Egemenlik öne sürülmez. Ekibiniz, düzenleyicileriniz ve meşru menfaati olan herhangi bir tarafça denetlenebilir."
+            },
+            "matrix": {
+                "sup": "Konuşlanma matrisi",
+                "headline": "Dört biçim. Tek egemenlik sözleşmesi.",
+                "body": "Konuşlanma modeli sizin seçiminize bağlıdır. Egemenlik güvenceleri değişmez.",
+                "attributeHeader": "Özellik",
+                "onpremHeader": "Yerinde",
+                "airgapHeader": "Air-gapped",
+                "sovereignHeader": "Egemen bulut",
+                "privateHeader": "Özel bulut",
+                "r1Attr": "Veri ikametgâhı",
+                "r1Onprem": "Donanımınız", "r1Airgap": "Donanımınız", "r1Sov": "Bölgeniz", "r1Priv": "Sağlayıcınız, bölgeniz",
+                "r2Attr": "Ağ çıkışı",
+                "r2Onprem": "Gerekmez", "r2Airgap": "Yok", "r2Sov": "Sınırlı", "r2Priv": "Sınırlı",
+                "r3Attr": "Müşteri-yönetimli anahtarlar",
+                "r3Onprem": "Evet", "r3Airgap": "Evet", "r3Sov": "Evet", "r3Priv": "Evet",
+                "r4Attr": "Kiracı izolasyonu",
+                "r4Onprem": "Tek kiracı", "r4Airgap": "Tek kiracı", "r4Sov": "Egemen bölge", "r4Priv": "Tek kiracı",
+                "r5Attr": "Güncelleme modeli",
+                "r5Onprem": "İmzalı güncellemeler", "r5Airgap": "İmzalı, çevrimdışı", "r5Sov": "İmzalı güncellemeler", "r5Priv": "İmzalı güncellemeler",
+                "r6Attr": "Operatör erişimi",
+                "r6Onprem": "Sizin", "r6Airgap": "Sizin", "r6Sov": "Sözleşmeyle sınırlı", "r6Priv": "Sözleşmeyle sınırlı",
+                "r7Attr": "Denetim günlüğü",
+                "r7Onprem": "Çevre içi", "r7Airgap": "Çevre içi", "r7Sov": "Müşteri-sahipli", "r7Priv": "Müşteri-sahipli"
+            },
+            "access": {
+                "sup": "Erişim denetimi",
+                "headline": "İnce-taneli. Federe. Denetlenebilir.",
+                "rbacLabel": "RBAC",
+                "rbacBody": "Analistler, operatörler, yöneticiler ve denetçiler için rol-temelli erişim; bizim değil, sizin kurum yapınıza göre tanımlanır.",
+                "abacLabel": "ABAC",
+                "abacBody": "RBAC üzerine öznitelik-temelli politika. Bağlam, yetki ve amaca bağlı olarak varlık, olay ve hücre düzeyinde görünürlük.",
+                "fedLabel": "Federasyon",
+                "fedBody": "Kimlik sağlayıcınıza takılın: SAML, OIDC, mTLS; doğrulanabilir oturum bağlamasıyla.",
+                "privLabel": "Ayrıcalıklı erişim",
+                "privBody": "Tam-zamanında yükseltme, hassas eylemler üzerinde çift-denetim, tam oturum kaydı. Sürekli yönetici yok."
+            },
+            "audit": {
+                "sup": "Denetlenebilirlik",
+                "headline": "Kim. Ne. Ne zaman. Neden.",
+                "body": "Platformdaki her eylem; kurcalama-kanıtlı, müşteri-sahipli bir denetim günlüğüne yakalanır. Düzenleyici, sonradan-eylem ve dahili inceleme kurulu için tasarlanmıştır.",
+                "whoLabel": "Kim",
+                "whoBody": "Her operatör, her analist, her sistem kimliği adlandırılır; anonim eylem yok.",
+                "whatLabel": "Ne",
+                "whatBody": "Eylem, sorgu, girdi, YZ çıktısı, iş akışı geçişi; tamamı yakalanır.",
+                "whenLabel": "Ne zaman",
+                "whenBody": "Güvenilir zaman damgaları, yaz-bir-kez günlüğü, kurcalama-kanıtlı zincir.",
+                "whyLabel": "Neden",
+                "whyBody": "Amaç etiketleri her eylem boyunca taşınır; sonradan-eylem incelemesini ve düzenleyici soruşturmayı destekler."
+            },
+            "standards": {
+                "sup": "Standartlar",
+                "headline": "Denetçilerinizin zaten kullandığı standartlara göre mühendislik edildi.",
+                "body": "Davion; güvenlik ekibinizin ve düzenleyicilerin zaten işlettiği çerçevelere göre tasarlanır. Resmi sertifikasyonun geçerli olduğu yerde, kapsamı ve kanıtı görüşme başına belgeleriz.",
+                "isoName": "ISO 27001",
+                "isoBody": "Platforma ve operatör uygulamasına hizalanmış bilgi güvenliği yönetim sistemi.",
+                "socName": "SOC 2",
+                "socBody": "Güvenlik, kullanılabilirlik, işleme bütünlüğü, gizlilik ve mahremiyet için mühendislik edilmiş; uygulanabilir olduğu yerde denetlenmiş.",
+                "nis2Name": "NIS2 sınıfı",
+                "nis2Body": "AB yargı yetkilerinde konuşlanma temeli olarak kritik-altyapı siber düzenlemesi.",
+                "gdprName": "GDPR",
+                "gdprBody": "Yasal dayanak, veri-sahibi hakları ve tasarımdan DPA-hazır.",
+                "sectorName": "Sektöre özel",
+                "sectorBody": "Savunma, finansal-hizmetler, sağlık ve kamu sektörü rejimleri görüşme başına ele alınır."
+            },
+            "ai": {
+                "sup": "Sorumlu YZ",
+                "headline": "Egemen çıkarım. Alıntılı çıktılar. Gerektiğinde reddetme.",
+                "body": "AlpOS içindeki YZ; köken bilgisi, alıntı, denetim ve reddetme hakkıyla, diğer her katmanla aynı şekilde yönetilir. Kurumun savunamayacağı YZ teslim etmeyiz.",
+                "sovInfLabel": "Egemen çıkarım",
+                "sovInfBody": "Modeller çevreniz içinde çalışır. Açık politika olmadan; eğitim verisi, gradyanlar veya çıktılar Davion'a veya herhangi bir tedarikçiye geçmez.",
+                "provenLabel": "Köken bilgisi",
+                "provenBody": "Kullanılan her model, her sürüm, her girdi; her çıktıya karşı kaydedilir.",
+                "citationLabel": "Alıntı",
+                "citationBody": "Çıktılar kaynak verisini alıntılar. İzleyemediğiniz bir YZ sonucu, savunamayacağınız bir sonuçtur.",
+                "refusalLabel": "Belirsizlikte reddetme",
+                "refusalBody": "Güven düşük veya kanıt eksik olduğunda sistem bunu söyler. Kendinden emin olmaktan çok savunulabilir olmak.",
+                "hitlLabel": "İnsan-döngüde",
+                "hitlBody": "Sonuçlu eylemler adlandırılmış bir operatör gerektirir. YZ tek başına eylemde bulunmaz.",
+                "noCovertLabel": "Gizli eğitim yok",
+                "noCovertBody": "Müşteri verisi; açık ve yazılı rıza olmadan asla paylaşılan modelleri eğitmek için kullanılmaz."
+            },
+            "lifecycle": {
+                "sup": "Veri yaşam döngüsü",
+                "headline": "Veri alımı. İşleme. Kullanım. Saklama. Silme.",
+                "body": "Veri yaşam döngüsü uçtan uca yönetilir. Politika sınırda uygulanır, köken bilgisi dönüşüm boyunca izlenir, saklama sözleşmeyle sınırlanır, silme talep üzerine kanıtlanır.",
+                "l1Stage": "Veri alımı",
+                "l1Body": "Veri; politikayla, kaynaklar, amaçlar ve saklama kaynakta beyan edilerek girer.",
+                "l2Stage": "İşleme",
+                "l2Body": "Dönüşümler, birleştirmeler ve zenginleştirmeler boyunca köken bilgisi izlenir. Her türetilen veri kaynağına izlenebilir.",
+                "l3Stage": "Kullanım",
+                "l3Body": "Erişim RBAC + ABAC ile yönetilir. Sorgular kaydedilir. YZ çıktıları alıntılanır.",
+                "l4Stage": "Saklama",
+                "l4Body": "Kaynak başına, amaç başına saklama politikası uygulanır. Müşteri-tanımlı, sözleşmeyle bağlı.",
+                "l5Stage": "Silme",
+                "l5Body": "Silinme hakkı saygılı tutulur. Gerektiği yerde kriptografik silme. Sadece iddia edilmiş değil, kanıtlanabilir."
+            },
+            "engage": {
+                "sup": "Görüşme",
+                "headline": "Güvenlik ekibinizi masaya getirin.",
+                "body": "Güvenlik anketlerini tam olarak yanıtlarız, ortamınıza karşı teknik derinlemesine incelemeler yürütürüz ve taahhüt etmeden önce denetim ekibinizin isteyeceği kanıtı sağlarız.",
+                "cta": "Güvenlik ekibimizle konuşun"
+            }
+        },
+        "venture": {
+            "meta": {
+                "title": "Girişim",
+                "description": "Davion; egemen veri, YZ ve savunma-bitişik teknolojide yatırım yapar ve inşa eder. Sermaye, erişim ve platform birlikte.",
+                "ogTitle": "Davion · Girişim",
+                "ogDescription": "Egemen-teknoloji ekosistemi için sermaye ve platform."
+            },
+            "hero": {
+                "sup": "Girişim",
+                "headline": "Egemen-teknoloji ekosistemi için sermaye ve platform",
+                "body": "Davion; egemen veri, YZ ve savunma-bitişik teknolojide yatırım yapar ve inşa eder. Sermaye, erişim ve platform birlikte. Ölçülü, ciddi, kurucu-öncelikli."
+            },
+            "empty": {
+                "eyebrow": "Tez beklemede",
+                "headline": "Kamuya açık girişim tezi ve giriş süreci onaylandığında yayınlanacak",
+                "body": "Bu arada; egemen veri, egemen YZ, savunma-bitişik teknoloji veya kurumsal-karar altyapısında inşa eden kurucular; tek sayfalık bir özeti, görüşme sayfasından Girişim niyetiyle yönlendirebilir. Doğru kişi okur.",
+                "ctaPrimary": "Bize pitch'leyin",
+                "ctaSecondary": "Hakkımızda'yı okuyun"
+            }
+        },
+        "status": {
+            "meta": {
+                "title": "Durum",
+                "description": "Davion servislerinin operasyonel durumu. Pazarlama sitesi, görüşme girişi ve konuşlanma-başına durum rotaları.",
+                "ogTitle": "Davion · Durum",
+                "ogDescription": "Davion servislerinin operasyonel durumu."
+            },
+            "hero": {
+                "sup": "Operasyonlar · Durum",
+                "headline": "Operasyonel durum",
+                "body": "Kamuya açık yüzeyler: bu site, görüşme girişi, basın odası API'si. Müşteri-konuşlanma durumu burada değil, görüşme sözleşmesinde raporlanır; konuşlanmaya göre egemenlik iki yönlü çalışır.",
+                "lastCheckedLabel": "Son kontrol"
+            },
+            "summary": {
+                "headline": "Tüm kamuya açık servisler operasyonel",
+                "body": "Şu anda takip edilen olay yok. Şüpheli bir sorun bildirmek için {email} adresine yazın."
+            },
+            "services": {
+                "sup": "Servisler",
+                "headline": "Burada kapsananlar",
+                "operationalLabel": "Operasyonel",
+                "perDeploymentLabel": "Konuşlanma başına",
+                "disruptedLabel": "Kesintide",
+                "s1Name": "davion.com (pazarlama sitesi)",
+                "s1Detail": "Nuxt 3 SSR. Kenarda önbelleğe alındı. Lansmandan beri takip edilen olay yok.",
+                "s2Name": "Görüşme girişi",
+                "s2Detail": "engagement{'@'}davion.com adresine mailto-temelli giriş. Bir iş günü içinde yönlendirme.",
+                "s3Name": "Basın odası ve içerik API",
+                "s3Detail": "Postgres-destekli. /api/blog adresinde salt-okunur kamu API'si.",
+                "s4Name": "Müşteri-başına AlpOS konuşlanmaları",
+                "s4Detail": "Müşteri konuşlanmaları, müşterinin çevresi içinde çalışır. Durumları bu kamu sayfasında değil, görüşme sözleşmesi altında raporlanır."
+            },
+            "history": {
+                "sup": "Olay tarihçesi",
+                "headline": "Kayıtta olay yok",
+                "body": "Davion erken aşamadadır; kamu yüzeyleri anlamlı bir olay tarihçesi üretmeye yetecek kadar uzun süredir yayında değil. Yönetimli bir durum sağlayıcısı altında konuşlandığımızda (P3.6), bileşen-başına çalışma süresi ve olay zaman çizelgeleri burada yer alacak."
+            },
+            "reporting": {
+                "sup": "Bildirim",
+                "headline": "Çalışmayan bir şey mi buldunuz?",
+                "body": "Kamu-yüzey sorunları için (bu site, görüşme girişi, basın odası): ops{'@'}davion.com. Görüşmeniz içindeki konuşlanma-başına olaylar için: atanmış çözüm mühendisinize veya sözleşmeli destek kanalına yönlendirin."
+            }
         }
     }
 }

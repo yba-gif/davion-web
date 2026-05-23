@@ -1480,6 +1480,198 @@
                 "wtu4": "Maintain regulator-grade lineage from raw source to derived insight",
                 "ctaHeadline": "Lineage from raw row to final decision"
             }
+        },
+        "trust": {
+            "meta": {
+                "title": "Trust & Sovereignty",
+                "description": "The Davion sovereignty model, deployment matrix, access control, end-to-end auditability, standards alignment, responsible-AI commitments, and data lifecycle.",
+                "ogTitle": "Davion · Trust & Sovereignty",
+                "ogDescription": "Where the data sits, who can see it, what we sign, what we will not sign, and the deployment matrix that backs it."
+            },
+            "hero": {
+                "sup": "Trust & Sovereignty",
+                "headline": "Your data. Your jurisdiction. Your audit.",
+                "body": "Sovereignty is not asserted at Davion. It is engineered. This page is the one a CIO opens before approving anything, the model, the deployment matrix, access control, audit, the standards we design to, and the AI commitments.",
+                "cta": "Speak with our security team"
+            },
+            "principles": {
+                "sup": "Sovereignty model",
+                "headline": "Four principles. Auditable, not asserted.",
+                "body": "Sovereignty in software is a claim that has to be redeemable. These are the principles Davion engineers to, and the principles your security team can validate independently.",
+                "residencyLabel": "Residency",
+                "residencyBody": "Data stays in the jurisdiction you specify. No cross-border transit without explicit policy.",
+                "nothingLeavesLabel": "Nothing leaves",
+                "nothingLeavesBody": "No telemetry, no analyst behavior, no model gradients, no query content exit the perimeter unless you authorize it.",
+                "nationalLabel": "National control",
+                "nationalBody": "For sovereign deployments, operational control rests with the institution, not with Davion or any third party.",
+                "provableLabel": "Provable",
+                "provableBody": "Sovereignty is not asserted. It is auditable, by your team, your regulators, and any party with a legitimate interest."
+            },
+            "matrix": {
+                "sup": "Deployment matrix",
+                "headline": "Four modes. One sovereignty contract.",
+                "body": "The deployment model is yours to choose. The sovereignty guarantees do not change.",
+                "attributeHeader": "Attribute",
+                "onpremHeader": "On-premise",
+                "airgapHeader": "Air-gapped",
+                "sovereignHeader": "Sovereign cloud",
+                "privateHeader": "Private cloud",
+                "r1Attr": "Data residency",
+                "r1Onprem": "Your hardware", "r1Airgap": "Your hardware", "r1Sov": "Your region", "r1Priv": "Your provider, your region",
+                "r2Attr": "Network egress",
+                "r2Onprem": "None required", "r2Airgap": "None", "r2Sov": "Constrained", "r2Priv": "Constrained",
+                "r3Attr": "Customer-managed keys",
+                "r3Onprem": "Yes", "r3Airgap": "Yes", "r3Sov": "Yes", "r3Priv": "Yes",
+                "r4Attr": "Tenant isolation",
+                "r4Onprem": "Single tenant", "r4Airgap": "Single tenant", "r4Sov": "Sovereign region", "r4Priv": "Single tenant",
+                "r5Attr": "Update model",
+                "r5Onprem": "Signed updates", "r5Airgap": "Signed, offline", "r5Sov": "Signed updates", "r5Priv": "Signed updates",
+                "r6Attr": "Operator access",
+                "r6Onprem": "Yours", "r6Airgap": "Yours", "r6Sov": "Bounded by contract", "r6Priv": "Bounded by contract",
+                "r7Attr": "Audit log",
+                "r7Onprem": "In-perimeter", "r7Airgap": "In-perimeter", "r7Sov": "Customer-owned", "r7Priv": "Customer-owned"
+            },
+            "access": {
+                "sup": "Access control",
+                "headline": "Fine-grained. Federated. Auditable.",
+                "rbacLabel": "RBAC",
+                "rbacBody": "Role-based access for analysts, operators, administrators, and auditors, defined to your org structure, not ours.",
+                "abacLabel": "ABAC",
+                "abacBody": "Attribute-based policy on top of RBAC. Visibility at the entity, event, and cell level, conditioned on context, clearance, and purpose.",
+                "fedLabel": "Federation",
+                "fedBody": "Plug into your identity provider, SAML, OIDC, mTLS, with attestable session binding.",
+                "privLabel": "Privileged access",
+                "privBody": "Just-in-time elevation, dual-control on sensitive actions, full session recording. No standing admin."
+            },
+            "audit": {
+                "sup": "Auditability",
+                "headline": "Who. What. When. Why.",
+                "body": "Every action on the platform is captured to a tamper-evident, customer-owned audit log. Designed for the regulator, the after-action, and the internal review board.",
+                "whoLabel": "Who",
+                "whoBody": "Every operator, every analyst, every system identity is named, no anonymous actions.",
+                "whatLabel": "What",
+                "whatBody": "The action, the query, the input, the AI output, the workflow transition, captured in full.",
+                "whenLabel": "When",
+                "whenBody": "Trusted timestamps, write-once log, tamper-evident chain.",
+                "whyLabel": "Why",
+                "whyBody": "Purpose tags carry through every action, supporting after-action review and regulatory inquiry."
+            },
+            "standards": {
+                "sup": "Standards",
+                "headline": "Engineered to the standards your auditors already use.",
+                "body": "Davion designs to the frameworks your security team and regulators already operate by. Where formal certification applies, we document the scope and the evidence per engagement.",
+                "isoName": "ISO 27001",
+                "isoBody": "Information security management system aligned to the platform and to operator practice.",
+                "socName": "SOC 2",
+                "socBody": "Security, availability, processing integrity, confidentiality, and privacy, engineered for; audited where applicable.",
+                "nis2Name": "NIS2-class",
+                "nis2Body": "Critical-infrastructure cyber regulation as a deployment baseline in EU jurisdictions.",
+                "gdprName": "GDPR",
+                "gdprBody": "Lawful basis, data-subject rights, and DPA-ready by design.",
+                "sectorName": "Sector-specific",
+                "sectorBody": "Defense, financial-services, healthcare, and public-sector regimes addressed per engagement."
+            },
+            "ai": {
+                "sup": "Responsible AI",
+                "headline": "Sovereign inference. Cited outputs. Refusal when warranted.",
+                "body": "AI inside AlpOS is governed the same way every other layer is, with provenance, citation, audit, and the right to refuse. We do not ship AI that the institution cannot defend.",
+                "sovInfLabel": "Sovereign inference",
+                "sovInfBody": "Models run inside your perimeter. No training data, no gradients, no outputs cross into Davion or any vendor without explicit policy.",
+                "provenLabel": "Provenance",
+                "provenBody": "Every model used, every version, every input, recorded against every output.",
+                "citationLabel": "Citation",
+                "citationBody": "Outputs cite their source data. An AI conclusion you cannot trace is one you cannot defend.",
+                "refusalLabel": "Refusal under uncertainty",
+                "refusalBody": "When confidence is low or evidence is missing, the system says so. Defensible over confident.",
+                "hitlLabel": "Human-in-the-loop",
+                "hitlBody": "Consequential actions require a named operator. The AI does not act unilaterally.",
+                "noCovertLabel": "No covert training",
+                "noCovertBody": "Customer data is never used to train shared models without explicit, written consent."
+            },
+            "lifecycle": {
+                "sup": "Data lifecycle",
+                "headline": "Ingest. Process. Use. Retain. Delete.",
+                "body": "The data lifecycle is governed end to end. Policy enforced at the boundary, lineage tracked through transformation, retention bounded by contract, deletion provable on request.",
+                "l1Stage": "Ingest",
+                "l1Body": "Data enters under policy, sources, purposes, and retention declared at the source.",
+                "l2Stage": "Process",
+                "l2Body": "Lineage tracked through transforms, joins, and enrichments. Every derived datum is traceable to its origin.",
+                "l3Stage": "Use",
+                "l3Body": "Access governed by RBAC + ABAC. Queries logged. AI outputs cited.",
+                "l4Stage": "Retain",
+                "l4Body": "Retention policy enforced per-source, per-purpose. Customer-defined, contractually bound.",
+                "l5Stage": "Delete",
+                "l5Body": "Right-to-erasure honored. Cryptographic deletion where required. Provable, not just claimed."
+            },
+            "engage": {
+                "sup": "Engage",
+                "headline": "Bring your security team to the table.",
+                "body": "We answer security questionnaires in full, run technical deep-dives against your environment, and provide the evidence your audit team will ask for, before you commit.",
+                "cta": "Speak with our security team"
+            }
+        },
+        "venture": {
+            "meta": {
+                "title": "Venture",
+                "description": "Davion backs and builds in sovereign data, AI, and defense-adjacent technology. Capital, access, and platform together.",
+                "ogTitle": "Davion · Venture",
+                "ogDescription": "Capital and platform for the sovereign-tech ecosystem."
+            },
+            "hero": {
+                "sup": "Venture",
+                "headline": "Capital and platform for the sovereign-tech ecosystem",
+                "body": "Davion backs and builds in sovereign data, AI, and defense-adjacent technology. Capital, access, and platform together. Restrained, serious, founder-first."
+            },
+            "empty": {
+                "eyebrow": "Thesis pending",
+                "headline": "The public venture thesis and intake process land once they are signed off",
+                "body": "In the meantime, founders building in sovereign data, sovereign AI, defense-adjacent technology, or institutional-decision infrastructure can route a one-page summary through the engagement page with the Venture intent. The right person reads it.",
+                "ctaPrimary": "Pitch us",
+                "ctaSecondary": "Read About"
+            }
+        },
+        "status": {
+            "meta": {
+                "title": "Status",
+                "description": "Operational status of Davion services. The marketing site, the engagement intake, and per-deployment status routes.",
+                "ogTitle": "Davion · Status",
+                "ogDescription": "Operational status of Davion services."
+            },
+            "hero": {
+                "sup": "Operations · Status",
+                "headline": "Operational status",
+                "body": "The public surfaces, this site, the engagement intake, the newsroom API. Customer-deployment status is reported under the engagement contract, not here; sovereignty by deployment cuts both ways.",
+                "lastCheckedLabel": "Last checked"
+            },
+            "summary": {
+                "headline": "All public services operational",
+                "body": "No incidents currently tracked. To report a suspected issue, write to {email}."
+            },
+            "services": {
+                "sup": "Services",
+                "headline": "What's covered here",
+                "operationalLabel": "Operational",
+                "perDeploymentLabel": "Per deployment",
+                "disruptedLabel": "Disrupted",
+                "s1Name": "davion.com (marketing site)",
+                "s1Detail": "Nuxt 3 SSR. Cached at edge. No incidents tracked since launch.",
+                "s2Name": "Engagement intake",
+                "s2Detail": "mailto-based intake to engagement{'@'}davion.com. Routing inside one business day.",
+                "s3Name": "Newsroom & content API",
+                "s3Detail": "Postgres-backed. Read-only public API at /api/blog.",
+                "s4Name": "Per-customer AlpOS deployments",
+                "s4Detail": "Customer deployments run inside the customer's perimeter. Their status is reported under their engagement contract, not on this public page."
+            },
+            "history": {
+                "sup": "Incident history",
+                "headline": "No incidents on record",
+                "body": "Davion is early-stage; the public surfaces have not been live long enough to produce a meaningful incident history. Once we deploy under a managed status provider (P3.6), per-component uptime and incident timelines will live here."
+            },
+            "reporting": {
+                "sup": "Reporting",
+                "headline": "Found something that's not working?",
+                "body": "For public-surface issues (this site, the engagement intake, the newsroom): ops{'@'}davion.com. For per-deployment incidents inside your engagement: route through your assigned solutions engineer or the contractual support channel."
+            }
         }
     }
 }

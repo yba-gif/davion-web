@@ -1,59 +1,47 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 useSeoMeta({
-    title: 'Status',
-    description: 'Operational status of Davion services. The marketing site, the engagement intake, and per-deployment status routes.',
-    ogTitle: 'Davion · Status',
-    ogDescription: 'Operational status of Davion services.',
+    title: () => t('pages.status.meta.title'),
+    description: () => t('pages.status.meta.description'),
+    ogTitle: () => t('pages.status.meta.ogTitle'),
+    ogDescription: () => t('pages.status.meta.ogDescription'),
 })
 
 // Static status view. Real per-component status comes from a managed status
-// provider (StatusPage / Better Stack / Atlassian) once production deploy
-// lands per P3.6. This page is honest until then.
+// provider once production deploy lands per P3.6. This page is honest until then.
 const lastChecked = '2026-05-21'
 
 const services = [
-    {
-        name: 'davion.com (marketing site)',
-        status: 'operational',
-        detail: 'Nuxt 3 SSR. Cached at edge. No incidents tracked since launch.',
-    },
-    {
-        name: 'Engagement intake',
-        status: 'operational',
-        detail: 'mailto-based intake to engagement@davion.com. Routing inside one business day.',
-    },
-    {
-        name: 'Newsroom & content API',
-        status: 'operational',
-        detail: 'Postgres-backed. Read-only public API at /api/blog.',
-    },
-    {
-        name: 'Per-customer AlpOS deployments',
-        status: 'per-deployment',
-        detail: 'Customer deployments run inside the customer\'s perimeter. Their status is reported under their engagement contract, not on this public page.',
-    },
-]
+    { nameKey: 's1Name', detailKey: 's1Detail', status: 'operational' },
+    { nameKey: 's2Name', detailKey: 's2Detail', status: 'operational' },
+    { nameKey: 's3Name', detailKey: 's3Detail', status: 'operational' },
+    { nameKey: 's4Name', detailKey: 's4Detail', status: 'per-deployment' },
+] as const
 
 const statusColour = (s: string) =>
     s === 'operational' ? 'bg-primary' : s === 'per-deployment' ? 'bg-drygray-default' : 'bg-red-500'
 
+const { t: tt } = useI18n()
 const statusLabel = (s: string) =>
-    s === 'operational' ? 'Operational' : s === 'per-deployment' ? 'Per deployment' : 'Disrupted'
+    s === 'operational' ? tt('pages.status.services.operationalLabel')
+    : s === 'per-deployment' ? tt('pages.status.services.perDeploymentLabel')
+    : tt('pages.status.services.disruptedLabel')
 </script>
 
 <template>
     <div class="flex flex-col gap-4">
         <!-- Hero -->
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
-            <CommonSup title="Operations · Status" />
+            <CommonSup :title="$t('pages.status.hero.sup')" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[72px] tracking-tight max-w-4xl">
-                Operational status<span class="text-primary-text">.</span>
+                {{ $t('pages.status.hero.headline') }}<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                The public surfaces, this site, the engagement intake, the newsroom API. Customer-deployment status is reported under the engagement contract, not here; sovereignty by deployment cuts both ways.
+                {{ $t('pages.status.hero.body') }}
             </p>
             <p class="text-[13px] font-mono uppercase tracking-[0.15em] text-drygray-default mt-8">
-                Last checked · {{ lastChecked }}
+                {{ $t('pages.status.hero.lastCheckedLabel') }} · {{ lastChecked }}
             </p>
         </section>
 
@@ -65,10 +53,14 @@ const statusLabel = (s: string) =>
                 </div>
                 <div class="lg:col-span-11">
                     <p class="font-degular font-bold text-drygray-100 text-h2 md:text-[36px] leading-tight">
-                        All public services operational<span class="text-primary-text">.</span>
+                        {{ $t('pages.status.summary.headline') }}<span class="text-primary-text">.</span>
                     </p>
                     <p class="text-b1 text-drygray-default mt-3">
-                        No incidents currently tracked. To report a suspected issue, write to <a href="mailto:ops@davion.com" class="text-primary-text underline underline-offset-2 hover:no-underline">ops@davion.com</a>.
+                        <i18n-t keypath="pages.status.summary.body" tag="span">
+                            <template #email>
+                                <a href="mailto:ops@davion.com" class="text-primary-text underline underline-offset-2 hover:no-underline">ops{{ '@' }}davion.com</a>
+                            </template>
+                        </i18n-t>
                     </p>
                 </div>
             </div>
@@ -76,22 +68,22 @@ const statusLabel = (s: string) =>
 
         <!-- Per-service list -->
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
-            <CommonSup title="Services" />
+            <CommonSup :title="$t('pages.status.services.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                What's covered here<span class="text-primary-text">.</span>
+                {{ $t('pages.status.services.headline') }}<span class="text-primary-text">.</span>
             </h2>
             <ul class="mt-10 space-y-3">
-                <li v-for="s in services" :key="s.name" class="bg-whitesmoke-100 rounded-2xl p-6">
+                <li v-for="s in services" :key="s.nameKey" class="bg-whitesmoke-100 rounded-2xl p-6">
                     <div class="grid md:grid-cols-12 gap-4 items-center">
                         <div class="md:col-span-1">
                             <span class="block w-3 h-3 rounded-full" :class="statusColour(s.status)" aria-hidden="true" />
                         </div>
                         <div class="md:col-span-4">
-                            <p class="font-degular font-bold text-drygray-100 text-h3 leading-tight">{{ s.name }}</p>
+                            <p class="font-degular font-bold text-drygray-100 text-h3 leading-tight">{{ $t(`pages.status.services.${s.nameKey}`) }}</p>
                             <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text mt-1">{{ statusLabel(s.status) }}</p>
                         </div>
                         <div class="md:col-span-7">
-                            <p class="text-b1 text-drygray-default">{{ s.detail }}</p>
+                            <p class="text-b1 text-drygray-default">{{ $t(`pages.status.services.${s.detailKey}`) }}</p>
                         </div>
                     </div>
                 </li>
@@ -100,12 +92,12 @@ const statusLabel = (s: string) =>
 
         <!-- Incident history -->
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
-            <CommonSup title="Incident history" />
+            <CommonSup :title="$t('pages.status.history.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[32px] md:leading-[1.05] max-w-3xl">
-                No incidents on record<span class="text-primary-text">.</span>
+                {{ $t('pages.status.history.headline') }}<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b1 text-drygray-default mt-6 max-w-3xl">
-                Davion is early-stage; the public surfaces have not been live long enough to produce a meaningful incident history. Once we deploy under a managed status provider (P3.6), per-component uptime and incident timelines will live here.
+                {{ $t('pages.status.history.body') }}
             </p>
         </section>
 
@@ -113,16 +105,16 @@ const statusLabel = (s: string) =>
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
             <div class="grid lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-8">
-                    <CommonSup title="Reporting" />
+                    <CommonSup :title="$t('pages.status.reporting.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[32px] md:leading-[1.05]">
-                        Found something that's not working<span class="text-primary-text">?</span>
+                        {{ $t('pages.status.reporting.headline') }}
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                        For public-surface issues (this site, the engagement intake, the newsroom): ops@davion.com. For per-deployment incidents inside your engagement: route through your assigned solutions engineer or the contractual support channel.
+                        {{ $t('pages.status.reporting.body') }}
                     </p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right">
-                    <a href="mailto:ops@davion.com"><CommonButton variant="primary" icon="base:arrow">ops@davion.com</CommonButton></a>
+                    <a href="mailto:ops@davion.com"><CommonButton variant="primary" icon="base:arrow">ops{{ '@' }}davion.com</CommonButton></a>
                 </div>
             </div>
         </section>

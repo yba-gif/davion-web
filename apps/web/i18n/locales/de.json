@@ -1480,6 +1480,198 @@
                 "wtu4": "Regulierungs-Klasse-Lineage von der Rohquelle bis zur abgeleiteten Erkenntnis bewahren",
                 "ctaHeadline": "Lineage von der Rohzeile bis zur endgültigen Entscheidung"
             }
+        },
+        "trust": {
+            "meta": {
+                "title": "Vertrauen und Souveränität",
+                "description": "Das Davion-Souveränitätsmodell, die Einsatzmatrix, Zugriffskontrolle, durchgängige Auditierbarkeit, Standard-Ausrichtung, Responsible-AI-Verpflichtungen und Datenlebenszyklus.",
+                "ogTitle": "Davion · Vertrauen und Souveränität",
+                "ogDescription": "Wo die Daten sitzen, wer sie sehen darf, was wir unterzeichnen, was wir nicht unterzeichnen — und die Einsatzmatrix, die das stützt."
+            },
+            "hero": {
+                "sup": "Vertrauen und Souveränität",
+                "headline": "Ihre Daten. Ihre Jurisdiktion. Ihr Audit.",
+                "body": "Souveränität wird bei Davion nicht behauptet. Sie wird konstruiert. Diese Seite ist die, die ein CIO öffnet, bevor er irgendetwas genehmigt — das Modell, die Einsatzmatrix, Zugriffskontrolle, Audit, die Standards, nach denen wir entwerfen, und die KI-Verpflichtungen.",
+                "cta": "Mit unserem Security-Team sprechen"
+            },
+            "principles": {
+                "sup": "Souveränitätsmodell",
+                "headline": "Vier Prinzipien. Auditierbar, nicht behauptet.",
+                "body": "Souveränität in Software ist ein Anspruch, der einlösbar sein muss. Das sind die Prinzipien, nach denen Davion konstruiert — und die Ihr Security-Team unabhängig validieren kann.",
+                "residencyLabel": "Residenz",
+                "residencyBody": "Daten bleiben in der von Ihnen festgelegten Jurisdiktion. Kein grenzüberschreitender Transit ohne explizite Richtlinie.",
+                "nothingLeavesLabel": "Nichts verlässt",
+                "nothingLeavesBody": "Keine Telemetrie, kein Analystenverhalten, keine Modellgradienten, keine Abfrageinhalte verlassen den Perimeter, sofern Sie es nicht autorisieren.",
+                "nationalLabel": "Nationale Kontrolle",
+                "nationalBody": "Bei souveränen Einsätzen liegt die operative Kontrolle bei der Institution — nicht bei Davion oder einem Dritten.",
+                "provableLabel": "Beweisbar",
+                "provableBody": "Souveränität wird nicht behauptet. Sie ist auditierbar — durch Ihr Team, Ihre Regulierer und jede Partei mit berechtigtem Interesse."
+            },
+            "matrix": {
+                "sup": "Einsatzmatrix",
+                "headline": "Vier Modi. Ein Souveränitätsvertrag.",
+                "body": "Das Einsatzmodell wählen Sie. Die Souveränitätsgarantien ändern sich nicht.",
+                "attributeHeader": "Attribut",
+                "onpremHeader": "On-Premise",
+                "airgapHeader": "Air-gapped",
+                "sovereignHeader": "Souveräne Cloud",
+                "privateHeader": "Private Cloud",
+                "r1Attr": "Datenresidenz",
+                "r1Onprem": "Ihre Hardware", "r1Airgap": "Ihre Hardware", "r1Sov": "Ihre Region", "r1Priv": "Ihr Anbieter, Ihre Region",
+                "r2Attr": "Netzwerk-Egress",
+                "r2Onprem": "Nicht erforderlich", "r2Airgap": "Keiner", "r2Sov": "Eingeschränkt", "r2Priv": "Eingeschränkt",
+                "r3Attr": "Kundengesteuerte Schlüssel",
+                "r3Onprem": "Ja", "r3Airgap": "Ja", "r3Sov": "Ja", "r3Priv": "Ja",
+                "r4Attr": "Mandantenisolation",
+                "r4Onprem": "Single-Tenant", "r4Airgap": "Single-Tenant", "r4Sov": "Souveräne Region", "r4Priv": "Single-Tenant",
+                "r5Attr": "Update-Modell",
+                "r5Onprem": "Signierte Updates", "r5Airgap": "Signiert, offline", "r5Sov": "Signierte Updates", "r5Priv": "Signierte Updates",
+                "r6Attr": "Operator-Zugriff",
+                "r6Onprem": "Ihrer", "r6Airgap": "Ihrer", "r6Sov": "Vertraglich gebunden", "r6Priv": "Vertraglich gebunden",
+                "r7Attr": "Audit-Log",
+                "r7Onprem": "Im Perimeter", "r7Airgap": "Im Perimeter", "r7Sov": "Kundeneigen", "r7Priv": "Kundeneigen"
+            },
+            "access": {
+                "sup": "Zugriffskontrolle",
+                "headline": "Feingranular. Föderiert. Auditierbar.",
+                "rbacLabel": "RBAC",
+                "rbacBody": "Rollenbasierter Zugriff für Analysten, Operatoren, Administratoren und Auditoren — definiert nach Ihrer Org-Struktur, nicht unserer.",
+                "abacLabel": "ABAC",
+                "abacBody": "Attributbasierte Richtlinie über RBAC. Sichtbarkeit auf Entitäts-, Ereignis- und Zellebene — konditioniert auf Kontext, Freigabe und Zweck.",
+                "fedLabel": "Föderation",
+                "fedBody": "Anbindung an Ihren Identity-Provider: SAML, OIDC, mTLS — mit attestierbarer Sitzungsbindung.",
+                "privLabel": "Privilegierter Zugriff",
+                "privBody": "Just-in-Time-Erhöhung, Dual-Control bei sensitiven Aktionen, vollständige Sitzungsaufzeichnung. Keine ständigen Admins."
+            },
+            "audit": {
+                "sup": "Auditierbarkeit",
+                "headline": "Wer. Was. Wann. Warum.",
+                "body": "Jede Aktion auf der Plattform wird in einem manipulationssicheren, kundeneigenen Audit-Log erfasst. Konzipiert für den Regulierer, die After-Action und das interne Review-Board.",
+                "whoLabel": "Wer",
+                "whoBody": "Jeder Operator, jeder Analyst, jede Systemidentität ist benannt — keine anonymen Aktionen.",
+                "whatLabel": "Was",
+                "whatBody": "Die Aktion, die Abfrage, der Input, die KI-Ausgabe, der Workflow-Übergang — vollständig erfasst.",
+                "whenLabel": "Wann",
+                "whenBody": "Vertrauenswürdige Zeitstempel, Write-Once-Log, manipulationssichere Kette.",
+                "whyLabel": "Warum",
+                "whyBody": "Zweck-Tags begleiten jede Aktion — sie unterstützen After-Action-Review und regulatorische Anfrage."
+            },
+            "standards": {
+                "sup": "Standards",
+                "headline": "Konstruiert nach den Standards, die Ihre Auditoren bereits verwenden.",
+                "body": "Davion entwirft nach den Frameworks, mit denen Ihr Security-Team und die Regulierer bereits arbeiten. Wo formale Zertifizierung gilt, dokumentieren wir den Umfang und die Belege pro Engagement.",
+                "isoName": "ISO 27001",
+                "isoBody": "Informationssicherheits-Managementsystem, ausgerichtet auf die Plattform und die Operator-Praxis.",
+                "socName": "SOC 2",
+                "socBody": "Sicherheit, Verfügbarkeit, Verarbeitungsintegrität, Vertraulichkeit und Datenschutz — entwickelt für, geprüft, wo anwendbar.",
+                "nis2Name": "NIS2-Klasse",
+                "nis2Body": "Cyber-Regulierung für kritische Infrastruktur als Einsatz-Baseline in EU-Jurisdiktionen.",
+                "gdprName": "DSGVO",
+                "gdprBody": "Rechtsgrundlage, Betroffenenrechte und AVV-bereit per Design.",
+                "sectorName": "Branchenspezifisch",
+                "sectorBody": "Verteidigungs-, Finanzdienstleistungs-, Gesundheits- und Public-Sector-Regime — pro Engagement adressiert."
+            },
+            "ai": {
+                "sup": "Responsible AI",
+                "headline": "Souveräne Inferenz. Zitierte Ausgaben. Verweigerung, wenn angebracht.",
+                "body": "KI in AlpOS wird genauso kontrolliert wie jede andere Ebene — mit Provenienz, Zitation, Audit und Verweigerungsrecht. Wir liefern keine KI aus, die die Institution nicht verteidigen kann.",
+                "sovInfLabel": "Souveräne Inferenz",
+                "sovInfBody": "Modelle laufen innerhalb Ihres Perimeters. Keine Trainingsdaten, keine Gradienten, keine Ausgaben gehen ohne explizite Richtlinie an Davion oder einen Anbieter.",
+                "provenLabel": "Provenienz",
+                "provenBody": "Jedes verwendete Modell, jede Version, jeder Input — gegen jede Ausgabe erfasst.",
+                "citationLabel": "Zitation",
+                "citationBody": "Ausgaben zitieren ihre Quelldaten. Eine KI-Schlussfolgerung, die Sie nicht zurückverfolgen können, ist eine, die Sie nicht verteidigen können.",
+                "refusalLabel": "Verweigerung unter Unsicherheit",
+                "refusalBody": "Wenn die Konfidenz niedrig oder die Belege fehlen, sagt das System es. Verteidigbar geht vor selbstbewusst.",
+                "hitlLabel": "Human-in-the-Loop",
+                "hitlBody": "Folgenreiche Aktionen erfordern einen benannten Operator. Die KI handelt nicht eigenmächtig.",
+                "noCovertLabel": "Kein verdecktes Training",
+                "noCovertBody": "Kundendaten werden niemals ohne ausdrückliche, schriftliche Zustimmung verwendet, um geteilte Modelle zu trainieren."
+            },
+            "lifecycle": {
+                "sup": "Datenlebenszyklus",
+                "headline": "Erfassung. Verarbeitung. Nutzung. Aufbewahrung. Löschung.",
+                "body": "Der Datenlebenszyklus wird durchgängig kontrolliert. Richtlinie an der Grenze durchgesetzt, Lineage durch Transformation verfolgt, Aufbewahrung vertraglich gebunden, Löschung auf Anfrage beweisbar.",
+                "l1Stage": "Erfassung",
+                "l1Body": "Daten kommen unter Richtlinie ein — Quellen, Zwecke und Aufbewahrung an der Quelle deklariert.",
+                "l2Stage": "Verarbeitung",
+                "l2Body": "Lineage verfolgt durch Transforms, Joins und Anreicherungen. Jedes abgeleitete Datum ist auf seinen Ursprung zurückverfolgbar.",
+                "l3Stage": "Nutzung",
+                "l3Body": "Zugriff gesteuert durch RBAC + ABAC. Abfragen protokolliert. KI-Ausgaben zitiert.",
+                "l4Stage": "Aufbewahrung",
+                "l4Body": "Aufbewahrungsrichtlinie pro Quelle, pro Zweck durchgesetzt. Kundendefiniert, vertraglich gebunden.",
+                "l5Stage": "Löschung",
+                "l5Body": "Recht auf Vergessenwerden respektiert. Kryptografische Löschung, wo erforderlich. Beweisbar, nicht nur behauptet."
+            },
+            "engage": {
+                "sup": "Kontakt",
+                "headline": "Bringen Sie Ihr Security-Team an den Tisch.",
+                "body": "Wir beantworten Sicherheitsfragebögen vollständig, führen technische Deep-Dives gegen Ihre Umgebung und liefern die Belege, die Ihr Audit-Team verlangen wird — bevor Sie sich verpflichten.",
+                "cta": "Mit unserem Security-Team sprechen"
+            }
+        },
+        "venture": {
+            "meta": {
+                "title": "Venture",
+                "description": "Davion unterstützt und baut in souveräner Daten-, KI- und verteidigungsangrenzender Technologie. Kapital, Zugang und Plattform zusammen.",
+                "ogTitle": "Davion · Venture",
+                "ogDescription": "Kapital und Plattform für das souveräne-Tech-Ökosystem."
+            },
+            "hero": {
+                "sup": "Venture",
+                "headline": "Kapital und Plattform für das souveräne-Tech-Ökosystem",
+                "body": "Davion unterstützt und baut in souveräner Daten-, KI- und verteidigungsangrenzender Technologie. Kapital, Zugang und Plattform zusammen. Zurückhaltend, ernsthaft, gründerorientiert."
+            },
+            "empty": {
+                "eyebrow": "These ausstehend",
+                "headline": "Die öffentliche Venture-These und der Intake-Prozess landen, sobald sie freigegeben sind",
+                "body": "In der Zwischenzeit können Gründer, die in souveränen Daten, souveräner KI, verteidigungsangrenzender Technologie oder institutioneller Entscheidungsinfrastruktur bauen, eine einseitige Zusammenfassung über die Engagement-Seite mit der Venture-Absicht einreichen. Die richtige Person liest sie.",
+                "ctaPrimary": "Pitchen Sie uns",
+                "ctaSecondary": "Über uns lesen"
+            }
+        },
+        "status": {
+            "meta": {
+                "title": "Status",
+                "description": "Betriebsstatus der Davion-Dienste. Die Marketing-Site, das Engagement-Intake und Pro-Einsatz-Status-Routen.",
+                "ogTitle": "Davion · Status",
+                "ogDescription": "Betriebsstatus der Davion-Dienste."
+            },
+            "hero": {
+                "sup": "Betrieb · Status",
+                "headline": "Betriebsstatus",
+                "body": "Die öffentlichen Oberflächen: diese Site, das Engagement-Intake, die Newsroom-API. Der Kunden-Einsatzstatus wird unter dem Engagement-Vertrag berichtet — nicht hier; Souveränität nach Einsatz schneidet in beide Richtungen.",
+                "lastCheckedLabel": "Zuletzt geprüft"
+            },
+            "summary": {
+                "headline": "Alle öffentlichen Dienste betriebsbereit",
+                "body": "Derzeit keine Vorfälle verfolgt. Um einen vermuteten Vorfall zu melden, schreiben Sie an {email}."
+            },
+            "services": {
+                "sup": "Dienste",
+                "headline": "Was hier abgedeckt ist",
+                "operationalLabel": "Betriebsbereit",
+                "perDeploymentLabel": "Pro Einsatz",
+                "disruptedLabel": "Gestört",
+                "s1Name": "davion.com (Marketing-Site)",
+                "s1Detail": "Nuxt 3 SSR. Am Edge gecacht. Keine Vorfälle seit Launch verfolgt.",
+                "s2Name": "Engagement-Intake",
+                "s2Detail": "mailto-basiertes Intake an engagement{'@'}davion.com. Routing innerhalb eines Werktages.",
+                "s3Name": "Newsroom- und Content-API",
+                "s3Detail": "Postgres-gestützt. Schreibgeschützte öffentliche API unter /api/blog.",
+                "s4Name": "Pro-Kunden-AlpOS-Einsätze",
+                "s4Detail": "Kunden-Einsätze laufen innerhalb des Kundenperimeters. Ihr Status wird unter ihrem Engagement-Vertrag berichtet — nicht auf dieser öffentlichen Seite."
+            },
+            "history": {
+                "sup": "Vorfallshistorie",
+                "headline": "Keine Vorfälle dokumentiert",
+                "body": "Davion ist in einer frühen Phase; die öffentlichen Oberflächen sind nicht lange genug live, um eine aussagekräftige Vorfallshistorie zu produzieren. Sobald wir unter einem verwalteten Status-Provider deployen (P3.6), werden hier Pro-Komponente-Uptime und Vorfallszeitleisten leben."
+            },
+            "reporting": {
+                "sup": "Meldung",
+                "headline": "Etwas gefunden, das nicht funktioniert?",
+                "body": "Für Probleme der öffentlichen Oberfläche (diese Site, Engagement-Intake, Newsroom): ops{'@'}davion.com. Für Pro-Einsatz-Vorfälle innerhalb Ihres Engagements: über Ihren zugewiesenen Solutions-Engineer oder den vertraglichen Support-Kanal routen."
+            }
         }
     }
 }
