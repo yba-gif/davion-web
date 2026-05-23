@@ -1,87 +1,60 @@
 <script setup lang="ts">
-// Refactored to <IndustryLayout> in P1.U7.
+// Refactored to <IndustryLayout> in P1.U7; copy moved to
+// pages.industries.def.* in P4.9b. Defense-specific overrides:
+// - Hero CTAs: "Connect confidentially" + "Deployment matrix"
+// - problemAreasTitle override (4 mission domains, not "Four problem areas")
+// - Engage CTAs: "Connect confidentially" + "Trust & deployment"
+const { t } = useI18n()
+
 useSeoMeta({
-    title: 'Defense & Intelligence',
-    description: 'Defense and intelligence organisations use Davion when decisions run on classified data that cannot leave the perimeter. Air-gapped sovereign AI with audit-grade lineage.',
-    ogTitle: 'Davion · Defense & Intelligence',
-    ogDescription: 'Air-gapped sovereign AI for mission planning, signals fusion, and OSINT. Decisions stay inside the perimeter.',
+    title: () => t('pages.industries.def.meta.title'),
+    description: () => t('pages.industries.def.meta.description'),
+    ogTitle: () => t('pages.industries.def.meta.ogTitle'),
+    ogDescription: () => t('pages.industries.def.meta.ogDescription'),
 })
 
-const data = {
-    eyebrow: 'Industries · Defense & Intelligence',
-    headline: 'Defense and intelligence organisations use Davion when decisions run on data that cannot leave the perimeter',
-    body: 'Air-gapped sovereign AI for mission planning, all-source fusion, and OSINT. The data, the weights, and the audit log stay inside the enclave. Every decision is traceable to the sources it was made on; every model run is reproducible. Davion proposes; the commander, analyst, or operator decides.',
+const data = computed(() => ({
+    eyebrow: t('pages.industries.def.eyebrow'),
+    headline: t('pages.industries.def.headline'),
+    body: t('pages.industries.def.body'),
 
-    // Defense-specific CTAs (Connect confidentially is the canonical CTA for this audience).
-    primaryCta: { label: 'Connect confidentially', to: '/contact' },
-    secondaryCta: { label: 'Deployment matrix', to: '/trust' },
+    primaryCta:   { label: t('pages.industries.def.primaryCtaLabel'),   to: '/contact' },
+    secondaryCta: { label: t('pages.industries.def.secondaryCtaLabel'), to: '/trust' },
 
-    problemAreasTitle: 'Four mission domains. One sovereign platform',
+    problemAreasTitle: t('pages.industries.def.problemAreasTitle'),
     problemAreas: [
-        {
-            title: 'Mission planning & decision support',
-            bullets: [
-                'Multi-source intelligence fusion under classification',
-                'Course-of-action analysis with cited evidence',
-                'Commander\'s copilot, proposes, never decides',
-                'After-action lineage from raw source to recommendation',
-            ],
-        },
-        {
-            title: 'OSINT & all-source analysis',
-            bullets: [
-                'Continuous collection across public web, social, and adversary media',
-                'Cross-lingual processing in 60+ languages with provenance',
-                'Entity resolution across aliases, accounts, and behaviours',
-                'Analyst brief generation with full source trail',
-            ],
-        },
-        {
-            title: 'Signals & sensor fusion',
-            bullets: [
-                'Geospatial, video, audio, and SIGINT fused into one ontology',
-                'Anomaly detection on patterns of life and tactical change',
-                'Cross-sensor confirmation before alerting',
-                'Air-gappable from the edge to the operations centre',
-            ],
-        },
-        {
-            title: 'Insider risk & counterintelligence',
-            bullets: [
-                'Behavioural and access-pattern analytics inside the enclave',
-                'Cell-level access controls and per-decision audit',
-                'Investigation workflow with chain-of-custody preservation',
-                'Adversary-aware threat models on internal systems',
-            ],
-        },
+        { title: t('pages.industries.def.pa1Title'), bullets: [t('pages.industries.def.pa1b1'), t('pages.industries.def.pa1b2'), t('pages.industries.def.pa1b3'), t('pages.industries.def.pa1b4')] },
+        { title: t('pages.industries.def.pa2Title'), bullets: [t('pages.industries.def.pa2b1'), t('pages.industries.def.pa2b2'), t('pages.industries.def.pa2b3'), t('pages.industries.def.pa2b4')] },
+        { title: t('pages.industries.def.pa3Title'), bullets: [t('pages.industries.def.pa3b1'), t('pages.industries.def.pa3b2'), t('pages.industries.def.pa3b3'), t('pages.industries.def.pa3b4')] },
+        { title: t('pages.industries.def.pa4Title'), bullets: [t('pages.industries.def.pa4b1'), t('pages.industries.def.pa4b2'), t('pages.industries.def.pa4b3'), t('pages.industries.def.pa4b4')] },
     ],
 
-    solutionsTitle: 'AlpOS applied to defense and intelligence',
+    solutionsTitle: t('pages.industries.def.solutionsTitle'),
     solutions: [
-        { name: 'All-source fusion', body: 'Geospatial, signals, OSINT, and HUMINT into one ontology, with classification handling and per-source provenance.' },
-        { name: 'Analyst copilot', body: 'Drafts briefs, surfaces weak signals, and cites every source. Never decides; the analyst owns the call.' },
-        { name: 'OSINT collection', body: 'Continuous, multilingual collection with adversary-aware bias controls and provenance to original source.' },
-        { name: 'Pattern-of-life', body: 'Cross-sensor pattern detection with anomaly scoring, suitable for both tactical and counter-intelligence missions.' },
-        { name: 'Mission planning', body: 'Course-of-action analysis with explainable drivers and weighted constraints, auditable end to end.' },
-        { name: 'Air-gap deployment', body: 'Designed to run disconnected. Updates are signed, logged, and reviewable inside the perimeter.' },
+        { name: t('pages.industries.def.s1Name'), body: t('pages.industries.def.s1Body') },
+        { name: t('pages.industries.def.s2Name'), body: t('pages.industries.def.s2Body') },
+        { name: t('pages.industries.def.s3Name'), body: t('pages.industries.def.s3Body') },
+        { name: t('pages.industries.def.s4Name'), body: t('pages.industries.def.s4Body') },
+        { name: t('pages.industries.def.s5Name'), body: t('pages.industries.def.s5Body') },
+        { name: t('pages.industries.def.s6Name'), body: t('pages.industries.def.s6Body') },
     ],
 
-    storyHeadline: 'An indicator rarely arrives on a single channel',
-    storyBody: 'It surfaces as a fragment of geospatial change, a shift in adversary media, a movement in commercial telemetry, a quiet day on a channel that is rarely quiet. AlpOS fuses the fragments into one ontology, weighs them against the analyst\'s evidentiary standard, and proposes the brief. The analyst reads the proposal. The analyst sees the lineage. The analyst makes the call.',
-    storyOutcome: 'Earlier indication. Defensible attribution. Reproducible reasoning that survives an after-action review.',
+    storyHeadline: t('pages.industries.def.storyHeadline'),
+    storyBody: t('pages.industries.def.storyBody'),
+    storyOutcome: t('pages.industries.def.storyOutcome'),
     storyLayers: [
-        'Ingest: geospatial, SIGINT, OSINT, HUMINT, internal',
-        'Ontology: entities, locations, events, capabilities',
-        'Analyze: pattern-of-life, anomaly, cross-source confirm',
-        'Decide: analyst copilot, evidence, classification',
-        'Act: brief generation, dissemination, audit log',
+        t('pages.industries.def.sl1'),
+        t('pages.industries.def.sl2'),
+        t('pages.industries.def.sl3'),
+        t('pages.industries.def.sl4'),
+        t('pages.industries.def.sl5'),
     ],
 
-    ctaHeadline: 'Briefings on this side of the air-gap',
-    ctaBody: 'Engagements with defense and intelligence organisations begin under non-disclosure. Reference architectures, demos, and proof-of-concept proposals are tailored to your classification regime.',
-    ctaPrimary: { label: 'Connect confidentially', to: '/contact' },
-    ctaSecondary: { label: 'Trust & deployment', to: '/trust' },
-}
+    ctaHeadline: t('pages.industries.def.ctaHeadline'),
+    ctaBody: t('pages.industries.def.ctaBody'),
+    ctaPrimary:   { label: t('pages.industries.def.ctaPrimaryLabel'),   to: '/contact' },
+    ctaSecondary: { label: t('pages.industries.def.ctaSecondaryLabel'), to: '/trust' },
+}))
 </script>
 
 <template>
