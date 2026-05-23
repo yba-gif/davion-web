@@ -2,11 +2,16 @@
 // Davion home, base1 visual language with the design moves restored:
 // spiral hero, black Sectors marquee, real Newsroom showcase, frosted-spiral CTA.
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 // Home meta aligned to the P0.3 hero (Variant A, clarity-first).
+// Description tracks the active locale so the meta tags reflect the
+// language the visitor is viewing.
 useSeoMeta({
-    description: 'Sovereign AI for institutions whose data can\'t leave. The platform banks, ministries, and energy operators use when decisions must be defensible, auditable, and made on data that never enters a public cloud.',
-    ogTitle: 'Davion, Sovereign AI for institutions whose data can\'t leave',
-    ogDescription: 'The platform banks, ministries, and energy operators use when decisions must be defensible, auditable, and made on data that never enters a public cloud.',
+    description: () => t('hero.body'),
+    ogTitle: () => `Davion, ${t('hero.headline')}`,
+    ogDescription: () => t('hero.body'),
 })
 useHead({ title: 'Davion', titleTemplate: '%s' })
 
@@ -32,46 +37,32 @@ const gridPosts = computed<Post[]>(() => posts.value.slice(1, 3))
 
 // P1.U5: formatDate is auto-imported from composables/useFormatDate.ts, // shared ISO-format util. Previous inline `en-US` short-month formatter retired.
 
+// All arrays carry i18n keys; template resolves with $t() so content
+// tracks the active locale.
 const solutions = [
-    {
-        name: 'AlpOS',
-        label: 'Platform · Flagship',
-        body: 'The sovereign AI platform underneath every Davion solution. Ingest, ontology, analytics, AI, decisioning, action, governed end to end.',
-        to: '/solutions/alpos',
-        icon: 'base:chart-square',
-    },
-    {
-        name: 'Cybersecurity',
-        label: 'Solution',
-        body: 'Defensive intelligence for environments that cannot fail. Detection through pattern, anomaly, and graph analysis, inside your perimeter.',
-        to: '/solutions/cybersecurity',
-        icon: 'base:verified',
-    },
-    {
-        name: 'Digital Transformation',
-        label: 'Solution',
-        body: 'From siloed data to a single governed source of truth, phased from POC to industrial deployment, without losing the institution.',
-        to: '/solutions/digital-transformation',
-        icon: 'base:chart-2',
-    },
-]
+    { nameKey: 'subnav.solutions.alpos',         labelKey: 'home.solutions.alposLabel',   bodyKey: 'home.solutions.alposBody',   to: '/solutions/alpos',                  icon: 'base:chart-square' },
+    { nameKey: 'subnav.solutions.cybersecurity', labelKey: 'home.solutions.cyberLabel',   bodyKey: 'home.solutions.cyberBody',   to: '/solutions/cybersecurity',          icon: 'base:verified' },
+    { nameKey: 'subnav.solutions.digital',       labelKey: 'home.solutions.digitalLabel', bodyKey: 'home.solutions.digitalBody', to: '/solutions/digital-transformation', icon: 'base:chart-2' },
+] as const
 
 const cycle = [
-    { n: '01', title: 'Ingest', body: 'Pull every relevant signal through a single governed pipeline.' },
-    { n: '02', title: 'Model', body: 'Shape it as entities, events, and relationships in your ontology.' },
-    { n: '03', title: 'Reason', body: 'Run AI against the ontology with citations back to source.' },
-    { n: '04', title: 'Act', body: 'Embed the decision into operators and systems of record.' },
-]
+    { n: '01', titleKey: 'home.cycle.steps.01.title', bodyKey: 'home.cycle.steps.01.body' },
+    { n: '02', titleKey: 'home.cycle.steps.02.title', bodyKey: 'home.cycle.steps.02.body' },
+    { n: '03', titleKey: 'home.cycle.steps.03.title', bodyKey: 'home.cycle.steps.03.body' },
+    { n: '04', titleKey: 'home.cycle.steps.04.title', bodyKey: 'home.cycle.steps.04.body' },
+] as const
 
 const sovereignty = [
-    { name: 'On-premise', body: 'Your hardware. Your network.' },
-    { name: 'Air-gapped', body: 'Disconnected operation, signed updates.' },
-    { name: 'Sovereign cloud', body: 'Your provider, your region, bound by contract.' },
-]
+    { nameKey: 'home.sovereignty.modes.onprem.name',    bodyKey: 'home.sovereignty.modes.onprem.body' },
+    { nameKey: 'home.sovereignty.modes.airgapped.name', bodyKey: 'home.sovereignty.modes.airgapped.body' },
+    { nameKey: 'home.sovereignty.modes.cloud.name',     bodyKey: 'home.sovereignty.modes.cloud.body' },
+] as const
 
+// Sectors + promises stay English in the marquee on purpose: they
+// function as brand language / visual rhythm, not descriptive copy.
+// Translating "Sovereign / Defensible / In-perimeter" loses the
+// punch. Keep them as-is across locales.
 const sectors = ['Financial Services', 'Energy', 'Manufacturing', 'Life Sciences', 'Retail', 'Government', 'Critical Infrastructure', 'Defense & Intelligence']
-// Marquee promises, pulled from the Davion vocabulary (docs/brand-voice.md §3).
-// No ChapsVision echoes ("Agentic AI", "Modular by design").
 const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-prem', 'Auditable', 'Decision-ready', 'Operator-owned']
 </script>
 
@@ -84,23 +75,23 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
                 <div class="max-w-3xl">
-                    <CommonSup title="Solutions" />
+                    <CommonSup :title="$t('home.solutions.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        The platform<span class="text-primary-text">.</span> And the solutions built on it<span class="text-primary-text">.</span>
+                        {{ $t('home.solutions.headline1') }}<span class="text-primary-text">.</span> {{ $t('home.solutions.headline2') }}<span class="text-primary-text">.</span>
                     </h2>
                 </div>
                 <p class="text-b2 text-drygray-default max-w-md">
-                    AlpOS is the constant. Cybersecurity and Digital Transformation are how it's applied, same sovereignty, same audit, same spine.
+                    {{ $t('home.solutions.body') }}
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-4">
                 <FeatureCard
                     v-for="s in solutions"
-                    :key="s.name"
-                    :title="s.name"
-                    :description="s.body"
+                    :key="s.nameKey"
+                    :title="$t(s.nameKey)"
+                    :description="$t(s.bodyKey)"
                     :icon="s.icon"
-                    :href="s.to"
+                    :href="localePath(s.to)"
                 />
             </div>
         </section>
@@ -109,15 +100,15 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-7">
-                    <CommonSup title="Flagship · AlpOS" />
+                    <CommonSup :title="$t('home.alposTeaser.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        The sovereign AI platform underneath every Davion solution<span class="text-primary-text">.</span>
+                        {{ $t('home.alposTeaser.headline') }}<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                        AlpOS unifies data, ontology, analytics, and agentic AI in one modular platform, ingest to act, governed end to end. Digital Transformation, Cybersecurity, and OSINT are how it is applied.
+                        {{ $t('home.alposTeaser.body') }}
                     </p>
                     <div class="mt-8">
-                        <NuxtLink to="/solutions/alpos"><CommonButton variant="primary" icon="base:arrow">Explore AlpOS</CommonButton></NuxtLink>
+                        <NuxtLink :to="localePath('/solutions/alpos')"><CommonButton variant="primary" icon="base:arrow">{{ $t('home.alposTeaser.cta') }}</CommonButton></NuxtLink>
                     </div>
                 </div>
                 <div class="lg:col-span-5">
@@ -132,19 +123,21 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         <!-- 4. Intelligence cycle -->
         <section v-reveal class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="max-w-2xl mb-10 md:mb-14">
-                <CommonSup title="The AI cycle" />
+                <CommonSup :title="$t('home.cycle.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    Ingest<span class="text-primary-text">.</span> Model<span class="text-primary-text">.</span> Reason<span class="text-primary-text">.</span> Act<span class="text-primary-text">.</span>
+                    <span v-for="(part, i) in ($tm('home.cycle.headlineParts') as string[])" :key="i">
+                        <span>{{ part }}</span><span class="text-primary-text">.</span><template v-if="i < ($tm('home.cycle.headlineParts') as string[]).length - 1"> </template>
+                    </span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
-                    Every Davion deployment runs the same sovereign cycle, from raw data to operational action. The platform stays constant; the surface adapts to the use case.
+                    {{ $t('home.cycle.body') }}
                 </p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div v-for="step in cycle" :key="step.n" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Step {{ step.n }}</p>
-                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ step.title }}</p>
-                    <p class="text-b1 text-drygray-default mt-3">{{ step.body }}</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ $t('home.cycle.stepLabel') }} {{ step.n }}</p>
+                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ $t(step.titleKey) }}</p>
+                    <p class="text-b1 text-drygray-default mt-3">{{ $t(step.bodyKey) }}</p>
                 </div>
             </div>
         </section>
@@ -152,20 +145,20 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         <!-- 5. Sovereignty strip -->
         <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="max-w-3xl mb-10 md:mb-14">
-                <CommonSup title="Sovereign by design" />
+                <CommonSup :title="$t('home.sovereignty.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    Run where you require, only where you require<span class="text-primary-text">.</span>
+                    {{ $t('home.sovereignty.headline') }}<span class="text-primary-text">.</span>
                 </h2>
             </div>
             <div class="grid sm:grid-cols-3 gap-4">
-                <div v-for="m in sovereignty" :key="m.name" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Mode</p>
-                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ m.name }}</p>
-                    <p class="text-b1 text-drygray-default mt-3">{{ m.body }}</p>
+                <div v-for="m in sovereignty" :key="m.nameKey" class="bg-white rounded-2xl p-6">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ $t('home.sovereignty.modeLabel') }}</p>
+                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-3">{{ $t(m.nameKey) }}</p>
+                    <p class="text-b1 text-drygray-default mt-3">{{ $t(m.bodyKey) }}</p>
                 </div>
             </div>
             <div class="mt-8">
-                <NuxtLink to="/trust"><CommonButton variant="outline" size="xs" icon="base:arrow">Trust &amp; Sovereignty</CommonButton></NuxtLink>
+                <NuxtLink :to="localePath('/trust')"><CommonButton variant="outline" size="xs" icon="base:arrow">{{ $t('home.sovereignty.cta') }}</CommonButton></NuxtLink>
             </div>
         </section>
 
@@ -177,15 +170,15 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         <section v-reveal class="relative rounded-3xl bg-black overflow-hidden">
             <div class="relative grid lg:grid-cols-12 gap-10 items-center px-6 md:px-12 lg:px-16 py-12 md:py-20">
                 <div class="lg:col-span-4">
-                    <CommonSup title="Industries" />
+                    <CommonSup :title="$t('home.sectors.sup')" />
                     <h2 class="font-degular font-bold text-white mt-4 text-[36px] md:text-[44px] lg:text-[48px] leading-[1.02] tracking-tight">
-                        For every business<span class="text-primary-text">.</span><br>For every government<span class="text-primary-text">.</span>
+                        {{ $t('home.sectors.headline1') }}<span class="text-primary-text">.</span><br>{{ $t('home.sectors.headline2') }}<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-white/60 mt-6 max-w-sm">
-                        Davion deploys across financial services, energy, manufacturing, life sciences, retail, government, critical infrastructure, and defense, wherever data has to become decisions you can defend.
+                        {{ $t('home.sectors.body') }}
                     </p>
                     <div class="mt-8">
-                        <NuxtLink to="/industries"><CommonButton variant="outline" size="xs" icon="base:arrow" class="!border-white/30 !text-white hover:!border-primary hover:!text-primary-text">Explore industries</CommonButton></NuxtLink>
+                        <NuxtLink :to="localePath('/industries')"><CommonButton variant="outline" size="xs" icon="base:arrow" class="!border-white/30 !text-white hover:!border-primary hover:!text-primary-text">{{ $t('home.sectors.cta') }}</CommonButton></NuxtLink>
                     </div>
                 </div>
                 <div class="lg:col-span-8 relative space-y-5">
@@ -211,13 +204,13 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         <section v-if="featuredPost" v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
                 <div>
-                    <CommonSup title="Newsroom" />
+                    <CommonSup :title="$t('home.newsroom.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        Dispatches from the work<span class="text-primary-text">.</span>
+                        {{ $t('home.newsroom.headline') }}<span class="text-primary-text">.</span>
                     </h2>
                 </div>
-                <NuxtLink to="/company/newsroom">
-                    <CommonButton variant="outline" size="xs" icon="base:arrow">All dispatches</CommonButton>
+                <NuxtLink :to="localePath('/company/newsroom')">
+                    <CommonButton variant="outline" size="xs" icon="base:arrow">{{ $t('home.newsroom.viewAll') }}</CommonButton>
                 </NuxtLink>
             </div>
             <HorizontalBlogCard
@@ -258,17 +251,17 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                 class="absolute inset-0 w-full h-full object-cover pointer-events-none scale-[1.8] lg:scale-[2] lg:translate-x-48 lg:-translate-y-24 select-none"
             >
             <div class="relative w-full flex flex-col items-center text-center py-14 md:py-28 lg:py-32 px-6 md:px-12 lg:px-16 backdrop-blur-[80px] bg-gradient-to-b from-azure/30 to-azure/10">
-                <CommonSup title="Engage" />
+                <CommonSup :title="$t('home.cta.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-6 leading-[0.92] tracking-[-0.02em]">
-                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your data<span class="text-primary-text">.</span></span>
-                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your AI<span class="text-primary-text">.</span></span>
-                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your decisions<span class="text-primary-text">.</span></span>
+                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">{{ $t('home.cta.line1') }}<span class="text-primary-text">.</span></span>
+                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">{{ $t('home.cta.line2') }}<span class="text-primary-text">.</span></span>
+                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">{{ $t('home.cta.line3') }}<span class="text-primary-text">.</span></span>
                 </h2>
                 <p class="text-b2 text-drygray-100 mt-10 max-w-xl font-medium">
-                    Briefings are consultative and tailored. Bring your data architecture, your constraints, and your operational reality. We will bring the right people from our side.
+                    {{ $t('home.cta.body') }}
                 </p>
                 <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
-                    <NuxtLink to="/contact"><CommonButton variant="primary" icon="base:arrow">Book a demo</CommonButton></NuxtLink>
+                    <NuxtLink :to="localePath('/contact')"><CommonButton variant="primary" icon="base:arrow">{{ $t('common.bookDemo') }}</CommonButton></NuxtLink>
                     <a href="mailto:briefings@davion.com"><CommonButton variant="outline" icon="base:arrow">briefings@davion.com</CommonButton></a>
                 </div>
             </div>

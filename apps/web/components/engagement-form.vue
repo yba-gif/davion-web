@@ -16,13 +16,19 @@ interface FormState {
     companyName: string // honeypot
 }
 
-const intents = [
-    { value: 'briefing',    label: 'Briefing',    desc: 'A tailored, consultative session on AlpOS and the Davion approach.' },
-    { value: 'partnership', label: 'Partnership', desc: 'Joint deployments, integrations, and strategic partnerships.' },
-    { value: 'press',       label: 'Press',       desc: 'Media inquiries and Newsroom contact.' },
-    { value: 'careers',     label: 'Careers',     desc: 'Open roles and speculative outreach.' },
-    { value: 'venture',     label: 'Venture',     desc: 'Founders building in sovereign data, AI, or defense-adjacent technology.' },
-]
+const localePath = useLocalePath()
+const { t } = useI18n()
+
+// Intent radio options. `label` resolved from i18n at render time so
+// the form tracks the active locale. `value` stays English so the
+// server-side handler receives a stable enum regardless of UI lang.
+const intents = computed(() => [
+    { value: 'briefing',    labelKey: 'form.intents.briefing' },
+    { value: 'partnership', labelKey: 'form.intents.partnership' },
+    { value: 'press',       labelKey: 'form.intents.press' },
+    { value: 'careers',     labelKey: 'form.intents.careers' },
+    { value: 'venture',     labelKey: 'form.intents.venture' },
+])
 
 const form = reactive<FormState>({
     name: '',
@@ -47,9 +53,9 @@ async function onSubmit() {
     fieldErrors.value = {}
 
     // Client-side sanity check, server will revalidate.
-    if (!form.name.trim()) fieldErrors.value.name = 'Required.'
-    if (!form.email.trim()) fieldErrors.value.email = 'Required.'
-    if (!messageLengthOk.value) fieldErrors.value.message = 'Tell us a bit more (at least 20 characters).'
+    if (!form.name.trim()) fieldErrors.value.name = t('form.errors.required')
+    if (!form.email.trim()) fieldErrors.value.email = t('form.errors.required')
+    if (!messageLengthOk.value) fieldErrors.value.message = t('form.errors.messageMin')
     if (Object.keys(fieldErrors.value).length > 0) return
 
     pending.value = true
@@ -72,10 +78,10 @@ async function onSubmit() {
             if (_form) formError.value = _form
         }
         else if (e?.statusCode === 429) {
-            formError.value = 'Too many submissions from your location. Try again in an hour, or email engagement@davion.com directly.'
+            formError.value = t('form.errors.rateLimit')
         }
         else {
-            formError.value = 'Something went wrong submitting the form. Email engagement@davion.com if it persists.'
+            formError.value = t('form.errors.generic')
         }
     }
     finally {
@@ -101,32 +107,37 @@ function resetForm() {
     <div class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
         <!-- Success state -->
         <div v-if="ticketCode">
-            <CommonSup title="Received" />
+            <CommonSup :title="$t('form.received')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                Got it. We will be in touch<span class="text-primary-text">.</span>
+                {{ $t('form.thankYouTitle') }}<span class="text-primary-text">.</span>
             </h2>
-            <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
-                Your submission was logged with reference <span class="font-mono text-drygray-100">{{ ticketCode }}</span>. The right operator on our side reads every enquiry inside one business day. If anything is urgent, email <a href="mailto:engagement@davion.com" class="text-primary-text underline underline-offset-2 hover:no-underline">engagement@davion.com</a> and quote the reference.
-            </p>
+            <i18n-t keypath="form.thankYouBody" tag="p" class="text-b2 text-drygray-default mt-6 max-w-3xl">
+                <template #ref>
+                    <span class="font-mono text-drygray-100">{{ ticketCode }}</span>
+                </template>
+                <template #email>
+                    <a href="mailto:engagement@davion.com" class="text-primary-text underline underline-offset-2 hover:no-underline">engagement@davion.com</a>
+                </template>
+            </i18n-t>
             <div class="mt-8 flex flex-wrap gap-3">
-                <NuxtLink to="/"><CommonButton variant="primary" icon="base:arrow">Back to home</CommonButton></NuxtLink>
+                <NuxtLink :to="localePath('/')"><CommonButton variant="primary" icon="base:arrow">{{ $t('form.backToHome') }}</CommonButton></NuxtLink>
                 <button type="button" @click="resetForm">
-                    <CommonButton variant="outline" icon="base:arrow">Submit another</CommonButton>
+                    <CommonButton variant="outline" icon="base:arrow">{{ $t('form.submitAnother') }}</CommonButton>
                 </button>
             </div>
         </div>
 
         <!-- Form state -->
         <form v-else novalidate @submit.prevent="onSubmit">
-            <CommonSup title="Tell us what you are trying to decide" />
+            <CommonSup :title="$t('form.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                A structured intake<span class="text-primary-text">.</span>
+                {{ $t('form.title') }}<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
-                Davion engagements are consultative. We route the enquiry to the right operator on our side; the first conversation is a briefing, not a pitch.
+                {{ $t('form.body') }}
             </p>
 
-            <!-- Honeypot -->
+            <!-- Honeypot (kept English; never user-visible) -->
             <div class="sr-only" aria-hidden="true">
                 <label for="companyName">Company name (leave blank)</label>
                 <input
@@ -141,7 +152,7 @@ function resetForm() {
             <div class="mt-10 grid md:grid-cols-2 gap-5">
                 <!-- Name -->
                 <div>
-                    <label for="ef-name" class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default block mb-2">Your name</label>
+                    <label for="ef-name" class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default block mb-2">{{ $t('form.name') }}</label>
                     <input
                         id="ef-name"
                         v-model="form.name"
@@ -151,14 +162,14 @@ function resetForm() {
                         :aria-invalid="!!fieldErrors.name || undefined"
                         :aria-describedby="fieldErrors.name ? 'ef-name-err' : undefined"
                         class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-base text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors min-h-[44px]"
-                        placeholder="Maria Schmidt"
+                        :placeholder="$t('form.namePlaceholder')"
                     >
                     <p v-if="fieldErrors.name" id="ef-name-err" class="text-[12px] text-red-600 mt-1.5">{{ fieldErrors.name }}</p>
                 </div>
 
                 <!-- Email -->
                 <div>
-                    <label for="ef-email" class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default block mb-2">Work email</label>
+                    <label for="ef-email" class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default block mb-2">{{ $t('form.email') }}</label>
                     <input
                         id="ef-email"
                         v-model="form.email"
@@ -168,14 +179,14 @@ function resetForm() {
                         :aria-invalid="!!fieldErrors.email || undefined"
                         :aria-describedby="fieldErrors.email ? 'ef-email-err' : undefined"
                         class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-base text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors min-h-[44px]"
-                        placeholder="m.schmidt@example.com"
+                        :placeholder="$t('form.emailPlaceholder')"
                     >
                     <p v-if="fieldErrors.email" id="ef-email-err" class="text-[12px] text-red-600 mt-1.5">{{ fieldErrors.email }}</p>
                 </div>
 
                 <!-- Organisation -->
                 <div>
-                    <label for="ef-org" class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default block mb-2">Organisation <span class="text-drygray-default font-normal normal-case">(optional)</span></label>
+                    <label for="ef-org" class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default block mb-2">{{ $t('form.organisation') }} <span class="text-drygray-default font-normal normal-case">{{ $t('form.organisationOptional') }}</span></label>
                     <input
                         id="ef-org"
                         v-model="form.organisation"
@@ -183,13 +194,13 @@ function resetForm() {
                         autocomplete="organization"
                         :aria-invalid="!!fieldErrors.organisation || undefined"
                         class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-base text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors min-h-[44px]"
-                        placeholder="Bank, ministry, operator…"
+                        :placeholder="$t('form.organisationPlaceholder')"
                     >
                 </div>
 
                 <!-- Role -->
                 <div>
-                    <label for="ef-role" class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default block mb-2">Role <span class="text-drygray-default font-normal normal-case">(optional)</span></label>
+                    <label for="ef-role" class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default block mb-2">{{ $t('form.role') }} <span class="text-drygray-default font-normal normal-case">{{ $t('form.organisationOptional') }}</span></label>
                     <input
                         id="ef-role"
                         v-model="form.role"
@@ -197,14 +208,14 @@ function resetForm() {
                         autocomplete="organization-title"
                         :aria-invalid="!!fieldErrors.role || undefined"
                         class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-base text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors min-h-[44px]"
-                        placeholder="Head of AI, CIO, Risk officer…"
+                        :placeholder="$t('form.rolePlaceholder')"
                     >
                 </div>
             </div>
 
             <!-- Intent -->
             <fieldset class="mt-8">
-                <legend class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default mb-3">What is this about</legend>
+                <legend class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default mb-3">{{ $t('form.intentLabel') }}</legend>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-2">
                     <label
                         v-for="i in intents"
@@ -223,7 +234,7 @@ function resetForm() {
                             :value="i.value"
                             class="sr-only"
                         >
-                        <span class="text-[13px] font-semibold">{{ i.label }}</span>
+                        <span class="text-[13px] font-semibold">{{ $t(i.labelKey) }}</span>
                     </label>
                 </div>
                 <p v-if="fieldErrors.intent" class="text-[12px] text-red-600 mt-2">{{ fieldErrors.intent }}</p>
@@ -231,7 +242,7 @@ function resetForm() {
 
             <!-- Message -->
             <div class="mt-8">
-                <label for="ef-msg" class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default block mb-2">What you are trying to decide</label>
+                <label for="ef-msg" class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default block mb-2">{{ $t('form.message') }}</label>
                 <textarea
                     id="ef-msg"
                     v-model="form.message"
@@ -242,12 +253,12 @@ function resetForm() {
                     :aria-invalid="!!fieldErrors.message || undefined"
                     :aria-describedby="fieldErrors.message ? 'ef-msg-err' : 'ef-msg-help'"
                     class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-base text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors leading-relaxed resize-y"
-                    placeholder="A few sentences about the decision, the constraints, and the timeline. The more concrete the better."
+                    :placeholder="$t('form.messagePlaceholder')"
                 />
                 <div class="flex justify-between mt-1.5">
                     <p :id="fieldErrors.message ? 'ef-msg-err' : 'ef-msg-help'"
                        :class="['text-[12px]', fieldErrors.message ? 'text-red-600' : 'text-drygray-default']">
-                        {{ fieldErrors.message || 'Minimum 20 characters. No NDA-protected detail.' }}
+                        {{ fieldErrors.message || $t('form.messageHelp') }}
                     </p>
                     <p class="text-[12px] font-mono text-drygray-default">{{ messageLengthLabel }}</p>
                 </div>
@@ -261,11 +272,11 @@ function resetForm() {
             <!-- Submit -->
             <div class="mt-8 flex flex-wrap items-center gap-4">
                 <button type="submit" :disabled="pending" class="text-[14px] font-semibold px-6 py-3 bg-primary text-drygray-100 rounded-lg hover:bg-primary/90 transition-colors min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-2">
-                    {{ pending ? 'Submitting…' : 'Submit' }}
+                    {{ pending ? $t('form.submitting') : $t('form.submit') }}
                     <span aria-hidden="true">↗</span>
                 </button>
                 <p class="text-[12px] text-drygray-default">
-                    By submitting you agree to our <NuxtLink to="/legal/privacy" class="text-primary-text underline underline-offset-2 hover:no-underline">privacy policy</NuxtLink>.
+                    {{ $t('form.privacyPrefix') }} <NuxtLink :to="localePath('/legal/privacy')" class="text-primary-text underline underline-offset-2 hover:no-underline">{{ $t('form.privacyLink') }}</NuxtLink>.
                 </p>
             </div>
         </form>
