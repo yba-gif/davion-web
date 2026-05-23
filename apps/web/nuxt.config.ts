@@ -1,3 +1,9 @@
+// Deploy target detection. NUXT_DEPLOY_TARGET=cloudflare is set by the
+// Cloudflare build script; everything else (Hetzner Docker, local dev,
+// `pnpm dev`) builds for a vanilla Node runtime and skips NuxtHub +
+// Cloudflare-specific config.
+const isCloudflare = process.env.NUXT_DEPLOY_TARGET === 'cloudflare'
+
 export default defineNuxtConfig({
     devtools: { enabled: true },
 
@@ -26,7 +32,17 @@ export default defineNuxtConfig({
 
     css: ['~/assets/css/main.css'],
 
-    modules: ['@nuxt/image', '@nuxt/icon', '@nuxtjs/tailwindcss', '@nuxthub/core', '@nuxtjs/i18n'],
+    modules: [
+        '@nuxt/image',
+        '@nuxt/icon',
+        '@nuxtjs/tailwindcss',
+        // NuxtHub configures Nitro for Cloudflare Workers. Skip on Hetzner
+        // (or any non-Cloudflare deploy) so we don't load Cloudflare-
+        // specific bindings (env.ASSETS, NuxtHub remote services, etc.)
+        // that don't exist outside the Workers runtime.
+        ...(isCloudflare ? ['@nuxthub/core' as const] : []),
+        '@nuxtjs/i18n',
+    ] as string[],
 
     // P4.1: Trilingual site (English / Turkish / German). English is the
     // default and lives at the bare apex (davion.com.tr/about); other
@@ -69,16 +85,6 @@ export default defineNuxtConfig({
             strictMessage: false,
         },
     },
-
-    // P3.6: NuxtHub is the official Cloudflare integration for Nuxt 3. It
-    // configures Nitro for the modern Workers + Static Assets path
-    // automatically, sidestepping Nitro 2.12's cloudflare-module preset
-    // aliasing back to cloudflare-module-legacy (which imports the
-    // deprecated __STATIC_CONTENT_MANIFEST global and fails at the
-    // Cloudflare API validation step). All hub-* features (database, kv,
-    // blob, ai, browser, vectorize) are intentionally left disabled.
-    // Davion uses Neon Postgres via drizzle, not NuxtHub's D1 wrapper.
-    hub: {},
 
     image: {
         dir: 'public',

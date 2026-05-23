@@ -1,0 +1,60 @@
+# Davion edge proxy (Caddy 2). Production.
+#
+# Caddy terminates TLS (Let's Encrypt, automatic) and reverse-proxies
+# everything to the Nuxt server on port 3000. Cloudflare sits in front
+# of Caddy as DNS + WAF + DDoS proxy; Cloudflare's origin connection to
+# this box uses Caddy's Let's Encrypt cert.
+#
+# If you switch Cloudflare's SSL/TLS mode to "Flexible", change the
+# top-level address from "davion.com.tr ..." to ":80" and remove the
+# TLS-related directives. "Full (strict)" mode is the recommended
+# default and is what this config assumes.
+
+{
+    # Email used for Let's Encrypt account registration + expiry
+    # notices. Replace with your address before first deploy.
+    email ops@davion.com
+
+    # Don't leak Caddy version in the Server header.
+    servers {
+        metrics
+    }
+}
+
+(security_headers) {
+    header {
+        # HSTS: tell browsers to always use HTTPS for 1 year.
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "SAMEORIGIN"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        Permissions-Policy "camera=(), microphone=(), geolocation=()"
+        # Hide that we run Caddy. Server identification is fingerprinting.
+        -Server
+    }
+}
+
+davion.com.tr, www.davion.com.tr {
+    import security_headers
+    encode gzip zstd
+
+    # All requests go to the Nuxt server. Nuxt handles SSR for pages,
+    # API routes under /api/*, static assets under /_nuxt/* with proper
+    # cache-control headers, and /public assets (favicon, OG card, etc).
+    reverse_proxy web:3000 {
+        header_up Host {host}
+        header_up X-Real-IP {remote_host}
+        header_up X-Forwarded-Proto {scheme}
+        header_up X-Forwarded-For {remote_host}
+
+        # If the Nuxt server is unhealthy, fall through to a 502 quickly
+        # rather than hanging on the connection.
+        fail_duration 10s
+        max_fails 3
+    }
+
+    log {
+        output stdout
+        format console
+    }
+}

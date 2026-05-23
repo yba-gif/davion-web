@@ -1,0 +1,38 @@
+# Don't ship local dev cruft into the Docker build context.
+# Order matters: blanket excludes first, then targeted negations.
+
+# Per-language artefacts
+**/node_modules
+**/.nuxt
+**/.output
+**/dist
+**/.turbo
+**/coverage
+
+# Source-control / IDE
+.git
+.gitignore
+.gitattributes
+.github
+.idea
+.vscode
+.DS_Store
+
+# Local env. The Docker build doesn't need them (runtime envs come
+# from docker-compose / `-e`). Keep .env.example so the build context
+# carries the shape doc for future devs.
+.env
+.env.local
+.env.production
+.env.development
+!.env.example
+
+# Old contractor docker scaffolding (kept in tree for now, but
+# irrelevant to the new build).
+docker
+
+# Misc
+*.log
+.cache
+.next
+.svelte-kit

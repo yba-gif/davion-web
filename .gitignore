@@ -133,8 +133,8 @@ temp/
 # Turbo
 .turbo/
 
-# Docker
-.dockerignore
+# Docker (none currently ignored; .dockerignore SHOULD be tracked since
+# it controls what Docker sees during builds, and every clone needs it).
 
 # Drizzle
 **/migrations/*.sql

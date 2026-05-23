@@ -1,0 +1,73 @@
+# Davion production stack (Hetzner deploy).
+#
+# Brings up the Nuxt web app + a Caddy reverse proxy. SSL handled by
+# Caddy via Let's Encrypt. DNS lives on Cloudflare (still), pointing
+# at this box's public IP. Neon Postgres stays as the database;
+# nothing about the DB layer changes.
+#
+# Required env (put in .env next to this file, or export before `up`):
+#   DATABASE_URL     postgresql://...@.neon.tech/neondb?sslmode=require
+#   IP_HASH_SALT     32-char hex, generate with `openssl rand -hex 16`
+#
+# Optional env:
+#   SCHEDULING_URL   Cal.com / Calendly embed URL
+#   SCHEDULING_EMAIL briefings@davion.com (default)
+#   DEMO_EMBED_URL   Loom / Vimeo URL for the AlpOS demo
+#
+# Usage:
+#   docker compose up -d --build           # first time / after code change
+#   docker compose logs -f web caddy       # follow logs
+#   docker compose down                    # stop everything
+#   docker compose pull && docker compose up -d   # update Caddy
+
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: davion-web:latest
+        container_name: davion-web
+        restart: unless-stopped
+        environment:
+            DATABASE_URL: ${DATABASE_URL:?DATABASE_URL is required}
+            IP_HASH_SALT: ${IP_HASH_SALT:?IP_HASH_SALT is required}
+            SCHEDULING_URL: ${SCHEDULING_URL:-}
+            SCHEDULING_EMAIL: ${SCHEDULING_EMAIL:-briefings@davion.com}
+            DEMO_EMBED_URL: ${DEMO_EMBED_URL:-}
+            NUXT_PORT: "3000"
+            NUXT_HOST: "0.0.0.0"
+        expose:
+            - "3000"
+        networks:
+            - davion
+        healthcheck:
+            test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/api/health"]
+            interval: 30s
+            timeout: 5s
+            retries: 3
+            start_period: 20s
+
+    caddy:
+        image: caddy:2-alpine
+        container_name: davion-caddy
+        restart: unless-stopped
+        depends_on:
+            web:
+                condition: service_healthy
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - ./Caddyfile:/etc/caddy/Caddyfile:ro
+            - caddy_data:/data
+            - caddy_config:/config
+        networks:
+            - davion
+
+networks:
+    davion:
+        driver: bridge
+
+volumes:
+    caddy_data:
+    caddy_config:
