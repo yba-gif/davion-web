@@ -36,9 +36,15 @@ const config: Config = {
                 },
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                degular: ['Degular Display', 'sans-serif'],
-                switzer: ['Switzer', 'sans-serif'],
+                sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                // P4.4: Degular Display Demo only ships Latin Basic glyphs.
+                // Falling back through Switzer (which has full Latin
+                // Extended-A from Fontshare) so Turkish (ş ğ ı İ) and
+                // strict German (ß) render correctly inside font-degular
+                // headlines. See main.css for the matching unicode-range
+                // restriction on the @font-face entries.
+                degular: ['Degular Display', 'Switzer', 'system-ui', '-apple-system', 'sans-serif'],
+                switzer: ['Switzer', 'system-ui', '-apple-system', 'sans-serif'],
             },
         },
     },
