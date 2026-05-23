@@ -1,9 +1,12 @@
 <script setup lang="ts">
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 useSeoMeta({
-    title: 'Press kit',
-    description: 'Davion press kit, logos, brand colours, executive bio placeholders, contact for journalists and analysts.',
-    ogTitle: 'Davion · Press kit',
-    ogDescription: 'Logos, colours, factsheet, executive bios, media contact.',
+    title: () => t('pages.press.hero.sup'),
+    description: () => t('pages.press.hero.body'),
+    ogTitle: () => `Davion · ${t('pages.press.hero.sup')}`,
+    ogDescription: () => t('pages.press.hero.body'),
 })
 
 // Brand colour swatches. AA-safe + decoration colours from tailwind.config.ts.
@@ -35,58 +38,62 @@ const executives = [
     },
 ]
 
+// Facts list: label + value pairs both come from i18n. The structure is
+// flat for easier translation; data lives in pages.press.facts.*.
 const facts = [
-    { label: 'Headquarters', value: 'Zurich · Istanbul' },
-    { label: 'Founded', value: 'Pending entity finalisation' },
-    { label: 'Stage', value: 'Early-stage; first engagements under contract' },
-    { label: 'Categories', value: 'Sovereign AI · Data intelligence · Decision support' },
-    { label: 'Buyers we serve', value: 'Banks, ministries, defense, energy, life sciences, manufacturing, government, critical infrastructure' },
-    { label: 'Deployment postures', value: 'On-prem · Air-gapped · Sovereign cloud' },
-]
+    { labelKey: 'pages.press.facts.hq',         valueKey: 'pages.press.facts.hqValue' },
+    { labelKey: 'pages.press.facts.founded',    valueKey: 'pages.press.facts.foundedValue' },
+    { labelKey: 'pages.press.facts.stage',      valueKey: 'pages.press.facts.stageValue' },
+    { labelKey: 'pages.press.facts.categories', valueKey: 'pages.press.facts.categoriesValue' },
+    { labelKey: 'pages.press.facts.buyers',     valueKey: 'pages.press.facts.buyersValue' },
+    { labelKey: 'pages.press.facts.postures',   valueKey: 'pages.press.facts.posturesValue' },
+] as const
 </script>
 
 <template>
     <div class="flex flex-col gap-4">
         <!-- Hero -->
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
-            <CommonSup title="Press kit · Media" />
+            <CommonSup :title="$t('pages.press.hero.sup')" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[72px] tracking-tight max-w-4xl">
-                For journalists and analysts<span class="text-primary-text">.</span>
+                {{ $t('pages.press.hero.headline') }}<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Everything a working journalist or analyst needs to write about Davion accurately. Embargoed material handled with discretion via the press desk.
+                {{ $t('pages.press.hero.body') }}
             </p>
             <div class="mt-10 flex flex-wrap gap-3">
-                <a href="mailto:press@davion.com"><CommonButton variant="primary" icon="base:arrow">press@davion.com</CommonButton></a>
-                <NuxtLink to="/company/newsroom"><CommonButton variant="outline" icon="base:arrow">Newsroom</CommonButton></NuxtLink>
+                <a href="mailto:press@davion.com"><CommonButton variant="primary" icon="base:arrow">{{ $t('pages.press.hero.ctaEmail') }}</CommonButton></a>
+                <NuxtLink :to="localePath('/company/newsroom')"><CommonButton variant="outline" icon="base:arrow">{{ $t('pages.press.hero.ctaNewsroom') }}</CommonButton></NuxtLink>
             </div>
         </section>
 
         <!-- Factsheet -->
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
-            <CommonSup title="Factsheet" />
+            <CommonSup :title="$t('pages.press.factsheet.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                Davion at a glance<span class="text-primary-text">.</span>
+                {{ $t('pages.press.factsheet.headline') }}<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
-                The facts as they stand today. Updated as the company grows; anything pending is marked as such.
+                {{ $t('pages.press.factsheet.body') }}
             </p>
             <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                <div v-for="f in facts" :key="f.label" class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default">{{ f.label }}</p>
-                    <p class="font-degular font-bold text-drygray-100 text-[18px] mt-2 leading-snug">{{ f.value }}</p>
+                <div v-for="f in facts" :key="f.labelKey" class="bg-white rounded-2xl p-6">
+                    <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default">{{ $t(f.labelKey) }}</p>
+                    <p class="font-degular font-bold text-drygray-100 text-[18px] mt-2 leading-snug">{{ $t(f.valueKey) }}</p>
                 </div>
             </div>
         </section>
 
-        <!-- Downloadable assets -->
+        <!-- Downloadable assets. Asset names + notes left in English on
+             purpose: these reference filenames + size strings that don't
+             benefit from translation. -->
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
-            <CommonSup title="Logos and assets" />
+            <CommonSup :title="$t('pages.press.assets.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                Download-ready files<span class="text-primary-text">.</span>
+                {{ $t('pages.press.assets.headline') }}<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
-                These are the placeholder assets shipped with the current site. The full identity package, mark, wordmark, lockups, type system, lands with the P2.3 identity refresh.
+                {{ $t('pages.press.assets.body') }}
             </p>
             <div class="mt-10 space-y-3">
                 <a
@@ -106,7 +113,7 @@ const facts = [
                         </div>
                         <div class="md:col-span-1 md:text-right">
                             <span class="text-[13px] text-drygray-100 group-hover:text-primary-text transition-colors font-medium inline-flex items-center gap-2">
-                                Download
+                                {{ $t('common.downloadLabel') }}
                                 <span aria-hidden="true">↓</span>
                             </span>
                         </div>
@@ -115,14 +122,16 @@ const facts = [
             </div>
         </section>
 
-        <!-- Colours -->
+        <!-- Colours. Names + hex codes + usage descriptions left in
+             English: they reference Tailwind class names and design
+             tokens that aren't translatable. -->
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
-            <CommonSup title="Brand colours" />
+            <CommonSup :title="$t('pages.press.colours.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                The palette in use today<span class="text-primary-text">.</span>
+                {{ $t('pages.press.colours.headline') }}<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
-                Two greens (decoration + AA-safe text), two greys, four pastels. The two-tone green system passes WCAG AA contrast for green-on-white text.
+                {{ $t('pages.press.colours.body') }}
             </p>
             <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 <div v-for="c in colours" :key="c.hex" class="bg-white rounded-2xl overflow-hidden">
@@ -136,23 +145,30 @@ const facts = [
             </div>
         </section>
 
-        <!-- Executive bios -->
+        <!-- Executive bios. Name + role + bio come from pages.about.team.*
+             so the press page stays consistent with the About page on
+             every language switch. -->
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
-            <CommonSup title="Executive bios" />
+            <CommonSup :title="$t('pages.press.executives.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                People you can quote<span class="text-primary-text">.</span>
+                {{ $t('pages.press.executives.headline') }}<span class="text-primary-text">.</span>
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
-                Davion is early-stage. Additional executive bios are added as they are approved for public reference. For background interviews, route through the press desk.
+                {{ $t('pages.press.executives.body') }}
             </p>
             <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div v-for="e in executives" :key="e.name" class="bg-whitesmoke-100 rounded-2xl p-6">
-                    <div v-if="e.photo === null" class="aspect-square bg-white rounded-xl mb-4 flex items-center justify-center">
-                        <span class="text-[11px] font-mono uppercase tracking-[0.15em] text-drygray-default">Portrait pending</span>
-                    </div>
-                    <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">{{ e.role }}</p>
-                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-2 leading-tight">{{ e.name }}</p>
-                    <p class="text-b1 text-drygray-default mt-3">{{ e.bio }}</p>
+                    <NuxtImg
+                        v-if="e.photo"
+                        :src="e.photo"
+                        :alt="`${e.name}, ${e.role}`"
+                        width="600"
+                        height="600"
+                        class="aspect-square w-full rounded-xl mb-4 object-cover"
+                    />
+                    <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">{{ $t('pages.about.team.ceoRole') }}</p>
+                    <p class="text-h3 font-degular font-bold text-drygray-100 mt-2 leading-tight">{{ $t('pages.about.team.berkanName') }}</p>
+                    <p class="text-b1 text-drygray-default mt-3">{{ $t('pages.about.team.berkanBlurb') }}</p>
                     <a :href="`mailto:${e.contact}`" class="text-[13px] text-primary-text mt-4 inline-block hover:underline">{{ e.contact }}</a>
                 </div>
             </div>
@@ -162,12 +178,12 @@ const facts = [
         <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-8">
-                    <CommonSup title="Press desk" />
+                    <CommonSup :title="$t('pages.press.contact.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                        Media enquiries<span class="text-primary-text">.</span>
+                        {{ $t('pages.press.contact.headline') }}<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                        Routing through the press desk for embargoed news, executive interview requests, background briefings, and analyst inquiries. We respond inside one business day.
+                        {{ $t('pages.press.contact.body') }}
                     </p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right">
