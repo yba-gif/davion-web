@@ -41,14 +41,20 @@ interface CapabilityData {
 
 const props = defineProps<{ data: CapabilityData }>()
 
-const primaryCta = computed<Cta>(() => props.data.primaryCta ?? { label: 'Book a demo', to: '/contact' })
-const secondaryCta = computed<Cta>(() => props.data.secondaryCta ?? { label: 'See AlpOS', to: '/solutions/alpos' })
-const whatItDoesTitle = computed(() => props.data.whatItDoesTitle ?? 'Four guarantees')
-const whenToUseTitle = computed(() => props.data.whenToUseTitle ?? 'Patterns we see in production')
-const industriesTitle = computed(() => props.data.industriesTitle ?? 'Where this earns its keep')
-const ctaEyebrow = computed(() => props.data.ctaEyebrow ?? 'Engage')
-const ctaPrimary = computed<Cta>(() => props.data.ctaPrimary ?? { label: 'Book a demo', to: '/contact' })
-const ctaSecondary = computed<Cta>(() => props.data.ctaSecondary ?? { label: 'Speak to an expert', to: '/contact' })
+const { t } = useI18n()
+const localePath = useLocalePath()
+
+// Defaults route through pages.capabilities.shared.* so scaffolding renders
+// in-language. Per-page data props can override. CTAs pass raw paths; the
+// template wraps them with localePath().
+const primaryCta = computed<Cta>(() => props.data.primaryCta ?? { label: t('pages.capabilities.shared.heroPrimaryCtaDefault'), to: '/contact' })
+const secondaryCta = computed<Cta>(() => props.data.secondaryCta ?? { label: t('pages.capabilities.shared.heroSecondaryCtaDefault'), to: '/solutions/alpos' })
+const whatItDoesTitle = computed(() => props.data.whatItDoesTitle ?? t('pages.capabilities.shared.whatItDoesTitleDefault'))
+const whenToUseTitle = computed(() => props.data.whenToUseTitle ?? t('pages.capabilities.shared.whenToUseTitleDefault'))
+const industriesTitle = computed(() => props.data.industriesTitle ?? t('pages.capabilities.shared.industriesTitleDefault'))
+const ctaEyebrow = computed(() => props.data.ctaEyebrow ?? t('pages.capabilities.shared.ctaEyebrow'))
+const ctaPrimary = computed<Cta>(() => props.data.ctaPrimary ?? { label: t('pages.capabilities.shared.ctaPrimaryDefault'), to: '/contact' })
+const ctaSecondary = computed<Cta>(() => props.data.ctaSecondary ?? { label: t('pages.capabilities.shared.ctaSecondaryDefault'), to: '/contact' })
 
 // Match IndustryLayout: split headlines on ". " so each segment gets a green dot accent.
 function splitHeadlineSegments(h: string): string[] {
@@ -72,8 +78,8 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">{{ data.body }}</p>
             <div class="mt-10 flex flex-wrap gap-3">
-                <NuxtLink :to="primaryCta.to"><CommonButton variant="primary" icon="base:arrow">{{ primaryCta.label }}</CommonButton></NuxtLink>
-                <NuxtLink :to="secondaryCta.to"><CommonButton variant="outline" icon="base:arrow">{{ secondaryCta.label }}</CommonButton></NuxtLink>
+                <NuxtLink :to="localePath(primaryCta.to)"><CommonButton variant="primary" icon="base:arrow">{{ primaryCta.label }}</CommonButton></NuxtLink>
+                <NuxtLink :to="localePath(secondaryCta.to)"><CommonButton variant="outline" icon="base:arrow">{{ secondaryCta.label }}</CommonButton></NuxtLink>
             </div>
         </section>
 
@@ -81,7 +87,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
         <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10">
                 <div class="lg:col-span-4">
-                    <CommonSup title="What it does" />
+                    <CommonSup :title="$t('pages.capabilities.shared.whatItDoesEyebrow')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
                         <template v-for="(seg, i) in whatItDoesSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><span class="text-primary-text">.</span></template>
                     </h2>
@@ -98,14 +104,14 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
         <!-- §3 How it works -->
         <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="mb-10 md:mb-14 max-w-3xl">
-                <CommonSup title="How it works" />
+                <CommonSup :title="$t('pages.capabilities.shared.howItWorksEyebrow')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
                     <template v-for="(seg, i) in howItWorksSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><span class="text-primary-text">.</span></template>
                 </h2>
             </div>
             <ol class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <li v-for="s in data.howItWorks" :key="s.n" class="bg-whitesmoke-100 rounded-2xl p-6">
-                    <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">Step {{ s.n }}</p>
+                    <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">{{ $t('pages.capabilities.shared.stepLabel') }} {{ s.n }}</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-3 leading-tight">{{ s.title }}</p>
                     <p class="text-b1 text-drygray-default mt-3">{{ s.body }}</p>
                 </li>
@@ -116,7 +122,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
         <section v-reveal class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10">
                 <div class="lg:col-span-5">
-                    <CommonSup title="When to use it" />
+                    <CommonSup :title="$t('pages.capabilities.shared.whenToUseEyebrow')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
                         <template v-for="(seg, i) in whenToUseSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><span class="text-primary-text">.</span></template>
                     </h2>
@@ -132,13 +138,13 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
 
         <!-- §5 Industries leaning on this -->
         <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
-            <CommonSup title="Industries leaning on this" />
+            <CommonSup :title="$t('pages.capabilities.shared.industriesEyebrow')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
                 <template v-for="(seg, i) in industriesSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><span class="text-primary-text">.</span></template>
             </h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-8">
-                <NuxtLink v-for="i in data.industries" :key="i.slug" :to="`/industries/${i.slug}`" class="bg-whitesmoke-100 card-hover hover:bg-whitesmoke-200 rounded-2xl p-5 transition-colors block group">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Industry</p>
+                <NuxtLink v-for="i in data.industries" :key="i.slug" :to="localePath(`/industries/${i.slug}`)" class="bg-whitesmoke-100 card-hover hover:bg-whitesmoke-200 rounded-2xl p-5 transition-colors block group">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ $t('pages.capabilities.shared.industryLabel') }}</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-2 group-hover:text-primary-text transition-colors leading-tight">{{ i.name }}</p>
                 </NuxtLink>
             </div>
@@ -154,8 +160,8 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
                     </h2>
                 </div>
                 <div class="lg:col-span-4 lg:text-right flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
-                    <NuxtLink :to="ctaPrimary.to"><CommonButton variant="primary" icon="base:arrow">{{ ctaPrimary.label }}</CommonButton></NuxtLink>
-                    <NuxtLink :to="ctaSecondary.to"><CommonButton variant="outline" icon="base:arrow">{{ ctaSecondary.label }}</CommonButton></NuxtLink>
+                    <NuxtLink :to="localePath(ctaPrimary.to)"><CommonButton variant="primary" icon="base:arrow">{{ ctaPrimary.label }}</CommonButton></NuxtLink>
+                    <NuxtLink :to="localePath(ctaSecondary.to)"><CommonButton variant="outline" icon="base:arrow">{{ ctaSecondary.label }}</CommonButton></NuxtLink>
                 </div>
             </div>
         </section>

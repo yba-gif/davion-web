@@ -1253,6 +1253,59 @@
                 "ctaHeadline": "Defend the science the regulator will read",
                 "ctaBody": "Briefings are scoped to your regulatory envelope, bring your data, your authorities, and the decisions you need to defend at submission and audit."
             }
+        },
+        "capabilities": {
+            "index": {
+                "meta": {
+                    "title": "AI Capabilities",
+                    "description": "The AI capabilities bundled in AlpOS, RAG, geospatial, video, audio, translation, and data acquisition, all run inside your perimeter.",
+                    "ogTitle": "Davion · Capabilities",
+                    "ogDescription": "Six AI capabilities, one sovereign platform. Bundled with AlpOS, governed end to end, run where you require."
+                },
+                "hero": {
+                    "sup": "Platform · AI Capabilities",
+                    "headline": "AI capabilities, governed at the layer above",
+                    "body": "AlpOS bundles a stack of AI capabilities that operate inside your perimeter, grounded against your ontology, audited end to end, run where you require."
+                },
+                "list": {
+                    "capabilityLabel": "Capability",
+                    "exploreLabel": "Explore",
+                    "ragName": "RAG over your ontology",
+                    "ragBody": "Retrieval-augmented generation grounded in your domain model, not the open web.",
+                    "geoName": "Geospatial analytics",
+                    "geoBody": "Map, ground, and reason over location-aware data at operational scale.",
+                    "videoName": "Video intelligence",
+                    "videoBody": "Detect, classify, and search across video corpora, inside your perimeter.",
+                    "audioName": "Audio analysis & transcription",
+                    "audioBody": "Speaker, sentiment, and semantic structure from audio at scale.",
+                    "translationName": "Machine translation",
+                    "translationBody": "60+ languages, with provenance, run inside your perimeter.",
+                    "dataName": "Data acquisition & preparation",
+                    "dataBody": "Connectors, ETL, enrichment, and governance from source to ontology."
+                },
+                "engage": {
+                    "sup": "Engage",
+                    "headline": "Bundle the capabilities you need",
+                    "body": "AlpOS lets you turn on what you need, when you need it, modular by design, sovereign by default.",
+                    "cta": "Book a demo"
+                }
+            },
+            "shared": {
+                "whatItDoesEyebrow": "What it does",
+                "howItWorksEyebrow": "How it works",
+                "whenToUseEyebrow": "When to use it",
+                "industriesEyebrow": "Industries leaning on this",
+                "stepLabel": "Step",
+                "industryLabel": "Industry",
+                "whatItDoesTitleDefault": "Four guarantees",
+                "whenToUseTitleDefault": "Patterns we see in production",
+                "industriesTitleDefault": "Where this earns its keep",
+                "ctaEyebrow": "Engage",
+                "ctaPrimaryDefault": "Book a demo",
+                "ctaSecondaryDefault": "Speak to an expert",
+                "heroPrimaryCtaDefault": "Book a demo",
+                "heroSecondaryCtaDefault": "See AlpOS"
+            }
         }
     }
 }

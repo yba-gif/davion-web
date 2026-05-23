@@ -1253,6 +1253,59 @@
                 "ctaHeadline": "Düzenleyicinin okuyacağı bilimi savunun",
                 "ctaBody": "Brifingler düzenleyici çerçevenize göre belirlenir; verinizi, yetkililerinizi ve başvuruda ve denetimde savunmanız gereken kararları getirin."
             }
+        },
+        "capabilities": {
+            "index": {
+                "meta": {
+                    "title": "Yapay Zekâ Yetenekleri",
+                    "description": "AlpOS'a paketlenmiş yapay zekâ yetenekleri: RAG, coğrafi, video, ses, çeviri ve veri edinimi; hepsi çevreniz içinde çalışır.",
+                    "ogTitle": "Davion · Yetenekler",
+                    "ogDescription": "Altı yapay zekâ yeteneği, tek egemen platform. AlpOS ile paketlenmiş, uçtan uca yönetilen, gerektiğiniz yerde çalışan."
+                },
+                "hero": {
+                    "sup": "Platform · YZ Yetenekleri",
+                    "headline": "Üst katmanda yönetilen YZ yetenekleri",
+                    "body": "AlpOS; çevreniz içinde çalışan, ontolojiniz üzerinde temellendirilmiş, uçtan uca denetlenen ve gerektiğiniz yerde çalışan bir yapay zekâ yetenek yığını sunar."
+                },
+                "list": {
+                    "capabilityLabel": "Yetenek",
+                    "exploreLabel": "Keşfet",
+                    "ragName": "Ontolojiniz üzerinde RAG",
+                    "ragBody": "Açık web değil; sizin alan modelinize temellendirilmiş geri-erişim destekli üretim.",
+                    "geoName": "Coğrafi analitik",
+                    "geoBody": "Konum-farkındalıklı veri üzerinde harita, temellendirme ve operasyonel ölçekte muhakeme.",
+                    "videoName": "Video istihbaratı",
+                    "videoBody": "Video kütüphanelerinde tespit, sınıflandırma ve arama; çevreniz içinde.",
+                    "audioName": "Ses analizi ve dökümü",
+                    "audioBody": "Ses kayıtlarından konuşmacı, duygu ve anlamsal yapı; arşiv ölçeğinde.",
+                    "translationName": "Makine çevirisi",
+                    "translationBody": "60+ dil; köken bilgisiyle, çevreniz içinde.",
+                    "dataName": "Veri edinimi ve hazırlığı",
+                    "dataBody": "Konektörler, ETL, zenginleştirme ve yönetişim; kaynaktan ontolojiye."
+                },
+                "engage": {
+                    "sup": "Görüşme",
+                    "headline": "İhtiyacınız olan yetenekleri paketleyin",
+                    "body": "AlpOS; modüler tasarımla, varsayılan olarak egemen şekilde, ihtiyacınız olanı ihtiyacınız olduğunda açmanızı sağlar.",
+                    "cta": "Demo al"
+                }
+            },
+            "shared": {
+                "whatItDoesEyebrow": "Ne yapar",
+                "howItWorksEyebrow": "Nasıl çalışır",
+                "whenToUseEyebrow": "Ne zaman kullanılır",
+                "industriesEyebrow": "Bu yeteneğe yaslanan sektörler",
+                "stepLabel": "Adım",
+                "industryLabel": "Sektör",
+                "whatItDoesTitleDefault": "Dört güvence",
+                "whenToUseTitleDefault": "Üretimde gördüğümüz örüntüler",
+                "industriesTitleDefault": "Bu yeteneğin kendini kanıtladığı yerler",
+                "ctaEyebrow": "Görüşme",
+                "ctaPrimaryDefault": "Demo al",
+                "ctaSecondaryDefault": "Bir uzmanla konuş",
+                "heroPrimaryCtaDefault": "Demo al",
+                "heroSecondaryCtaDefault": "AlpOS'u gör"
+            }
         }
     }
 }

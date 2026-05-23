@@ -1253,6 +1253,59 @@
                 "ctaHeadline": "Verteidigen Sie die Wissenschaft, die der Regulierer lesen wird",
                 "ctaBody": "Briefings werden auf Ihre regulatorische Hülle abgestimmt — bringen Sie Ihre Daten, Ihre Behörden und die Entscheidungen, die Sie bei der Einreichung und im Audit verteidigen müssen."
             }
+        },
+        "capabilities": {
+            "index": {
+                "meta": {
+                    "title": "KI-Fähigkeiten",
+                    "description": "Die KI-Fähigkeiten, gebündelt in AlpOS: RAG, Geospatial, Video, Audio, Übersetzung und Datenakquise — alle laufen innerhalb Ihres Perimeters.",
+                    "ogTitle": "Davion · Fähigkeiten",
+                    "ogDescription": "Sechs KI-Fähigkeiten, eine souveräne Plattform. Gebündelt mit AlpOS, durchgängig kontrolliert, dort ausgeführt, wo Sie es verlangen."
+                },
+                "hero": {
+                    "sup": "Plattform · KI-Fähigkeiten",
+                    "headline": "KI-Fähigkeiten, eine Ebene höher kontrolliert",
+                    "body": "AlpOS bündelt einen Stack von KI-Fähigkeiten, die innerhalb Ihres Perimeters arbeiten, gegen Ihre Ontologie geerdet sind, durchgängig auditiert werden und dort laufen, wo Sie es verlangen."
+                },
+                "list": {
+                    "capabilityLabel": "Fähigkeit",
+                    "exploreLabel": "Erkunden",
+                    "ragName": "RAG über Ihre Ontologie",
+                    "ragBody": "Retrieval-augmented Generation, geerdet in Ihrem Domänenmodell — nicht im offenen Web.",
+                    "geoName": "Geospatial-Analytik",
+                    "geoBody": "Standortbewusste Daten kartieren, erden und in operativem Maßstab analysieren.",
+                    "videoName": "Video-Intelligenz",
+                    "videoBody": "Erkennen, klassifizieren und durchsuchen in Video-Korpora — innerhalb Ihres Perimeters.",
+                    "audioName": "Audio-Analyse und Transkription",
+                    "audioBody": "Sprecher, Stimmung und semantische Struktur aus Audio — in Archivgröße.",
+                    "translationName": "Maschinelle Übersetzung",
+                    "translationBody": "60+ Sprachen mit Provenienz — innerhalb Ihres Perimeters ausgeführt.",
+                    "dataName": "Datenakquise und -aufbereitung",
+                    "dataBody": "Konnektoren, ETL, Anreicherung und Governance — von der Quelle bis zur Ontologie."
+                },
+                "engage": {
+                    "sup": "Kontakt",
+                    "headline": "Die Fähigkeiten bündeln, die Sie brauchen",
+                    "body": "AlpOS lässt Sie einschalten, was Sie brauchen — wann Sie es brauchen. Modular per Design, souverän per Default.",
+                    "cta": "Demo buchen"
+                }
+            },
+            "shared": {
+                "whatItDoesEyebrow": "Was es macht",
+                "howItWorksEyebrow": "Wie es funktioniert",
+                "whenToUseEyebrow": "Wann es einzusetzen ist",
+                "industriesEyebrow": "Branchen, die darauf bauen",
+                "stepLabel": "Schritt",
+                "industryLabel": "Branche",
+                "whatItDoesTitleDefault": "Vier Garantien",
+                "whenToUseTitleDefault": "Muster, die wir in Produktion sehen",
+                "industriesTitleDefault": "Wo dies seinen Wert beweist",
+                "ctaEyebrow": "Kontakt",
+                "ctaPrimaryDefault": "Demo buchen",
+                "ctaSecondaryDefault": "Mit Expertin sprechen",
+                "heroPrimaryCtaDefault": "Demo buchen",
+                "heroSecondaryCtaDefault": "AlpOS ansehen"
+            }
         }
     }
 }
