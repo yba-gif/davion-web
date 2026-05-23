@@ -31,9 +31,11 @@ const svg = `
     <text x="64" y="33" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#212121">Davion</text>
   </g>
 
-  <!-- Headline -->
-  <text x="80" y="280" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="800" fill="#212121">Sovereign AI for institutions</text>
-  <text x="80" y="360" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="800" fill="#212121">whose data can't leave<tspan fill="#2A8B3C">.</tspan></text>
+  <!-- Headline. Update in lock-step with pages.hero.headline (en.json) and the
+       nuxt.config.ts og:title fallback. Re-run this script to regenerate
+       og-cover.png after any headline change. -->
+  <text x="80" y="280" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="800" fill="#212121">Decision infrastructure</text>
+  <text x="80" y="360" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="800" fill="#212121">for data that can't leave<tspan fill="#2A8B3C">.</tspan></text>
 
   <!-- Subhead -->
   <text x="80" y="450" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="500" fill="#212121" opacity="0.75">The platform banks, ministries, and energy operators</text>
