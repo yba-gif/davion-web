@@ -674,6 +674,202 @@
                     "served": "Sektörlerimiz",
                     "engage": "Görüşme"
                 }
+            },
+            "cyber": {
+                "meta": {
+                    "title": "Siber Güvenlik",
+                    "description": "Aksamaması gereken ortamlar için savunma istihbaratı. Örüntü, anomali ve graf analiziyle tespit; kısıtlı ve air-gapped ortamlar için tasarımdan güvenli mimari.",
+                    "ogTitle": "Davion · Siber Güvenlik",
+                    "ogDescription": "Çevre içinde örüntü, anomali ve graf analizi. Telemetrinin dışarı çıkamayacağı ortamlar için tasarlanmıştır."
+                },
+                "hero": {
+                    "sup": "Çözümler · Siber Güvenlik",
+                    "headline": "Aksamaması gereken ortamlar için savunma istihbaratı.",
+                    "body": "Siber, artık kurumun belirleyici riskidir. Davion; verisini hiçbir yere gönderemeyen, air-gapped olanlar dahil çevrelerin içinde tespit, yanıt ve yönetişimi konuşlandırır.",
+                    "cta": "Demo al"
+                },
+                "problem": {
+                    "sup": "Sorun",
+                    "headline": "Çevrenizdeki bir ihlal, egemenliğinizin de ihlalidir.",
+                    "body": "Standart SaaS-SOC mimarileri telemetriyi, kararları ve analist davranışını kurumun dışına taşır. Düzenlemeye tabi ve hassas operatörler için bu yanlış yöndür. Tespit, verinin yaşadığı yerde yaşamalıdır."
+                },
+                "detection": {
+                    "sup": "Tespit",
+                    "headline": "Üç yöntem. Tek analitik yüzey.",
+                    "body": "Davion tespiti AlpOS üzerinde çalışır. Örüntü, anomali ve graf analizi aynı ontolojiyi ve aynı denetim izini paylaşır.",
+                    "methodLabel": "Yöntem",
+                    "patternName": "Örüntü",
+                    "patternBody": "Kullanıcı, sistem ve trafik üzerinde davranışsal başlangıçlar. Bilinenden sapmalar hızla yüzeye çıkar.",
+                    "anomalyName": "Anomali",
+                    "anomalyBody": "İstatistiksel ve makine öğrenmesi yöntemleri, kural-temelli tespitin yakalayamadığını yakalar; ihlalden önce gelen zayıf sinyaller dahil.",
+                    "graphName": "Graf",
+                    "graphBody": "Varlıklar, oturumlar ve olaylar arasında ilişki analizi. Yanal hareket ve düşman taktikleri görünür kılınır."
+                },
+                "architecture": {
+                    "sup": "Mimari",
+                    "headline": "Tasarımdan güvenli. Standartlarınızla uyumlu.",
+                    "r1g": "Segmentasyon",
+                    "r1i": "Bölge-başına konuşlanma ve denetimli bölge-arası alışveriş. Saldırı tasarımdan sınırlanır.",
+                    "r2g": "Denetimli alışveriş",
+                    "r2i": "Çevreler arasında imzalı ve denetimli veri akışı. Gizli kanal yok.",
+                    "r3g": "İzlenebilirlik",
+                    "r3i": "Her eylem, her operatör, her sinyal; uçtan uca kayıtlı ve incelenebilir.",
+                    "r4g": "Standart uyumu",
+                    "r4i": "ISO 27001, NIS2 sınıfı ve sektöre özel sertifikalara saygılı; sonradan eklenmemiş."
+                },
+                "constrained": {
+                    "sup": "Kısıtlı ortamlar",
+                    "headline": "Air-gapped ve kıt kaynaklılar için tasarlandı.",
+                    "body": "Davion; internet erişimi olmayan, koltuk-başına lisanssız ve üçüncü-taraf telemetri olmayan ortamlarda konuşlanır. Platform operasyonel olarak mümkün olanın sınırında çalışır.",
+                    "modesLabel": "Biçimler",
+                    "m1": "Yerinde",
+                    "m2": "Air-gapped",
+                    "m3": "Taktik kenar",
+                    "m4": "Egemen bulut"
+                },
+                "outcomes": {
+                    "sup": "Sonuçlar",
+                    "headline": "Neyle savunduğunuz.",
+                    "detectionLabel": "Tespit",
+                    "detectionBody": "Düşman taktikleri üçüncü-taraf akıştan değil, çevreniz içinde yüzeye taşınır.",
+                    "responseLabel": "Yanıt",
+                    "responseBody": "Sinyalden operatör eylemine dakikalar içinde. Soruşturma döngüsü mimarinin kendisidir.",
+                    "defenseLabel": "Savunulabilirlik",
+                    "defenseBody": "Her eylem, her tespit, her analist tuş vuruşu; düzenleyiciler ve sonradan-eylem için incelenebilir."
+                },
+                "engage": {
+                    "sup": "Görüşme",
+                    "headline": "Verinin yaşadığı yerde savunun.",
+                    "body": "Değerlendirmeler; gerçekten karşı savunmak zorunda olduğunuz tehditlerle ve gerçekten sahip olduğunuz operasyonel ortamda başlar.",
+                    "cta": "Demo al"
+                }
+            },
+            "osint": {
+                "meta": {
+                    "title": "OSINT",
+                    "description": "Egemen açık-kaynak istihbarat; çok kaynaklı toplama, korelasyon ve sentez; anonim, güvenli ve uyumlu.",
+                    "ogTitle": "Davion · OSINT",
+                    "ogDescription": "Köken bilgisiyle çok dilli açık-kaynak istihbarat. Toplama, korelasyon ve brifing üretimi çevreniz içinde."
+                },
+                "hero": {
+                    "sup": "Çözümler · OSINT",
+                    "headline": "Egemen açık-kaynak istihbarat.",
+                    "body": "Kamu sektörü ve kurumsal risk için çok kaynaklı toplama, korelasyon ve sentez; anonim, güvenli ve uyumlu. Soruşturma çevreniz içinde yürür.",
+                    "cta": "Demo al"
+                },
+                "problem": {
+                    "sup": "Sorun",
+                    "headline": "Her zamankinden fazla kamu bilgisi, her zamankinden az sinyal.",
+                    "body": "Araştırmacılar; okuyabileceğinden fazla kaynağa, izleyebileceğinden fazla panele ve güvenebileceğinden fazla yapay zekâya erişir. Asıl iş toplama değildir. Korelasyon, sentez ve savunulabilir sonuçtur."
+                },
+                "sources": {
+                    "sup": "Kaynaklar",
+                    "headline": "Her kaynak. Çevreniz içinde.",
+                    "body": "Davion; sorguyu, analist davranışını veya sonucu bir tedarikçiye göndermeden; yüzey, derin, karanlık ve kendi külliyatınız arasında bağlantı kurar.",
+                    "sourceLabel": "Kaynak",
+                    "s1Name": "Açık web",
+                    "s1Body": "İndekslenmiş siteler, kamu kayıtları, resmi açıklamalar, sektörel veritabanları.",
+                    "s2Name": "Derin + karanlık",
+                    "s2Body": "Standart aramayla erişilemeyen forumlar, pazaryerleri ve kanallar.",
+                    "s3Name": "Sinyaller",
+                    "s3Body": "Kamu telemetrisi, sızıntılar, depolar, görüntü verileri, sosyal akışlar, coğrafi veriler.",
+                    "s4Name": "Dahili",
+                    "s4Body": "Açık kaynaklarla yan yana, yönetimli ve ontolojiyle hizalı kendi külliyatınız."
+                },
+                "engine": {
+                    "sup": "Motor",
+                    "headline": "Toplamadan sonuca, uçtan uca izlenebilir.",
+                    "r1g": "Korelasyon",
+                    "r1i": "Güven puanlamasıyla kaynaklar-arası eşleştirme. Kimlik eksen değişimi, takma ad çözümü, zaman çizgisi yeniden inşası.",
+                    "r2g": "Bilgi grafları",
+                    "r2i": "Varlıklar, ilişkiler ve olaylar bir arama sonuçları yığını değil, soruşturulabilir bir grafta birikir.",
+                    "r3g": "Yapay zekâ yardımcısı",
+                    "r3i": "Araştırma, analiz, korelasyon, sentez. Her sonuç kaynağını alıntılar; köken bilgisi olmadan hiçbir şey iddia edilmez.",
+                    "r4g": "Uyum",
+                    "r4i": "Toplama; yerel hukuka ve operatör politikasına saygılıdır. Her sorgu ve her eylem kayda alınır."
+                },
+                "useCases": {
+                    "sup": "Kullanım alanları",
+                    "headline": "İki kitle. Aynı platform.",
+                    "publicAudience": "Kamu sektörü",
+                    "publicE1": "Soruşturmalar",
+                    "publicE2": "Dijital istihbarat",
+                    "publicE3": "Dezenformasyonla mücadele",
+                    "publicE4": "Yaptırım uygulama",
+                    "enterpriseAudience": "Kurumsal",
+                    "enterpriseE1": "Dolandırıcılık · AML / CFT",
+                    "enterpriseE2": "Rekabet istihbaratı",
+                    "enterpriseE3": "İtibar ve marka riski",
+                    "enterpriseE4": "Tedarik zinciri açığı"
+                },
+                "engage": {
+                    "sup": "Görüşme",
+                    "headline": "Veriyi dışarı sızdırmadan soruşturun.",
+                    "body": "Demolar sizin senaryolarınıza göre çalıştırılır. Verinize ihtiyacımız yok; en zorlu açık sorunuza ihtiyacımız var.",
+                    "cta": "Demo al"
+                }
+            },
+            "dt": {
+                "meta": {
+                    "title": "Dijital Dönüşüm",
+                    "description": "Egemenliği bozmadan modernizasyon; silolanmış veriden tek bir yönetimli doğruluk kaynağına; POC'tan endüstriyel konuşlanmaya kadar evreli.",
+                    "ogTitle": "Davion · Dijital Dönüşüm",
+                    "ogDescription": "Kurumu kaybetmeden veri katmanını modernleştirin. Evreli POC → endüstriyel konuşlanma, uçtan uca egemenlik korunarak."
+                },
+                "hero": {
+                    "sup": "Çözümler · Dijital Dönüşüm",
+                    "headline": "Silolanmış veriden tek bir yönetimli doğruluk kaynağına.",
+                    "body": "Yönetişimi hıza, parayı ikisine de feda edemeyen kurumlar için modernizasyon. AlpOS omurga olur; kavram kanıtından endüstriyel konuşlanmaya evreli olarak.",
+                    "cta": "Demo al"
+                },
+                "problem": {
+                    "sup": "Sorun",
+                    "headline": "Eski yığınlar yönetilmek üzere tasarlanmadı.",
+                    "body": "On yıllarca süren nokta araçlar, parçalı şemalar ve ertelenen göçler; kurumları güvenemedikleri veriler, savunamadıkları modeller ve geç gelen kararlarla baş başa bıraktı. Modernizasyon kozmetik bir uygulama değildir. Egemen bir uygulamadır."
+                },
+                "phases": {
+                    "sup": "Evreli yolculuk",
+                    "headline": "POC'tan endüstriyel konuşlanmaya; kurumu kaybetmeden.",
+                    "phaseLabel": "Evre",
+                    "p1Name": "Keşif",
+                    "p1Body": "Veriyi, iş akışlarını ve operasyonel gerçekliği denetleyin. İlk yönetilecek en yüksek değerli kararı belirleyin.",
+                    "p2Name": "POC",
+                    "p2Body": "Kavram kanıtı veri kümesi üzerinde AlpOS'u ayağa kaldırın. Veri-alımdan-eyleme omurgasını uçtan uca, egemen çevre içinde gösterin.",
+                    "p3Name": "Endüstrileştirme",
+                    "p3Body": "POC'tan operasyonel konuşlanmaya genişleyin. Kalan kaynakları bağlayın, ontolojiyi resmileştirin, kararları kayıt iş akışlarına gömün.",
+                    "p4Name": "Etkinleştirme",
+                    "p4Body": "Operatörleri eğitin, sahipliği devredin ve platformu süregelen değişim için araçlandırın. İş yüklenici olmadan devam eder."
+                },
+                "underneath": {
+                    "sup": "Altında",
+                    "headline": "İşi taşıyan AlpOS katmanları.",
+                    "body": "Dijital Dönüşüm görüşmeleri tüm veri-alımdan-eyleme omurgasına dayanır; ancak işin ağırlığı bu dördüne düşer.",
+                    "l1Name": "Veri alımı",
+                    "l1Body": "Parçalı veriyi tek bir yönetimli boruhattına getirin; köken kaynaktan izlenir.",
+                    "l2Name": "Ontoloji",
+                    "l2Body": "Kurum çapında ortak söz dağarcığını kurun; analistler, mühendisler ve operatörler aynı modele karşı muhakeme eder.",
+                    "l3Name": "Karar",
+                    "l3Body": "Rapor-ve-toplantı döngülerinin yerine, kaynaklarını alıntılayan yapay zekâyla operatör-seviyesinde karar üretimini koyun.",
+                    "l4Name": "Eylem",
+                    "l4Body": "Kararları, kurumun zaten kullandığı kayıt sistemlerine geri yazın.",
+                    "exploreCta": "AlpOS'u keşfet"
+                },
+                "outcomes": {
+                    "sup": "Sonuçlar",
+                    "headline": "Kurum ne kazanır.",
+                    "speedLabel": "İçgörüye süre",
+                    "speedBody": "Üç aylık inceleme değil; günler içinde karar. Platform, eski yığınların yarattığı hız boşluğunu kapatır.",
+                    "govLabel": "Yönetişim",
+                    "govBody": "Her karar izlenebilir. Modernizasyon, denetim pahasına değil, denetimle birlikte gelir.",
+                    "ownerLabel": "Operatör sahipliği",
+                    "ownerBody": "Konuşlanmadan sonra platforma kurum sahip olur; ebedi bir tedarikçi ilişkisi değil."
+                },
+                "engage": {
+                    "sup": "Görüşme",
+                    "headline": "Yönetişimi hıza takas etmeden modernleştirin.",
+                    "body": "Brifingler; kurumunuzdaki bugün en yüksek değerli kararla başlar ve geriye doğru çalışır.",
+                    "cta": "Demo al"
+                }
             }
         }
     }

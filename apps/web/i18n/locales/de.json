@@ -674,6 +674,202 @@
                     "served": "Branchen",
                     "engage": "Kontakt"
                 }
+            },
+            "cyber": {
+                "meta": {
+                    "title": "Cybersicherheit",
+                    "description": "Defensive Intelligenz für Umgebungen, die nicht ausfallen dürfen. Erkennung über Muster-, Anomalie- und Graphanalyse; Secure-by-Design-Architektur für eingeschränkte und air-gapped Umgebungen.",
+                    "ogTitle": "Davion · Cybersicherheit",
+                    "ogDescription": "Muster-, Anomalie- und Graphanalyse innerhalb des Perimeters. Entworfen für Umgebungen, in denen Telemetrie nicht hinaus darf."
+                },
+                "hero": {
+                    "sup": "Lösungen · Cybersicherheit",
+                    "headline": "Defensive Intelligenz für Umgebungen, die nicht ausfallen dürfen.",
+                    "body": "Cyber ist heute das prägende institutionelle Risiko. Davion setzt Erkennung, Reaktion und Governance innerhalb der Perimeter ein, die ihre Daten nirgendwohin senden können — air-gapped eingeschlossen.",
+                    "cta": "Demo buchen"
+                },
+                "problem": {
+                    "sup": "Das Problem",
+                    "headline": "Ein Einbruch innerhalb Ihres Perimeters ist auch ein Einbruch Ihrer Souveränität.",
+                    "body": "Standard-SaaS-SOC-Architekturen verlagern Telemetrie, Entscheidungen und Analystenverhalten aus der Institution heraus. Für regulierte und sensitive Operatoren ist das die falsche Richtung. Erkennung muss dort leben, wo die Daten leben."
+                },
+                "detection": {
+                    "sup": "Erkennung",
+                    "headline": "Drei Methoden. Eine analytische Oberfläche.",
+                    "body": "Davion-Erkennung läuft auf AlpOS. Muster-, Anomalie- und Graphanalyse teilen sich dieselbe Ontologie — und denselben Audit-Trail.",
+                    "methodLabel": "Methode",
+                    "patternName": "Muster",
+                    "patternBody": "Verhaltens-Baselines über Nutzer, Systeme und Datenverkehr. Abweichungen vom Bekannten kommen schnell ans Licht.",
+                    "anomalyName": "Anomalie",
+                    "anomalyBody": "Statistische und ML-Methoden fangen, was regelbasierte Erkennung nicht erfasst — inklusive schwacher Signale, die einem Einbruch vorausgehen.",
+                    "graphName": "Graph",
+                    "graphBody": "Beziehungsanalyse über Entitäten, Sessions und Ereignisse. Laterale Bewegung und gegnerisches Handwerk werden sichtbar."
+                },
+                "architecture": {
+                    "sup": "Architektur",
+                    "headline": "Per Design sicher. Auf Ihre Standards ausgerichtet.",
+                    "r1g": "Segmentierung",
+                    "r1i": "Zonenweise Einsätze mit kontrolliertem Inter-Zonen-Austausch. Kompromittierung per Design eingegrenzt.",
+                    "r2g": "Kontrollierter Austausch",
+                    "r2i": "Signierter, auditierter Datenfluss zwischen Perimetern. Keine verdeckten Kanäle.",
+                    "r3g": "Nachvollziehbarkeit",
+                    "r3i": "Jede Aktion, jeder Operator, jedes Signal — durchgängig protokolliert und überprüfbar.",
+                    "r4g": "Standard-Ausrichtung",
+                    "r4i": "ISO 27001, NIS2-Klasse und branchenspezifische Zertifizierungen respektiert — nicht nachgerüstet."
+                },
+                "constrained": {
+                    "sup": "Eingeschränkte Umgebungen",
+                    "headline": "Entworfen für air-gapped und unter-ressourcierte Umgebungen.",
+                    "body": "Davion läuft in Umgebungen ohne Internet-Ausgang, ohne Per-Seat-Lizenzierung und ohne Drittanbieter-Telemetrie. Die Plattform arbeitet am Rand dessen, was operativ möglich ist.",
+                    "modesLabel": "Modi",
+                    "m1": "On-Premise",
+                    "m2": "Air-gapped",
+                    "m3": "Taktischer Edge",
+                    "m4": "Souveräne Cloud"
+                },
+                "outcomes": {
+                    "sup": "Ergebnisse",
+                    "headline": "Womit Sie verteidigen.",
+                    "detectionLabel": "Erkennung",
+                    "detectionBody": "Gegnerisches Handwerk wird innerhalb Ihres Perimeters sichtbar — nicht aus einem Drittanbieter-Feed.",
+                    "responseLabel": "Reaktion",
+                    "responseBody": "Vom Signal zur Operator-Aktion in Minuten. Der Untersuchungszyklus ist die Architektur.",
+                    "defenseLabel": "Verteidigbarkeit",
+                    "defenseBody": "Jede Aktion, jede Erkennung, jeder Analysten-Tastendruck — überprüfbar für Regulierer und die After-Action."
+                },
+                "engage": {
+                    "sup": "Kontakt",
+                    "headline": "Verteidigen Sie dort, wo die Daten leben.",
+                    "body": "Assessments starten mit den Bedrohungen, gegen die Sie tatsächlich verteidigen müssen — in der operativen Umgebung, die Sie tatsächlich haben.",
+                    "cta": "Demo buchen"
+                }
+            },
+            "osint": {
+                "meta": {
+                    "title": "OSINT",
+                    "description": "Souveräne Open-Source-Intelligenz: Multi-Quellen-Erfassung, Korrelation und Synthese — anonym, sicher und compliant.",
+                    "ogTitle": "Davion · OSINT",
+                    "ogDescription": "Mehrsprachige Open-Source-Intelligenz mit Provenienz. Erfassung, Korrelation und Briefing-Erstellung innerhalb Ihres Perimeters."
+                },
+                "hero": {
+                    "sup": "Lösungen · OSINT",
+                    "headline": "Souveräne Open-Source-Intelligenz.",
+                    "body": "Multi-Quellen-Erfassung, Korrelation und Synthese — anonym, sicher und compliant, für den öffentlichen Sektor und Unternehmensrisiko. Die Untersuchung läuft innerhalb Ihres Perimeters.",
+                    "cta": "Demo buchen"
+                },
+                "problem": {
+                    "sup": "Das Problem",
+                    "headline": "Mehr öffentliche Informationen als je zuvor — und weniger Signal als je zuvor.",
+                    "body": "Ermittler haben Zugang zu mehr Quellen, als sie lesen können, mehr Dashboards, als sie überwachen können, und mehr KI, als sie vertrauen können. Die Arbeit ist nicht Erfassung. Sie ist Korrelation, Synthese und verteidigbarer Schluss."
+                },
+                "sources": {
+                    "sup": "Quellen",
+                    "headline": "Jede Quelle. Innerhalb Ihres Perimeters.",
+                    "body": "Davion verbindet die Oberfläche, das Deep, das Dark und Ihr eigenes Korpus — ohne die Abfrage, das Analystenverhalten oder das Ergebnis an einen Anbieter zu senden.",
+                    "sourceLabel": "Quelle",
+                    "s1Name": "Offenes Web",
+                    "s1Body": "Indexierte Seiten, öffentliche Register, offizielle Erklärungen, sektorale Datenbanken.",
+                    "s2Name": "Deep + Dark",
+                    "s2Body": "Foren, Marktplätze und Kanäle, die mit Standardsuche nicht erreichbar sind.",
+                    "s3Name": "Signale",
+                    "s3Body": "Öffentliche Telemetrie, Leaks, Repos, Bilddaten, Social-Streams, Geospatial.",
+                    "s4Name": "Intern",
+                    "s4Body": "Ihr eigenes Korpus — kontrolliert und ontologisch ausgerichtet, neben offenen Quellen."
+                },
+                "engine": {
+                    "sup": "Engine",
+                    "headline": "Von der Erfassung zum Schluss — durchgängig nachvollziehbar.",
+                    "r1g": "Korrelation",
+                    "r1i": "Quellen-übergreifender Abgleich mit Konfidenz-Scoring. Identitätspivots, Alias-Auflösung, Zeitstrahl-Rekonstruktion.",
+                    "r2g": "Wissensgraphen",
+                    "r2i": "Entitäten, Beziehungen und Ereignisse sammeln sich zu einem untersuchbaren Graphen — kein Haufen Suchergebnisse.",
+                    "r3g": "KI-Copilot",
+                    "r3i": "Recherche, Analyse, Korrelation, Synthese. Jede Schlussfolgerung zitiert ihre Quellen; nichts wird ohne Provenienz behauptet.",
+                    "r4g": "Compliance",
+                    "r4i": "Die Erfassung respektiert lokales Recht und Operator-Richtlinien. Jede Abfrage und jede Aktion wird protokolliert."
+                },
+                "useCases": {
+                    "sup": "Anwendungsfälle",
+                    "headline": "Zwei Zielgruppen. Dieselbe Plattform.",
+                    "publicAudience": "Öffentlicher Sektor",
+                    "publicE1": "Ermittlungen",
+                    "publicE2": "Digitale Intelligenz",
+                    "publicE3": "Anti-Desinformation",
+                    "publicE4": "Sanktionsdurchsetzung",
+                    "enterpriseAudience": "Unternehmen",
+                    "enterpriseE1": "Betrug · AML / CFT",
+                    "enterpriseE2": "Wettbewerbsintelligenz",
+                    "enterpriseE3": "Reputations- und Markenrisiko",
+                    "enterpriseE4": "Lieferkettenrisiko"
+                },
+                "engage": {
+                    "sup": "Kontakt",
+                    "headline": "Ermitteln, ohne zu exfiltrieren.",
+                    "body": "Demos werden gegen Ihre Szenarien gefahren. Wir brauchen Ihre Daten nicht — wir brauchen Ihre schwierigste offene Frage.",
+                    "cta": "Demo buchen"
+                }
+            },
+            "dt": {
+                "meta": {
+                    "title": "Digitale Transformation",
+                    "description": "Modernisierung mit intakter Souveränität — von Datensilos zu einer einzigen kontrollierten Quelle der Wahrheit, stufenweise vom POC bis zum industriellen Einsatz.",
+                    "ogTitle": "Davion · Digitale Transformation",
+                    "ogDescription": "Modernisieren Sie die Datenebene, ohne die Institution zu verlieren. Stufenweise POC → industrieller Einsatz, durchgängige Souveränität."
+                },
+                "hero": {
+                    "sup": "Lösungen · Digitale Transformation",
+                    "headline": "Von Datensilos zu einer einzigen kontrollierten Quelle der Wahrheit.",
+                    "body": "Modernisierung für Institutionen, die Governance nicht gegen Geschwindigkeit eintauschen können — und sich nicht leisten können, weiter für beides zu zahlen. AlpOS wird das Rückgrat — stufenweise vom Proof-of-Concept bis zum industriellen Einsatz.",
+                    "cta": "Demo buchen"
+                },
+                "problem": {
+                    "sup": "Das Problem",
+                    "headline": "Legacy-Stacks wurden nicht für Governance entworfen.",
+                    "body": "Jahrzehnte aus Punktwerkzeugen, fragmentierten Schemata und aufgeschobenen Migrationen haben Institutionen mit Daten zurückgelassen, denen sie nicht vertrauen, mit Modellen, die sie nicht verteidigen, und mit Entscheidungen, die zu spät kommen. Modernisierung ist keine kosmetische Übung. Sie ist eine souveräne."
+                },
+                "phases": {
+                    "sup": "Stufenweise Reise",
+                    "headline": "Vom POC bis zum industriellen Einsatz — ohne die Institution zu verlieren.",
+                    "phaseLabel": "Phase",
+                    "p1Name": "Entdecken",
+                    "p1Body": "Daten, Workflows und operative Realität auditieren. Die einzelne Entscheidung mit dem höchsten Wert identifizieren, die zuerst kontrolliert werden soll.",
+                    "p2Name": "POC",
+                    "p2Body": "AlpOS gegen den Proof-of-Concept-Datensatz aufsetzen. Das Erfassung-zu-Aktion-Rückgrat durchgängig demonstrieren — innerhalb des souveränen Perimeters.",
+                    "p3Name": "Industrialisieren",
+                    "p3Body": "Vom POC zum operativen Einsatz erweitern. Verbleibende Quellen anbinden, die Ontologie formalisieren, Entscheidungen in Systems-of-Record-Workflows einbetten.",
+                    "p4Name": "Befähigen",
+                    "p4Body": "Operatoren ausbilden, Eigentum übergeben und die Plattform für laufende Veränderung instrumentieren. Die Arbeit geht weiter — ohne den Auftragnehmer."
+                },
+                "underneath": {
+                    "sup": "Darunter",
+                    "headline": "Die AlpOS-Ebenen, die die Arbeit tragen.",
+                    "body": "Engagements für Digitale Transformation stützen sich auf das gesamte Erfassung-zu-Aktion-Rückgrat — aber das Gewicht der Arbeit fällt auf diese vier.",
+                    "l1Name": "Erfassung",
+                    "l1Body": "Fragmentierte Daten in eine einzige kontrollierte Pipeline bringen; Lineage von der Quelle verfolgt.",
+                    "l2Name": "Ontologie",
+                    "l2Body": "Das gemeinsame Vokabular über die Institution etablieren — Analysten, Ingenieure und Operatoren argumentieren gegen dasselbe Modell.",
+                    "l3Name": "Entscheidung",
+                    "l3Body": "Report-und-Meeting-Zyklen durch Operator-grade Entscheidungsfindung ersetzen — mit KI, die ihre Quellen zitiert.",
+                    "l4Name": "Aktion",
+                    "l4Body": "Entscheidungen zurück in die Systems of Record schreiben, die die Institution bereits betreibt.",
+                    "exploreCta": "AlpOS erkunden"
+                },
+                "outcomes": {
+                    "sup": "Ergebnisse",
+                    "headline": "Was die Institution bekommt.",
+                    "speedLabel": "Time-to-Insight",
+                    "speedBody": "Entscheidungen in Tagen — nicht Quartalsreviews. Die Plattform absorbiert die Geschwindigkeitslücke, die Legacy-Stacks erzeugen.",
+                    "govLabel": "Governance",
+                    "govBody": "Jede Entscheidung ist nachvollziehbar. Modernisierung kommt mit Audit — nicht auf dessen Kosten.",
+                    "ownerLabel": "Operator-Eigentum",
+                    "ownerBody": "Die Institution besitzt die Plattform nach dem Einsatz — keine Anbieterbeziehung in Perpetuität."
+                },
+                "engage": {
+                    "sup": "Kontakt",
+                    "headline": "Modernisieren, ohne Governance gegen Geschwindigkeit einzutauschen.",
+                    "body": "Briefings beginnen mit der Entscheidung von höchstem Wert in Ihrer Institution heute — und arbeiten von dort rückwärts.",
+                    "cta": "Demo buchen"
+                }
             }
         }
     }
