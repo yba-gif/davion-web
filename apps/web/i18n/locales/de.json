@@ -410,6 +410,54 @@
                 "headline": "Erreichen Sie das Pressereferat",
                 "body": "Für Interviews, Sperrfristen, Faktenchecks und Analystenbriefings."
             }
+        },
+        "solutions": {
+            "index": {
+                "meta": {
+                    "title": "Lösungen",
+                    "description": "Davion-Lösungen: AlpOS, Digitale Transformation, Cybersicherheit, OSINT — aufgebaut auf einer souveränen Plattform.",
+                    "ogTitle": "Davion · Lösungen",
+                    "ogDescription": "AlpOS ist die Konstante. Cybersicherheit, Digitale Transformation und OSINT sind ihre Anwendungen."
+                },
+                "hero": {
+                    "sup": "Lösungen",
+                    "headline": "Vier Lösungen. Eine Plattform darunter.",
+                    "body": "AlpOS ist das Betriebssystem. Digitale Transformation, Cybersicherheit und OSINT sind ihre Anwendungen. Dieselbe Erfassung-zu-Aktion-Achse, dieselben Souveränitätsgarantien, derselbe Audit-Trail."
+                },
+                "stack": {
+                    "sup": "Stack",
+                    "solutionLabel": "Lösung",
+                    "platformLabel": "Plattform",
+                    "body": "Erfassung · Ontologie · Analyse · Entscheidung · Aktion — innerhalb eines souveränen Perimeters."
+                },
+                "items": {
+                    "explore": "Erkunden",
+                    "alposLabel": "Plattform · Flaggschiff",
+                    "alposBody": "Das souveräne Betriebssystem unter jeder Davion-Lösung. Erfassung, Ontologie, Analytik, KI, Entscheidung, Aktion.",
+                    "solutionLabel": "Lösung",
+                    "digitalBody": "Von Datensilos zu einer einzigen, kontrollierten Quelle der Wahrheit — stufenweise vom POC bis zum industriellen Einsatz.",
+                    "cyberBody": "Defensive Intelligenz für Umgebungen, die nicht ausfallen dürfen. Erkennung über Muster-, Anomalie- und Graphanalyse.",
+                    "osintBody": "Souveräne Open-Source-Intelligenz: Multi-Quellen-Erfassung, Korrelation, Synthese — anonym und compliant."
+                },
+                "deployment": {
+                    "sup": "Einsatz",
+                    "headline": "Jede Lösung. Jeder Einsatzmodus.",
+                    "body": "On-Premise, air-gapped, souveräne Cloud oder Private Cloud. Sie wählen das Einsatzmodell; die Souveränitätsgarantien ändern sich nicht.",
+                    "cta": "Vertrauen und Souveränität"
+                },
+                "industries": {
+                    "sup": "Branchen",
+                    "headline": "Käufer identifizieren sich über die Mission, nicht das Feature.",
+                    "body": "Davion ist im Einsatz in Verteidigung, Nachrichtendiensten, kritischer Infrastruktur, Verwaltung, Finanzdienstleistungen und Energie — überall dort, wo Entscheidungen schnell und belastbar zugleich sein müssen.",
+                    "cta": "Branchen"
+                },
+                "engage": {
+                    "sup": "Kontakt",
+                    "headline": "Mit AlpOS beginnen. Den Rest maßschneidern.",
+                    "body": "Die meisten Engagements beginnen mit einem auf Ihre Umgebung zugeschnittenen AlpOS-Briefing und erweitern sich um die Lösungsebenen, sobald sich die Plattform bewährt hat.",
+                    "cta": "AlpOS erkunden"
+                }
+            }
         }
     }
 }

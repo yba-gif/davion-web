@@ -410,6 +410,54 @@
                 "headline": "Reach the press desk",
                 "body": "For interviews, embargoes, fact-checks, and analyst briefings."
             }
+        },
+        "solutions": {
+            "index": {
+                "meta": {
+                    "title": "Solutions",
+                    "description": "Davion solutions: AlpOS, Digital Transformation, Cybersecurity, OSINT, built on one sovereign platform.",
+                    "ogTitle": "Davion · Solutions",
+                    "ogDescription": "AlpOS is the constant. Cybersecurity, Digital Transformation, and OSINT are how it is applied."
+                },
+                "hero": {
+                    "sup": "Solutions",
+                    "headline": "Four solutions. One platform underneath.",
+                    "body": "AlpOS is the operating system. Digital Transformation, Cybersecurity, and OSINT are how it is applied. Same ingest-to-act spine, same sovereignty guarantees, same audit trail."
+                },
+                "stack": {
+                    "sup": "Stack",
+                    "solutionLabel": "Solution",
+                    "platformLabel": "Platform",
+                    "body": "Ingest · Ontology · Analyze · Decide · Act, inside a sovereign perimeter."
+                },
+                "items": {
+                    "explore": "Explore",
+                    "alposLabel": "Platform · Flagship",
+                    "alposBody": "The sovereign operating system underneath every Davion solution. Ingest, ontology, analytics, AI, decisioning, action.",
+                    "solutionLabel": "Solution",
+                    "digitalBody": "From siloed data to a single governed source of truth, phased from POC to industrial deployment.",
+                    "cyberBody": "Defensive intelligence for environments that cannot fail. Detection through pattern, anomaly, and graph analysis.",
+                    "osintBody": "Sovereign open-source intelligence, multi-source collection, correlation, and synthesis; anonymous and compliant."
+                },
+                "deployment": {
+                    "sup": "Deployment",
+                    "headline": "Every solution. Every deployment mode.",
+                    "body": "On-premise, air-gapped, sovereign cloud, or private cloud. The deployment model is yours to choose; the sovereignty guarantees do not change.",
+                    "cta": "Trust & Sovereignty"
+                },
+                "industries": {
+                    "sup": "Industries",
+                    "headline": "Buyers identify by mission, not feature.",
+                    "body": "Davion is deployed in defense, intelligence, critical infrastructure, government, financial services, and energy, wherever decisions must be both fast and defensible.",
+                    "cta": "Industries"
+                },
+                "engage": {
+                    "sup": "Engage",
+                    "headline": "Start with AlpOS. Tailor the rest.",
+                    "body": "Most engagements begin with an AlpOS briefing tailored to your environment, then expand into the solution layers as the platform proves itself.",
+                    "cta": "Explore AlpOS"
+                }
+            }
         }
     }
 }

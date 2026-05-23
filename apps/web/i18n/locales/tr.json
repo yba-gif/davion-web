@@ -410,6 +410,54 @@
                 "headline": "Basın masasına ulaşın",
                 "body": "Röportajlar, ambargolar, gerçek kontrolleri ve analist brifingleri için."
             }
+        },
+        "solutions": {
+            "index": {
+                "meta": {
+                    "title": "Çözümler",
+                    "description": "Davion çözümleri: AlpOS, Dijital Dönüşüm, Siber Güvenlik, OSINT; tek bir egemen platform üzerinde.",
+                    "ogTitle": "Davion · Çözümler",
+                    "ogDescription": "Sabit olan AlpOS'tur. Siber Güvenlik, Dijital Dönüşüm ve OSINT, onun uygulanma biçimleridir."
+                },
+                "hero": {
+                    "sup": "Çözümler",
+                    "headline": "Dört çözüm. Altında tek platform.",
+                    "body": "AlpOS işletim sistemidir. Dijital Dönüşüm, Siber Güvenlik ve OSINT, onun uygulanma biçimleridir. Aynı veri-alımdan-eyleme omurgası, aynı egemenlik güvenceleri, aynı denetim izi."
+                },
+                "stack": {
+                    "sup": "Yapı",
+                    "solutionLabel": "Çözüm",
+                    "platformLabel": "Platform",
+                    "body": "Veri alımı · Ontoloji · Analiz · Karar · Eylem; egemen bir çevre içinde."
+                },
+                "items": {
+                    "explore": "Keşfet",
+                    "alposLabel": "Platform · Amiral gemisi",
+                    "alposBody": "Davion'un her çözümünün altındaki egemen işletim sistemi. Veri alımı, ontoloji, analitik, yapay zekâ, karar üretimi, eylem.",
+                    "solutionLabel": "Çözüm",
+                    "digitalBody": "Silolanmış veriden tek bir denetimli doğruluk kaynağına; pilot uygulamadan endüstriyel konuşlanmaya kadar evreli.",
+                    "cyberBody": "Aksamaması gereken ortamlar için savunma istihbaratı. Örüntü, anomali ve graf analizi ile tespit.",
+                    "osintBody": "Egemen açık-kaynak istihbarat: çok kaynaklı toplama, korelasyon ve sentez; anonim ve uyumlu."
+                },
+                "deployment": {
+                    "sup": "Konuşlanma",
+                    "headline": "Her çözüm. Her konuşlanma biçimi.",
+                    "body": "Yerinde, air-gapped, egemen bulut veya özel bulut. Konuşlanma biçimini siz seçersiniz; egemenlik güvenceleri değişmez.",
+                    "cta": "Güven ve Egemenlik"
+                },
+                "industries": {
+                    "sup": "Sektörler",
+                    "headline": "Alıcılar misyonla tanımlanır, özellikle değil.",
+                    "body": "Davion; savunma, istihbarat, kritik altyapı, kamu, finansal hizmetler ve enerjide; kararların hem hızlı hem savunulabilir olması gereken her ortamda konuşlanır.",
+                    "cta": "Sektörler"
+                },
+                "engage": {
+                    "sup": "Görüşme",
+                    "headline": "AlpOS'la başlayın. Üstünü biçin.",
+                    "body": "Görüşmelerin çoğu, ortamınıza özelleştirilmiş bir AlpOS brifingiyle başlar; platform kendini kanıtladıkça çözüm katmanları eklenir.",
+                    "cta": "AlpOS'u keşfet"
+                }
+            }
         }
     }
 }
