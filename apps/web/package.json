@@ -15,7 +15,8 @@
         "lint:brand": "pnpm lint:aa && pnpm lint:dashes",
         "build:og": "node scripts/build-og-cover.mjs",
         "build:mobile-spiral": "node scripts/build-mobile-spiral.mjs",
-        "build:assets": "pnpm build:og && pnpm build:mobile-spiral"
+        "build:logo": "node scripts/build-logo.mjs",
+        "build:assets": "pnpm build:og && pnpm build:mobile-spiral && pnpm build:logo"
     },
     "dependencies": {
         "@base1/database": "workspace:*",

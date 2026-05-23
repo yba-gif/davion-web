@@ -119,7 +119,13 @@ export default defineNuxtConfig({
                 { property: 'og:site_name', content: 'Davion' },
             ],
             link: [
-                { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' },
+                // Favicon set. Multiple sizes so browsers pick the best fit:
+                //   32px for tab favicon, 192px for Android home-screen, 180px
+                //   apple-touch-icon for iOS. All generated from the master
+                //   1000x1000 source via `pnpm build:logo`.
+                { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/logo-32.png' },
+                { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/logo-192.png' },
+                { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
                 // P0.6: preload the LCP hero image (WebP, 1600w variant) to ensure
                 // the spiral lands in the LCP budget on first paint.
                 { rel: 'preload', as: 'image', href: '/section_background-1600.webp', type: 'image/webp', fetchpriority: 'high' },

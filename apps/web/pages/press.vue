@@ -19,7 +19,8 @@ const colours = [
 ]
 
 const assets = [
-    { name: 'Davion mark · SVG (current)', file: '/icon.svg', size: '< 1 KB', note: 'Placeholder mark from base1 inheritance. Final mark lands with P2.3 identity refresh.' },
+    { name: 'Davion mark · PNG (1024×1024)', file: '/logo.png', size: '~ 41 KB', note: 'The "D." mark on brand-green with rounded corners. Generated from the 1000×1000 master via pnpm build:logo. Smaller sizes available at /logo-512.png, /logo-192.png, /logo-64.png, /logo-32.png.' },
+    { name: 'Davion wordmark · SVG', file: '/logo.svg', size: '~ 4 KB', note: 'Full "Davion" wordmark, dark grey on transparent. For light backgrounds.' },
     { name: 'OG card · 1200×630 PNG', file: '/og-cover.png', size: '~ 49 KB', note: 'Default social-share card. Brand-aligned with current positioning headline.' },
     { name: 'Hero spiral · WebP @ 1600w', file: '/section_background-1600.webp', size: '~ 50 KB', note: 'The signature image. Cleared for editorial use with credit to Davion.' },
 ]

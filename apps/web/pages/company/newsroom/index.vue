@@ -114,7 +114,7 @@ function categoryLabel(slug: string) {
                             class="w-full aspect-[16/10] object-cover rounded-2xl"
                         />
                         <div v-else class="w-full aspect-[16/10] bg-white rounded-2xl flex items-center justify-center">
-                            <NuxtImg src="/icon.svg" alt="" width="64" height="64" class="size-16 opacity-50" />
+                            <NuxtImg src="/logo-64.png" alt="" width="64" height="64" class="size-16 opacity-50" />
                         </div>
                     </div>
                     <div class="lg:col-span-5">

@@ -169,7 +169,7 @@ onBeforeUnmount(() => {
     >
         <div class="flex flex-row items-center justify-start gap-8">
             <NuxtLink to="/" class="flex items-center gap-2 cursor-pointer" @click="closeAll">
-                <NuxtImg src="/icon.svg" alt="" width="20" height="20" class="size-5" />
+                <NuxtImg src="/logo-64.png" alt="Davion" width="20" height="20" class="size-5" />
                 <span class="font-degular font-bold text-[18px] text-drygray-100">Davion</span>
             </NuxtLink>
 
