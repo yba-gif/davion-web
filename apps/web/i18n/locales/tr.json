@@ -337,6 +337,79 @@
                 "headline2": "sonraki adım bir konuşmadır",
                 "button": "Uzmanla konuşun"
             }
+        },
+        "contact": {
+            "hero": {
+                "sup": "Görüşme",
+                "headline": "Neyi karara bağlamaya çalıştığınızı anlatın",
+                "body": "Davion görüşmeleri danışmanlık niteliğindedir. Getirdiklerinize göre sizi doğru ekibe yönlendiririz. Niyetinizi söyleyin, biz size ulaşalım."
+            },
+            "intents": {
+                "sup": "Niyetler",
+                "headline": "Hangisi geçerli?",
+                "briefingDesc": "AlpOS ve Davion yaklaşımı üzerine özelleştirilmiş, danışmanlık niteliğinde bir oturum.",
+                "partnershipDesc": "Ortak konuşlanmalar, entegrasyonlar ve stratejik ortaklıklar.",
+                "pressDesc": "Medya soruları ve Haber Odası iletişimi.",
+                "careersDesc": "Açık roller ve misyon odaklı mühendisler ile operatörler için spekülatif başvuru.",
+                "ventureDesc": "Egemen veri, yapay zekâ veya savunma yakın teknolojide inşa eden kurucular."
+            },
+            "email": {
+                "sup": "Doğrudan e-posta · ekip bazında",
+                "headline": "Veya doğru ekibe doğrudan yazın",
+                "body": "Sorunuz bir brifing değilse, bu kutular genel başvurudan daha hızlı yönlendirir.",
+                "engagementLabel": "Görüşme · Ortaklık",
+                "pressLabel": "Basın · Analist",
+                "careersLabel": "Kariyer",
+                "opsLabel": "Operasyon · Durum"
+            }
+        },
+        "press": {
+            "hero": {
+                "sup": "Basın kiti · Medya",
+                "headline": "Gazeteciler ve analistler için",
+                "body": "Çalışan bir gazeteci veya analistin Davion hakkında doğru yazmak için ihtiyaç duyduğu her şey. Ambargolu materyaller basın masası üzerinden takdirle ele alınır.",
+                "ctaEmail": "press@davion.com",
+                "ctaNewsroom": "Haber Odası"
+            },
+            "factsheet": {
+                "sup": "Bilgi notu",
+                "headline": "Bir bakışta Davion",
+                "body": "Bugün itibarıyla bilinen gerçekler. Şirket büyüdükçe güncellenir; beklemede olan her şey o şekilde işaretlenir."
+            },
+            "facts": {
+                "hq": "Merkez",
+                "hqValue": "Zürih · İstanbul",
+                "founded": "Kuruluş",
+                "foundedValue": "Tüzel kişilik kesinleşmeyi bekliyor",
+                "stage": "Aşama",
+                "stageValue": "Erken aşama; ilk sözleşmeli görüşmeler aktif",
+                "categories": "Kategoriler",
+                "categoriesValue": "Egemen yapay zekâ · Veri zekâsı · Karar desteği",
+                "buyers": "Hizmet verdiğimiz alıcılar",
+                "buyersValue": "Bankalar, bakanlıklar, savunma, enerji, yaşam bilimleri, üretim, kamu, kritik altyapı",
+                "postures": "Konuşlanma duruşları",
+                "posturesValue": "Yerinde · Hava boşluklu · Egemen bulut"
+            },
+            "assets": {
+                "sup": "Logolar ve varlıklar",
+                "headline": "İndirilmeye hazır dosyalar",
+                "body": "Bunlar mevcut siteyle birlikte gelen yer tutucu varlıklardır. Tam kimlik paketi, marka, kelime markası, lockup'lar, tipografi sistemi, P2.3 kimlik tazelemesi ile gelecek."
+            },
+            "colours": {
+                "sup": "Marka renkleri",
+                "headline": "Bugün kullanılan palet",
+                "body": "Mevcut palet. Birincil yeşil yalnızca dekorasyon içindir; primary-text, beyaz üzerine metin için AA-güvenli varyanttır."
+            },
+            "executives": {
+                "sup": "Yöneticiler",
+                "headline": "Adlandırılmış ekip",
+                "body": "Basına hazır biyografiler. Ek yöneticiler adlandırıldıkça burada yayınlanır."
+            },
+            "contact": {
+                "sup": "Basın iletişimi",
+                "headline": "Basın masasına ulaşın",
+                "body": "Röportajlar, ambargolar, gerçek kontrolleri ve analist brifingleri için."
+            }
         }
     }
 }

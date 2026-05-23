@@ -337,6 +337,79 @@
                 "headline2": "ist der nächste Schritt ein Gespräch",
                 "button": "Mit einem Experten sprechen"
             }
+        },
+        "contact": {
+            "hero": {
+                "sup": "Engagement",
+                "headline": "Sagen Sie uns, was Sie entscheiden müssen",
+                "body": "Davion-Engagements sind beratend. Wir leiten Sie an das richtige Team weiter, basierend auf dem, was Sie mitbringen. Nennen Sie Ihre Absicht, und wir melden uns."
+            },
+            "intents": {
+                "sup": "Absichten",
+                "headline": "Welche passt?",
+                "briefingDesc": "Eine maßgeschneiderte, beratende Sitzung zu AlpOS und dem Davion-Ansatz.",
+                "partnershipDesc": "Gemeinsame Einsätze, Integrationen und strategische Partnerschaften.",
+                "pressDesc": "Medienanfragen und Newsroom-Kontakt.",
+                "careersDesc": "Offene Stellen und spekulative Anfragen für missionsorientierte Ingenieure und Operatoren.",
+                "ventureDesc": "Gründer, die in souveränen Daten, KI oder verteidigungsnaher Technologie aufbauen."
+            },
+            "email": {
+                "sup": "Direkte E-Mail · pro Team",
+                "headline": "Oder schreiben Sie direkt an das richtige Team",
+                "body": "Wenn Ihre Anfrage kein Briefing ist, leiten diese Postfächer schneller weiter als die allgemeine Aufnahme.",
+                "engagementLabel": "Engagement · Partnerschaft",
+                "pressLabel": "Presse · Analyst",
+                "careersLabel": "Karriere",
+                "opsLabel": "Betrieb · Status"
+            }
+        },
+        "press": {
+            "hero": {
+                "sup": "Pressekit · Medien",
+                "headline": "Für Journalisten und Analysten",
+                "body": "Alles, was ein arbeitender Journalist oder Analyst benötigt, um über Davion korrekt zu schreiben. Sperrfristmaterial wird über das Pressereferat mit Diskretion behandelt.",
+                "ctaEmail": "press@davion.com",
+                "ctaNewsroom": "Newsroom"
+            },
+            "factsheet": {
+                "sup": "Factsheet",
+                "headline": "Davion auf einen Blick",
+                "body": "Die Fakten wie sie heute stehen. Wird aktualisiert, während das Unternehmen wächst; alles Ausstehende ist als solches gekennzeichnet."
+            },
+            "facts": {
+                "hq": "Hauptsitz",
+                "hqValue": "Zürich · Istanbul",
+                "founded": "Gegründet",
+                "foundedValue": "Rechtsform-Finalisierung ausstehend",
+                "stage": "Phase",
+                "stageValue": "Frühphase; erste Engagements unter Vertrag",
+                "categories": "Kategorien",
+                "categoriesValue": "Souveräne KI · Datenintelligenz · Entscheidungsunterstützung",
+                "buyers": "Käufer, die wir bedienen",
+                "buyersValue": "Banken, Ministerien, Verteidigung, Energie, Life Sciences, Fertigung, Behörden, kritische Infrastruktur",
+                "postures": "Einsatzhaltungen",
+                "posturesValue": "On-premise · Air-gapped · Souveräne Cloud"
+            },
+            "assets": {
+                "sup": "Logos und Assets",
+                "headline": "Download-fertige Dateien",
+                "body": "Dies sind die Platzhalter-Assets, die mit der aktuellen Seite ausgeliefert werden. Das vollständige Identitätspaket, Marke, Wortmarke, Lockups, Typografie-System, kommt mit dem P2.3-Identitäts-Refresh."
+            },
+            "colours": {
+                "sup": "Markenfarben",
+                "headline": "Die heute verwendete Palette",
+                "body": "Die Palette wie sie steht. Primäres Grün ist nur Dekoration; primary-text ist die AA-sichere Variante für Text auf Weiß."
+            },
+            "executives": {
+                "sup": "Geschäftsleitung",
+                "headline": "Benanntes Team",
+                "body": "Presse-fertige Biografien. Weitere Führungspersonen werden hier veröffentlicht, sobald sie benannt sind."
+            },
+            "contact": {
+                "sup": "Pressekontakt",
+                "headline": "Erreichen Sie das Pressereferat",
+                "body": "Für Interviews, Sperrfristen, Faktenchecks und Analystenbriefings."
+            }
         }
     }
 }

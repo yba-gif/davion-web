@@ -337,6 +337,79 @@
                 "headline2": "the next move is a conversation",
                 "button": "Speak to an expert"
             }
+        },
+        "contact": {
+            "hero": {
+                "sup": "Engage",
+                "headline": "Tell us what you're trying to decide",
+                "body": "Davion engagements are consultative. We route you to the right team based on what you bring. Tell us your intent, and we will reach out."
+            },
+            "intents": {
+                "sup": "Intents",
+                "headline": "Which one applies?",
+                "briefingDesc": "A tailored, consultative session on AlpOS and the Davion approach.",
+                "partnershipDesc": "Joint deployments, integrations, and strategic partnerships.",
+                "pressDesc": "Media inquiries and Newsroom contact.",
+                "careersDesc": "Open roles and speculative outreach for mission-aligned engineers and operators.",
+                "ventureDesc": "Founders building in sovereign data, AI, or defense-adjacent technology."
+            },
+            "email": {
+                "sup": "Direct email · per team",
+                "headline": "Or write to the right team directly",
+                "body": "If your enquiry is not a briefing, these inboxes route faster than the generic intake.",
+                "engagementLabel": "Engagement · Partnership",
+                "pressLabel": "Press · Analyst",
+                "careersLabel": "Careers",
+                "opsLabel": "Operations · Status"
+            }
+        },
+        "press": {
+            "hero": {
+                "sup": "Press kit · Media",
+                "headline": "For journalists and analysts",
+                "body": "Everything a working journalist or analyst needs to write about Davion accurately. Embargoed material handled with discretion via the press desk.",
+                "ctaEmail": "press@davion.com",
+                "ctaNewsroom": "Newsroom"
+            },
+            "factsheet": {
+                "sup": "Factsheet",
+                "headline": "Davion at a glance",
+                "body": "The facts as they stand today. Updated as the company grows; anything pending is marked as such."
+            },
+            "facts": {
+                "hq": "Headquarters",
+                "hqValue": "Zurich · Istanbul",
+                "founded": "Founded",
+                "foundedValue": "Pending entity finalisation",
+                "stage": "Stage",
+                "stageValue": "Early-stage; first engagements under contract",
+                "categories": "Categories",
+                "categoriesValue": "Sovereign AI · Data intelligence · Decision support",
+                "buyers": "Buyers we serve",
+                "buyersValue": "Banks, ministries, defense, energy, life sciences, manufacturing, government, critical infrastructure",
+                "postures": "Deployment postures",
+                "posturesValue": "On-prem · Air-gapped · Sovereign cloud"
+            },
+            "assets": {
+                "sup": "Logos and assets",
+                "headline": "Download-ready files",
+                "body": "These are the placeholder assets shipped with the current site. The full identity package, mark, wordmark, lockups, type system, lands with the P2.3 identity refresh."
+            },
+            "colours": {
+                "sup": "Brand colours",
+                "headline": "The palette in use today",
+                "body": "The palette as it stands. Primary green is decoration only; primary-text is the AA-safe variant for on-white text."
+            },
+            "executives": {
+                "sup": "Executives",
+                "headline": "Named team",
+                "body": "Press-ready bios. Additional executives publish here as they're named."
+            },
+            "contact": {
+                "sup": "Press contact",
+                "headline": "Reach the press desk",
+                "body": "For interviews, embargoes, fact-checks, and analyst briefings."
+            }
         }
     }
 }
