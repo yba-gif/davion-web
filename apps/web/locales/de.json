@@ -119,7 +119,7 @@
         "name": "Ihr Name",
         "namePlaceholder": "Maria Schmidt",
         "email": "Berufliche E-Mail",
-        "emailPlaceholder": "m.schmidt@example.com",
+        "emailPlaceholder": "m.schmidt{'@'}example.com",
         "organisation": "Organisation",
         "organisationOptional": "(optional)",
         "organisationPlaceholder": "Bank, Ministerium, Betreiber…",
@@ -149,8 +149,8 @@
         "errors": {
             "required": "Pflichtfeld.",
             "messageMin": "Bitte etwas ausführlicher (mindestens 20 Zeichen).",
-            "rateLimit": "Zu viele Anfragen von Ihrem Standort. Versuchen Sie es in einer Stunde erneut oder schreiben Sie direkt an engagement@davion.com.",
-            "generic": "Beim Absenden ist ein Fehler aufgetreten. Bei Wiederholung schreiben Sie an engagement@davion.com."
+            "rateLimit": "Zu viele Anfragen von Ihrem Standort. Versuchen Sie es in einer Stunde erneut oder schreiben Sie direkt an engagement{'@'}davion.com.",
+            "generic": "Beim Absenden ist ein Fehler aufgetreten. Bei Wiederholung schreiben Sie an engagement{'@'}davion.com."
         }
     },
     "bio": {

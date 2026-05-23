@@ -119,7 +119,7 @@
         "name": "Your name",
         "namePlaceholder": "Maria Schmidt",
         "email": "Work email",
-        "emailPlaceholder": "m.schmidt@example.com",
+        "emailPlaceholder": "m.schmidt{'@'}example.com",
         "organisation": "Organisation",
         "organisationOptional": "(optional)",
         "organisationPlaceholder": "Bank, ministry, operator…",
@@ -149,8 +149,8 @@
         "errors": {
             "required": "Required.",
             "messageMin": "Tell us a bit more (at least 20 characters).",
-            "rateLimit": "Too many submissions from your location. Try again in an hour, or email engagement@davion.com directly.",
-            "generic": "Something went wrong submitting the form. Email engagement@davion.com if it persists."
+            "rateLimit": "Too many submissions from your location. Try again in an hour, or email engagement{'@'}davion.com directly.",
+            "generic": "Something went wrong submitting the form. Email engagement{'@'}davion.com if it persists."
         }
     },
     "bio": {

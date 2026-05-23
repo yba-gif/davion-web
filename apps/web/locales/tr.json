@@ -119,7 +119,7 @@
         "name": "Adınız",
         "namePlaceholder": "Maria Schmidt",
         "email": "Kurumsal e-posta",
-        "emailPlaceholder": "m.schmidt@example.com",
+        "emailPlaceholder": "m.schmidt{'@'}example.com",
         "organisation": "Kurum",
         "organisationOptional": "(isteğe bağlı)",
         "organisationPlaceholder": "Banka, bakanlık, operatör…",
@@ -149,8 +149,8 @@
         "errors": {
             "required": "Gerekli.",
             "messageMin": "Biraz daha anlatın (en az 20 karakter).",
-            "rateLimit": "Konumunuzdan çok fazla başvuru alındı. Bir saat sonra tekrar deneyin veya doğrudan engagement@davion.com adresine yazın.",
-            "generic": "Form gönderilirken bir hata oluştu. Devam ederse engagement@davion.com adresine yazın."
+            "rateLimit": "Konumunuzdan çok fazla başvuru alındı. Bir saat sonra tekrar deneyin veya doğrudan engagement{'@'}davion.com adresine yazın.",
+            "generic": "Form gönderilirken bir hata oluştu. Devam ederse engagement{'@'}davion.com adresine yazın."
         }
     },
     "bio": {
