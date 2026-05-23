@@ -1870,7 +1870,7 @@
                 "r4Location": "Zürich · Istanbul · Remote (CET ±2)",
                 "r4Body": "Den Retrieval- und RAG-Stack innerhalb von AlpOS verantworten. Index-Design, Embedding-Strategie, zugriffsgesteuertes Retrieval, Evaluierung gegen echte institutionelle Korpora. Sie liefern das System aus; Sie verteidigen es auch in einem Kunden-Audit.",
                 "r4s1": "Hat Retrieval in Skala (≥ 100M Dokumente) in Produktion ausgeliefert",
-                "r4s2": "Starke Evaluierungs-Disziplin — Golden-Sets, retrieval@k, Faithfulness",
+                "r4s2": "Starke Evaluierungs-Disziplin — Golden-Sets, retrieval{'@'}k, Faithfulness",
                 "r4s3": "Liest adversarielle Prompt-Forschung und wendet sie auf Kundenumgebungen an",
                 "r5Title": "Founding Designer",
                 "r5Team": "Brand · Produkt",

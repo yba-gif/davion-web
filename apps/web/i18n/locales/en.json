@@ -1870,7 +1870,7 @@
                 "r4Location": "Zurich · Istanbul · Remote (CET ±2)",
                 "r4Body": "Own the retrieval and RAG stack inside AlpOS. Index design, embedding strategy, access-controlled retrieval, evaluation against real institutional corpora. You ship the system; you also defend it in a customer audit.",
                 "r4s1": "Has shipped retrieval at scale (≥ 100M docs) in production",
-                "r4s2": "Strong evaluation discipline, golden sets, retrieval@k, faithfulness",
+                "r4s2": "Strong evaluation discipline, golden sets, retrieval{'@'}k, faithfulness",
                 "r4s3": "Reads adversarial-prompt research and applies it to customer environments",
                 "r5Title": "Founding Designer",
                 "r5Team": "Brand · Product",

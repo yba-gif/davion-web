@@ -1870,7 +1870,7 @@
                 "r4Location": "Zürih · İstanbul · Uzaktan (CET ±2)",
                 "r4Body": "AlpOS içindeki geri-erişim ve RAG yığınını sahiplenin. İndeks tasarımı, gömme stratejisi, erişim-denetimli geri-erişim, gerçek kurumsal külliyatlara karşı değerlendirme. Sistemi teslim edersiniz; ayrıca bir müşteri denetiminde onu savunursunuz.",
                 "r4s1": "Üretimde ölçekte geri-erişim teslim etmiş (≥ 100M belge)",
-                "r4s2": "Güçlü değerlendirme disiplini; altın kümeler, retrieval@k, sadakat",
+                "r4s2": "Güçlü değerlendirme disiplini; altın kümeler, retrieval{'@'}k, sadakat",
                 "r4s3": "Düşmanca-istem araştırmalarını okur ve müşteri ortamlarına uygular",
                 "r5Title": "Kurucu Tasarımcı",
                 "r5Team": "Marka · Ürün",
