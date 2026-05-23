@@ -6,6 +6,29 @@ useSeoMeta({
     ogDescription: 'Sovereignty isn\'t a feature. It\'s where the work happens.',
 })
 
+// Founder bio modal. Triggered from the team card. Closes on backdrop
+// click or ESC. Body scroll lock while open so the page underneath
+// doesn't shift.
+const showBio = ref(false)
+
+function openBio() { showBio.value = true }
+function closeBio() { showBio.value = false }
+
+function onKey(e: KeyboardEvent) {
+    if (e.key === 'Escape' && showBio.value) closeBio()
+}
+
+watch(showBio, (open) => {
+    if (typeof document === 'undefined') return
+    document.body.style.overflow = open ? 'hidden' : ''
+})
+
+onMounted(() => window.addEventListener('keydown', onKey))
+onBeforeUnmount(() => {
+    window.removeEventListener('keydown', onKey)
+    if (typeof document !== 'undefined') document.body.style.overflow = ''
+})
+
 const values = [
     {
         n: '01',
@@ -46,6 +69,31 @@ const values = [
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 A conviction-led note from the team building Davion, the opinion underneath the product, the values that decide what we build next, and the people accountable for it.
             </p>
+        </section>
+
+        <!-- What is sovereign AI? Definitional anchor for novice buyers. Moved here
+             from the landing page so the home stays focused on the expert funnel
+             while this page carries the full explainer. -->
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+            <div class="grid lg:grid-cols-12 gap-10 items-start">
+                <div class="lg:col-span-4">
+                    <CommonSup title="If you are new to the term" />
+                    <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
+                        What is sovereign AI<span class="text-primary-text">?</span>
+                    </h2>
+                </div>
+                <div class="lg:col-span-8 space-y-5 text-[17px] leading-[1.6] text-drygray-100 font-medium">
+                    <p>
+                        Sovereign AI is AI that runs <strong class="font-semibold">where the data lives</strong>, under the institution's own governance, not in a vendor's cloud.
+                    </p>
+                    <p>
+                        Most platforms calling themselves "sovereign AI" today are hosted services with European billing addresses. The data still crosses the vendor's network, the inference still runs on the vendor's hardware, and the audit trail still belongs to the vendor. That is regulatory residency, not operational sovereignty.
+                    </p>
+                    <p>
+                        Davion is operationally sovereign: deployments run inside the customer's perimeter, air-gapped, on-prem, or in a sovereign cloud bound by contract. The data does not leave. The weights are auditable on-prem. Every decision traces back to the source it was made on.
+                    </p>
+                </div>
+            </div>
         </section>
 
         <!-- Why Davion exists -->
@@ -139,12 +187,28 @@ const values = [
                 </p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-white rounded-2xl p-6">
-                    <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">Founder · CTO</p>
-                    <p class="font-degular font-bold text-drygray-100 text-h3 mt-3">Bek</p>
+                <div class="bg-white rounded-2xl p-6 flex flex-col">
+                    <NuxtImg
+                        src="/team/berkan-altun-240.webp"
+                        alt="Berkan Altun, CEO of Davion"
+                        width="240"
+                        height="240"
+                        class="size-20 rounded-2xl object-cover mb-4"
+                    />
+                    <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">CEO</p>
+                    <p class="font-degular font-bold text-drygray-100 text-h3 mt-3">Berkan Altun</p>
                     <p class="text-b1 text-drygray-default mt-3">
-                        Builds the platform. Writes the architecture. Sits in on every engagement. Full bio on request and once approved for public reference.
+                        Sets product direction, owns the platform's architecture, and personally sits in on every customer engagement.
                     </p>
+                    <button
+                        type="button"
+                        class="mt-5 self-start text-[13px] font-semibold text-primary-text underline underline-offset-4 hover:no-underline focus-visible:outline-2 focus-visible:outline-primary-text focus-visible:outline-offset-2 rounded"
+                        :aria-expanded="showBio"
+                        aria-controls="berkan-altun-bio"
+                        @click="openBio"
+                    >
+                        Read full bio →
+                    </button>
                 </div>
                 <div class="bg-white/60 rounded-2xl p-6 border border-dashed border-drygray-200">
                     <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default">Hiring · Solutions Engineering</p>
@@ -177,5 +241,69 @@ const values = [
                 </div>
             </div>
         </section>
+
+        <!-- Bio modal. Teleported to body so it sits above all stacking contexts.
+             Backdrop click closes; ESC key handled in <script setup>. -->
+        <Teleport to="body">
+            <Transition name="fade">
+                <div
+                    v-if="showBio"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="berkan-altun-bio-title"
+                    class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
+                    @click.self="closeBio"
+                >
+                    <div
+                        id="berkan-altun-bio"
+                        class="bg-white rounded-3xl max-w-3xl w-full p-6 md:p-10 max-h-[90vh] overflow-y-auto relative"
+                    >
+                        <button
+                            type="button"
+                            class="absolute top-4 right-4 size-10 rounded-full bg-whitesmoke-100 hover:bg-drygray-200 flex items-center justify-center text-drygray-100 focus-visible:outline-2 focus-visible:outline-primary-text focus-visible:outline-offset-2"
+                            aria-label="Close bio"
+                            @click="closeBio"
+                        >
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3 L15 15 M15 3 L3 15"/></svg>
+                        </button>
+                        <div class="flex flex-col md:flex-row gap-6 md:gap-10 mt-2">
+                            <NuxtImg
+                                src="/team/berkan-altun.webp"
+                                alt="Berkan Altun, CEO of Davion"
+                                width="600"
+                                height="600"
+                                class="size-40 md:size-48 rounded-2xl object-cover flex-shrink-0"
+                            />
+                            <div class="flex-1 min-w-0">
+                                <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">CEO</p>
+                                <h3 id="berkan-altun-bio-title" class="font-degular font-bold text-drygray-100 text-h2 md:text-[36px] mt-3">Berkan Altun</h3>
+                                <div class="mt-6 space-y-4 text-[16px] leading-[1.6] text-drygray-100">
+                                    <p>
+                                        Berkan leads Davion as Chief Executive Officer. He sets product direction, owns the platform's architecture, and personally sits in on every customer engagement.
+                                    </p>
+                                    <p>
+                                        He operates between <strong class="font-semibold">Zurich and Istanbul</strong>, aligning Swiss neutrality at the data layer with NATO-perimeter operational depth in the field.
+                                    </p>
+                                    <p class="text-drygray-default">
+                                        Detailed background and prior work published once approved for public reference. For board-level engagements, reach out via <NuxtLink to="/contact" class="text-primary-text underline underline-offset-4 hover:no-underline">the contact page</NuxtLink>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Transition>
+        </Teleport>
     </div>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.18s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+</style>

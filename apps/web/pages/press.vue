@@ -27,11 +27,11 @@ const assets = [
 
 const executives = [
     {
-        name: 'Bek',
-        role: 'Founder, CTO',
-        bio: 'Builds the platform. Writes the architecture. Sits in on every engagement. Background placeholder until publishing is approved.',
+        name: 'Berkan Altun',
+        role: 'CEO',
+        bio: 'Sets product direction, owns the platform\'s architecture, and personally sits in on every customer engagement. Operates between Zurich and Istanbul. Detailed background published once approved for public reference.',
         contact: 'press@davion.com',
-        photo: null,
+        photo: '/team/berkan-altun.webp',
     },
 ]
 

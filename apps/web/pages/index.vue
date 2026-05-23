@@ -57,10 +57,10 @@ const solutions = [
 ]
 
 const cycle = [
-    { n: '01', title: 'Data', body: 'Pull every relevant signal through a single governed pipeline.' },
-    { n: '02', title: 'Meaning', body: 'Model it as entities, events, and relationships in your ontology.' },
-    { n: '03', title: 'Decision', body: 'Reason against the ontology with AI that cites its sources.' },
-    { n: '04', title: 'Action', body: 'Embed the decision into operators and systems of record.' },
+    { n: '01', title: 'Ingest', body: 'Pull every relevant signal through a single governed pipeline.' },
+    { n: '02', title: 'Model', body: 'Shape it as entities, events, and relationships in your ontology.' },
+    { n: '03', title: 'Reason', body: 'Run AI against the ontology with citations back to source.' },
+    { n: '04', title: 'Act', body: 'Embed the decision into operators and systems of record.' },
 ]
 
 const sovereignty = [
@@ -79,12 +79,6 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
     <div class="flex flex-col gap-4">
         <!-- 1. Mission hero, base1's original SectionHero structure with Davion copy/route -->
         <SectionHero />
-
-        <!-- P1.7 Numbers Strip, replaces the deleted TrustedByStrip with verifiable
-             architectural and presence facts. Founding year omitted by founder direction
-             until legal entity is finalized. -->
-        <NumbersStrip />
-
 
         <!-- 2. Solutions triad, AlpOS, Cybersecurity, Digital Transformation -->
         <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
@@ -140,7 +134,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
             <div class="max-w-2xl mb-10 md:mb-14">
                 <CommonSup title="The AI cycle" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    Data → Meaning → Decision → Action<span class="text-primary-text">.</span>
+                    Ingest<span class="text-primary-text">.</span> Model<span class="text-primary-text">.</span> Reason<span class="text-primary-text">.</span> Act<span class="text-primary-text">.</span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
                     Every Davion deployment runs the same sovereign cycle, from raw data to operational action. The platform stays constant; the surface adapts to the use case.
@@ -175,35 +169,9 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
             </div>
         </section>
 
-        <!-- 5.5 P1.U8, "What is sovereign AI?" anchor. Catches novice-buyer paths
-             (CFOs, board members, anyone outside the CIO/CISO core) without slowing
-             the expert flow. Links to /company/about §1 for full POV. -->
-        <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
-            <div class="grid lg:grid-cols-12 gap-10 items-start">
-                <div class="lg:col-span-4">
-                    <CommonSup title="If you are new to the term" />
-                    <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                        What is sovereign AI<span class="text-primary-text">?</span>
-                    </h2>
-                </div>
-                <div class="lg:col-span-8 space-y-5 text-[17px] leading-[1.6] text-drygray-100 font-medium">
-                    <p>
-                        Sovereign AI is AI that runs <strong class="font-semibold">where the data lives</strong>, under the institution's own governance, not in a vendor's cloud.
-                    </p>
-                    <p>
-                        Most platforms calling themselves "sovereign AI" today are hosted services with European billing addresses. The data still crosses the vendor's network, the inference still runs on the vendor's hardware, and the audit trail still belongs to the vendor. That is regulatory residency, not operational sovereignty.
-                    </p>
-                    <p>
-                        Davion is operationally sovereign: deployments run inside the customer's perimeter, air-gapped, on-prem, or in a sovereign cloud bound by contract. The data does not leave. The weights are auditable on-prem. Every decision traces back to the source it was made on.
-                    </p>
-                    <p class="pt-2">
-                        <NuxtLink to="/company/about" class="text-primary-text underline underline-offset-4 hover:no-underline font-semibold">
-                            Read the full worldview →
-                        </NuxtLink>
-                    </p>
-                </div>
-            </div>
-        </section>
+        <!-- "What is sovereign AI?" definitional section moved to /company/about
+             (the explainer fits better next to the full worldview than next to the
+             expert-funnel hero). Landing kept lean. -->
 
         <!-- 6. Sectors marquee, black interlude, dual-row scrolling, edge gradient fades -->
         <section v-reveal class="relative rounded-3xl bg-black overflow-hidden">
