@@ -17,7 +17,7 @@ const solutions = [
 <template>
     <div class="flex flex-col gap-4">
         <!-- Hero -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup title="Solutions" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
                 Four solutions. One platform underneath.
@@ -56,7 +56,7 @@ const solutions = [
         </section>
 
         <!-- Solution cards -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid sm:grid-cols-2 gap-4">
                 <NuxtLink
                     v-for="s in solutions"
@@ -76,7 +76,7 @@ const solutions = [
         </section>
 
         <!-- Deployment + Industries -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-2 gap-10 lg:gap-14">
                 <div>
                     <CommonSup title="Deployment" />
@@ -102,7 +102,7 @@ const solutions = [
         </section>
 
         <!-- CTA -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="grid lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-8">
                     <CommonSup title="Engage" />

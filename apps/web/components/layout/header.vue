@@ -8,6 +8,13 @@ const openDropdown = ref<string | null>(null)
 const headerRef = ref<HTMLElement | null>(null)
 const route = useRoute()
 
+// Lock body scroll while the mobile drawer is open so the page underneath
+// doesn't bleed through scrolling on touch devices. Restored on close.
+watch(isMobileMenuOpen, (open) => {
+    if (typeof document === 'undefined') return
+    document.body.style.overflow = open ? 'hidden' : ''
+})
+
 const nav = [
     {
         label: 'Solutions',
@@ -159,6 +166,9 @@ onMounted(() => {
 onBeforeUnmount(() => {
     document.removeEventListener('click', onClickOutside)
     document.removeEventListener('keydown', onKeydown)
+    // Defensive: restore body scroll if the component unmounts while the
+    // drawer is open (e.g. user navigates away).
+    if (typeof document !== 'undefined') document.body.style.overflow = ''
 })
 </script>
 
@@ -242,7 +252,7 @@ onBeforeUnmount(() => {
                 aria-label="Toggle menu"
                 @click="isMobileMenuOpen = !isMobileMenuOpen"
             >
-                <Icon :name="isMobileMenuOpen ? 'base:close' : 'base:menu'" :class="isMobileMenuOpen ? 'size-6' : 'size-8'" />
+                <Icon :name="isMobileMenuOpen ? 'base:close' : 'base:menu'" class="size-7" />
             </button>
         </div>
     </nav>

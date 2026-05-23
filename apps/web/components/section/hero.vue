@@ -20,9 +20,12 @@ function navigateToAlpos() {
 <template>
     <section
         id="hero-section"
-        class="w-full bg-azure h-[847px] relative min-[980px]:h-[700px] flex flex-col items-start justify-start py-[122px] px-24 max-[980px]:py-4 max-[980px]:px-4 box-border gap-2.5 text-left text-drygray-100 font-switzer rounded-3xl overflow-hidden"
+        class="w-full bg-azure h-[640px] relative min-[980px]:h-[700px] flex flex-col items-start justify-start py-[122px] px-24 max-[980px]:py-10 max-[980px]:px-6 box-border gap-2.5 text-left text-drygray-100 font-switzer rounded-3xl overflow-hidden"
     >
-        <!-- P2.U7: mobile-tight crop served at <=768px; full master variants on larger viewports. -->
+        <!-- P2.U7: mobile-tight crop served at <=768px; full master variants on larger viewports.
+             Mobile responsive: hero box reduced from 847px to 640px (was taller than
+             iPhone viewport), padding bumped from py-4 (16px) to py-10 (40px) so text
+             has breathing room above the spiral. -->
         <picture>
             <source
                 media="(max-width: 768px)"
@@ -30,7 +33,7 @@ function navigateToAlpos() {
                 type="image/webp"
             >
             <img
-                class="min-[980px]:w-[1176px] absolute pointer-events-none top-0 max-[980px]:top-64 min-[980px]:-right-80 scale-150 max-[980px]:scale-[3]"
+                class="min-[980px]:w-[1176px] absolute pointer-events-none top-0 max-[980px]:top-32 min-[980px]:-right-80 scale-150 max-[980px]:scale-[1.7]"
                 src="/section_background-1600.webp"
                 srcset="
                     /section_background-480.webp 480w,

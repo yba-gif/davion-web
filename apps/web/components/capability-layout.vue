@@ -65,7 +65,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
 <template>
     <div class="flex flex-col gap-4">
         <!-- §1 Hero -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup :title="data.eyebrow" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[68px] tracking-tight max-w-5xl">
                 <template v-for="(seg, i) in heroSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><span class="text-primary-text">.</span></template>
@@ -78,7 +78,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
         </section>
 
         <!-- §2 What it does -->
-        <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10">
                 <div class="lg:col-span-4">
                     <CommonSup title="What it does" />
@@ -96,7 +96,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
         </section>
 
         <!-- §3 How it works -->
-        <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="mb-10 md:mb-14 max-w-3xl">
                 <CommonSup title="How it works" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
@@ -113,7 +113,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
         </section>
 
         <!-- §4 When to use it -->
-        <section v-reveal class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10">
                 <div class="lg:col-span-5">
                     <CommonSup title="When to use it" />
@@ -131,7 +131,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
         </section>
 
         <!-- §5 Industries leaning on this -->
-        <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup title="Industries leaning on this" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
                 <template v-for="(seg, i) in industriesSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><span class="text-primary-text">.</span></template>
@@ -145,7 +145,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
         </section>
 
         <!-- §6 CTA -->
-        <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="grid lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-8">
                     <CommonSup :title="ctaEyebrow" />

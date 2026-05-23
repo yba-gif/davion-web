@@ -81,7 +81,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         <SectionHero />
 
         <!-- 2. Solutions triad, AlpOS, Cybersecurity, Digital Transformation -->
-        <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
                 <div class="max-w-3xl">
                     <CommonSup title="Solutions" />
@@ -106,7 +106,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         </section>
 
         <!-- 3. AlpOS teaser -->
-        <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-7">
                     <CommonSup title="Flagship · AlpOS" />
@@ -130,7 +130,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         </section>
 
         <!-- 4. Intelligence cycle -->
-        <section v-reveal class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="max-w-2xl mb-10 md:mb-14">
                 <CommonSup title="The AI cycle" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -150,7 +150,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         </section>
 
         <!-- 5. Sovereignty strip -->
-        <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-reveal class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup title="Sovereign by design" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -175,7 +175,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
 
         <!-- 6. Sectors marquee, black interlude, dual-row scrolling, edge gradient fades -->
         <section v-reveal class="relative rounded-3xl bg-black overflow-hidden">
-            <div class="relative grid lg:grid-cols-12 gap-10 items-center px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <div class="relative grid lg:grid-cols-12 gap-10 items-center px-6 md:px-12 lg:px-16 py-12 md:py-20">
                 <div class="lg:col-span-4">
                     <CommonSup title="Industries" />
                     <h2 class="font-degular font-bold text-white mt-4 text-[36px] md:text-[44px] lg:text-[48px] leading-[1.02] tracking-tight">
@@ -208,7 +208,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
         </section>
 
         <!-- 7. Newsroom showcase, Featured (HorizontalBlogCard) + Grid (BlogCard) -->
-        <section v-if="featuredPost" v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-if="featuredPost" v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
                 <div>
                     <CommonSup title="Newsroom" />
@@ -257,7 +257,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                 decoding="async"
                 class="absolute inset-0 w-full h-full object-cover pointer-events-none scale-[1.8] lg:scale-[2] lg:translate-x-48 lg:-translate-y-24 select-none"
             >
-            <div class="relative w-full flex flex-col items-center text-center py-20 md:py-28 lg:py-32 px-6 md:px-12 lg:px-16 backdrop-blur-[80px] bg-gradient-to-b from-azure/30 to-azure/10">
+            <div class="relative w-full flex flex-col items-center text-center py-14 md:py-28 lg:py-32 px-6 md:px-12 lg:px-16 backdrop-blur-[80px] bg-gradient-to-b from-azure/30 to-azure/10">
                 <CommonSup title="Engage" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-6 leading-[0.92] tracking-[-0.02em]">
                     <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">Your data<span class="text-primary-text">.</span></span>

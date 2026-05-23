@@ -150,7 +150,7 @@ function resetForm() {
                         autocomplete="name"
                         :aria-invalid="!!fieldErrors.name || undefined"
                         :aria-describedby="fieldErrors.name ? 'ef-name-err' : undefined"
-                        class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-[15px] text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors min-h-[44px]"
+                        class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-base text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors min-h-[44px]"
                         placeholder="Maria Schmidt"
                     >
                     <p v-if="fieldErrors.name" id="ef-name-err" class="text-[12px] text-red-600 mt-1.5">{{ fieldErrors.name }}</p>
@@ -167,7 +167,7 @@ function resetForm() {
                         autocomplete="email"
                         :aria-invalid="!!fieldErrors.email || undefined"
                         :aria-describedby="fieldErrors.email ? 'ef-email-err' : undefined"
-                        class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-[15px] text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors min-h-[44px]"
+                        class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-base text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors min-h-[44px]"
                         placeholder="m.schmidt@example.com"
                     >
                     <p v-if="fieldErrors.email" id="ef-email-err" class="text-[12px] text-red-600 mt-1.5">{{ fieldErrors.email }}</p>
@@ -182,7 +182,7 @@ function resetForm() {
                         type="text"
                         autocomplete="organization"
                         :aria-invalid="!!fieldErrors.organisation || undefined"
-                        class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-[15px] text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors min-h-[44px]"
+                        class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-base text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors min-h-[44px]"
                         placeholder="Bank, ministry, operator…"
                     >
                 </div>
@@ -196,7 +196,7 @@ function resetForm() {
                         type="text"
                         autocomplete="organization-title"
                         :aria-invalid="!!fieldErrors.role || undefined"
-                        class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-[15px] text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors min-h-[44px]"
+                        class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-base text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors min-h-[44px]"
                         placeholder="Head of AI, CIO, Risk officer…"
                     >
                 </div>
@@ -241,7 +241,7 @@ function resetForm() {
                     maxlength="4000"
                     :aria-invalid="!!fieldErrors.message || undefined"
                     :aria-describedby="fieldErrors.message ? 'ef-msg-err' : 'ef-msg-help'"
-                    class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-[15px] text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors leading-relaxed resize-y"
+                    class="w-full bg-whitesmoke-100 rounded-xl px-4 py-3 text-base text-drygray-100 placeholder-drygray-default focus:outline-none focus:ring-2 focus:ring-drygray-100 focus:bg-white transition-colors leading-relaxed resize-y"
                     placeholder="A few sentences about the decision, the constraints, and the timeline. The more concrete the better."
                 />
                 <div class="flex justify-between mt-1.5">

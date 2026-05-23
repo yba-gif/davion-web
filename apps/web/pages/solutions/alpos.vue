@@ -98,7 +98,7 @@ const tocSections = [
 <template>
     <div class="flex flex-col gap-4">
         <!-- 1. Platform hero, pain-first construction -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup title="Platform · AlpOS" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-5xl">
                 Sovereign AI infrastructure for decisions that can't wait<span class="text-primary-text">.</span> And can't leak<span class="text-primary-text">.</span>
@@ -122,7 +122,7 @@ const tocSections = [
             <div class="flex flex-col gap-4 min-w-0">
 
         <!-- 2. Problem -->
-        <section id="problem" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
+        <section id="problem" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24 scroll-mt-20">
             <CommonSup title="The problem" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[32px] leading-[1.05] md:text-[44px] md:leading-[1.05] tracking-tight max-w-4xl">
                 When data outpaces the capacity to decide, decisions fail<span class="text-primary-text">.</span>
@@ -133,7 +133,7 @@ const tocSections = [
         </section>
 
         <!-- 3. Architecture diagram -->
-        <section id="architecture" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
+        <section id="architecture" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24 scroll-mt-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Architecture" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -191,7 +191,7 @@ const tocSections = [
         </section>
 
         <!-- 4. Layer deep-dives -->
-        <section id="layers" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
+        <section id="layers" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24 scroll-mt-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Layers" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -219,7 +219,7 @@ const tocSections = [
         </section>
 
         <!-- 5. Where it lands, concrete vertical use cases. Eyebrow renamed (was "In the field", ChapsVision echo per voice doc). -->
-        <section id="field" class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
+        <section id="field" class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24 scroll-mt-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Where it lands" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -240,7 +240,7 @@ const tocSections = [
         </section>
 
         <!-- 6. Sovereign by design -->
-        <section id="sovereign" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
+        <section id="sovereign" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24 scroll-mt-20">
             <div class="mb-10 md:mb-14 max-w-3xl">
                 <CommonSup title="Sovereign by design" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -260,7 +260,7 @@ const tocSections = [
         </section>
 
         <!-- 7. Modularity -->
-        <section id="modular" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20 scroll-mt-20">
+        <section id="modular" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20 scroll-mt-20">
             <CommonSup title="Modular" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05] max-w-3xl">
                 Compose the platform. Brand the modules<span class="text-primary-text">.</span>
@@ -271,7 +271,7 @@ const tocSections = [
         </section>
 
         <!-- 8. Capability matrix -->
-        <section id="capability-matrix" class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
+        <section id="capability-matrix" class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24 scroll-mt-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Capability matrix" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -293,7 +293,7 @@ const tocSections = [
         </section>
 
         <!-- 9. AI capabilities tiles (NEW) -->
-        <section id="ai-capabilities" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20 scroll-mt-20">
+        <section id="ai-capabilities" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20 scroll-mt-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="AI capabilities" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -316,7 +316,7 @@ const tocSections = [
         </section>
 
         <!-- 10. Outcomes -->
-        <section id="outcomes" class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
+        <section id="outcomes" class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24 scroll-mt-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Outcomes" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -332,7 +332,7 @@ const tocSections = [
         </section>
 
         <!-- 11. Industries we serve (NEW) -->
-        <section id="industries-served" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20 scroll-mt-20">
+        <section id="industries-served" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20 scroll-mt-20">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
                 <div>
                     <CommonSup title="Industries we serve" />
@@ -356,7 +356,7 @@ const tocSections = [
         </section>
 
         <!-- 12. CTA -->
-        <section id="engage" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24 scroll-mt-20">
+        <section id="engage" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24 scroll-mt-20">
             <div class="grid lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-8">
                     <CommonSup title="Engage" />

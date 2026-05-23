@@ -68,7 +68,7 @@ useSeoMeta({
 
         <template v-else-if="post">
             <!-- Hero -->
-            <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+            <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
                 <CommonSup title="Newsroom dispatch" />
                 <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[36px] leading-[1.05] md:text-[52px] md:leading-[1.02] lg:text-[72px] tracking-tight max-w-4xl">
                     {{ post.title }}
@@ -96,12 +96,12 @@ useSeoMeta({
             </section>
 
             <!-- Article body -->
-            <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+            <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
                 <div class="max-w-3xl mx-auto prose-davion" v-html="renderedContent" />
             </section>
 
             <!-- Related -->
-            <section v-if="related.length" class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+            <section v-if="related.length" class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
                 <CommonSup title="Related" />
                 <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     <NuxtLink

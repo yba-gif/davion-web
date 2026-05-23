@@ -64,7 +64,7 @@ function categoryLabel(slug: string) {
 <template>
     <div class="flex flex-col gap-4">
         <!-- Hero -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup title="Company · Newsroom" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
                 Dispatches from the work<span class="text-primary-text">.</span>
@@ -93,7 +93,7 @@ function categoryLabel(slug: string) {
         </section>
 
         <!-- Loading state (P1.U2) -->
-        <section v-if="pending" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-if="pending" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup title="Loading" />
             <h2 class="sr-only">Loading dispatches</h2>
             <div class="mt-10">
@@ -142,7 +142,7 @@ function categoryLabel(slug: string) {
         </section>
 
         <!-- Index -->
-        <section v-if="rest.length" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section v-if="rest.length" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup title="All dispatches" />
             <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <NuxtLink
@@ -190,7 +190,7 @@ function categoryLabel(slug: string) {
         </EmptyState>
 
         <!-- Press kit / media contact block -->
-        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10 items-end">
                 <div class="lg:col-span-8">
                     <CommonSup title="Press kit · Media contact" />

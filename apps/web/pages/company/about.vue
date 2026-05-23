@@ -61,7 +61,7 @@ const values = [
 <template>
     <div class="flex flex-col gap-4">
         <!-- Hero -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup title="Company · About" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[76px] tracking-tight max-w-4xl">
                 Sovereignty isn't a feature<span class="text-primary-text">.</span><br>It's where the work happens<span class="text-primary-text">.</span>
@@ -74,7 +74,7 @@ const values = [
         <!-- What is sovereign AI? Definitional anchor for novice buyers. Moved here
              from the landing page so the home stays focused on the expert funnel
              while this page carries the full explainer. -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="grid lg:grid-cols-12 gap-10 items-start">
                 <div class="lg:col-span-4">
                     <CommonSup title="If you are new to the term" />
@@ -97,7 +97,7 @@ const values = [
         </section>
 
         <!-- Why Davion exists -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="grid lg:grid-cols-12 gap-10 items-start">
                 <div class="lg:col-span-4">
                     <CommonSup title="Why Davion exists" />
@@ -126,7 +126,7 @@ const values = [
         </section>
 
         <!-- What we believe, 5 values written as sentences, not nouns -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="mb-12 md:mb-16 max-w-3xl">
                 <CommonSup title="What we believe" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -150,7 +150,7 @@ const values = [
         </section>
 
         <!-- How we work, engagement model -->
-        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="grid lg:grid-cols-12 gap-10 items-start">
                 <div class="lg:col-span-4">
                     <CommonSup title="How we work" />
@@ -176,7 +176,7 @@ const values = [
         </section>
 
         <!-- Who's behind this -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="mb-10 md:mb-14 max-w-3xl">
                 <CommonSup title="Who's behind this" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -228,7 +228,7 @@ const values = [
         </section>
 
         <!-- CTA -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-8">
                     <CommonSup title="Engage" />

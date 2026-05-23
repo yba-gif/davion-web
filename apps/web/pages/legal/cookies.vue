@@ -28,7 +28,7 @@ const cookies = [
 
 <template>
     <div class="flex flex-col gap-4">
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup title="Legal · Cookie policy" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[72px] tracking-tight max-w-4xl">
                 Cookie policy<span class="text-primary-text">.</span>
@@ -53,7 +53,7 @@ const cookies = [
         </section>
 
         <!-- Inventory -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup title="Cookie inventory" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
                 Every cookie this site can set<span class="text-primary-text">.</span>

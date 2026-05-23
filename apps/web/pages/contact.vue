@@ -17,7 +17,7 @@ const intents = [
 
 <template>
     <div class="flex flex-col gap-4">
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup title="Engage" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
                 Tell us what you're trying to decide<span class="text-primary-text">.</span>
@@ -37,7 +37,7 @@ const intents = [
              (runtimeConfig). -->
         <SchedulingEmbed />
 
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup title="Intents" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05] max-w-3xl">
                 Which one applies?
@@ -51,7 +51,7 @@ const intents = [
         </section>
 
         <!-- Per-team email routing. Generic intake handled by SchedulingEmbed above. -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <CommonSup title="Direct email · per team" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
                 Or write to the right team directly<span class="text-primary-text">.</span>

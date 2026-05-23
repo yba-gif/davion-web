@@ -48,7 +48,7 @@ const facts = [
 <template>
     <div class="flex flex-col gap-4">
         <!-- Hero -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup title="Press kit · Media" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[72px] tracking-tight max-w-4xl">
                 For journalists and analysts<span class="text-primary-text">.</span>
@@ -63,7 +63,7 @@ const facts = [
         </section>
 
         <!-- Factsheet -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup title="Factsheet" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
                 Davion at a glance<span class="text-primary-text">.</span>
@@ -80,7 +80,7 @@ const facts = [
         </section>
 
         <!-- Downloadable assets -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup title="Logos and assets" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
                 Download-ready files<span class="text-primary-text">.</span>
@@ -116,7 +116,7 @@ const facts = [
         </section>
 
         <!-- Colours -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup title="Brand colours" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
                 The palette in use today<span class="text-primary-text">.</span>
@@ -137,7 +137,7 @@ const facts = [
         </section>
 
         <!-- Executive bios -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup title="Executive bios" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
                 People you can quote<span class="text-primary-text">.</span>
@@ -159,7 +159,7 @@ const facts = [
         </section>
 
         <!-- Media contact -->
-        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-8">
                     <CommonSup title="Press desk" />

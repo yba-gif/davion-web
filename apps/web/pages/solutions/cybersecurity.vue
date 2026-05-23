@@ -28,7 +28,7 @@ const outcomes = [
 
 <template>
     <div class="flex flex-col gap-4">
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup title="Solutions · Cybersecurity" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
                 Defensive intelligence for environments that cannot fail.
@@ -41,7 +41,7 @@ const outcomes = [
             </div>
         </section>
 
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <CommonSup title="The problem" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[36px] leading-[1.05] md:text-[56px] md:leading-[1.02] tracking-tight max-w-4xl">
                 A breach inside your perimeter is also a breach of your sovereignty.
@@ -51,7 +51,7 @@ const outcomes = [
             </p>
         </section>
 
-        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup title="Detection" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -70,7 +70,7 @@ const outcomes = [
             </div>
         </section>
 
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Architecture" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -85,7 +85,7 @@ const outcomes = [
             </div>
         </section>
 
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-7">
                     <CommonSup title="Constrained environments" />
@@ -110,7 +110,7 @@ const outcomes = [
             </div>
         </section>
 
-        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Outcomes" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -125,7 +125,7 @@ const outcomes = [
             </div>
         </section>
 
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="grid lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-8">
                     <CommonSup title="Engage" />

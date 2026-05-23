@@ -54,7 +54,7 @@ const sections = [
 
 <template>
     <div class="flex flex-col gap-4">
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup title="Legal · Terms of use" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[72px] tracking-tight max-w-4xl">
                 Website terms of use<span class="text-primary-text">.</span>
@@ -67,7 +67,7 @@ const sections = [
             </p>
         </section>
 
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <ol class="space-y-8 max-w-4xl">
                 <li v-for="s in sections" :key="s.n" class="grid md:grid-cols-12 gap-4 md:gap-8 border-t border-drygray-200 pt-8 first:border-t-0 first:pt-0">
                     <div class="md:col-span-3">

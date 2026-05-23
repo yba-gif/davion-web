@@ -86,7 +86,7 @@ const process = [
 <template>
     <div class="flex flex-col gap-4">
         <!-- Hero -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup title="Company · Careers" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[72px] tracking-tight max-w-4xl">
                 Sovereign AI is operator work<span class="text-primary-text">.</span>
@@ -97,7 +97,7 @@ const process = [
         </section>
 
         <!-- EVP, what working here actually looks like -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10">
                 <div class="lg:col-span-4">
                     <CommonSup title="What working here looks like" />
@@ -131,7 +131,7 @@ const process = [
         </section>
 
         <!-- Open roles -->
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="mb-10 md:mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
                 <div>
                     <CommonSup title="Open roles" />
@@ -167,7 +167,7 @@ const process = [
         </section>
 
         <!-- Hiring process -->
-        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="mb-10 md:mb-14 max-w-3xl">
                 <CommonSup title="How we hire" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
@@ -184,7 +184,7 @@ const process = [
         </section>
 
         <!-- CTA -->
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="grid lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-8">
                     <CommonSup title="Apply or stay in touch" />

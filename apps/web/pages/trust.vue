@@ -65,7 +65,7 @@ const lifecycle = [
 
 <template>
     <div class="flex flex-col gap-4">
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-20 md:py-28">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup title="Trust &amp; Sovereignty" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
                 Your data. Your jurisdiction. Your audit.
@@ -78,7 +78,7 @@ const lifecycle = [
             </div>
         </section>
 
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup title="Sovereignty model" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -96,7 +96,7 @@ const lifecycle = [
             </div>
         </section>
 
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Deployment matrix" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -130,7 +130,7 @@ const lifecycle = [
             </div>
         </section>
 
-        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Access control" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -145,7 +145,7 @@ const lifecycle = [
             </div>
         </section>
 
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup title="Auditability" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -163,7 +163,7 @@ const lifecycle = [
             </div>
         </section>
 
-        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="mb-10 md:mb-14">
                 <CommonSup title="Standards" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -181,7 +181,7 @@ const lifecycle = [
             </div>
         </section>
 
-        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup title="Responsible AI" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -199,7 +199,7 @@ const lifecycle = [
             </div>
         </section>
 
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-20">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup title="Data lifecycle" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
@@ -218,7 +218,7 @@ const lifecycle = [
             </div>
         </section>
 
-        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-16 md:py-24">
+        <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24">
             <div class="grid lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-8">
                     <CommonSup title="Engage" />
