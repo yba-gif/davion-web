@@ -368,7 +368,7 @@
                 "sup": "Basın kiti · Medya",
                 "headline": "Gazeteciler ve analistler için",
                 "body": "Çalışan bir gazeteci veya analistin Davion hakkında doğru yazmak için ihtiyaç duyduğu her şey. Ambargolu materyaller basın masası üzerinden takdirle ele alınır.",
-                "ctaEmail": "press@davion.com",
+                "ctaEmail": "press{'@'}davion.com",
                 "ctaNewsroom": "Haber Odası"
             },
             "factsheet": {

@@ -368,7 +368,7 @@
                 "sup": "Pressekit · Medien",
                 "headline": "Für Journalisten und Analysten",
                 "body": "Alles, was ein arbeitender Journalist oder Analyst benötigt, um über Davion korrekt zu schreiben. Sperrfristmaterial wird über das Pressereferat mit Diskretion behandelt.",
-                "ctaEmail": "press@davion.com",
+                "ctaEmail": "press{'@'}davion.com",
                 "ctaNewsroom": "Newsroom"
             },
             "factsheet": {

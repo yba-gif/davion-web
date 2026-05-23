@@ -368,7 +368,7 @@
                 "sup": "Press kit · Media",
                 "headline": "For journalists and analysts",
                 "body": "Everything a working journalist or analyst needs to write about Davion accurately. Embargoed material handled with discretion via the press desk.",
-                "ctaEmail": "press@davion.com",
+                "ctaEmail": "press{'@'}davion.com",
                 "ctaNewsroom": "Newsroom"
             },
             "factsheet": {
