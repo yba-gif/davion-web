@@ -26,7 +26,38 @@ export default defineNuxtConfig({
 
     css: ['~/assets/css/main.css'],
 
-    modules: ['@nuxt/image', '@nuxt/icon', '@nuxtjs/tailwindcss', '@nuxthub/core'],
+    modules: ['@nuxt/image', '@nuxt/icon', '@nuxtjs/tailwindcss', '@nuxthub/core', '@nuxtjs/i18n'],
+
+    // P4.1: Trilingual site (English / Turkish / German). English is the
+    // default and lives at the bare apex (davion.com.tr/about); other
+    // locales get prefixed (/tr/about, /de/about). First-visit browser
+    // language detection happens only on the root path, then a cookie
+    // (davion_lang) remembers the pick. Manual switch from the header
+    // always wins. Lazy-loaded translations keep the bundle lean.
+    i18n: {
+        locales: [
+            { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
+            { code: 'tr', iso: 'tr-TR', name: 'Türkçe', file: 'tr.json' },
+            { code: 'de', iso: 'de-DE', name: 'Deutsch', file: 'de.json' },
+        ],
+        defaultLocale: 'en',
+        strategy: 'prefix_except_default',
+        lazy: true,
+        langDir: 'locales/',
+        detectBrowserLanguage: {
+            useCookie: true,
+            cookieKey: 'davion_lang',
+            redirectOn: 'root',
+            fallbackLocale: 'en',
+        },
+        compilation: {
+            // Required for Cloudflare Workers preset: avoids bundling
+            // the message-compiler runtime (which depends on `eval`
+            // and breaks under Workers CSP). Translations are
+            // pre-compiled at build time instead.
+            strictMessage: false,
+        },
+    },
 
     // P3.6: NuxtHub is the official Cloudflare integration for Nuxt 3. It
     // configures Nitro for the modern Workers + Static Assets path

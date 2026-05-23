@@ -15,56 +15,56 @@ watch(isMobileMenuOpen, (open) => {
     document.body.style.overflow = open ? 'hidden' : ''
 })
 
+// Nav model uses i18n keys (labelKey / descKey) instead of literal strings.
+// Resolved with $t() in the template so the bar tracks the current locale.
+// Paths stay raw; localePath() wraps them at render time so /about becomes
+// /tr/about for Turkish, /de/about for German, etc.
 const nav = [
     {
-        label: 'Solutions',
+        labelKey: 'nav.solutions',
         children: [
-            { label: 'AlpOS', to: '/solutions/alpos', flagship: true, desc: 'The sovereign AI platform underneath every solution.' },
-            { label: 'Digital Transformation', to: '/solutions/digital-transformation' },
-            { label: 'Cybersecurity', to: '/solutions/cybersecurity' },
-            { label: 'OSINT', to: '/solutions/osint' },
+            { labelKey: 'subnav.solutions.alpos', to: '/solutions/alpos', flagship: true, descKey: 'subnav.solutions.alposDesc' },
+            { labelKey: 'subnav.solutions.digital', to: '/solutions/digital-transformation' },
+            { labelKey: 'subnav.solutions.cybersecurity', to: '/solutions/cybersecurity' },
+            { labelKey: 'subnav.solutions.osint', to: '/solutions/osint' },
         ],
     },
-    // Capabilities dropdown restored, P2.2 promoted all 6 capability pages
-    // out of stub status. Each links into 2-4 industries that lean on it.
     {
-        label: 'Capabilities',
+        labelKey: 'nav.capabilities',
         children: [
-            { label: 'RAG over your ontology', to: '/capabilities/rag', desc: 'AI that cites its sources, grounded in your ontology.' },
-            { label: 'Geospatial analytics', to: '/capabilities/geospatial', desc: 'Map, ground, and reason over location-aware data.' },
-            { label: 'Video intelligence', to: '/capabilities/video-intelligence', desc: 'Search hours of video by content. Chain-of-custody intact.' },
-            { label: 'Audio analysis', to: '/capabilities/audio-analysis', desc: 'Transcribe, diarise, and extract structure at archive scale.' },
-            { label: 'Machine translation', to: '/capabilities/translation', desc: '60+ languages inside your perimeter.' },
-            { label: 'Data acquisition', to: '/capabilities/data-acquisition', desc: 'Connectors, ETL, enrichment from source to ontology.' },
-            { label: 'All capabilities', to: '/capabilities' },
+            { labelKey: 'subnav.capabilities.rag', to: '/capabilities/rag', descKey: 'subnav.capabilities.ragDesc' },
+            { labelKey: 'subnav.capabilities.geospatial', to: '/capabilities/geospatial', descKey: 'subnav.capabilities.geospatialDesc' },
+            { labelKey: 'subnav.capabilities.video', to: '/capabilities/video-intelligence', descKey: 'subnav.capabilities.videoDesc' },
+            { labelKey: 'subnav.capabilities.audio', to: '/capabilities/audio-analysis', descKey: 'subnav.capabilities.audioDesc' },
+            { labelKey: 'subnav.capabilities.translation', to: '/capabilities/translation', descKey: 'subnav.capabilities.translationDesc' },
+            { labelKey: 'subnav.capabilities.dataAcq', to: '/capabilities/data-acquisition', descKey: 'subnav.capabilities.dataAcqDesc' },
+            { labelKey: 'subnav.capabilities.all', to: '/capabilities' },
         ],
     },
-    // Industries dropdown carries all 6 real playbooks (P2.1 promoted
-    // Manufacturing / Life Sciences / Government out of stub status).
     {
-        label: 'Industries',
+        labelKey: 'nav.industries',
         children: [
-            { label: 'Financial Services', to: '/industries/financial-services', flagship: true, desc: 'Market & risk, compliance, client intelligence, resilience.' },
-            { label: 'Energy', to: '/industries/energy', desc: 'Grid, generation, asset reliability, OT-side cyber.' },
-            { label: 'Defense & Intelligence', to: '/industries/defense-intelligence', desc: 'Air-gapped sovereign AI inside the enclave.' },
-            { label: 'Manufacturing', to: '/industries/manufacturing', desc: 'Plant operations, quality, supply, OT cyber.' },
-            { label: 'Life Sciences', to: '/industries/life-sciences', desc: 'Discovery, clinical, pharmacovigilance, GxP.' },
-            { label: 'Government', to: '/industries/government', desc: 'Cross-agency entity resolution, fraud, oversight.' },
-            { label: 'All industries', to: '/industries' },
+            { labelKey: 'subnav.industries.finance', to: '/industries/financial-services', flagship: true, descKey: 'subnav.industries.financeDesc' },
+            { labelKey: 'subnav.industries.energy', to: '/industries/energy', descKey: 'subnav.industries.energyDesc' },
+            { labelKey: 'subnav.industries.defense', to: '/industries/defense-intelligence', descKey: 'subnav.industries.defenseDesc' },
+            { labelKey: 'subnav.industries.manufacturing', to: '/industries/manufacturing', descKey: 'subnav.industries.manufacturingDesc' },
+            { labelKey: 'subnav.industries.lifeSciences', to: '/industries/life-sciences', descKey: 'subnav.industries.lifeSciencesDesc' },
+            { labelKey: 'subnav.industries.government', to: '/industries/government', descKey: 'subnav.industries.governmentDesc' },
+            { labelKey: 'subnav.industries.all', to: '/industries' },
         ],
     },
-    { label: 'Trust', to: '/trust' },
-    // Company dropdown, collapsed from 3 flat top-level links (About / Careers /
-    // Newsroom) once Careers landed in P2.6.
+    { labelKey: 'nav.trust', to: '/trust' },
     {
-        label: 'Company',
+        labelKey: 'nav.company',
         children: [
-            { label: 'About', to: '/company/about', flagship: true, desc: 'The opinion underneath the product.' },
-            { label: 'Careers', to: '/company/careers', desc: 'Engineers and operators wanted.' },
-            { label: 'Newsroom', to: '/company/newsroom', desc: 'Dispatches from the work.' },
+            { labelKey: 'subnav.company.about', to: '/company/about', flagship: true, descKey: 'subnav.company.aboutDesc' },
+            { labelKey: 'subnav.company.careers', to: '/company/careers', descKey: 'subnav.company.careersDesc' },
+            { labelKey: 'subnav.company.newsroom', to: '/company/newsroom', descKey: 'subnav.company.newsroomDesc' },
         ],
     },
 ] as const
+
+const localePath = useLocalePath()
 
 // P1.U4: WAI-ARIA menubar pattern.
 // - Trigger button: aria-haspopup="menu", aria-expanded toggles on open/close.
@@ -178,61 +178,61 @@ onBeforeUnmount(() => {
         class="sticky rounded-b-2xl top-0 w-full max-w-7xl mx-auto [backdrop-filter:blur(32px)] bg-white/80 h-[72px] flex flex-row items-center justify-between gap-0 text-left text-sm text-drygray-100 font-switzer px-6 z-50 shadow-sm"
     >
         <div class="flex flex-row items-center justify-start gap-8">
-            <NuxtLink to="/" class="flex items-center gap-2 cursor-pointer" @click="closeAll">
+            <NuxtLink :to="localePath('/')" class="flex items-center gap-2 cursor-pointer" @click="closeAll">
                 <NuxtImg src="/logo-64.png" alt="Davion" width="20" height="20" class="size-5" />
                 <span class="font-degular font-bold text-[18px] text-drygray-100">Davion</span>
             </NuxtLink>
 
             <!-- Desktop nav -->
             <div class="hidden lg:flex flex-row items-center justify-start gap-7">
-                <template v-for="item in nav" :key="item.label">
+                <template v-for="item in nav" :key="item.labelKey">
                     <NuxtLink
                         v-if="'to' in item && item.to"
-                        :to="item.to"
+                        :to="localePath(item.to)"
                         class="leading-[150%] font-medium transition-colors hover:text-primary-text"
                     >
-                        {{ item.label }}
+                        {{ $t(item.labelKey) }}
                     </NuxtLink>
                     <div v-else class="relative">
                         <button
-                            :ref="(el) => registerTrigger(item.label, el as HTMLElement | null)"
+                            :ref="(el) => registerTrigger(item.labelKey, el as HTMLElement | null)"
                             type="button"
                             class="leading-[150%] font-medium transition-colors hover:text-primary-text inline-flex items-center gap-1.5"
-                            :aria-expanded="openDropdown === item.label"
+                            :aria-expanded="openDropdown === item.labelKey"
                             aria-haspopup="menu"
-                            :aria-controls="`menu-${item.label}`"
-                            @click.stop="toggleDropdown(item.label)"
-                            @keydown="onTriggerKeydown($event, item.label)"
+                            :aria-controls="`menu-${item.labelKey}`"
+                            @click.stop="toggleDropdown(item.labelKey)"
+                            @keydown="onTriggerKeydown($event, item.labelKey)"
                         >
-                            {{ item.label }}
+                            {{ $t(item.labelKey) }}
                             <span
                                 class="text-drygray-default text-[10px] transition-transform"
-                                :class="openDropdown === item.label ? 'rotate-180' : ''"
+                                :class="openDropdown === item.labelKey ? 'rotate-180' : ''"
                                 aria-hidden="true"
                             >▾</span>
                         </button>
                         <div
-                            v-if="openDropdown === item.label && 'children' in item"
-                            :id="`menu-${item.label}`"
+                            v-if="openDropdown === item.labelKey && 'children' in item"
+                            :id="`menu-${item.labelKey}`"
                             role="menu"
-                            :aria-label="item.label"
+                            :aria-label="$t(item.labelKey)"
                             class="absolute top-full left-0 mt-3 min-w-[340px] bg-white rounded-2xl shadow-xl border border-drygray-200 overflow-hidden"
                         >
                             <NuxtLink
                                 v-for="(c, idx) in item.children"
                                 :key="c.to"
-                                :ref="(el) => registerMenuItem(item.label, idx, el as unknown as HTMLElement | null)"
-                                :to="c.to"
+                                :ref="(el) => registerMenuItem(item.labelKey, idx, el as unknown as HTMLElement | null)"
+                                :to="localePath(c.to)"
                                 role="menuitem"
                                 :tabindex="idx === 0 ? 0 : -1"
                                 class="block px-5 py-4 hover:bg-whitesmoke-100 transition-colors border-t border-drygray-200 first:border-t-0"
-                                @keydown="onMenuKeydown($event, item.label, idx)"
+                                @keydown="onMenuKeydown($event, item.labelKey, idx)"
                             >
                                 <div class="flex items-center justify-between gap-4">
-                                    <span class="text-drygray-100 font-medium">{{ c.label }}</span>
-                                    <span v-if="'flagship' in c && c.flagship" class="text-primary-text text-[11px] font-semibold uppercase tracking-wider">Flagship</span>
+                                    <span class="text-drygray-100 font-medium">{{ $t(c.labelKey) }}</span>
+                                    <span v-if="'flagship' in c && c.flagship" class="text-primary-text text-[11px] font-semibold uppercase tracking-wider">{{ $t('subnav.flagship') }}</span>
                                 </div>
-                                <p v-if="'desc' in c && c.desc" class="text-drygray-default text-[13px] mt-1">{{ c.desc }}</p>
+                                <p v-if="'descKey' in c && c.descKey" class="text-drygray-default text-[13px] mt-1">{{ $t(c.descKey) }}</p>
                             </NuxtLink>
                         </div>
                     </div>
@@ -240,16 +240,18 @@ onBeforeUnmount(() => {
             </div>
         </div>
 
-        <!-- Desktop CTA + mobile toggle -->
-        <div class="flex items-center gap-3 text-[15px]">
-            <NuxtLink to="/contact" class="hidden lg:inline-flex">
-                <CommonButton size="xs" variant="outline" icon="base:arrow">Book a demo</CommonButton>
+        <!-- Desktop CTA + language switcher + mobile toggle -->
+        <div class="flex items-center gap-2 lg:gap-3 text-[15px]">
+            <CommonLangSwitcher class="hidden lg:block" />
+            <NuxtLink :to="localePath('/contact')" class="hidden lg:inline-flex">
+                <CommonButton size="xs" variant="outline" icon="base:arrow">{{ $t('nav.bookDemo') }}</CommonButton>
             </NuxtLink>
+            <CommonLangSwitcher class="lg:hidden" />
             <button
                 type="button"
                 class="lg:hidden p-2"
                 :aria-expanded="isMobileMenuOpen"
-                aria-label="Toggle menu"
+                :aria-label="$t('nav.openMenu')"
                 @click="isMobileMenuOpen = !isMobileMenuOpen"
             >
                 <Icon :name="isMobileMenuOpen ? 'base:close' : 'base:menu'" class="size-7" />
@@ -261,33 +263,33 @@ onBeforeUnmount(() => {
     <Teleport to="body">
         <div v-if="isMobileMenuOpen" class="fixed inset-0 top-[72px] bg-white/95 backdrop-blur-md z-40 lg:hidden overflow-y-auto">
             <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-5">
-                <template v-for="item in nav" :key="item.label">
+                <template v-for="item in nav" :key="item.labelKey">
                     <NuxtLink
                         v-if="'to' in item && item.to"
-                        :to="item.to"
+                        :to="localePath(item.to)"
                         class="text-[28px] leading-tight font-degular font-semibold text-drygray-100 hover:text-primary-text"
                         @click="closeAll"
                     >
-                        {{ item.label }}
+                        {{ $t(item.labelKey) }}
                     </NuxtLink>
                     <div v-else-if="'children' in item">
-                        <p class="text-[11px] text-drygray-default uppercase tracking-[0.15em] font-semibold mb-3">{{ item.label }}</p>
+                        <p class="text-[11px] text-drygray-default uppercase tracking-[0.15em] font-semibold mb-3">{{ $t(item.labelKey) }}</p>
                         <div class="flex flex-col gap-3 pl-1">
                             <NuxtLink
                                 v-for="c in item.children"
                                 :key="c.to"
-                                :to="c.to"
+                                :to="localePath(c.to)"
                                 class="text-[22px] font-degular font-semibold text-drygray-100 hover:text-primary-text inline-flex items-center gap-3"
                                 @click="closeAll"
                             >
-                                {{ c.label }}
-                                <span v-if="'flagship' in c && c.flagship" class="text-primary-text text-[11px] font-semibold uppercase tracking-wider">Flagship</span>
+                                {{ $t(c.labelKey) }}
+                                <span v-if="'flagship' in c && c.flagship" class="text-primary-text text-[11px] font-semibold uppercase tracking-wider">{{ $t('subnav.flagship') }}</span>
                             </NuxtLink>
                         </div>
                     </div>
                 </template>
-                <NuxtLink to="/contact" class="mt-4" @click="closeAll">
-                    <CommonButton variant="primary" icon="base:arrow" class="w-full">Book a demo</CommonButton>
+                <NuxtLink :to="localePath('/contact')" class="mt-4" @click="closeAll">
+                    <CommonButton variant="primary" icon="base:arrow" class="w-full">{{ $t('nav.bookDemo') }}</CommonButton>
                 </NuxtLink>
             </div>
         </div>

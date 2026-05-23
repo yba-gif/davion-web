@@ -1,0 +1,223 @@
+{
+    "common": {
+        "readMore": "Read more",
+        "back": "Back",
+        "close": "Close",
+        "loading": "Loading",
+        "bookDemo": "Book a demo",
+        "viewAll": "View all",
+        "all": "All",
+        "downloadLabel": "Download"
+    },
+    "lang": {
+        "label": "Language",
+        "en": "English",
+        "tr": "Türkçe",
+        "de": "Deutsch"
+    },
+    "nav": {
+        "solutions": "Solutions",
+        "capabilities": "Capabilities",
+        "industries": "Industries",
+        "trust": "Trust",
+        "company": "Company",
+        "about": "About",
+        "careers": "Careers",
+        "newsroom": "Newsroom",
+        "bookDemo": "Book a demo",
+        "openMenu": "Toggle menu"
+    },
+    "subnav": {
+        "solutions": {
+            "alpos": "AlpOS",
+            "alposDesc": "The sovereign AI platform underneath every solution.",
+            "digital": "Digital Transformation",
+            "cybersecurity": "Cybersecurity",
+            "osint": "OSINT"
+        },
+        "capabilities": {
+            "rag": "RAG over your ontology",
+            "ragDesc": "AI that cites its sources, grounded in your ontology.",
+            "geospatial": "Geospatial analytics",
+            "geospatialDesc": "Map, ground, and reason over location-aware data.",
+            "video": "Video intelligence",
+            "videoDesc": "Search hours of video by content. Chain-of-custody intact.",
+            "audio": "Audio analysis",
+            "audioDesc": "Transcribe, diarise, and extract structure at archive scale.",
+            "translation": "Machine translation",
+            "translationDesc": "60+ languages inside your perimeter.",
+            "dataAcq": "Data acquisition",
+            "dataAcqDesc": "Connectors, ETL, enrichment from source to ontology.",
+            "all": "All capabilities"
+        },
+        "industries": {
+            "finance": "Financial Services",
+            "financeDesc": "Market & risk, compliance, client intelligence, resilience.",
+            "energy": "Energy",
+            "energyDesc": "Grid, generation, asset reliability, OT-side cyber.",
+            "defense": "Defense & Intelligence",
+            "defenseDesc": "Air-gapped sovereign AI inside the enclave.",
+            "manufacturing": "Manufacturing",
+            "manufacturingDesc": "Plant operations, quality, supply, OT cyber.",
+            "lifeSciences": "Life Sciences",
+            "lifeSciencesDesc": "Discovery, clinical, pharmacovigilance, GxP.",
+            "government": "Government",
+            "governmentDesc": "Cross-agency entity resolution, fraud, oversight.",
+            "all": "All industries"
+        },
+        "company": {
+            "about": "About",
+            "aboutDesc": "The opinion underneath the product.",
+            "careers": "Careers",
+            "careersDesc": "Engineers and operators wanted.",
+            "newsroom": "Newsroom",
+            "newsroomDesc": "Dispatches from the work."
+        },
+        "flagship": "Flagship"
+    },
+    "footer": {
+        "tagline": "Davion deploys inside your perimeter. The data does not leave. The decisions are auditable.",
+        "columns": {
+            "solutions": "Solutions",
+            "platform": "Platform",
+            "company": "Company"
+        },
+        "links": {
+            "industries": "Industries",
+            "trust": "Trust & Sovereignty",
+            "contact": "Contact"
+        },
+        "legal": {
+            "privacy": "Privacy",
+            "terms": "Terms",
+            "cookies": "Cookies",
+            "responsibleAi": "Responsible AI",
+            "status": "Status",
+            "cookiePreferences": "Cookie preferences"
+        },
+        "copyright": "© {year} Davion. All rights reserved.",
+        "sovereign": "Sovereign by deployment."
+    },
+    "hero": {
+        "headline": "Sovereign AI for institutions whose data can't leave",
+        "body": "Davion is the platform banks, ministries, and energy operators use when decisions must be defensible, auditable, and made on data that never enters a public cloud.",
+        "ctaPrimary": "Book a demo",
+        "ctaSecondary": "See how AlpOS works"
+    },
+    "cookies": {
+        "label": "Cookies",
+        "title": "Strictly-necessary by default",
+        "body": "Davion uses one strictly-necessary cookie to remember your choice. Anonymous analytics are loaded only if you opt in. No third-party tracking either way. Full policy in",
+        "policyLink": "Cookies",
+        "acceptAll": "Accept all",
+        "essentialOnly": "Essential only"
+    },
+    "form": {
+        "sup": "Tell us what you are trying to decide",
+        "title": "A structured intake",
+        "body": "Davion engagements are consultative. We route the enquiry to the right operator on our side; the first conversation is a briefing, not a pitch.",
+        "name": "Your name",
+        "namePlaceholder": "Maria Schmidt",
+        "email": "Work email",
+        "emailPlaceholder": "m.schmidt@example.com",
+        "organisation": "Organisation",
+        "organisationOptional": "(optional)",
+        "organisationPlaceholder": "Bank, ministry, operator…",
+        "role": "Role",
+        "rolePlaceholder": "Head of AI, CIO, Risk officer…",
+        "intentLabel": "What is this about",
+        "intents": {
+            "briefing": "Briefing",
+            "partnership": "Partnership",
+            "press": "Press",
+            "careers": "Careers",
+            "venture": "Venture"
+        },
+        "message": "What you are trying to decide",
+        "messagePlaceholder": "A few sentences about the decision, the constraints, and the timeline. The more concrete the better.",
+        "messageHelp": "Minimum 20 characters. No NDA-protected detail.",
+        "messageCounter": "{n}/4000",
+        "submitting": "Submitting…",
+        "submit": "Submit",
+        "privacyPrefix": "By submitting you agree to our",
+        "privacyLink": "privacy policy",
+        "received": "Received",
+        "thankYouTitle": "Got it. We will be in touch",
+        "thankYouBody": "Your submission was logged with reference {ref}. The right operator on our side reads every enquiry inside one business day. If anything is urgent, email {email} and quote the reference.",
+        "backToHome": "Back to home",
+        "submitAnother": "Submit another",
+        "errors": {
+            "required": "Required.",
+            "messageMin": "Tell us a bit more (at least 20 characters).",
+            "rateLimit": "Too many submissions from your location. Try again in an hour, or email engagement@davion.com directly.",
+            "generic": "Something went wrong submitting the form. Email engagement@davion.com if it persists."
+        }
+    },
+    "bio": {
+        "ceo": "CEO",
+        "readFullBio": "Read full bio",
+        "closeBio": "Close bio"
+    },
+    "home": {
+        "solutions": {
+            "sup": "Solutions",
+            "headline1": "The platform",
+            "headline2": "And the solutions built on it",
+            "body": "AlpOS is the constant. Cybersecurity and Digital Transformation are how it's applied, same sovereignty, same audit, same spine.",
+            "alposBody": "The sovereign AI platform underneath every Davion solution. Ingest, ontology, analytics, AI, decisioning, action, governed end to end.",
+            "alposLabel": "Platform · Flagship",
+            "cyberBody": "Defensive intelligence for environments that cannot fail. Detection through pattern, anomaly, and graph analysis, inside your perimeter.",
+            "cyberLabel": "Solution",
+            "digitalBody": "From siloed data to a single governed source of truth, phased from POC to industrial deployment, without losing the institution.",
+            "digitalLabel": "Solution"
+        },
+        "alposTeaser": {
+            "sup": "Flagship · AlpOS",
+            "headline": "The sovereign AI platform underneath every Davion solution",
+            "body": "AlpOS unifies data, ontology, analytics, and agentic AI in one modular platform, ingest to act, governed end to end. Digital Transformation, Cybersecurity, and OSINT are how it is applied.",
+            "cta": "Explore AlpOS"
+        },
+        "cycle": {
+            "sup": "The AI cycle",
+            "headlineParts": ["Ingest", "Model", "Reason", "Act"],
+            "body": "Every Davion deployment runs the same sovereign cycle, from raw data to operational action. The platform stays constant; the surface adapts to the use case.",
+            "stepLabel": "Step",
+            "steps": {
+                "01": { "title": "Ingest", "body": "Pull every relevant signal through a single governed pipeline." },
+                "02": { "title": "Model", "body": "Shape it as entities, events, and relationships in your ontology." },
+                "03": { "title": "Reason", "body": "Run AI against the ontology with citations back to source." },
+                "04": { "title": "Act", "body": "Embed the decision into operators and systems of record." }
+            }
+        },
+        "sovereignty": {
+            "sup": "Sovereign by design",
+            "headline": "Run where you require, only where you require",
+            "modeLabel": "Mode",
+            "modes": {
+                "onprem": { "name": "On-premise", "body": "Your hardware. Your network." },
+                "airgapped": { "name": "Air-gapped", "body": "Disconnected operation, signed updates." },
+                "cloud": { "name": "Sovereign cloud", "body": "Your provider, your region, bound by contract." }
+            },
+            "cta": "Trust & Sovereignty"
+        },
+        "sectors": {
+            "sup": "Industries",
+            "headline1": "For every business",
+            "headline2": "For every government",
+            "body": "Davion deploys across financial services, energy, manufacturing, life sciences, retail, government, critical infrastructure, and defense, wherever data has to become decisions you can defend.",
+            "cta": "Explore industries"
+        },
+        "newsroom": {
+            "sup": "Newsroom",
+            "headline": "Dispatches from the work",
+            "viewAll": "All dispatches"
+        },
+        "cta": {
+            "sup": "Engage",
+            "line1": "Your data",
+            "line2": "Your AI",
+            "line3": "Your decisions",
+            "body": "Briefings are consultative and tailored. Bring your data architecture, your constraints, and your operational reality. We will bring the right people from our side."
+        }
+    }
+}

@@ -10,6 +10,7 @@
 //   window.CustomEvent('cookie-consent:open') to reopen the banner.
 
 const STORAGE_KEY = 'davion_cookie_consent'
+const localePath = useLocalePath()
 
 const visible = ref(false)
 // Track whether we've checked storage yet, avoids flash on first paint.
@@ -78,14 +79,14 @@ onBeforeUnmount(() => {
                 class="fixed bottom-3 inset-x-3 md:bottom-6 md:right-6 md:left-auto md:max-w-md z-[80] bg-white rounded-2xl shadow-xl border border-drygray-200 p-6 pointer-events-auto"
             >
                 <p id="cookie-consent-title" class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text mb-2">
-                    Cookies
+                    {{ $t('cookies.label') }}
                 </p>
                 <h2 class="font-degular font-bold text-drygray-100 text-[20px] leading-tight mb-3">
-                    Strictly-necessary by default<span class="text-primary-text">.</span>
+                    {{ $t('cookies.title') }}<span class="text-primary-text">.</span>
                 </h2>
                 <p id="cookie-consent-body" class="text-[14px] leading-[1.5] text-drygray-default mb-5">
-                    Davion uses one strictly-necessary cookie to remember your choice. Anonymous analytics are loaded only if you opt in. No third-party tracking either way. Full policy in
-                    <NuxtLink to="/legal/cookies" class="text-primary-text underline underline-offset-2 hover:no-underline">Cookies</NuxtLink>.
+                    {{ $t('cookies.body') }}
+                    <NuxtLink :to="localePath('/legal/cookies')" class="text-primary-text underline underline-offset-2 hover:no-underline">{{ $t('cookies.policyLink') }}</NuxtLink>.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-2">
                     <button
@@ -93,14 +94,14 @@ onBeforeUnmount(() => {
                         class="text-[13px] font-semibold px-4 py-2.5 bg-drygray-100 text-white rounded-lg hover:bg-drygray-100/90 transition-colors"
                         @click="choose('accept')"
                     >
-                        Accept all
+                        {{ $t('cookies.acceptAll') }}
                     </button>
                     <button
                         type="button"
                         class="text-[13px] font-semibold px-4 py-2.5 bg-white text-drygray-100 border border-drygray-200 rounded-lg hover:border-drygray-100 transition-colors"
                         @click="choose('essential')"
                     >
-                        Essential only
+                        {{ $t('cookies.essentialOnly') }}
                     </button>
                 </div>
             </div>

@@ -8,12 +8,13 @@
 import Button from '~/components/common/button.vue'
 
 const router = useRouter()
+const localePath = useLocalePath()
 
 function navigateToContact() {
-    router.push('/contact')
+    router.push(localePath('/contact'))
 }
 function navigateToAlpos() {
-    router.push('/solutions/alpos')
+    router.push(localePath('/solutions/alpos'))
 }
 </script>
 
@@ -50,10 +51,10 @@ function navigateToAlpos() {
         </picture>
         <div class="min-[980px]:w-[676px] max-[980px]:w-full flex flex-col items-start justify-end max-[980px]:h-full gap-8 z-[1]">
             <h1 class="font-degular font-semibold tracking-[-0.02em] leading-[1.02] m-0 text-[68px] max-[980px]:text-[40px] min-[980px]:w-[676px] max-[980px]:w-full">
-                Sovereign AI for institutions whose data can't leave<span class="text-primary-text font-degular">.</span>
+                {{ $t('hero.headline') }}<span class="text-primary-text font-degular">.</span>
             </h1>
             <p class="min-[980px]:w-[560px] max-[980px]:w-full leading-[150%] font-medium text-[18px] max-[980px]:text-[16px] m-0">
-                Davion is the platform banks, ministries, and energy operators use when decisions must be defensible, auditable, and made on data that never enters a public cloud.
+                {{ $t('hero.body') }}
             </p>
             <div class="w-full flex flex-row max-[980px]:flex-col items-center justify-start gap-3 text-center text-[15px]">
                 <Button
@@ -63,7 +64,7 @@ function navigateToAlpos() {
                     class="min-[980px]:w-[200px] max-[980px]:w-full"
                     @click="navigateToContact"
                 >
-                    Book a demo
+                    {{ $t('hero.ctaPrimary') }}
                 </Button>
                 <Button
                     variant="outline"
@@ -72,7 +73,7 @@ function navigateToAlpos() {
                     class="min-[980px]:w-[220px] max-[980px]:w-full"
                     @click="navigateToAlpos"
                 >
-                    See how AlpOS works
+                    {{ $t('hero.ctaSecondary') }}
                 </Button>
             </div>
         </div>

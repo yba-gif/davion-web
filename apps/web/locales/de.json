@@ -1,0 +1,223 @@
+{
+    "common": {
+        "readMore": "Weiterlesen",
+        "back": "Zurück",
+        "close": "Schließen",
+        "loading": "Wird geladen",
+        "bookDemo": "Demo anfragen",
+        "viewAll": "Alle anzeigen",
+        "all": "Alle",
+        "downloadLabel": "Herunterladen"
+    },
+    "lang": {
+        "label": "Sprache",
+        "en": "English",
+        "tr": "Türkçe",
+        "de": "Deutsch"
+    },
+    "nav": {
+        "solutions": "Lösungen",
+        "capabilities": "Fähigkeiten",
+        "industries": "Branchen",
+        "trust": "Vertrauen",
+        "company": "Unternehmen",
+        "about": "Über uns",
+        "careers": "Karriere",
+        "newsroom": "Newsroom",
+        "bookDemo": "Demo anfragen",
+        "openMenu": "Menü umschalten"
+    },
+    "subnav": {
+        "solutions": {
+            "alpos": "AlpOS",
+            "alposDesc": "Die souveräne KI-Plattform unter jeder Lösung.",
+            "digital": "Digitale Transformation",
+            "cybersecurity": "Cybersicherheit",
+            "osint": "OSINT"
+        },
+        "capabilities": {
+            "rag": "RAG über Ihre Ontologie",
+            "ragDesc": "KI, die Quellen zitiert, verankert in Ihrer Ontologie.",
+            "geospatial": "Geodatenanalyse",
+            "geospatialDesc": "Standortbezogene Daten kartieren, verorten und verarbeiten.",
+            "video": "Video-Intelligence",
+            "videoDesc": "Stundenlanges Videomaterial inhaltlich durchsuchen. Beweiskette intakt.",
+            "audio": "Audio-Analyse",
+            "audioDesc": "Transkribieren, sprecherweise trennen und in Archivgröße strukturieren.",
+            "translation": "Maschinelle Übersetzung",
+            "translationDesc": "Über 60 Sprachen innerhalb Ihres Perimeters.",
+            "dataAcq": "Datenerfassung",
+            "dataAcqDesc": "Konnektoren, ETL und Anreicherung von der Quelle zur Ontologie.",
+            "all": "Alle Fähigkeiten"
+        },
+        "industries": {
+            "finance": "Finanzdienstleistungen",
+            "financeDesc": "Markt und Risiko, Compliance, Kundenintelligence, Resilienz.",
+            "energy": "Energie",
+            "energyDesc": "Netz, Erzeugung, Anlagenzuverlässigkeit, OT-Cyber.",
+            "defense": "Verteidigung und Nachrichtendienste",
+            "defenseDesc": "Air-gapped souveräne KI innerhalb der Enklave.",
+            "manufacturing": "Fertigung",
+            "manufacturingDesc": "Anlagenbetrieb, Qualität, Lieferkette, OT-Cyber.",
+            "lifeSciences": "Life Sciences",
+            "lifeSciencesDesc": "Forschung, Klinik, Pharmakovigilanz, GxP.",
+            "government": "Behörden",
+            "governmentDesc": "Behördenübergreifende Identitätsauflösung, Betrugserkennung, Aufsicht.",
+            "all": "Alle Branchen"
+        },
+        "company": {
+            "about": "Über uns",
+            "aboutDesc": "Die Überzeugung hinter dem Produkt.",
+            "careers": "Karriere",
+            "careersDesc": "Ingenieure und Operatoren gesucht.",
+            "newsroom": "Newsroom",
+            "newsroomDesc": "Berichte aus der Arbeit."
+        },
+        "flagship": "Flaggschiff"
+    },
+    "footer": {
+        "tagline": "Davion läuft innerhalb Ihres Perimeters. Die Daten verlassen ihn nicht. Die Entscheidungen sind auditierbar.",
+        "columns": {
+            "solutions": "Lösungen",
+            "platform": "Plattform",
+            "company": "Unternehmen"
+        },
+        "links": {
+            "industries": "Branchen",
+            "trust": "Vertrauen und Souveränität",
+            "contact": "Kontakt"
+        },
+        "legal": {
+            "privacy": "Datenschutz",
+            "terms": "AGB",
+            "cookies": "Cookies",
+            "responsibleAi": "Verantwortliche KI",
+            "status": "Status",
+            "cookiePreferences": "Cookie-Einstellungen"
+        },
+        "copyright": "© {year} Davion. Alle Rechte vorbehalten.",
+        "sovereign": "Souverän durch Betrieb."
+    },
+    "hero": {
+        "headline": "Souveräne KI für Institutionen, deren Daten nicht weg dürfen",
+        "body": "Davion ist die Plattform, die Banken, Ministerien und Energieversorger einsetzen, wenn Entscheidungen verteidigbar, nachvollziehbar und auf Daten getroffen werden müssen, die nie in eine öffentliche Cloud gelangen.",
+        "ctaPrimary": "Demo anfragen",
+        "ctaSecondary": "AlpOS in Aktion sehen"
+    },
+    "cookies": {
+        "label": "Cookies",
+        "title": "Standardmäßig nur das Notwendigste",
+        "body": "Davion verwendet einen einzigen, zwingend erforderlichen Cookie, um Ihre Auswahl zu speichern. Anonyme Analysen werden nur geladen, wenn Sie zustimmen. Kein Tracking durch Dritte, in keinem Fall. Vollständige Richtlinie unter",
+        "policyLink": "Cookies",
+        "acceptAll": "Alle akzeptieren",
+        "essentialOnly": "Nur notwendige"
+    },
+    "form": {
+        "sup": "Sagen Sie uns, was Sie entscheiden müssen",
+        "title": "Strukturierte Anfrage",
+        "body": "Davion-Engagements sind beratend. Wir leiten Ihre Anfrage an den richtigen Operator auf unserer Seite weiter; das erste Gespräch ist ein Briefing, kein Pitch.",
+        "name": "Ihr Name",
+        "namePlaceholder": "Maria Schmidt",
+        "email": "Berufliche E-Mail",
+        "emailPlaceholder": "m.schmidt@example.com",
+        "organisation": "Organisation",
+        "organisationOptional": "(optional)",
+        "organisationPlaceholder": "Bank, Ministerium, Betreiber…",
+        "role": "Rolle",
+        "rolePlaceholder": "Head of AI, CIO, Risikomanager…",
+        "intentLabel": "Worum geht es",
+        "intents": {
+            "briefing": "Briefing",
+            "partnership": "Partnerschaft",
+            "press": "Presse",
+            "careers": "Karriere",
+            "venture": "Venture"
+        },
+        "message": "Was Sie entscheiden müssen",
+        "messagePlaceholder": "Ein paar Sätze zur Entscheidung, den Rahmenbedingungen und der Zeitachse. Je konkreter, desto besser.",
+        "messageHelp": "Mindestens 20 Zeichen. Keine NDA-geschützten Details.",
+        "messageCounter": "{n}/4000",
+        "submitting": "Wird gesendet…",
+        "submit": "Senden",
+        "privacyPrefix": "Mit dem Absenden akzeptieren Sie unsere",
+        "privacyLink": "Datenschutzerklärung",
+        "received": "Empfangen",
+        "thankYouTitle": "Angekommen. Wir melden uns",
+        "thankYouBody": "Ihre Anfrage wurde mit der Referenz {ref} erfasst. Der richtige Operator auf unserer Seite liest jede Anfrage innerhalb eines Werktags. Bei Eilfällen schreiben Sie direkt an {email} und geben Sie die Referenz an.",
+        "backToHome": "Zurück zur Startseite",
+        "submitAnother": "Weitere Anfrage senden",
+        "errors": {
+            "required": "Pflichtfeld.",
+            "messageMin": "Bitte etwas ausführlicher (mindestens 20 Zeichen).",
+            "rateLimit": "Zu viele Anfragen von Ihrem Standort. Versuchen Sie es in einer Stunde erneut oder schreiben Sie direkt an engagement@davion.com.",
+            "generic": "Beim Absenden ist ein Fehler aufgetreten. Bei Wiederholung schreiben Sie an engagement@davion.com."
+        }
+    },
+    "bio": {
+        "ceo": "CEO",
+        "readFullBio": "Vollständige Biografie lesen",
+        "closeBio": "Biografie schließen"
+    },
+    "home": {
+        "solutions": {
+            "sup": "Lösungen",
+            "headline1": "Die Plattform",
+            "headline2": "Und die Lösungen, die darauf aufbauen",
+            "body": "AlpOS ist die Konstante. Cybersicherheit und Digitale Transformation sind ihre Anwendungen: gleiche Souveränität, gleiches Audit, gleiches Rückgrat.",
+            "alposBody": "Die souveräne KI-Plattform unter jeder Davion-Lösung. Erfassung, Ontologie, Analyse, KI, Entscheidung, Aktion, durchgängig kontrolliert.",
+            "alposLabel": "Plattform · Flaggschiff",
+            "cyberBody": "Defensive Intelligenz für Umgebungen, die nicht ausfallen dürfen. Erkennung über Muster-, Anomalie- und Graphanalyse, innerhalb Ihres Perimeters.",
+            "cyberLabel": "Lösung",
+            "digitalBody": "Von verteilten Daten zu einer einzigen kontrollierten Wahrheitsquelle, schrittweise vom POC zum industriellen Einsatz, ohne die Institution zu verlieren.",
+            "digitalLabel": "Lösung"
+        },
+        "alposTeaser": {
+            "sup": "Flaggschiff · AlpOS",
+            "headline": "Die souveräne KI-Plattform unter jeder Davion-Lösung",
+            "body": "AlpOS vereint Daten, Ontologie, Analyse und agentische KI in einer modularen Plattform, von der Erfassung bis zur Aktion, durchgängig kontrolliert. Digitale Transformation, Cybersicherheit und OSINT sind ihre Anwendungen.",
+            "cta": "AlpOS erkunden"
+        },
+        "cycle": {
+            "sup": "Der KI-Zyklus",
+            "headlineParts": ["Erfassen", "Modellieren", "Schlussfolgern", "Handeln"],
+            "body": "Jeder Davion-Einsatz folgt demselben souveränen Zyklus: von Rohdaten zur operativen Aktion. Die Plattform bleibt konstant; die Oberfläche passt sich dem Anwendungsfall an.",
+            "stepLabel": "Schritt",
+            "steps": {
+                "01": { "title": "Erfassen", "body": "Jedes relevante Signal durch eine einzige kontrollierte Pipeline ziehen." },
+                "02": { "title": "Modellieren", "body": "Als Entitäten, Ereignisse und Beziehungen in Ihrer Ontologie abbilden." },
+                "03": { "title": "Schlussfolgern", "body": "KI auf der Ontologie ausführen, mit Quellverweisen zurück zum Ursprung." },
+                "04": { "title": "Handeln", "body": "Die Entscheidung in Operatoren und Quellsysteme einbetten." }
+            }
+        },
+        "sovereignty": {
+            "sup": "Souverän per Design",
+            "headline": "Dort betreiben, wo Sie es brauchen, nur dort",
+            "modeLabel": "Modus",
+            "modes": {
+                "onprem": { "name": "On-premise", "body": "Ihre Hardware. Ihr Netzwerk." },
+                "airgapped": { "name": "Air-gapped", "body": "Betrieb ohne Netzverbindung, signierte Updates." },
+                "cloud": { "name": "Souveräne Cloud", "body": "Ihr Anbieter, Ihre Region, vertraglich gebunden." }
+            },
+            "cta": "Vertrauen und Souveränität"
+        },
+        "sectors": {
+            "sup": "Branchen",
+            "headline1": "Für jedes Unternehmen",
+            "headline2": "Für jede Regierung",
+            "body": "Davion läuft in Finanzdienstleistungen, Energie, Fertigung, Life Sciences, Handel, Behörden, kritischer Infrastruktur und Verteidigung, überall dort, wo aus Daten verteidigbare Entscheidungen werden müssen.",
+            "cta": "Branchen erkunden"
+        },
+        "newsroom": {
+            "sup": "Newsroom",
+            "headline": "Berichte aus der Arbeit",
+            "viewAll": "Alle Berichte"
+        },
+        "cta": {
+            "sup": "Engagement",
+            "line1": "Ihre Daten",
+            "line2": "Ihre KI",
+            "line3": "Ihre Entscheidungen",
+            "body": "Briefings sind beratend und maßgeschneidert. Bringen Sie Ihre Datenarchitektur, Ihre Rahmenbedingungen und Ihre operative Realität mit. Wir bringen die richtigen Personen von unserer Seite."
+        }
+    }
+}

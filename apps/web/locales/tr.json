@@ -1,0 +1,223 @@
+{
+    "common": {
+        "readMore": "Daha fazla oku",
+        "back": "Geri",
+        "close": "Kapat",
+        "loading": "Yükleniyor",
+        "bookDemo": "Demo planla",
+        "viewAll": "Tümünü gör",
+        "all": "Tümü",
+        "downloadLabel": "İndir"
+    },
+    "lang": {
+        "label": "Dil",
+        "en": "English",
+        "tr": "Türkçe",
+        "de": "Deutsch"
+    },
+    "nav": {
+        "solutions": "Çözümler",
+        "capabilities": "Yetenekler",
+        "industries": "Sektörler",
+        "trust": "Güven",
+        "company": "Şirket",
+        "about": "Hakkımızda",
+        "careers": "Kariyer",
+        "newsroom": "Haber Odası",
+        "bookDemo": "Demo planla",
+        "openMenu": "Menüyü aç"
+    },
+    "subnav": {
+        "solutions": {
+            "alpos": "AlpOS",
+            "alposDesc": "Her çözümün temelinde yatan egemen yapay zekâ platformu.",
+            "digital": "Dijital Dönüşüm",
+            "cybersecurity": "Siber Güvenlik",
+            "osint": "OSINT"
+        },
+        "capabilities": {
+            "rag": "Ontolojiniz üzerinde RAG",
+            "ragDesc": "Kaynaklarını gösteren, ontolojinize dayalı yapay zekâ.",
+            "geospatial": "Konumsal analiz",
+            "geospatialDesc": "Konum farkındalıklı veriyi haritalayın, temellendirin ve akıl yürütün.",
+            "video": "Video zekâsı",
+            "videoDesc": "Saatlerce videoyu içeriğine göre arayın. Delil zinciri korunur.",
+            "audio": "Ses analizi",
+            "audioDesc": "Arşiv ölçeğinde transkripsiyon, konuşmacı ayrımı ve yapı çıkarımı.",
+            "translation": "Makine çevirisi",
+            "translationDesc": "Kendi çevreniz içinde 60'tan fazla dil.",
+            "dataAcq": "Veri edinimi",
+            "dataAcqDesc": "Kaynaktan ontolojiye konektörler, ETL ve zenginleştirme.",
+            "all": "Tüm yetenekler"
+        },
+        "industries": {
+            "finance": "Finansal Hizmetler",
+            "financeDesc": "Piyasa ve risk, uyum, müşteri zekâsı, dayanıklılık.",
+            "energy": "Enerji",
+            "energyDesc": "Şebeke, üretim, varlık güvenilirliği, OT siber güvenliği.",
+            "defense": "Savunma ve İstihbarat",
+            "defenseDesc": "Mahremiyetli alan içinde hava boşluklu egemen yapay zekâ.",
+            "manufacturing": "Üretim",
+            "manufacturingDesc": "Tesis operasyonları, kalite, tedarik, OT siber.",
+            "lifeSciences": "Yaşam Bilimleri",
+            "lifeSciencesDesc": "Keşif, klinik, farmakovijilans, GxP.",
+            "government": "Kamu",
+            "governmentDesc": "Kurumlar arası varlık çözümleme, sahtekarlık, denetim.",
+            "all": "Tüm sektörler"
+        },
+        "company": {
+            "about": "Hakkımızda",
+            "aboutDesc": "Ürünün altındaki görüş.",
+            "careers": "Kariyer",
+            "careersDesc": "Mühendisler ve operatörler aranıyor.",
+            "newsroom": "Haber Odası",
+            "newsroomDesc": "Sahadan haberler."
+        },
+        "flagship": "Amiral gemi"
+    },
+    "footer": {
+        "tagline": "Davion sizin çevreniz içinde konuşlanır. Veriler dışarı çıkmaz. Kararlar denetlenebilirdir.",
+        "columns": {
+            "solutions": "Çözümler",
+            "platform": "Platform",
+            "company": "Şirket"
+        },
+        "links": {
+            "industries": "Sektörler",
+            "trust": "Güven ve Egemenlik",
+            "contact": "İletişim"
+        },
+        "legal": {
+            "privacy": "Gizlilik",
+            "terms": "Şartlar",
+            "cookies": "Çerezler",
+            "responsibleAi": "Sorumlu Yapay Zekâ",
+            "status": "Durum",
+            "cookiePreferences": "Çerez tercihleri"
+        },
+        "copyright": "© {year} Davion. Tüm hakları saklıdır.",
+        "sovereign": "Konuşlanmayla egemen."
+    },
+    "hero": {
+        "headline": "Verisi dışarıya çıkamayacak kurumlar için egemen yapay zekâ",
+        "body": "Davion, bankaların, bakanlıkların ve enerji operatörlerinin kararlarının savunulabilir, denetlenebilir ve halka açık buluta hiç girmemiş veriler üzerinden alınması gerektiğinde kullandığı platformdur.",
+        "ctaPrimary": "Demo planla",
+        "ctaSecondary": "AlpOS nasıl çalışır?"
+    },
+    "cookies": {
+        "label": "Çerezler",
+        "title": "Varsayılan olarak yalnızca gerekli olanlar",
+        "body": "Davion, tercihinizi hatırlamak için yalnızca bir kesinlikle gerekli çerez kullanır. Anonim analizler yalnızca onay verirseniz yüklenir. Hiçbir durumda üçüncü taraf izleme yoktur. Tam politika:",
+        "policyLink": "Çerezler",
+        "acceptAll": "Tümünü kabul et",
+        "essentialOnly": "Yalnızca gerekli olanlar"
+    },
+    "form": {
+        "sup": "Neyi karara bağlamaya çalıştığınızı anlatın",
+        "title": "Yapılandırılmış başvuru",
+        "body": "Davion görüşmeleri danışmanlık niteliğindedir. Talebinizi tarafımızdaki doğru operatöre yönlendiririz; ilk sohbet bir satış sunumu değil, bir brifingdir.",
+        "name": "Adınız",
+        "namePlaceholder": "Maria Schmidt",
+        "email": "Kurumsal e-posta",
+        "emailPlaceholder": "m.schmidt@example.com",
+        "organisation": "Kurum",
+        "organisationOptional": "(isteğe bağlı)",
+        "organisationPlaceholder": "Banka, bakanlık, operatör…",
+        "role": "Görev",
+        "rolePlaceholder": "AI Direktörü, CIO, Risk Yöneticisi…",
+        "intentLabel": "Konu nedir",
+        "intents": {
+            "briefing": "Brifing",
+            "partnership": "Ortaklık",
+            "press": "Basın",
+            "careers": "Kariyer",
+            "venture": "Girişim"
+        },
+        "message": "Neyi karara bağlamaya çalışıyorsunuz",
+        "messagePlaceholder": "Karar, kısıtlar ve zaman çizelgesi hakkında birkaç cümle. Ne kadar somut, o kadar iyi.",
+        "messageHelp": "En az 20 karakter. NDA korumalı detay yazmayın.",
+        "messageCounter": "{n}/4000",
+        "submitting": "Gönderiliyor…",
+        "submit": "Gönder",
+        "privacyPrefix": "Göndererek",
+        "privacyLink": "gizlilik politikamızı",
+        "received": "Alındı",
+        "thankYouTitle": "Aldık. Sizinle iletişime geçeceğiz",
+        "thankYouBody": "Başvurunuz {ref} referans koduyla kaydedildi. Tarafımızdaki doğru operatör her başvuruyu bir iş günü içinde okur. Acil bir konu varsa {email} adresine yazın ve referansı belirtin.",
+        "backToHome": "Anasayfaya dön",
+        "submitAnother": "Başka bir başvuru gönder",
+        "errors": {
+            "required": "Gerekli.",
+            "messageMin": "Biraz daha anlatın (en az 20 karakter).",
+            "rateLimit": "Konumunuzdan çok fazla başvuru alındı. Bir saat sonra tekrar deneyin veya doğrudan engagement@davion.com adresine yazın.",
+            "generic": "Form gönderilirken bir hata oluştu. Devam ederse engagement@davion.com adresine yazın."
+        }
+    },
+    "bio": {
+        "ceo": "CEO",
+        "readFullBio": "Tam biyografiyi oku",
+        "closeBio": "Biyografiyi kapat"
+    },
+    "home": {
+        "solutions": {
+            "sup": "Çözümler",
+            "headline1": "Platform",
+            "headline2": "Ve üzerine inşa edilen çözümler",
+            "body": "Sabit olan AlpOS'tur. Siber Güvenlik ve Dijital Dönüşüm, onun uygulanma biçimidir; aynı egemenlik, aynı denetim, aynı omurga.",
+            "alposBody": "Her Davion çözümünün temelinde yatan egemen yapay zekâ platformu. Veri alımı, ontoloji, analiz, yapay zekâ, karar verme, eylem; uçtan uca yönetişimle.",
+            "alposLabel": "Platform · Amiral gemi",
+            "cyberBody": "Hata kaldırmayan ortamlar için savunma zekâsı. Çevreniz içinde örüntü, anomali ve grafik analiziyle tespit.",
+            "cyberLabel": "Çözüm",
+            "digitalBody": "Bölünmüş veriden tek bir yönetilen gerçek kaynağına; POC'tan endüstriyel konuşlanmaya kadar kurumu kaybetmeden adım adım.",
+            "digitalLabel": "Çözüm"
+        },
+        "alposTeaser": {
+            "sup": "Amiral gemi · AlpOS",
+            "headline": "Her Davion çözümünün temelinde yatan egemen yapay zekâ platformu",
+            "body": "AlpOS; veriyi, ontolojiyi, analizi ve eylemci yapay zekâyı tek bir modüler platformda birleştirir; veri alımından eyleme kadar uçtan uca yönetilir. Dijital Dönüşüm, Siber Güvenlik ve OSINT onun uygulanma biçimleridir.",
+            "cta": "AlpOS'u keşfedin"
+        },
+        "cycle": {
+            "sup": "Yapay zekâ döngüsü",
+            "headlineParts": ["Veri al", "Modelle", "Akıl yürüt", "Eylem"],
+            "body": "Her Davion konuşlanması aynı egemen döngüyü çalıştırır: ham veriden operasyonel eyleme. Platform sabit kalır; yüzey kullanım senaryosuna göre değişir.",
+            "stepLabel": "Adım",
+            "steps": {
+                "01": { "title": "Veri al", "body": "Her ilgili sinyali tek bir yönetilen veri hattından geçirin." },
+                "02": { "title": "Modelle", "body": "Ontolojinizde varlıklar, olaylar ve ilişkiler olarak şekillendirin." },
+                "03": { "title": "Akıl yürüt", "body": "Kaynağa kadar atıf zinciriyle, ontolojiye karşı yapay zekâ çalıştırın." },
+                "04": { "title": "Eylem", "body": "Kararı operatörlerin ve kayıt sistemlerinin içine gömün." }
+            }
+        },
+        "sovereignty": {
+            "sup": "Tasarımdan egemen",
+            "headline": "Gereken yerde, yalnızca gereken yerde çalıştırın",
+            "modeLabel": "Mod",
+            "modes": {
+                "onprem": { "name": "Yerinde", "body": "Sizin donanımınız. Sizin ağınız." },
+                "airgapped": { "name": "Hava boşluklu", "body": "Bağlantısız çalışma, imzalı güncellemeler." },
+                "cloud": { "name": "Egemen bulut", "body": "Sizin sağlayıcınız, sizin bölgeniz, sözleşmeyle bağlı." }
+            },
+            "cta": "Güven ve Egemenlik"
+        },
+        "sectors": {
+            "sup": "Sektörler",
+            "headline1": "Her iş için",
+            "headline2": "Her devlet için",
+            "body": "Davion finansal hizmetler, enerji, üretim, yaşam bilimleri, perakende, kamu, kritik altyapı ve savunma alanlarında konuşlanır; verinin savunulabilir kararlara dönüşmesi gereken her yerde.",
+            "cta": "Sektörleri keşfet"
+        },
+        "newsroom": {
+            "sup": "Haber Odası",
+            "headline": "Sahadan haberler",
+            "viewAll": "Tüm haberler"
+        },
+        "cta": {
+            "sup": "Görüşme",
+            "line1": "Sizin veriniz",
+            "line2": "Sizin yapay zekânız",
+            "line3": "Sizin kararlarınız",
+            "body": "Brifingler danışmanlık niteliğindedir ve özelleştirilir. Veri mimarinizi, kısıtlarınızı ve operasyonel gerçekliğinizi getirin. Bizim tarafımızdan doğru kişileri biz getiririz."
+        }
+    }
+}
