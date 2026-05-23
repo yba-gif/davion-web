@@ -457,6 +457,223 @@
                     "body": "Most engagements begin with an AlpOS briefing tailored to your environment, then expand into the solution layers as the platform proves itself.",
                     "cta": "Explore AlpOS"
                 }
+            },
+            "alpos": {
+                "meta": {
+                    "title": "AlpOS",
+                    "description": "Sovereign AI infrastructure for decisions that cannot wait, and cannot leak. AlpOS turns data into operational action inside your perimeter, end to end.",
+                    "ogTitle": "Davion · AlpOS",
+                    "ogDescription": "The sovereign AI platform: ingest, ontology, analyze, decide, act, governed end to end, deployed inside your perimeter."
+                },
+                "hero": {
+                    "sup": "Platform · AlpOS",
+                    "headlinePart1": "Sovereign AI infrastructure for decisions that can't wait",
+                    "headlinePart2": " And can't leak",
+                    "body": "Most organisations can see their data. Few can act on it when it matters. AlpOS closes the gap, one governed environment, from every source to every decision, inside your perimeter.",
+                    "ctaPrimary": "Book a demo",
+                    "ctaSecondary": "See the architecture"
+                },
+                "problem": {
+                    "sup": "The problem",
+                    "headline": "When data outpaces the capacity to decide, decisions fail",
+                    "body": "Institutions today inherit fragmented data, opaque models, and tooling that was not built to be governed. The cost is not abstract, it is missed signals, slow responses, and decisions that cannot be defended after the fact. AlpOS exists to close that gap."
+                },
+                "architecture": {
+                    "sup": "Architecture",
+                    "headlinePart1": "Ingest → Ontology → Analyze → Decide → Act",
+                    "headlinePart2": " All inside a sovereign perimeter",
+                    "svgAria": "AlpOS architecture: Ingest, Ontology, Analyze and AI, Decide, Act, all inside a sovereign perimeter.",
+                    "perimeter": "SOVEREIGN PERIMETER",
+                    "ingest": "Ingest",
+                    "dataTag": "DATA",
+                    "ontology": "Ontology",
+                    "meaningTag": "MEANING",
+                    "analyze": "Analyze · AI",
+                    "insightTag": "INSIGHT",
+                    "decide": "Decide",
+                    "decisionTag": "DECISION",
+                    "act": "Act",
+                    "actionTag": "ACTION",
+                    "residency": "DATA RESIDENCY",
+                    "access": "ACCESS CONTROL · RBAC / ABAC",
+                    "audit": "FULL AUDIT TRAIL",
+                    "leaves": "NOTHING LEAVES"
+                },
+                "layers": {
+                    "sup": "Layers",
+                    "headline": "Five layers. One spine. Designed to be governed",
+                    "layerLabel": "Layer",
+                    "l1": {
+                        "slug": "Ingest",
+                        "title": "Data integration & preparation",
+                        "body": "Pull every relevant signal, structured, unstructured, real-time, archival, through a single governed pipeline. Native connectors, schema-on-read or schema-on-write, lineage tracked from source. Nothing is collected blindly. Nothing is collected outside policy.",
+                        "s1": "200+ connectors",
+                        "s2": "Streaming + batch ingest",
+                        "s3": "Lineage + provenance",
+                        "s4": "PII-aware transforms"
+                    },
+                    "l2": {
+                        "slug": "Ontology",
+                        "title": "Semantic model of your domain",
+                        "body": "Entities, events, and relationships modeled to your domain, not a generic schema. The ontology becomes the shared vocabulary across analysts, engineers, and operators. Queries and AI reason against it, not against raw tables.",
+                        "s1": "Entities · Events · Relationships",
+                        "s2": "Versioned model",
+                        "s3": "Role-aware visibility",
+                        "s4": "Domain vocabularies"
+                    },
+                    "l3": {
+                        "slug": "Analyze",
+                        "title": "Analytics, knowledge graphs, weak-signal detection",
+                        "body": "Run the analytic load where the data lives. Knowledge graphs surface relationships flat queries miss. Statistical and ML methods detect the patterns, and the weak signals that precede them.",
+                        "s1": "Graph queries",
+                        "s2": "Anomaly + weak-signal detection",
+                        "s3": "Behavioral analytics",
+                        "s4": "Geospatial · time-series"
+                    },
+                    "l4": {
+                        "slug": "Decide",
+                        "title": "AI copilot with traceability",
+                        "body": "An agentic copilot that argues from the ontology, cites the data, and shows its work. Every recommendation is traceable to its source. Hallucinations do not survive contact with auditable evidence.",
+                        "s1": "RAG over your ontology",
+                        "s2": "Reasoning traces",
+                        "s3": "Human-in-the-loop gating",
+                        "s4": "Model provenance",
+                        "s5": "Refusal under uncertainty"
+                    },
+                    "l5": {
+                        "slug": "Act",
+                        "title": "Operational decisioning & workflow",
+                        "body": "Decisions only matter when they reach the operator and the system. Workflows, dispatch, case management, and write-back to systems of record are embedded, so AlpOS does not stop at insight.",
+                        "s1": "Workflow engine",
+                        "s2": "Case / ticket integration",
+                        "s3": "Write-back to systems of record",
+                        "s4": "SLA + escalation",
+                        "s5": "Post-action review"
+                    }
+                },
+                "field": {
+                    "sup": "Where it lands",
+                    "headline": "Three institutions. Three problems. One platform",
+                    "body": "How AlpOS is applied in practice, three concrete deployments across financial services, critical infrastructure, and defense.",
+                    "s1": {
+                        "sector": "Financial Services · AML",
+                        "problem": "Financial crime rarely leaves a single trace.",
+                        "body": "AlpOS maps the full network of entities, accounts, transactions, and behavioural signals across sources, surfacing the patterns flat rules and isolated dashboards miss. Investigations move from alerts to actionable cases, with full lineage from raw transaction to operator decision.",
+                        "outcome": "Faster case adjudication. Fewer false positives. Audit by design."
+                    },
+                    "s2": {
+                        "sector": "Energy & Critical Infrastructure · Asset health",
+                        "problem": "Fleet-wide defects, hidden in the variance.",
+                        "body": "AlpOS correlates telemetry across distributed assets, finds the weak signals that precede failure, and routes the response to the operators who can act, without telemetry leaving the perimeter. The same spine handles unplanned outages and planned maintenance windows.",
+                        "outcome": "Anomaly response in minutes. Defensible runbooks. Post-incident review without losing the institution."
+                    },
+                    "s3": {
+                        "sector": "Defense & Intelligence · Signals fusion",
+                        "problem": "Decisions in classified environments cannot wait, and cannot leak.",
+                        "body": "AlpOS unifies signal streams inside the perimeter, lets analysts pivot across them with cited evidence, and produces traceable outputs the after-action can defend. Deployable on-premise and air-gapped, with cell-level access control and a full audit trail.",
+                        "outcome": "Mission cycle compressed. Every action defensible."
+                    }
+                },
+                "sovereign": {
+                    "sup": "Sovereign by design",
+                    "headline": "Your data. Your jurisdiction. Your access controls. Your audit",
+                    "body": "Sovereignty is not a deployment option. It is an architectural commitment. AlpOS runs where you require, and only where you require.",
+                    "modeLabel": "Mode",
+                    "m1Name": "On-premise",
+                    "m1Body": "Your hardware. Your network. Your operational control. AlpOS is installable inside your perimeter with no external dependencies at runtime.",
+                    "m2Name": "Air-gapped",
+                    "m2Body": "Disconnected operation for environments that require it. Signed-update model; nothing transits unsanctioned channels.",
+                    "m3Name": "Sovereign cloud",
+                    "m3Body": "Run inside a sovereign cloud you trust, in the region you require, under contracts that bind data jurisdiction.",
+                    "m4Name": "Private cloud",
+                    "m4Body": "Single-tenant deployment in a cloud of your choice, with customer-managed keys and per-tenant isolation."
+                },
+                "modular": {
+                    "sup": "Modular",
+                    "headline": "Compose the platform. Brand the modules",
+                    "body": "AlpOS layers are independently deployable and independently brandable. Customers and partners map their own product names onto the same architecture, under the same sovereignty guarantees. The platform is the constant. The surface is yours."
+                },
+                "matrix": {
+                    "sup": "Capability matrix",
+                    "headline": "What AlpOS is, in specifics",
+                    "r1g": "Data integration",
+                    "r1i": "Streaming + batch · 200+ connectors · Schema-on-read / on-write",
+                    "r2g": "Governance",
+                    "r2i": "End-to-end audit log · Lineage + provenance · Data residency controls",
+                    "r3g": "Access control",
+                    "r3i": "RBAC · ABAC · Per-entity visibility · Cell-level policy",
+                    "r4g": "Ontology",
+                    "r4i": "Domain modeling · Entities / events / relationships · Versioned · Role-aware",
+                    "r5g": "Analytics",
+                    "r5i": "SQL + graph queries · Time-series · Geospatial · Weak-signal detection",
+                    "r6g": "AI",
+                    "r6i": "RAG over ontology · Reasoning traces · Model provenance · HITL gating",
+                    "r7g": "Operations",
+                    "r7i": "Workflow engine · Case management · Back-system write · SLA + escalation",
+                    "r8g": "Deployment",
+                    "r8i": "On-premise · Air-gapped · Sovereign cloud · Private cloud"
+                },
+                "ai": {
+                    "sup": "AI capabilities",
+                    "headline": "AI capabilities, governed at the layer above",
+                    "body": "AlpOS bundles a stack of AI capabilities that operate inside your perimeter, grounded against your ontology, audited end to end.",
+                    "explore": "Explore",
+                    "rag": "RAG over your ontology",
+                    "ragBody": "Retrieval-augmented generation grounded in your domain model, not the open web.",
+                    "geo": "Geospatial analytics",
+                    "geoBody": "Map, ground, and reason over location-aware data at operational scale.",
+                    "video": "Video intelligence",
+                    "videoBody": "Detect, classify, and search across video corpora, inside your perimeter.",
+                    "audio": "Audio analysis & transcription",
+                    "audioBody": "Speaker, sentiment, and semantic structure from audio at scale.",
+                    "translation": "Machine translation",
+                    "translationBody": "60+ languages, with provenance, run inside your perimeter.",
+                    "data": "Data acquisition & preparation",
+                    "dataBody": "Connectors, ETL, enrichment, and governance from source to ontology."
+                },
+                "outcomes": {
+                    "sup": "Outcomes",
+                    "headline": "Faster decisions. Defensible decisions. Governed at scale",
+                    "speedLabel": "Speed",
+                    "speedBody": "From signal to first action in minutes, not weeks. The cycle is the architecture, not a series of integrations.",
+                    "defenseLabel": "Defensibility",
+                    "defenseBody": "Every output traceable to its source data and the operator who acted on it. Auditable by design, before, during, and after.",
+                    "trustLabel": "Trust",
+                    "trustBody": "Deployable in environments where \"send the data to a vendor\" is not an option. Sovereignty as a precondition, not a feature."
+                },
+                "served": {
+                    "sup": "Industries we serve",
+                    "headline": "One platform. Many institutions",
+                    "cta": "All industries",
+                    "detailLabel": "Industry detail",
+                    "fs": "Financial Services",
+                    "energy": "Energy",
+                    "mfg": "Manufacturing",
+                    "ls": "Life Sciences",
+                    "gov": "Government",
+                    "def": "Defense & Intelligence"
+                },
+                "engage": {
+                    "sup": "Engage",
+                    "headline": "Bring AlpOS into your operations",
+                    "body": "Demos are run against your scenarios. Bring your data architecture, your constraints, and your operational reality, we'll bring the platform and the right people from our side.",
+                    "ctaPrimary": "Book a demo",
+                    "ctaSecondary": "Speak to an expert"
+                },
+                "toc": {
+                    "problem": "The problem",
+                    "architecture": "Architecture",
+                    "demo": "See it in motion",
+                    "layers": "Layers",
+                    "field": "Where it lands",
+                    "sovereign": "Sovereign by design",
+                    "modular": "Modular",
+                    "matrix": "Capability matrix",
+                    "ai": "AI capabilities",
+                    "outcomes": "Outcomes",
+                    "served": "Industries we serve",
+                    "engage": "Engage"
+                }
             }
         }
     }

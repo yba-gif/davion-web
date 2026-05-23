@@ -457,6 +457,223 @@
                     "body": "Die meisten Engagements beginnen mit einem auf Ihre Umgebung zugeschnittenen AlpOS-Briefing und erweitern sich um die Lösungsebenen, sobald sich die Plattform bewährt hat.",
                     "cta": "AlpOS erkunden"
                 }
+            },
+            "alpos": {
+                "meta": {
+                    "title": "AlpOS",
+                    "description": "Souveräne KI-Infrastruktur für Entscheidungen, die nicht warten und nicht durchsickern dürfen. AlpOS verwandelt Daten in operative Aktion innerhalb Ihres Perimeters — durchgängig.",
+                    "ogTitle": "Davion · AlpOS",
+                    "ogDescription": "Die souveräne KI-Plattform: Erfassung, Ontologie, Analyse, Entscheidung, Aktion — durchgängig kontrolliert, eingesetzt innerhalb Ihres Perimeters."
+                },
+                "hero": {
+                    "sup": "Plattform · AlpOS",
+                    "headlinePart1": "Souveräne KI-Infrastruktur für Entscheidungen, die nicht warten können",
+                    "headlinePart2": " Und nicht durchsickern dürfen",
+                    "body": "Die meisten Organisationen können ihre Daten sehen. Wenige können in entscheidenden Momenten handeln. AlpOS schließt diese Lücke — eine kontrollierte Umgebung von jeder Quelle zu jeder Entscheidung, innerhalb Ihres Perimeters.",
+                    "ctaPrimary": "Demo buchen",
+                    "ctaSecondary": "Architektur ansehen"
+                },
+                "problem": {
+                    "sup": "Das Problem",
+                    "headline": "Wenn Daten die Entscheidungsfähigkeit überholen, scheitern Entscheidungen",
+                    "body": "Institutionen erben heute fragmentierte Daten, undurchsichtige Modelle und Werkzeuge, die nicht für Governance gebaut wurden. Die Kosten sind nicht abstrakt: verpasste Signale, langsame Reaktionen und Entscheidungen, die im Nachhinein nicht verteidigt werden können. AlpOS existiert, um diese Lücke zu schließen."
+                },
+                "architecture": {
+                    "sup": "Architektur",
+                    "headlinePart1": "Erfassung → Ontologie → Analyse → Entscheidung → Aktion",
+                    "headlinePart2": " Alles innerhalb eines souveränen Perimeters",
+                    "svgAria": "AlpOS-Architektur: Erfassung, Ontologie, Analyse und KI, Entscheidung, Aktion — alles innerhalb eines souveränen Perimeters.",
+                    "perimeter": "SOUVERÄNER PERIMETER",
+                    "ingest": "Erfassung",
+                    "dataTag": "DATEN",
+                    "ontology": "Ontologie",
+                    "meaningTag": "BEDEUTUNG",
+                    "analyze": "Analyse · KI",
+                    "insightTag": "ERKENNTNIS",
+                    "decide": "Entscheidung",
+                    "decisionTag": "ENTSCHEIDUNG",
+                    "act": "Aktion",
+                    "actionTag": "AKTION",
+                    "residency": "DATENRESIDENZ",
+                    "access": "ZUGRIFFSKONTROLLE · RBAC / ABAC",
+                    "audit": "VOLLSTÄNDIGER AUDIT-TRAIL",
+                    "leaves": "NICHTS VERLÄSST"
+                },
+                "layers": {
+                    "sup": "Ebenen",
+                    "headline": "Fünf Ebenen. Ein Rückgrat. Auf Governance ausgelegt",
+                    "layerLabel": "Ebene",
+                    "l1": {
+                        "slug": "Erfassung",
+                        "title": "Datenintegration und -aufbereitung",
+                        "body": "Jedes relevante Signal — strukturiert, unstrukturiert, Echtzeit, archiviert — über eine einzige kontrollierte Pipeline ziehen. Native Konnektoren, Schema-on-Read oder Schema-on-Write, Herkunftsverfolgung ab der Quelle. Nichts wird blind erfasst. Nichts wird außerhalb der Richtlinie erfasst.",
+                        "s1": "200+ Konnektoren",
+                        "s2": "Streaming + Batch-Erfassung",
+                        "s3": "Lineage + Provenienz",
+                        "s4": "PII-bewusste Transformationen"
+                    },
+                    "l2": {
+                        "slug": "Ontologie",
+                        "title": "Semantisches Modell Ihrer Domäne",
+                        "body": "Entitäten, Ereignisse und Beziehungen — modelliert für Ihre Domäne, kein generisches Schema. Die Ontologie wird zum gemeinsamen Vokabular für Analysten, Ingenieure und Operatoren. Abfragen und KI argumentieren dagegen, nicht gegen rohe Tabellen.",
+                        "s1": "Entitäten · Ereignisse · Beziehungen",
+                        "s2": "Versioniertes Modell",
+                        "s3": "Rollenbewusste Sichtbarkeit",
+                        "s4": "Domänen-Vokabulare"
+                    },
+                    "l3": {
+                        "slug": "Analyse",
+                        "title": "Analytik, Wissensgraphen, Erkennung schwacher Signale",
+                        "body": "Die analytische Last dort ausführen, wo die Daten leben. Wissensgraphen bringen Beziehungen ans Licht, die flache Abfragen übersehen. Statistische und ML-Methoden erkennen Muster — und die schwachen Signale, die ihnen vorausgehen.",
+                        "s1": "Graph-Abfragen",
+                        "s2": "Anomalie- und Schwachsignal-Erkennung",
+                        "s3": "Verhaltensanalytik",
+                        "s4": "Geospatial · Zeitreihen"
+                    },
+                    "l4": {
+                        "slug": "Entscheidung",
+                        "title": "KI-Copilot mit Nachvollziehbarkeit",
+                        "body": "Ein agentischer Copilot, der aus der Ontologie argumentiert, die Daten zitiert und seinen Weg offenlegt. Jede Empfehlung ist bis zur Quelle nachvollziehbar. Halluzinationen überleben den Kontakt mit prüfbaren Belegen nicht.",
+                        "s1": "RAG über Ihre Ontologie",
+                        "s2": "Argumentationsspuren",
+                        "s3": "Human-in-the-Loop-Gating",
+                        "s4": "Modellprovenienz",
+                        "s5": "Verweigerung unter Unsicherheit"
+                    },
+                    "l5": {
+                        "slug": "Aktion",
+                        "title": "Operative Entscheidungsfindung und Workflow",
+                        "body": "Entscheidungen zählen erst, wenn sie den Operator und das System erreichen. Workflows, Disposition, Fallbearbeitung und Rückschreiben in Systems of Record sind eingebettet — AlpOS endet nicht bei der Erkenntnis.",
+                        "s1": "Workflow-Engine",
+                        "s2": "Fall- / Ticket-Integration",
+                        "s3": "Rückschreiben in Systems of Record",
+                        "s4": "SLA + Eskalation",
+                        "s5": "Post-Action-Review"
+                    }
+                },
+                "field": {
+                    "sup": "Wo es landet",
+                    "headline": "Drei Institutionen. Drei Probleme. Eine Plattform",
+                    "body": "Wie AlpOS in der Praxis angewendet wird — drei konkrete Einsätze in Finanzdienstleistungen, kritischer Infrastruktur und Verteidigung.",
+                    "s1": {
+                        "sector": "Finanzdienstleistungen · AML",
+                        "problem": "Finanzkriminalität hinterlässt selten eine einzelne Spur.",
+                        "body": "AlpOS bildet das vollständige Netzwerk aus Entitäten, Konten, Transaktionen und Verhaltenssignalen quellenübergreifend ab und bringt Muster ans Licht, die flache Regeln und isolierte Dashboards verfehlen. Untersuchungen wandern von Alarmen zu umsetzbaren Fällen — mit vollständiger Lineage von der Rohtransaktion bis zur Operator-Entscheidung.",
+                        "outcome": "Schnellere Fallbeurteilung. Weniger False Positives. Audit per Design."
+                    },
+                    "s2": {
+                        "sector": "Energie und kritische Infrastruktur · Asset-Health",
+                        "problem": "Flottenweite Defekte, verborgen in der Varianz.",
+                        "body": "AlpOS korreliert Telemetrie über verteilte Anlagen, findet die schwachen Signale, die einem Ausfall vorausgehen, und leitet die Reaktion an die Operatoren, die handeln können — ohne dass die Telemetrie den Perimeter verlässt. Dasselbe Rückgrat handhabt ungeplante Ausfälle und geplante Wartungsfenster.",
+                        "outcome": "Anomalie-Reaktion in Minuten. Verteidigbare Runbooks. Post-Incident-Review, ohne die Institution zu verlieren."
+                    },
+                    "s3": {
+                        "sector": "Verteidigung und Nachrichtendienste · Signalfusion",
+                        "problem": "Entscheidungen in eingestuften Umgebungen können nicht warten und nicht durchsickern.",
+                        "body": "AlpOS vereint Signalströme innerhalb des Perimeters, lässt Analysten mit zitierten Belegen zwischen ihnen wechseln und erzeugt nachvollziehbare Ergebnisse, die die After-Action verteidigen kann. Einsetzbar on-premise und air-gapped — mit zellenebener Zugriffskontrolle und vollständigem Audit-Trail.",
+                        "outcome": "Missionszyklus komprimiert. Jede Aktion verteidigbar."
+                    }
+                },
+                "sovereign": {
+                    "sup": "Souverän per Design",
+                    "headline": "Ihre Daten. Ihre Jurisdiktion. Ihre Zugriffskontrollen. Ihr Audit",
+                    "body": "Souveränität ist keine Einsatzoption. Sie ist eine architektonische Verpflichtung. AlpOS läuft, wo Sie es verlangen — und nur dort, wo Sie es verlangen.",
+                    "modeLabel": "Modus",
+                    "m1Name": "On-Premise",
+                    "m1Body": "Ihre Hardware. Ihr Netzwerk. Ihre operative Kontrolle. AlpOS ist innerhalb Ihres Perimeters installierbar — ohne externe Abhängigkeiten zur Laufzeit.",
+                    "m2Name": "Air-gapped",
+                    "m2Body": "Getrennter Betrieb für Umgebungen, die ihn erfordern. Signed-Update-Modell; nichts passiert unautorisierte Kanäle.",
+                    "m3Name": "Souveräne Cloud",
+                    "m3Body": "Läuft in einer souveränen Cloud, der Sie vertrauen, in der Region, die Sie verlangen, unter Verträgen, die die Datenjurisdiktion binden.",
+                    "m4Name": "Private Cloud",
+                    "m4Body": "Single-Tenant-Einsatz in einer Cloud Ihrer Wahl — mit kundengesteuerten Schlüsseln und Per-Tenant-Isolation."
+                },
+                "modular": {
+                    "sup": "Modular",
+                    "headline": "Die Plattform komponieren. Die Module branden",
+                    "body": "AlpOS-Ebenen sind unabhängig einsetzbar und unabhängig markenfähig. Kunden und Partner bilden ihre eigenen Produktnamen auf dieselbe Architektur ab — unter denselben Souveränitätsgarantien. Die Plattform ist die Konstante. Die Oberfläche gehört Ihnen."
+                },
+                "matrix": {
+                    "sup": "Fähigkeitsmatrix",
+                    "headline": "Was AlpOS ist — in Spezifika",
+                    "r1g": "Datenintegration",
+                    "r1i": "Streaming + Batch · 200+ Konnektoren · Schema-on-Read / on-Write",
+                    "r2g": "Governance",
+                    "r2i": "End-to-End-Audit-Log · Lineage + Provenienz · Datenresidenz-Kontrollen",
+                    "r3g": "Zugriffskontrolle",
+                    "r3i": "RBAC · ABAC · Pro-Entität-Sichtbarkeit · Zellen-Policy",
+                    "r4g": "Ontologie",
+                    "r4i": "Domänenmodellierung · Entitäten / Ereignisse / Beziehungen · Versioniert · Rollenbewusst",
+                    "r5g": "Analytik",
+                    "r5i": "SQL- + Graph-Abfragen · Zeitreihen · Geospatial · Schwachsignal-Erkennung",
+                    "r6g": "KI",
+                    "r6i": "RAG über Ontologie · Argumentationsspuren · Modellprovenienz · HITL-Gating",
+                    "r7g": "Operations",
+                    "r7i": "Workflow-Engine · Fallbearbeitung · Rückschreibung in Backend-Systeme · SLA + Eskalation",
+                    "r8g": "Einsatz",
+                    "r8i": "On-Premise · Air-gapped · Souveräne Cloud · Private Cloud"
+                },
+                "ai": {
+                    "sup": "KI-Fähigkeiten",
+                    "headline": "KI-Fähigkeiten — eine Ebene höher kontrolliert",
+                    "body": "AlpOS bündelt einen Stack von KI-Fähigkeiten, die innerhalb Ihres Perimeters arbeiten, gegen Ihre Ontologie geerdet sind und durchgängig auditiert werden.",
+                    "explore": "Erkunden",
+                    "rag": "RAG über Ihre Ontologie",
+                    "ragBody": "Retrieval-augmented Generation, geerdet in Ihrem Domänenmodell — nicht im offenen Web.",
+                    "geo": "Geospatial-Analytik",
+                    "geoBody": "Standortbewusste Daten kartieren, erden und in operativem Maßstab analysieren.",
+                    "video": "Video-Intelligenz",
+                    "videoBody": "Erkennen, klassifizieren und durchsuchen in Video-Korpora — innerhalb Ihres Perimeters.",
+                    "audio": "Audio-Analyse und Transkription",
+                    "audioBody": "Sprecher, Stimmung und semantische Struktur aus Audio — in Archivgröße.",
+                    "translation": "Maschinelle Übersetzung",
+                    "translationBody": "60+ Sprachen mit Provenienz — innerhalb Ihres Perimeters ausgeführt.",
+                    "data": "Datenakquise und -aufbereitung",
+                    "dataBody": "Konnektoren, ETL, Anreicherung und Governance — von der Quelle bis zur Ontologie."
+                },
+                "outcomes": {
+                    "sup": "Ergebnisse",
+                    "headline": "Schnellere Entscheidungen. Verteidigbare Entscheidungen. Im Maßstab kontrolliert",
+                    "speedLabel": "Geschwindigkeit",
+                    "speedBody": "Vom Signal zur ersten Aktion in Minuten — nicht Wochen. Der Zyklus ist die Architektur, nicht eine Kette von Integrationen.",
+                    "defenseLabel": "Verteidigbarkeit",
+                    "defenseBody": "Jedes Ergebnis bis zu seinen Quelldaten und dem Operator, der es umsetzte, nachvollziehbar. Per Design auditierbar — davor, dabei und danach.",
+                    "trustLabel": "Vertrauen",
+                    "trustBody": "Einsetzbar in Umgebungen, in denen \"Daten zum Anbieter senden\" keine Option ist. Souveränität als Voraussetzung — nicht als Feature."
+                },
+                "served": {
+                    "sup": "Branchen, die wir bedienen",
+                    "headline": "Eine Plattform. Viele Institutionen",
+                    "cta": "Alle Branchen",
+                    "detailLabel": "Branchendetail",
+                    "fs": "Finanzdienstleistungen",
+                    "energy": "Energie",
+                    "mfg": "Fertigung",
+                    "ls": "Life Sciences",
+                    "gov": "Verwaltung",
+                    "def": "Verteidigung und Nachrichtendienste"
+                },
+                "engage": {
+                    "sup": "Kontakt",
+                    "headline": "AlpOS in Ihren Betrieb bringen",
+                    "body": "Demos werden gegen Ihre Szenarien gefahren. Bringen Sie Ihre Datenarchitektur, Ihre Restriktionen und Ihre operative Realität — wir bringen die Plattform und die richtigen Personen von unserer Seite.",
+                    "ctaPrimary": "Demo buchen",
+                    "ctaSecondary": "Mit Expertin sprechen"
+                },
+                "toc": {
+                    "problem": "Das Problem",
+                    "architecture": "Architektur",
+                    "demo": "In Aktion sehen",
+                    "layers": "Ebenen",
+                    "field": "Wo es landet",
+                    "sovereign": "Souverän per Design",
+                    "modular": "Modular",
+                    "matrix": "Fähigkeitsmatrix",
+                    "ai": "KI-Fähigkeiten",
+                    "outcomes": "Ergebnisse",
+                    "served": "Branchen",
+                    "engage": "Kontakt"
+                }
             }
         }
     }

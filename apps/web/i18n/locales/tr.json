@@ -457,6 +457,223 @@
                     "body": "Görüşmelerin çoğu, ortamınıza özelleştirilmiş bir AlpOS brifingiyle başlar; platform kendini kanıtladıkça çözüm katmanları eklenir.",
                     "cta": "AlpOS'u keşfet"
                 }
+            },
+            "alpos": {
+                "meta": {
+                    "title": "AlpOS",
+                    "description": "Bekleyemeyecek ve sızdırılamayacak kararlar için egemen yapay zekâ altyapısı. AlpOS, veriyi çevreniz içinde uçtan uca operasyonel eyleme dönüştürür.",
+                    "ogTitle": "Davion · AlpOS",
+                    "ogDescription": "Egemen yapay zekâ platformu: veri alımı, ontoloji, analiz, karar, eylem; uçtan uca yönetimli ve çevreniz içinde konuşlu."
+                },
+                "hero": {
+                    "sup": "Platform · AlpOS",
+                    "headlinePart1": "Bekleyemeyen kararlar",
+                    "headlinePart2": " Sızdıramayan altyapı",
+                    "body": "Çoğu kurum verisini görebilir; az kurum, iş ciddileştiğinde harekete geçebilir. AlpOS bu boşluğu kapatır: her kaynaktan her karara tek bir yönetimli ortam, çevreniz içinde.",
+                    "ctaPrimary": "Demo al",
+                    "ctaSecondary": "Mimariyi gör"
+                },
+                "problem": {
+                    "sup": "Sorun",
+                    "headline": "Veri, karar verme kapasitesini aştığında kararlar başarısız olur",
+                    "body": "Bugünün kurumları parçalı veri, opak modeller ve yönetilebilir olmak üzere kurulmamış araçlar devralır. Bedel soyut değildir: kaçırılan sinyaller, geciken yanıtlar ve sonradan savunulamayan kararlar. AlpOS bu boşluğu kapatmak için vardır."
+                },
+                "architecture": {
+                    "sup": "Mimari",
+                    "headlinePart1": "Veri alımı → Ontoloji → Analiz → Karar → Eylem",
+                    "headlinePart2": " Hepsi egemen bir çevre içinde",
+                    "svgAria": "AlpOS mimarisi: Veri alımı, Ontoloji, Analiz ve YZ, Karar, Eylem; hepsi egemen bir çevre içinde.",
+                    "perimeter": "EGEMEN ÇEVRE",
+                    "ingest": "Veri alımı",
+                    "dataTag": "VERİ",
+                    "ontology": "Ontoloji",
+                    "meaningTag": "ANLAM",
+                    "analyze": "Analiz · YZ",
+                    "insightTag": "İÇGÖRÜ",
+                    "decide": "Karar",
+                    "decisionTag": "KARAR",
+                    "act": "Eylem",
+                    "actionTag": "EYLEM",
+                    "residency": "VERİ İKAMETGÂHI",
+                    "access": "ERİŞİM DENETİMİ · RBAC / ABAC",
+                    "audit": "TAM DENETİM İZİ",
+                    "leaves": "HİÇBİR ŞEY ÇIKMAZ"
+                },
+                "layers": {
+                    "sup": "Katmanlar",
+                    "headline": "Beş katman. Tek omurga. Yönetilmek üzere tasarlandı",
+                    "layerLabel": "Katman",
+                    "l1": {
+                        "slug": "Veri alımı",
+                        "title": "Veri entegrasyonu ve hazırlığı",
+                        "body": "İlgili her sinyali; yapılandırılmış, yapılandırılmamış, gerçek zamanlı, arşivsel; tek bir yönetimli boruhattından çekin. Yerel konektörler, okumada veya yazmada şema, kaynaktan izlenen köken. Hiçbir şey gözü kapalı toplanmaz. Politika dışı toplanmaz.",
+                        "s1": "200+ konektör",
+                        "s2": "Akışlı + toplu veri alımı",
+                        "s3": "Köken + provenans",
+                        "s4": "KVKK/PII duyarlı dönüşümler"
+                    },
+                    "l2": {
+                        "slug": "Ontoloji",
+                        "title": "Alan modelinizin anlamsal modeli",
+                        "body": "Varlıklar, olaylar ve ilişkiler; genel bir şema değil, sizin alanınıza göre modellenir. Ontoloji; analistler, mühendisler ve operatörler arasında ortak söz dağarcığı olur. Sorgular ve yapay zekâ ham tablolara değil, ontolojiye karşı muhakeme eder.",
+                        "s1": "Varlıklar · Olaylar · İlişkiler",
+                        "s2": "Sürümlü model",
+                        "s3": "Role duyarlı görünürlük",
+                        "s4": "Alan terminolojileri"
+                    },
+                    "l3": {
+                        "slug": "Analiz",
+                        "title": "Analitik, bilgi grafları, zayıf-sinyal tespiti",
+                        "body": "Analitik yükü verinin yaşadığı yerde çalıştırın. Bilgi grafları, düz sorguların kaçırdığı ilişkileri yüzeye taşır. İstatistiksel ve makine öğrenmesi yöntemleri örüntüleri ve onlardan önce gelen zayıf sinyalleri tespit eder.",
+                        "s1": "Graf sorguları",
+                        "s2": "Anomali + zayıf-sinyal tespiti",
+                        "s3": "Davranışsal analitik",
+                        "s4": "Coğrafi · zaman-serisi"
+                    },
+                    "l4": {
+                        "slug": "Karar",
+                        "title": "İzlenebilir yapay zekâ yardımcısı",
+                        "body": "Ontolojiden argüman üreten, veriyi alıntılayan ve çalışmasını gösteren etmen-temelli bir yardımcı. Her öneri kaynağına kadar izlenebilir. Halüsinasyonlar denetlenebilir kanıtla temasta hayatta kalmaz.",
+                        "s1": "Ontolojiniz üzerinde RAG",
+                        "s2": "Muhakeme izleri",
+                        "s3": "İnsan-döngüde kapı",
+                        "s4": "Model provenansı",
+                        "s5": "Belirsizlikte reddetme"
+                    },
+                    "l5": {
+                        "slug": "Eylem",
+                        "title": "Operasyonel karar üretimi ve iş akışı",
+                        "body": "Kararlar; operatöre ve sisteme ulaştığında önem kazanır. İş akışları, sevkiyat, vaka yönetimi ve kayıt sistemlerine geri-yazma gömülüdür; AlpOS içgörüde durmaz.",
+                        "s1": "İş akışı motoru",
+                        "s2": "Vaka / bilet entegrasyonu",
+                        "s3": "Kayıt sistemlerine geri-yazma",
+                        "s4": "SLA + eskalasyon",
+                        "s5": "Eylem sonrası inceleme"
+                    }
+                },
+                "field": {
+                    "sup": "Nereye iniyor",
+                    "headline": "Üç kurum. Üç sorun. Tek platform",
+                    "body": "AlpOS'un pratikte nasıl uygulandığı; finansal hizmetler, kritik altyapı ve savunmada üç somut konuşlanma.",
+                    "s1": {
+                        "sector": "Finansal Hizmetler · AML",
+                        "problem": "Finansal suç nadiren tek bir iz bırakır.",
+                        "body": "AlpOS, varlık, hesap, işlem ve davranışsal sinyallerden oluşan ağı kaynaklar arası haritalandırır; düz kuralların ve izole panellerin kaçırdığı örüntüleri yüzeye taşır. Soruşturmalar uyarılardan eyleme dönüşür; ham işlemden operatör kararına uçtan uca köken bilgisiyle.",
+                        "outcome": "Daha hızlı vaka yargılaması. Daha az yanlış pozitif. Tasarımdan denetlenebilir."
+                    },
+                    "s2": {
+                        "sector": "Enerji ve Kritik Altyapı · Varlık sağlığı",
+                        "problem": "Filo çapında kusurlar, varyans içinde gizli.",
+                        "body": "AlpOS, dağıtık varlıklar boyunca telemetriyi koreleli kılar; arızadan önce gelen zayıf sinyalleri bulur ve yanıtı eyleme geçebilecek operatörlere yönlendirir; telemetri çevreden çıkmadan. Aynı omurga plansız kesintileri ve planlı bakım pencerelerini birlikte yönetir.",
+                        "outcome": "Anomali yanıtı dakikalar içinde. Savunulabilir prosedürler. Kurumu kaybetmeden olay-sonrası inceleme."
+                    },
+                    "s3": {
+                        "sector": "Savunma ve İstihbarat · Sinyal füzyonu",
+                        "problem": "Gizli ortamlardaki kararlar bekleyemez ve sızdırılamaz.",
+                        "body": "AlpOS, sinyal akışlarını çevre içinde birleştirir; analistlerin alıntılı kanıtla aralarında geçiş yapmasına izin verir; sonradan-eylem incelemenin savunabileceği izlenebilir çıktılar üretir. Yerinde ve air-gapped konuşlanabilir; hücre düzeyinde erişim denetimi ve tam denetim izi ile.",
+                        "outcome": "Görev döngüsü sıkıştırıldı. Her eylem savunulabilir."
+                    }
+                },
+                "sovereign": {
+                    "sup": "Tasarımdan egemen",
+                    "headline": "Veriniz. Yargı yetkiniz. Erişim denetimleriniz. Denetiminiz",
+                    "body": "Egemenlik bir konuşlanma seçeneği değildir. Mimari bir taahhüttür. AlpOS sadece sizin gerektirdiğiniz yerde, sizin gerektirdiğiniz şekilde çalışır.",
+                    "modeLabel": "Biçim",
+                    "m1Name": "Yerinde",
+                    "m1Body": "Sizin donanımınız. Sizin ağınız. Sizin operasyonel kontrolünüz. AlpOS, çalışma zamanında dış bağımlılığı olmadan çevrenizin içine kurulabilir.",
+                    "m2Name": "Air-gapped",
+                    "m2Body": "Gerektiren ortamlar için bağlantısız çalışma. İmzalı güncelleme modeli; hiçbir şey yetkisiz kanaldan geçmez.",
+                    "m3Name": "Egemen bulut",
+                    "m3Body": "Güvendiğiniz bir egemen bulut içinde, gerektirdiğiniz bölgede, veri yargı yetkisini bağlayan sözleşmeler altında çalışır.",
+                    "m4Name": "Özel bulut",
+                    "m4Body": "Seçtiğiniz bir bulutta tek kiracılı konuşlanma; müşteri-yönetimli anahtarlar ve kiracı-başına izolasyonla."
+                },
+                "modular": {
+                    "sup": "Modüler",
+                    "headline": "Platformu kurun. Modülleri markalayın",
+                    "body": "AlpOS katmanları bağımsız olarak konuşlanabilir ve bağımsız olarak markalanabilir. Müşteriler ve ortaklar, aynı mimariye, aynı egemenlik güvencesi altında kendi ürün adlarını eşleştirir. Platform sabittir. Yüzey sizindir."
+                },
+                "matrix": {
+                    "sup": "Yetenek matrisi",
+                    "headline": "AlpOS nedir, ayrıntıda",
+                    "r1g": "Veri entegrasyonu",
+                    "r1i": "Akış + toplu · 200+ konektör · Okumada / yazmada şema",
+                    "r2g": "Yönetişim",
+                    "r2i": "Uçtan uca denetim günlüğü · Köken + provenans · Veri ikametgâh denetimleri",
+                    "r3g": "Erişim denetimi",
+                    "r3i": "RBAC · ABAC · Varlık-başına görünürlük · Hücre düzeyinde politika",
+                    "r4g": "Ontoloji",
+                    "r4i": "Alan modelleme · Varlık / olay / ilişki · Sürümlü · Role duyarlı",
+                    "r5g": "Analitik",
+                    "r5i": "SQL + graf sorguları · Zaman-serisi · Coğrafi · Zayıf-sinyal tespiti",
+                    "r6g": "Yapay zekâ",
+                    "r6i": "Ontoloji üzerinde RAG · Muhakeme izleri · Model provenansı · İnsan-döngüde kapı",
+                    "r7g": "Operasyonlar",
+                    "r7i": "İş akışı motoru · Vaka yönetimi · Kayıt sistemine geri-yazma · SLA + eskalasyon",
+                    "r8g": "Konuşlanma",
+                    "r8i": "Yerinde · Air-gapped · Egemen bulut · Özel bulut"
+                },
+                "ai": {
+                    "sup": "Yapay zekâ yetenekleri",
+                    "headline": "Üst katmanda yönetilen YZ yetenekleri",
+                    "body": "AlpOS, çevreniz içinde çalışan, ontolojiniz üzerinde temellendirilmiş ve uçtan uca denetlenen bir yapay zekâ yetenek yığını sunar.",
+                    "explore": "Keşfet",
+                    "rag": "Ontolojiniz üzerinde RAG",
+                    "ragBody": "Açık web değil, sizin alan modelinize temellendirilmiş geri-erişim destekli üretim.",
+                    "geo": "Coğrafi analitik",
+                    "geoBody": "Konum-farkındalıklı veri üzerinde harita, temellendirme ve operasyonel ölçekte muhakeme.",
+                    "video": "Video istihbaratı",
+                    "videoBody": "Video kütüphanelerinde tespit, sınıflandırma ve arama; çevreniz içinde.",
+                    "audio": "Ses analizi ve dökümü",
+                    "audioBody": "Ses kayıtlarından konuşmacı, duygu ve anlamsal yapı; arşiv ölçeğinde.",
+                    "translation": "Makine çevirisi",
+                    "translationBody": "60+ dil; köken bilgisiyle, çevreniz içinde.",
+                    "data": "Veri edinimi ve hazırlığı",
+                    "dataBody": "Konektörler, ETL, zenginleştirme ve yönetişim; kaynaktan ontolojiye."
+                },
+                "outcomes": {
+                    "sup": "Sonuçlar",
+                    "headline": "Daha hızlı karar. Savunulabilir karar. Ölçekte yönetilen",
+                    "speedLabel": "Hız",
+                    "speedBody": "Sinyalden ilk eyleme dakikalar içinde, haftalar değil. Döngü, bir entegrasyon zinciri değil, mimarinin kendisidir.",
+                    "defenseLabel": "Savunulabilirlik",
+                    "defenseBody": "Her çıktı kaynak verisine ve onu uygulayan operatöre kadar izlenebilir. Tasarımdan denetlenebilir; öncesinde, sırasında ve sonrasında.",
+                    "trustLabel": "Güven",
+                    "trustBody": "\"Veriyi tedarikçiye gönderin\"in seçenek olmadığı ortamlarda konuşlanabilir. Egemenlik; özellik değil, önkoşul."
+                },
+                "served": {
+                    "sup": "Hizmet ettiğimiz sektörler",
+                    "headline": "Tek platform. Birçok kurum",
+                    "cta": "Tüm sektörler",
+                    "detailLabel": "Sektör detayı",
+                    "fs": "Finansal Hizmetler",
+                    "energy": "Enerji",
+                    "mfg": "Üretim",
+                    "ls": "Yaşam Bilimleri",
+                    "gov": "Kamu",
+                    "def": "Savunma ve İstihbarat"
+                },
+                "engage": {
+                    "sup": "Görüşme",
+                    "headline": "AlpOS'u operasyonlarınıza taşıyın",
+                    "body": "Demolar sizin senaryolarınıza göre çalıştırılır. Veri mimarinizi, kısıtlarınızı ve operasyonel gerçekliğinizi getirin; biz platformu ve doğru kişileri getireceğiz.",
+                    "ctaPrimary": "Demo al",
+                    "ctaSecondary": "Bir uzmanla konuş"
+                },
+                "toc": {
+                    "problem": "Sorun",
+                    "architecture": "Mimari",
+                    "demo": "İzleyin",
+                    "layers": "Katmanlar",
+                    "field": "Nereye iniyor",
+                    "sovereign": "Tasarımdan egemen",
+                    "modular": "Modüler",
+                    "matrix": "Yetenek matrisi",
+                    "ai": "YZ yetenekleri",
+                    "outcomes": "Sonuçlar",
+                    "served": "Sektörlerimiz",
+                    "engage": "Görüşme"
+                }
             }
         }
     }
