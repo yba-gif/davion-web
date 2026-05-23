@@ -889,17 +889,17 @@
                     "industryLabel": "Branche",
                     "playbookCta": "Playbook lesen",
                     "fsName": "Finanzdienstleistungen",
-                    "fsBody": "AML, Markt- und Risiko-Intelligenz, Überwachung, Kundenengagement, Betrug und operative Resilienz — Lineage in Regulierungsklasse.",
+                    "fsBody": "Audit-Klasse-Lineage über jede Transaktion, jeden Alarm und jede Gegenpartei — innerhalb des Bankenperimeters.",
                     "energyName": "Energie",
-                    "energyBody": "Netz, Erzeugung, Asset-Zuverlässigkeit und OT-Cybersicherheit — Telemetrie bleibt in Ihrem Perimeter.",
+                    "energyBody": "Netz, Erzeugung, Asset-Zuverlässigkeit und OT-Cyber — Telemetrie verlässt das Steuerungsnetz nie.",
                     "defName": "Verteidigung und Nachrichtendienste",
-                    "defBody": "Air-gapped souveräne Infrastruktur für Einsatzplanung, All-Source-Fusion und OSINT. Entscheidungen bleiben innerhalb der Enklave.",
+                    "defBody": "Air-gapped Infrastruktur für Einsatzplanung, All-Source-Fusion und OSINT.",
                     "mfgName": "Fertigung",
-                    "mfgBody": "Anlagenbetrieb, Qualität, Supply-Visibilität und industrielle Cybersicherheit — Produktionstelemetrie bleibt drinnen.",
+                    "mfgBody": "Anlagenbetrieb, Qualität, Supply und OT-Cyber — Produktionstelemetrie bleibt on-prem.",
                     "lsName": "Life Sciences",
-                    "lsBody": "Discovery, klinische Operationen, Pharmakovigilanz und GxP-Prozessintelligenz — per Design audit-fähig für Regulierer.",
+                    "lsBody": "Discovery, Studien, Pharmakovigilanz — per Design audit-fähig für Regulierer.",
                     "govName": "Verwaltung",
-                    "govBody": "Behördenübergreifende Entitätsauflösung, Sozialleistungsbetrug, kritische Infrastruktur und Vergabe-Oversight — Bürger-Datenrecht per Design respektiert."
+                    "govBody": "Behördenübergreifende Entitätsauflösung, Sozialleistungsbetrug, kritische Infrastruktur — Bürger-Datenrecht per Design respektiert."
                 },
                 "engage": {
                     "sup": "Kontakt",

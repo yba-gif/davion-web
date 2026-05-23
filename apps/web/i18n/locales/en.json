@@ -889,17 +889,17 @@
                     "industryLabel": "Industry",
                     "playbookCta": "Read the playbook",
                     "fsName": "Financial Services",
-                    "fsBody": "AML, market & risk intelligence, surveillance, client engagement, fraud, and operational resilience, regulator-grade lineage.",
+                    "fsBody": "Audit-grade lineage on every transaction, alert, and counterparty — inside the bank's perimeter.",
                     "energyName": "Energy",
-                    "energyBody": "Grid, generation, asset reliability, and OT-side cyber, telemetry stays in your perimeter.",
+                    "energyBody": "Grid, generation, asset reliability, and OT cyber — telemetry never leaves the control network.",
                     "defName": "Defense & Intelligence",
-                    "defBody": "Air-gapped sovereign infrastructure for mission planning, all-source fusion, and OSINT. Decisions stay inside the enclave.",
+                    "defBody": "Air-gapped infrastructure for mission planning, all-source fusion, and OSINT.",
                     "mfgName": "Manufacturing",
-                    "mfgBody": "Plant operations, quality, supply visibility, and industrial cybersecurity, production telemetry stays inside.",
+                    "mfgBody": "Plant operations, quality, supply, and OT cyber — production telemetry stays on-prem.",
                     "lsName": "Life Sciences",
-                    "lsBody": "Discovery, clinical operations, pharmacovigilance, and GxP process intelligence, audit-ready for regulators by design.",
+                    "lsBody": "Discovery, trials, pharmacovigilance — audit-ready for regulators by design.",
                     "govName": "Government",
-                    "govBody": "Cross-agency entity resolution, benefits fraud, critical infrastructure, and procurement oversight, citizen-data law respected by design."
+                    "govBody": "Cross-agency entity resolution, benefits fraud, critical infrastructure — citizen-data law respected by design."
                 },
                 "engage": {
                     "sup": "Engage",

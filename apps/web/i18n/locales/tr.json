@@ -889,17 +889,17 @@
                     "industryLabel": "Sektör",
                     "playbookCta": "Kılavuzu oku",
                     "fsName": "Finansal Hizmetler",
-                    "fsBody": "AML, piyasa ve risk istihbaratı, gözetim, müşteri ilişkisi, dolandırıcılık ve operasyonel dayanıklılık; düzenleyici sınıfında köken bilgisi.",
+                    "fsBody": "Her işlemde, uyarıda ve karşı tarafta denetim sınıfında köken bilgisi — bankanın çevresi içinde.",
                     "energyName": "Enerji",
-                    "energyBody": "Şebeke, üretim, varlık güvenilirliği ve OT-tarafı siber; telemetri çevrenizde kalır.",
+                    "energyBody": "Şebeke, üretim, varlık güvenilirliği ve OT siber — telemetri kontrol ağından asla çıkmaz.",
                     "defName": "Savunma ve İstihbarat",
-                    "defBody": "Görev planlaması, çoklu kaynaklı füzyon ve OSINT için air-gapped egemen altyapı. Kararlar enklav içinde kalır.",
+                    "defBody": "Görev planlaması, çoklu kaynaklı füzyon ve OSINT için air-gapped altyapı.",
                     "mfgName": "Üretim",
-                    "mfgBody": "Tesis operasyonları, kalite, tedarik görünürlüğü ve endüstriyel siber güvenlik; üretim telemetrisi içeride kalır.",
+                    "mfgBody": "Tesis operasyonları, kalite, tedarik ve OT siber — üretim telemetrisi yerinde kalır.",
                     "lsName": "Yaşam Bilimleri",
-                    "lsBody": "Keşif, klinik operasyonlar, farmakovijilans ve GxP süreç istihbaratı; tasarımdan denetlenebilir.",
+                    "lsBody": "Keşif, çalışmalar, farmakovijilans — tasarımdan düzenleyiciler için denetime hazır.",
                     "govName": "Kamu",
-                    "govBody": "Ajanslar-arası varlık çözümü, hak kazanç sahtekarlığı, kritik altyapı ve ihale gözetimi; vatandaş-veri hukuku tasarımdan korunur."
+                    "govBody": "Ajanslar-arası varlık çözümü, hak kazanç sahtekarlığı, kritik altyapı — vatandaş-veri hukuku tasarımdan korunur."
                 },
                 "engage": {
                     "sup": "Görüşme",
