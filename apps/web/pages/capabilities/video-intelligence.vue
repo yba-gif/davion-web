@@ -1,48 +1,51 @@
 <script setup lang="ts">
 // Refactored to <CapabilityLayout> in P1.U7.
+// Copy moved to pages.capabilities.video.* in P4.10b.
+const { t } = useI18n()
+
 useSeoMeta({
-    title: 'Video intelligence',
-    description: 'Detect, classify, and make searchable hours of video across cameras, devices, and archives, inside your perimeter, with chain-of-custody preserved.',
-    ogTitle: 'Davion · Video intelligence',
-    ogDescription: 'Video at the speed of investigation. Object, scene, and event detection across archives with chain-of-custody intact.',
+    title: () => t('pages.capabilities.video.meta.title'),
+    description: () => t('pages.capabilities.video.meta.description'),
+    ogTitle: () => t('pages.capabilities.video.meta.ogTitle'),
+    ogDescription: () => t('pages.capabilities.video.meta.ogDescription'),
 })
 
-const data = {
-    eyebrow: 'Capability · Video intelligence',
-    headline: 'Video at the speed of investigation. Chain-of-custody intact',
-    body: 'AlpOS Video Intelligence detects, classifies, and indexes hours of video so analysts search by content, not by timestamp. Runs against your cameras and your archives, inside your perimeter, with the lineage to defend the result in court.',
+const data = computed(() => ({
+    eyebrow: t('pages.capabilities.video.eyebrow'),
+    headline: t('pages.capabilities.video.headline'),
+    body: t('pages.capabilities.video.body'),
 
     whatItDoes: [
-        'Detects objects, scenes, and events across recorded and live video streams.',
-        'Indexes video so analysts search by content, not just timestamp.',
-        'Preserves chain-of-custody from frame to case file.',
-        'Runs entirely on operator hardware, body cameras, CCTV, ISR feeds, archive.',
+        t('pages.capabilities.video.wid1'),
+        t('pages.capabilities.video.wid2'),
+        t('pages.capabilities.video.wid3'),
+        t('pages.capabilities.video.wid4'),
     ],
 
-    howItWorksTitle: 'Ingest · Detect · Index · Cite',
+    howItWorksTitle: t('pages.capabilities.video.hiwTitle'),
     howItWorks: [
-        { n: '01', title: 'Ingest', body: 'Live streams and archives flow in through standard protocols (RTSP, NDI, file). Metadata travels with the frame.' },
-        { n: '02', title: 'Detect', body: 'Object detection, scene classification, OCR, and face / plate / vehicle recognition where policy permits.' },
-        { n: '03', title: 'Index', body: 'Every detection becomes a searchable entity in the ontology. Analysts query by content, not by minute.' },
-        { n: '04', title: 'Cite', body: 'Every result returns the frame, the source, and the chain-of-custody log. Court-admissible by design.' },
+        { n: '01', title: t('pages.capabilities.video.hiw1Title'), body: t('pages.capabilities.video.hiw1Body') },
+        { n: '02', title: t('pages.capabilities.video.hiw2Title'), body: t('pages.capabilities.video.hiw2Body') },
+        { n: '03', title: t('pages.capabilities.video.hiw3Title'), body: t('pages.capabilities.video.hiw3Body') },
+        { n: '04', title: t('pages.capabilities.video.hiw4Title'), body: t('pages.capabilities.video.hiw4Body') },
     ],
 
     whenToUse: [
-        'Public safety operators reviewing hours of body-camera footage after an incident',
-        'Defense and intelligence analysts searching ISR archives for tactical change',
-        'Manufacturing quality teams diagnosing visual defects across production lines',
-        'Critical-infrastructure operators monitoring CCTV against unauthorised access patterns',
+        t('pages.capabilities.video.wtu1'),
+        t('pages.capabilities.video.wtu2'),
+        t('pages.capabilities.video.wtu3'),
+        t('pages.capabilities.video.wtu4'),
     ],
 
     industries: [
-        { name: 'Defense & Intelligence', slug: 'defense-intelligence' },
-        { name: 'Government', slug: 'government' },
-        { name: 'Manufacturing', slug: 'manufacturing' },
-        { name: 'Energy', slug: 'energy' },
+        { name: t('pages.industries.index.list.defName'),    slug: 'defense-intelligence' },
+        { name: t('pages.industries.index.list.govName'),    slug: 'government' },
+        { name: t('pages.industries.index.list.mfgName'),    slug: 'manufacturing' },
+        { name: t('pages.industries.index.list.energyName'), slug: 'energy' },
     ],
 
-    ctaHeadline: 'Investigations at the speed of frames',
-}
+    ctaHeadline: t('pages.capabilities.video.ctaHeadline'),
+}))
 </script>
 
 <template>

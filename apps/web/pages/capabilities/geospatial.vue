@@ -1,48 +1,51 @@
 <script setup lang="ts">
 // Refactored to <CapabilityLayout> in P1.U7.
+// Copy moved to pages.capabilities.geo.* in P4.10b.
+const { t } = useI18n()
+
 useSeoMeta({
-    title: 'Geospatial analytics',
-    description: 'Map, ground, and reason over location-aware data at operational scale. Assets, events, trajectories, anchored in space, inside your perimeter.',
-    ogTitle: 'Davion · Geospatial analytics',
-    ogDescription: 'Reasoning over location-aware data, assets, events, trajectories. Inside the perimeter, with raster, vector, and trajectory data fused into one ontology.',
+    title: () => t('pages.capabilities.geo.meta.title'),
+    description: () => t('pages.capabilities.geo.meta.description'),
+    ogTitle: () => t('pages.capabilities.geo.meta.ogTitle'),
+    ogDescription: () => t('pages.capabilities.geo.meta.ogDescription'),
 })
 
-const data = {
-    eyebrow: 'Capability · Geospatial',
-    headline: 'Where matters. Reason over location-aware data inside your perimeter',
-    body: 'AlpOS Geospatial fuses raster, vector, and trajectory data, satellites, sensors, GIS, into one location-aware ontology. Anomalies, patterns of life, and tactical change become first-class signals on the operator\'s map.',
+const data = computed(() => ({
+    eyebrow: t('pages.capabilities.geo.eyebrow'),
+    headline: t('pages.capabilities.geo.headline'),
+    body: t('pages.capabilities.geo.body'),
 
     whatItDoes: [
-        'Fuses raster, vector, and trajectory data into one location-aware ontology.',
-        'Resolves and tracks entities across satellite, aerial, and ground sensors.',
-        'Detects anomalies on patterns of life, asset behaviour, and tactical change.',
-        'Runs against your tile servers and geo-data infrastructure, no third-party cloud.',
+        t('pages.capabilities.geo.wid1'),
+        t('pages.capabilities.geo.wid2'),
+        t('pages.capabilities.geo.wid3'),
+        t('pages.capabilities.geo.wid4'),
     ],
 
-    howItWorksTitle: 'Ingest · Ground · Reason · Render',
+    howItWorksTitle: t('pages.capabilities.geo.hiwTitle'),
     howItWorks: [
-        { n: '01', title: 'Ingest', body: 'Raster (satellite / aerial / drone), vector (GIS, OSM, internal), and trajectory (AIS, ADS-B, fleet telemetry) flow into the AlpOS pipeline.' },
-        { n: '02', title: 'Ground', body: 'Every observation is geocoded, georeferenced, and bound to the ontology entity it describes.' },
-        { n: '03', title: 'Reason', body: 'Graph and statistical methods detect patterns: convergence, dispersion, anomaly against historical baselines.' },
-        { n: '04', title: 'Render', body: 'Operators see the case on the map, with the lineage from raw observation to decision.' },
+        { n: '01', title: t('pages.capabilities.geo.hiw1Title'), body: t('pages.capabilities.geo.hiw1Body') },
+        { n: '02', title: t('pages.capabilities.geo.hiw2Title'), body: t('pages.capabilities.geo.hiw2Body') },
+        { n: '03', title: t('pages.capabilities.geo.hiw3Title'), body: t('pages.capabilities.geo.hiw3Body') },
+        { n: '04', title: t('pages.capabilities.geo.hiw4Title'), body: t('pages.capabilities.geo.hiw4Body') },
     ],
 
     whenToUse: [
-        'Grid and pipeline operators monitoring linear assets across thousands of kilometres',
-        'Defense and intelligence analysts running pattern-of-life on contested geography',
-        'Public-safety operators correlating incident reports with spatial demographics',
-        'Maritime and aviation surveillance with multi-sensor trajectory fusion',
+        t('pages.capabilities.geo.wtu1'),
+        t('pages.capabilities.geo.wtu2'),
+        t('pages.capabilities.geo.wtu3'),
+        t('pages.capabilities.geo.wtu4'),
     ],
 
     industries: [
-        { name: 'Defense & Intelligence', slug: 'defense-intelligence' },
-        { name: 'Energy', slug: 'energy' },
-        { name: 'Government', slug: 'government' },
-        { name: 'Manufacturing', slug: 'manufacturing' },
+        { name: t('pages.industries.index.list.defName'),    slug: 'defense-intelligence' },
+        { name: t('pages.industries.index.list.energyName'), slug: 'energy' },
+        { name: t('pages.industries.index.list.govName'),    slug: 'government' },
+        { name: t('pages.industries.index.list.mfgName'),    slug: 'manufacturing' },
     ],
 
-    ctaHeadline: 'Bring the map. We\'ll bring the platform',
-}
+    ctaHeadline: t('pages.capabilities.geo.ctaHeadline'),
+}))
 </script>
 
 <template>

@@ -1,48 +1,51 @@
 <script setup lang="ts">
 // Refactored to <CapabilityLayout> in P1.U7.
+// Copy moved to pages.capabilities.audio.* in P4.10b.
+const { t } = useI18n()
+
 useSeoMeta({
-    title: 'Audio analysis & transcription',
-    description: 'Transcribe, diarise, and extract structure from calls, interviews, and broadcasts, with speaker identification, sentiment, and topic modelling. Inside your perimeter.',
-    ogTitle: 'Davion · Audio analysis',
-    ogDescription: 'Speaker, sentiment, and semantic structure from audio at scale. Trading floors, contact centres, broadcasts, inside the perimeter.',
+    title: () => t('pages.capabilities.audio.meta.title'),
+    description: () => t('pages.capabilities.audio.meta.description'),
+    ogTitle: () => t('pages.capabilities.audio.meta.ogTitle'),
+    ogDescription: () => t('pages.capabilities.audio.meta.ogDescription'),
 })
 
-const data = {
-    eyebrow: 'Capability · Audio',
-    headline: 'Listen at scale. Audit at the same scale',
-    body: 'AlpOS Audio Analysis transcribes, diarises, and extracts structure from calls, interviews, and broadcasts. Speaker identification, sentiment shifts, topic boundaries, and compliance-relevant events become first-class signals in the ontology.',
+const data = computed(() => ({
+    eyebrow: t('pages.capabilities.audio.eyebrow'),
+    headline: t('pages.capabilities.audio.headline'),
+    body: t('pages.capabilities.audio.body'),
 
     whatItDoes: [
-        'Transcribes and diarises calls, interviews, and broadcasts at archive scale.',
-        'Identifies speakers, sentiment shifts, and topic boundaries.',
-        'Surfaces compliance-relevant events: market-abuse phrases, escalation patterns, distress signals.',
-        'Runs against your audio infrastructure, no third-party API, no recordings leave the perimeter.',
+        t('pages.capabilities.audio.wid1'),
+        t('pages.capabilities.audio.wid2'),
+        t('pages.capabilities.audio.wid3'),
+        t('pages.capabilities.audio.wid4'),
     ],
 
-    howItWorksTitle: 'Ingest · Transcribe · Structure · Cite',
+    howItWorksTitle: t('pages.capabilities.audio.hiwTitle'),
     howItWorks: [
-        { n: '01', title: 'Ingest', body: 'Audio flows in from call recorders, contact-centre platforms, broadcast feeds, or archive stores.' },
-        { n: '02', title: 'Transcribe', body: 'Multilingual ASR with diarisation produces speaker-labelled transcripts with timestamps and confidence.' },
-        { n: '03', title: 'Structure', body: 'Topic, sentiment, intent, and compliance pattern detection runs over the transcript and audio features.' },
-        { n: '04', title: 'Cite', body: 'Every event in the case file points back to the exact audio segment, speaker, and transcript line.' },
+        { n: '01', title: t('pages.capabilities.audio.hiw1Title'), body: t('pages.capabilities.audio.hiw1Body') },
+        { n: '02', title: t('pages.capabilities.audio.hiw2Title'), body: t('pages.capabilities.audio.hiw2Body') },
+        { n: '03', title: t('pages.capabilities.audio.hiw3Title'), body: t('pages.capabilities.audio.hiw3Body') },
+        { n: '04', title: t('pages.capabilities.audio.hiw4Title'), body: t('pages.capabilities.audio.hiw4Body') },
     ],
 
     whenToUse: [
-        'Trading-floor surveillance for market-abuse phrases under MAR / MiFID II',
-        'Contact-centre quality review across millions of recordings',
-        'Defense and intelligence analysis of broadcast and intercept audio',
-        'Clinical trial monitoring of patient-call recordings under HIPAA / GDPR',
+        t('pages.capabilities.audio.wtu1'),
+        t('pages.capabilities.audio.wtu2'),
+        t('pages.capabilities.audio.wtu3'),
+        t('pages.capabilities.audio.wtu4'),
     ],
 
     industries: [
-        { name: 'Financial Services', slug: 'financial-services' },
-        { name: 'Defense & Intelligence', slug: 'defense-intelligence' },
-        { name: 'Government', slug: 'government' },
-        { name: 'Life Sciences', slug: 'life-sciences' },
+        { name: t('pages.industries.index.list.fsName'),  slug: 'financial-services' },
+        { name: t('pages.industries.index.list.defName'), slug: 'defense-intelligence' },
+        { name: t('pages.industries.index.list.govName'), slug: 'government' },
+        { name: t('pages.industries.index.list.lsName'),  slug: 'life-sciences' },
     ],
 
-    ctaHeadline: 'Conversations at the scale of archives',
-}
+    ctaHeadline: t('pages.capabilities.audio.ctaHeadline'),
+}))
 </script>
 
 <template>

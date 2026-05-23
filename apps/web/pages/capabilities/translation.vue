@@ -1,48 +1,51 @@
 <script setup lang="ts">
 // Refactored to <CapabilityLayout> in P1.U7.
+// Copy moved to pages.capabilities.translation.* in P4.10b.
+const { t } = useI18n()
+
 useSeoMeta({
-    title: 'Machine translation',
-    description: 'High-quality translation across 60+ languages, run entirely inside your perimeter, with provenance for every translation and access control on every source.',
-    ogTitle: 'Davion · Machine translation',
-    ogDescription: 'Translation that respects your perimeter. 60+ languages, no third-party API, provenance for every translation.',
+    title: () => t('pages.capabilities.translation.meta.title'),
+    description: () => t('pages.capabilities.translation.meta.description'),
+    ogTitle: () => t('pages.capabilities.translation.meta.ogTitle'),
+    ogDescription: () => t('pages.capabilities.translation.meta.ogDescription'),
 })
 
-const data = {
-    eyebrow: 'Capability · Translation',
-    headline: 'Translation that respects your perimeter',
-    body: 'AlpOS Translation runs 60+ language pairs inside your perimeter, text, documents, audio transcripts, with provenance for every passage and access control on every source. No third-party API. No cross-border transit.',
+const data = computed(() => ({
+    eyebrow: t('pages.capabilities.translation.eyebrow'),
+    headline: t('pages.capabilities.translation.headline'),
+    body: t('pages.capabilities.translation.body'),
 
     whatItDoes: [
-        'Translates text, documents, and transcribed audio across 60+ language pairs.',
-        'Preserves layout, formatting, and embedded metadata through the translation.',
-        'Records source-to-target provenance for every passage, every sentence.',
-        'Runs entirely on operator hardware, no third-party API, no cross-border data transit.',
+        t('pages.capabilities.translation.wid1'),
+        t('pages.capabilities.translation.wid2'),
+        t('pages.capabilities.translation.wid3'),
+        t('pages.capabilities.translation.wid4'),
     ],
 
-    howItWorksTitle: 'Detect · Translate · Preserve · Cite',
+    howItWorksTitle: t('pages.capabilities.translation.hiwTitle'),
     howItWorks: [
-        { n: '01', title: 'Detect', body: 'Source language identified at document, paragraph, or sentence granularity. Mixed-language documents handled natively.' },
-        { n: '02', title: 'Translate', body: 'Domain-tuned models with terminology and glossary support. Confidence scores per segment.' },
-        { n: '03', title: 'Preserve', body: 'Layout, tables, embedded images, document structure, and metadata flow through intact.' },
-        { n: '04', title: 'Cite', body: 'Every translated passage links back to the source segment with model version and timestamp.' },
+        { n: '01', title: t('pages.capabilities.translation.hiw1Title'), body: t('pages.capabilities.translation.hiw1Body') },
+        { n: '02', title: t('pages.capabilities.translation.hiw2Title'), body: t('pages.capabilities.translation.hiw2Body') },
+        { n: '03', title: t('pages.capabilities.translation.hiw3Title'), body: t('pages.capabilities.translation.hiw3Body') },
+        { n: '04', title: t('pages.capabilities.translation.hiw4Title'), body: t('pages.capabilities.translation.hiw4Body') },
     ],
 
     whenToUse: [
-        'Defense and intelligence analysts processing adversary media and intercept material',
-        'Multinational compliance teams reviewing regulatory filings across jurisdictions',
-        'Pharmacovigilance teams ingesting adverse-event reports from international sources',
-        'Government agencies translating citizen-facing communications under accessibility law',
+        t('pages.capabilities.translation.wtu1'),
+        t('pages.capabilities.translation.wtu2'),
+        t('pages.capabilities.translation.wtu3'),
+        t('pages.capabilities.translation.wtu4'),
     ],
 
     industries: [
-        { name: 'Defense & Intelligence', slug: 'defense-intelligence' },
-        { name: 'Government', slug: 'government' },
-        { name: 'Life Sciences', slug: 'life-sciences' },
-        { name: 'Financial Services', slug: 'financial-services' },
+        { name: t('pages.industries.index.list.defName'), slug: 'defense-intelligence' },
+        { name: t('pages.industries.index.list.govName'), slug: 'government' },
+        { name: t('pages.industries.index.list.lsName'),  slug: 'life-sciences' },
+        { name: t('pages.industries.index.list.fsName'),  slug: 'financial-services' },
     ],
 
-    ctaHeadline: 'Multilingual without the cross-border round-trip',
-}
+    ctaHeadline: t('pages.capabilities.translation.ctaHeadline'),
+}))
 </script>
 
 <template>

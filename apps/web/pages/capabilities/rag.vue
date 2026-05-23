@@ -1,48 +1,53 @@
 <script setup lang="ts">
 // Refactored to <CapabilityLayout> in P1.U7.
+// Copy moved to pages.capabilities.rag.* in P4.10b.
+const { t } = useI18n()
+
 useSeoMeta({
-    title: 'RAG over your ontology',
-    description: 'Retrieval-augmented generation grounded in your domain ontology and document corpus, never the open web. Every output cites its source, every retrieval respects access control.',
-    ogTitle: 'Davion · RAG over your ontology',
-    ogDescription: 'AI that cites its sources. RAG grounded against your governed ontology, inside your perimeter, audit-ready.',
+    title: () => t('pages.capabilities.rag.meta.title'),
+    description: () => t('pages.capabilities.rag.meta.description'),
+    ogTitle: () => t('pages.capabilities.rag.meta.ogTitle'),
+    ogDescription: () => t('pages.capabilities.rag.meta.ogDescription'),
 })
 
-const data = {
-    eyebrow: 'Capability · RAG',
-    headline: 'AI that cites its sources. Grounded in your ontology, not the open web',
-    body: 'Retrieval-augmented generation that runs against your governed ontology and document corpus, inside your perimeter, with access control on every retrieval and provenance on every claim.',
+const data = computed(() => ({
+    eyebrow: t('pages.capabilities.rag.eyebrow'),
+    headline: t('pages.capabilities.rag.headline'),
+    body: t('pages.capabilities.rag.body'),
 
     whatItDoes: [
-        'Answers analyst questions against your governed document corpus, not the open web.',
-        'Cites the exact passage and source for every claim, no unsupported sentences.',
-        'Respects per-document and per-cell access control on every retrieval.',
-        'Runs entirely inside your perimeter, no third-party API, no leakage.',
+        t('pages.capabilities.rag.wid1'),
+        t('pages.capabilities.rag.wid2'),
+        t('pages.capabilities.rag.wid3'),
+        t('pages.capabilities.rag.wid4'),
     ],
 
-    howItWorksTitle: 'Ground · Retrieve · Reason · Cite',
+    howItWorksTitle: t('pages.capabilities.rag.hiwTitle'),
     howItWorks: [
-        { n: '01', title: 'Ground', body: 'Index your governed document corpus into a vector store inside your perimeter. The ontology decides what counts as a source.' },
-        { n: '02', title: 'Retrieve', body: 'Every query goes through the access-control layer first. Only passages the user is authorised to see are eligible for retrieval.' },
-        { n: '03', title: 'Reason', body: 'The LLM is constrained to reason only over retrieved passages. Sources travel with the answer.' },
-        { n: '04', title: 'Cite', body: 'Every claim is rendered with the exact passage and source reference. The analyst can verify, drill in, and audit.' },
+        { n: '01', title: t('pages.capabilities.rag.hiw1Title'), body: t('pages.capabilities.rag.hiw1Body') },
+        { n: '02', title: t('pages.capabilities.rag.hiw2Title'), body: t('pages.capabilities.rag.hiw2Body') },
+        { n: '03', title: t('pages.capabilities.rag.hiw3Title'), body: t('pages.capabilities.rag.hiw3Body') },
+        { n: '04', title: t('pages.capabilities.rag.hiw4Title'), body: t('pages.capabilities.rag.hiw4Body') },
     ],
 
     whenToUse: [
-        'Compliance officers answering questions against thousands of regulatory documents',
-        'Analysts drafting briefs against classified or proprietary source material',
-        'Solutions engineers searching internal documentation and architecture decisions',
-        'Field operators querying maintenance manuals, SOPs, and incident histories under audit',
+        t('pages.capabilities.rag.wtu1'),
+        t('pages.capabilities.rag.wtu2'),
+        t('pages.capabilities.rag.wtu3'),
+        t('pages.capabilities.rag.wtu4'),
     ],
 
+    // Industry names route through pages.industries.index.list.* (already
+    // translated in waves 5*). Avoids duplicating the same industry names.
     industries: [
-        { name: 'Financial Services', slug: 'financial-services' },
-        { name: 'Defense & Intelligence', slug: 'defense-intelligence' },
-        { name: 'Life Sciences', slug: 'life-sciences' },
-        { name: 'Government', slug: 'government' },
+        { name: t('pages.industries.index.list.fsName'),  slug: 'financial-services' },
+        { name: t('pages.industries.index.list.defName'), slug: 'defense-intelligence' },
+        { name: t('pages.industries.index.list.lsName'),  slug: 'life-sciences' },
+        { name: t('pages.industries.index.list.govName'), slug: 'government' },
     ],
 
-    ctaHeadline: 'AI you can defend at audit',
-}
+    ctaHeadline: t('pages.capabilities.rag.ctaHeadline'),
+}))
 </script>
 
 <template>
