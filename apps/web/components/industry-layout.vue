@@ -59,16 +59,23 @@ interface IndustryData {
 
 const props = defineProps<{ data: IndustryData }>()
 
-// Defaults, keep the FS template as the canonical source of truth for labels.
-const primaryCta = computed<Cta>(() => props.data.primaryCta ?? { label: 'Book a demo', to: '/contact' })
-const secondaryCta = computed<Cta>(() => props.data.secondaryCta ?? { label: 'See AlpOS', to: '/solutions/alpos' })
-const problemAreasEyebrow = computed(() => props.data.problemAreasEyebrow ?? 'Where Davion delivers')
-const problemAreasTitle = computed(() => props.data.problemAreasTitle ?? 'Four problem areas. One sovereign platform')
-const alposCta = computed<Cta>(() => props.data.alposCta ?? { label: 'Explore AlpOS', to: '/solutions/alpos' })
-const storyEyebrow = computed(() => props.data.storyEyebrow ?? 'Where it lands')
-const ctaEyebrow = computed(() => props.data.ctaEyebrow ?? 'Engage')
-const ctaPrimary = computed<Cta>(() => props.data.ctaPrimary ?? { label: 'Book a demo', to: '/contact' })
-const ctaSecondary = computed<Cta>(() => props.data.ctaSecondary ?? { label: 'Speak to an expert', to: '/contact' })
+const { t } = useI18n()
+const localePath = useLocalePath()
+
+// Defaults route through pages.industries.shared.* so /tr and /de render the
+// shared scaffolding (eyebrows, default CTAs, "AlpOS layers in play", etc.)
+// in-language. Per-page data props can still override any of these. The
+// template wraps every `cta.to` with localePath(), so data props should pass
+// raw paths (e.g. '/contact') — not pre-localized ones.
+const primaryCta = computed<Cta>(() => props.data.primaryCta ?? { label: t('pages.industries.shared.heroPrimaryCtaDefault'), to: '/contact' })
+const secondaryCta = computed<Cta>(() => props.data.secondaryCta ?? { label: t('pages.industries.shared.heroSecondaryCtaDefault'), to: '/solutions/alpos' })
+const problemAreasEyebrow = computed(() => props.data.problemAreasEyebrow ?? t('pages.industries.shared.problemAreasEyebrow'))
+const problemAreasTitle = computed(() => props.data.problemAreasTitle ?? t('pages.industries.shared.problemAreasTitleDefault'))
+const alposCta = computed<Cta>(() => props.data.alposCta ?? { label: t('pages.industries.shared.alposCtaDefault'), to: '/solutions/alpos' })
+const storyEyebrow = computed(() => props.data.storyEyebrow ?? t('pages.industries.shared.storyEyebrow'))
+const ctaEyebrow = computed(() => props.data.ctaEyebrow ?? t('pages.industries.shared.ctaEyebrow'))
+const ctaPrimary = computed<Cta>(() => props.data.ctaPrimary ?? { label: t('pages.industries.shared.ctaPrimaryDefault'), to: '/contact' })
+const ctaSecondary = computed<Cta>(() => props.data.ctaSecondary ?? { label: t('pages.industries.shared.ctaSecondaryDefault'), to: '/contact' })
 
 // Split a headline on ". " boundaries so each declarative segment gets a green
 // dot accent (Davion punctuation signature per docs/brand-voice.md §5 rule 7).
@@ -95,8 +102,8 @@ const solutionsSegments = computed(() => splitHeadlineSegments(props.data.soluti
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">{{ data.body }}</p>
             <div class="mt-10 flex flex-wrap gap-3">
-                <NuxtLink :to="primaryCta.to"><CommonButton variant="primary" icon="base:arrow">{{ primaryCta.label }}</CommonButton></NuxtLink>
-                <NuxtLink :to="secondaryCta.to"><CommonButton variant="outline" icon="base:arrow">{{ secondaryCta.label }}</CommonButton></NuxtLink>
+                <NuxtLink :to="localePath(primaryCta.to)"><CommonButton variant="primary" icon="base:arrow">{{ primaryCta.label }}</CommonButton></NuxtLink>
+                <NuxtLink :to="localePath(secondaryCta.to)"><CommonButton variant="outline" icon="base:arrow">{{ secondaryCta.label }}</CommonButton></NuxtLink>
             </div>
         </section>
 
@@ -125,7 +132,7 @@ const solutionsSegments = computed(() => splitHeadlineSegments(props.data.soluti
         <!-- §3 Solutions -->
         <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="mb-10 md:mb-14">
-                <CommonSup title="Solutions" />
+                <CommonSup :title="$t('pages.industries.shared.solutionsEyebrow')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
                     <template v-for="(seg, i) in solutionsSegments" :key="i"
                         ><span>{{ i > 0 ? ' ' : '' }}{{ seg }}</span><span class="text-primary-text">.</span></template>
@@ -133,13 +140,13 @@ const solutionsSegments = computed(() => splitHeadlineSegments(props.data.soluti
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div v-for="s in data.solutions" :key="s.name" class="bg-whitesmoke-100 rounded-2xl p-6">
-                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">Solution</p>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text">{{ $t('pages.industries.shared.solutionLabel') }}</p>
                     <p class="text-h3 font-degular font-bold text-drygray-100 mt-3 leading-tight">{{ s.name }}</p>
                     <p class="text-b1 text-drygray-default mt-3">{{ s.body }}</p>
                 </div>
             </div>
             <div class="mt-8">
-                <NuxtLink :to="alposCta.to"><CommonButton variant="outline" size="xs" icon="base:arrow">{{ alposCta.label }}</CommonButton></NuxtLink>
+                <NuxtLink :to="localePath(alposCta.to)"><CommonButton variant="outline" size="xs" icon="base:arrow">{{ alposCta.label }}</CommonButton></NuxtLink>
             </div>
         </section>
 
@@ -157,7 +164,7 @@ const solutionsSegments = computed(() => splitHeadlineSegments(props.data.soluti
                 </div>
                 <div class="lg:col-span-5">
                     <div class="bg-white rounded-2xl p-6">
-                        <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-drygray-default mb-4">AlpOS layers in play</p>
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-drygray-default mb-4">{{ $t('pages.industries.shared.alposLayersLabel') }}</p>
                         <ul class="space-y-2 text-b1 text-drygray-100">
                             <li v-for="l in data.storyLayers" :key="l" class="flex items-center gap-3">
                                 <span class="text-primary-text" aria-hidden="true">·</span> {{ l }}
@@ -180,8 +187,8 @@ const solutionsSegments = computed(() => splitHeadlineSegments(props.data.soluti
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">{{ data.ctaBody }}</p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
-                    <NuxtLink :to="ctaPrimary.to"><CommonButton variant="primary" icon="base:arrow">{{ ctaPrimary.label }}</CommonButton></NuxtLink>
-                    <NuxtLink :to="ctaSecondary.to"><CommonButton variant="outline" icon="base:arrow">{{ ctaSecondary.label }}</CommonButton></NuxtLink>
+                    <NuxtLink :to="localePath(ctaPrimary.to)"><CommonButton variant="primary" icon="base:arrow">{{ ctaPrimary.label }}</CommonButton></NuxtLink>
+                    <NuxtLink :to="localePath(ctaSecondary.to)"><CommonButton variant="outline" icon="base:arrow">{{ ctaSecondary.label }}</CommonButton></NuxtLink>
                 </div>
             </div>
         </section>

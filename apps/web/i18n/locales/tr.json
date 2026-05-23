@@ -871,6 +871,57 @@
                     "cta": "Demo al"
                 }
             }
+        },
+        "industries": {
+            "index": {
+                "meta": {
+                    "title": "Sektörler",
+                    "description": "Davion'un sektör bazında konuşlanmaları: Finansal Hizmetler, Enerji, Savunma ve İstihbarat, Üretim, Yaşam Bilimleri, Kamu; AlpOS üzerine kurulu altı egemen-YZ kılavuzu.",
+                    "ogTitle": "Davion · Sektörler",
+                    "ogDescription": "Dünyayı işleten kurumlar boyunca egemen yapay zekâ. AlpOS üzerine kurulu altı sektör kılavuzu."
+                },
+                "hero": {
+                    "sup": "Sektörler",
+                    "headline": "Dünyayı işleten kurumlar boyunca egemen yapay zekâ",
+                    "body": "Davion; finansal hizmetler, enerji, üretim, yaşam bilimleri, kamu ve savunmada konuşlanır; verinin savunulabilir kararlara dönüşmesi gereken her yerde."
+                },
+                "list": {
+                    "industryLabel": "Sektör",
+                    "playbookCta": "Kılavuzu oku",
+                    "fsName": "Finansal Hizmetler",
+                    "fsBody": "AML, piyasa ve risk istihbaratı, gözetim, müşteri ilişkisi, dolandırıcılık ve operasyonel dayanıklılık; düzenleyici sınıfında köken bilgisi.",
+                    "energyName": "Enerji",
+                    "energyBody": "Şebeke, üretim, varlık güvenilirliği ve OT-tarafı siber; telemetri çevrenizde kalır.",
+                    "defName": "Savunma ve İstihbarat",
+                    "defBody": "Görev planlaması, çoklu kaynaklı füzyon ve OSINT için air-gapped egemen YZ. Kararlar enklav içinde kalır.",
+                    "mfgName": "Üretim",
+                    "mfgBody": "Tesis operasyonları, kalite, tedarik görünürlüğü ve endüstriyel siber güvenlik; üretim telemetrisi içeride kalır.",
+                    "lsName": "Yaşam Bilimleri",
+                    "lsBody": "Keşif, klinik operasyonlar, farmakovijilans ve GxP süreç istihbaratı; tasarımdan denetlenebilir.",
+                    "govName": "Kamu",
+                    "govBody": "Ajanslar-arası varlık çözümü, hak kazanç sahtekarlığı, kritik altyapı ve ihale gözetimi; vatandaş-veri hukuku tasarımdan korunur."
+                },
+                "engage": {
+                    "sup": "Görüşme",
+                    "headline": "Görüşmeleri operatörler yönetir",
+                    "body": "Davion her görüşmeyi; misyonu sadece satmış değil, yaşamış kişilere yönlendirir.",
+                    "cta": "Demo al"
+                }
+            },
+            "shared": {
+                "problemAreasEyebrow": "Davion'un katkı sunduğu alanlar",
+                "problemAreasTitleDefault": "Dört sorun alanı. Tek egemen platform",
+                "solutionsEyebrow": "Çözümler",
+                "solutionLabel": "Çözüm",
+                "alposCtaDefault": "AlpOS'u keşfet",
+                "storyEyebrow": "Nereye iniyor",
+                "alposLayersLabel": "Devrede olan AlpOS katmanları",
+                "ctaEyebrow": "Görüşme",
+                "ctaPrimaryDefault": "Demo al",
+                "ctaSecondaryDefault": "Bir uzmanla konuş",
+                "heroPrimaryCtaDefault": "Demo al",
+                "heroSecondaryCtaDefault": "AlpOS'u gör"
+            }
         }
     }
 }

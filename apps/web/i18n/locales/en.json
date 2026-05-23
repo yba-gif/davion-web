@@ -871,6 +871,57 @@
                     "cta": "Book a demo"
                 }
             }
+        },
+        "industries": {
+            "index": {
+                "meta": {
+                    "title": "Industries",
+                    "description": "Davion deployments by sector: Financial Services, Energy, Defense & Intelligence, Manufacturing, Life Sciences, Government, six sovereign-AI playbooks built on AlpOS.",
+                    "ogTitle": "Davion · Industries",
+                    "ogDescription": "Sovereign AI across the institutions that run the world. Six industry playbooks built on AlpOS."
+                },
+                "hero": {
+                    "sup": "Industries",
+                    "headline": "Sovereign AI across the institutions that run the world",
+                    "body": "Davion is deployed across financial services, energy, manufacturing, life sciences, government, and defense, wherever data has to become decisions that can be defended."
+                },
+                "list": {
+                    "industryLabel": "Industry",
+                    "playbookCta": "Read the playbook",
+                    "fsName": "Financial Services",
+                    "fsBody": "AML, market & risk intelligence, surveillance, client engagement, fraud, and operational resilience, regulator-grade lineage.",
+                    "energyName": "Energy",
+                    "energyBody": "Grid, generation, asset reliability, and OT-side cyber, telemetry stays in your perimeter.",
+                    "defName": "Defense & Intelligence",
+                    "defBody": "Air-gapped sovereign AI for mission planning, all-source fusion, and OSINT. Decisions stay inside the enclave.",
+                    "mfgName": "Manufacturing",
+                    "mfgBody": "Plant operations, quality, supply visibility, and industrial cybersecurity, production telemetry stays inside.",
+                    "lsName": "Life Sciences",
+                    "lsBody": "Discovery, clinical operations, pharmacovigilance, and GxP process intelligence, audit-ready for regulators by design.",
+                    "govName": "Government",
+                    "govBody": "Cross-agency entity resolution, benefits fraud, critical infrastructure, and procurement oversight, citizen-data law respected by design."
+                },
+                "engage": {
+                    "sup": "Engage",
+                    "headline": "Engagements are led by operators",
+                    "body": "Davion routes each engagement to people who have lived the mission, not just sold to it.",
+                    "cta": "Book a demo"
+                }
+            },
+            "shared": {
+                "problemAreasEyebrow": "Where Davion delivers",
+                "problemAreasTitleDefault": "Four problem areas. One sovereign platform",
+                "solutionsEyebrow": "Solutions",
+                "solutionLabel": "Solution",
+                "alposCtaDefault": "Explore AlpOS",
+                "storyEyebrow": "Where it lands",
+                "alposLayersLabel": "AlpOS layers in play",
+                "ctaEyebrow": "Engage",
+                "ctaPrimaryDefault": "Book a demo",
+                "ctaSecondaryDefault": "Speak to an expert",
+                "heroPrimaryCtaDefault": "Book a demo",
+                "heroSecondaryCtaDefault": "See AlpOS"
+            }
         }
     }
 }

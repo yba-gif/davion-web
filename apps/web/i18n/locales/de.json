@@ -871,6 +871,57 @@
                     "cta": "Demo buchen"
                 }
             }
+        },
+        "industries": {
+            "index": {
+                "meta": {
+                    "title": "Branchen",
+                    "description": "Davion-Einsätze nach Branche: Finanzdienstleistungen, Energie, Verteidigung und Nachrichtendienste, Fertigung, Life Sciences, Verwaltung — sechs souveräne-KI-Playbooks auf AlpOS.",
+                    "ogTitle": "Davion · Branchen",
+                    "ogDescription": "Souveräne KI über die Institutionen, die die Welt betreiben. Sechs Branchen-Playbooks auf AlpOS."
+                },
+                "hero": {
+                    "sup": "Branchen",
+                    "headline": "Souveräne KI über die Institutionen, die die Welt betreiben",
+                    "body": "Davion ist im Einsatz in Finanzdienstleistungen, Energie, Fertigung, Life Sciences, Verwaltung und Verteidigung — überall dort, wo Daten zu Entscheidungen werden müssen, die verteidigt werden können."
+                },
+                "list": {
+                    "industryLabel": "Branche",
+                    "playbookCta": "Playbook lesen",
+                    "fsName": "Finanzdienstleistungen",
+                    "fsBody": "AML, Markt- und Risiko-Intelligenz, Überwachung, Kundenengagement, Betrug und operative Resilienz — Lineage in Regulierungsklasse.",
+                    "energyName": "Energie",
+                    "energyBody": "Netz, Erzeugung, Asset-Zuverlässigkeit und OT-Cybersicherheit — Telemetrie bleibt in Ihrem Perimeter.",
+                    "defName": "Verteidigung und Nachrichtendienste",
+                    "defBody": "Air-gapped souveräne KI für Einsatzplanung, All-Source-Fusion und OSINT. Entscheidungen bleiben innerhalb der Enklave.",
+                    "mfgName": "Fertigung",
+                    "mfgBody": "Anlagenbetrieb, Qualität, Supply-Visibilität und industrielle Cybersicherheit — Produktionstelemetrie bleibt drinnen.",
+                    "lsName": "Life Sciences",
+                    "lsBody": "Discovery, klinische Operationen, Pharmakovigilanz und GxP-Prozessintelligenz — per Design audit-fähig für Regulierer.",
+                    "govName": "Verwaltung",
+                    "govBody": "Behördenübergreifende Entitätsauflösung, Sozialleistungsbetrug, kritische Infrastruktur und Vergabe-Oversight — Bürger-Datenrecht per Design respektiert."
+                },
+                "engage": {
+                    "sup": "Kontakt",
+                    "headline": "Engagements werden von Operatoren geführt",
+                    "body": "Davion leitet jedes Engagement an Personen, die die Mission gelebt haben — nicht nur an sie verkauft.",
+                    "cta": "Demo buchen"
+                }
+            },
+            "shared": {
+                "problemAreasEyebrow": "Wo Davion liefert",
+                "problemAreasTitleDefault": "Vier Problemfelder. Eine souveräne Plattform",
+                "solutionsEyebrow": "Lösungen",
+                "solutionLabel": "Lösung",
+                "alposCtaDefault": "AlpOS erkunden",
+                "storyEyebrow": "Wo es landet",
+                "alposLayersLabel": "AlpOS-Ebenen im Einsatz",
+                "ctaEyebrow": "Kontakt",
+                "ctaPrimaryDefault": "Demo buchen",
+                "ctaSecondaryDefault": "Mit Expertin sprechen",
+                "heroPrimaryCtaDefault": "Demo buchen",
+                "heroSecondaryCtaDefault": "AlpOS ansehen"
+            }
         }
     }
 }
