@@ -179,14 +179,31 @@
         },
         "cycle": {
             "sup": "Der KI-Zyklus",
-            "headlineParts": ["Erfassen", "Modellieren", "Schlussfolgern", "Handeln"],
+            "headlineParts": [
+                "Erfassen",
+                "Modellieren",
+                "Schlussfolgern",
+                "Handeln"
+            ],
             "body": "Jeder Davion-Einsatz folgt demselben souveränen Zyklus: von Rohdaten zur operativen Aktion. Die Plattform bleibt konstant; die Oberfläche passt sich dem Anwendungsfall an.",
             "stepLabel": "Schritt",
             "steps": {
-                "01": { "title": "Erfassen", "body": "Jedes relevante Signal durch eine einzige kontrollierte Pipeline ziehen." },
-                "02": { "title": "Modellieren", "body": "Als Entitäten, Ereignisse und Beziehungen in Ihrer Ontologie abbilden." },
-                "03": { "title": "Schlussfolgern", "body": "KI auf der Ontologie ausführen, mit Quellverweisen zurück zum Ursprung." },
-                "04": { "title": "Handeln", "body": "Die Entscheidung in Operatoren und Quellsysteme einbetten." }
+                "01": {
+                    "title": "Erfassen",
+                    "body": "Jedes relevante Signal durch eine einzige kontrollierte Pipeline ziehen."
+                },
+                "02": {
+                    "title": "Modellieren",
+                    "body": "Als Entitäten, Ereignisse und Beziehungen in Ihrer Ontologie abbilden."
+                },
+                "03": {
+                    "title": "Schlussfolgern",
+                    "body": "KI auf der Ontologie ausführen, mit Quellverweisen zurück zum Ursprung."
+                },
+                "04": {
+                    "title": "Handeln",
+                    "body": "Die Entscheidung in Operatoren und Quellsysteme einbetten."
+                }
             }
         },
         "sovereignty": {
@@ -194,9 +211,18 @@
             "headline": "Dort betreiben, wo Sie es brauchen, nur dort",
             "modeLabel": "Modus",
             "modes": {
-                "onprem": { "name": "On-premise", "body": "Ihre Hardware. Ihr Netzwerk." },
-                "airgapped": { "name": "Air-gapped", "body": "Betrieb ohne Netzverbindung, signierte Updates." },
-                "cloud": { "name": "Souveräne Cloud", "body": "Ihr Anbieter, Ihre Region, vertraglich gebunden." }
+                "onprem": {
+                    "name": "On-premise",
+                    "body": "Ihre Hardware. Ihr Netzwerk."
+                },
+                "airgapped": {
+                    "name": "Air-gapped",
+                    "body": "Betrieb ohne Netzverbindung, signierte Updates."
+                },
+                "cloud": {
+                    "name": "Souveräne Cloud",
+                    "body": "Ihr Anbieter, Ihre Region, vertraglich gebunden."
+                }
             },
             "cta": "Vertrauen und Souveränität"
         },
@@ -218,6 +244,99 @@
             "line2": "Ihre KI",
             "line3": "Ihre Entscheidungen",
             "body": "Briefings sind beratend und maßgeschneidert. Bringen Sie Ihre Datenarchitektur, Ihre Rahmenbedingungen und Ihre operative Realität mit. Wir bringen die richtigen Personen von unserer Seite."
+        }
+    },
+    "pages": {
+        "about": {
+            "hero": {
+                "sup": "Unternehmen · Über uns",
+                "headline1": "Souveränität ist kein Feature",
+                "headline2": "Sie ist der Ort, an dem die Arbeit geschieht",
+                "body": "Eine überzeugungsgeleitete Notiz vom Team, das Davion aufbaut: die Meinung hinter dem Produkt, die Werte, die entscheiden, was wir als Nächstes bauen, und die Menschen, die dafür verantwortlich sind."
+            },
+            "sovereignAI": {
+                "sup": "Falls Sie den Begriff neu kennen",
+                "headline": "Was ist souveräne KI",
+                "p1Before": "Souveräne KI ist KI, die ",
+                "p1Bold": "dort läuft, wo die Daten leben",
+                "p1After": ", unter der Governance der Institution selbst, nicht in der Cloud eines Anbieters.",
+                "p2": "Die meisten Plattformen, die sich heute \"souveräne KI\" nennen, sind gehostete Dienste mit europäischen Rechnungsadressen. Die Daten passieren weiterhin das Netz des Anbieters, die Inferenz läuft weiterhin auf der Hardware des Anbieters, und der Audit-Trail gehört weiterhin dem Anbieter. Das ist regulatorische Ansässigkeit, nicht operative Souveränität.",
+                "p3": "Davion ist operativ souverän: Einsätze laufen innerhalb des Kunden-Perimeters, air-gapped, on-premise oder in einer vertraglich gebundenen souveränen Cloud. Die Daten verlassen nichts. Die Gewichte sind vor Ort auditierbar. Jede Entscheidung ist auf die Quelle zurückführbar, auf der sie getroffen wurde."
+            },
+            "why": {
+                "sup": "Warum Davion existiert",
+                "p1": "Die Kategorie hat regulatorische Ansässigkeit mit operativer Souveränität verwechselt.",
+                "p2": "Die meisten Plattformen, die sich heute \"souveräne KI\" nennen, sind gehostete Dienste mit europäischen Rechnungsadressen. Die Daten passieren das Netz des Anbieters. Die Inferenz läuft auf der Hardware des Anbieters. Der Audit-Trail lebt in der Cloud des Anbieters. Der Vertrag sagt \"souverän\", weil die Postleitzahl europäisch ist.",
+                "p3": "Für Banken, Ministerien und Betreiber kritischer Infrastruktur ist das keine Souveränität. Es ist Beschaffungstheater. Die Daten verlassen den Standort weiterhin. Die Entscheidungen werden weiterhin an einem Ort getroffen, den der Betreiber nicht kontrolliert. Der Audit-Trail gehört weiterhin dem Anbieter.",
+                "p4Before": "Davion existiert, weil die Lücke zwischen",
+                "p4Em1": "mit EU-Rechnungsstellung gehostet",
+                "p4Mid": "und",
+                "p4Em2": "operativ souverän",
+                "p4After": " die Lücke zwischen einer Plattform ist, die ein Verteidigungsministerium nutzen kann, und einer, die es nicht kann. Wir bauen für die zweite.",
+                "p5": "Unsere Einsätze laufen innerhalb des Kunden-Perimeters. Die Daten verlassen nichts. Die Gewichte sind vor Ort auditierbar. Die Inferenz läuft, wo die Arbeit läuft: air-gapped, on-premise oder in einer vertraglich gebundenen souveränen Cloud. Jede Entscheidung ist zurückführbar auf die Daten, auf denen sie getroffen wurde, die Richtlinie, die sie angewandt hat, und die Version des Modells, das sie erzeugt hat.",
+                "p6": "Das ist kein Marketingtext. Es ist der operative Unterschied zwischen einer Plattform, die genutzt werden kann, und einer, die es nicht kann."
+            },
+            "believe": {
+                "sup": "Was wir glauben",
+                "headline": "Fünf Behauptungen, die wir öffentlich verteidigen werden",
+                "body": "Jede Produktentscheidung von Davion führt auf eine davon zurück. Wenn Sie sie lesen und nicht zustimmen, sind wir wahrscheinlich nicht der richtige Anbieter, und das ist eine nützliche Sache, die man früh lernen kann.",
+                "claimLabel": "Behauptung",
+                "c01t": "Souveränität ist der Ort, an dem die Arbeit geschieht",
+                "c01b": "Regulatorische Ansässigkeit ist keine Souveränität. Gehostete KI mit europäischer Postleitzahl ist keine Souveränität. Souveränität wird dadurch bestimmt, wo die Daten leben, wo die Gewichte gespeichert sind und wo die Inferenz läuft. Davion läuft, wo die Arbeit läuft.",
+                "c02t": "Eine Entscheidung ist nur dann verteidigbar, wenn sie rekonstruierbar ist",
+                "c02b": "KI ohne Audit-Trail ist keine KI, die eine Institution nutzen kann. Jede Ausgabe, die Davion erzeugt, verweist zurück auf die Daten, auf denen sie getroffen wurde, die Richtlinie, die sie angewandt hat, und die Version des Modells, das sie erzeugt hat. Wenn eine Aufsichtsbehörde nach dem \"warum\" fragt, hat die Plattform eine Antwort.",
+                "c03t": "Die harten Fälle sind keine Randfälle",
+                "c03b": "Air-gapped. On-premise. Innerhalb eines Perimeters, den Sie kontrollieren. Das sind keine Ausnahmen der Kategorie; sie sind die operative Realität jeder Institution, in der Entscheidungen tatsächlich zählen. Wir entwerfen zuerst für den harten Fall; die einfacheren Einsätze sind nachgelagert.",
+                "c04t": "Modularität ersetzt Anbieterbindung",
+                "c04b": "Davion ist durchgängig kombinierbar und durchgängig austauschbar. Datenerfassung, Ontologie, Analyse, agentische Schicht, Aktion; jede ist austauschbar. Wir beabsichtigen, ein Anbieter zu sein, den Sie verlassen können. So bleiben Anbieter, die es verdienen zu bleiben.",
+                "c05t": "Der Operator betreibt das System. Wir betreiben die Entscheidungen nicht.",
+                "c05b": "Davion ist eine Plattform, kein autonomer Agent. Die Entscheidungen gehören den dafür verantwortlichen Menschen: dem Analysten, dem Compliance-Officer, dem Operator, dem Befehlshaber. Die Plattform schlägt vor, zitiert ihre Quellen und wartet auf Freigabe. Wir bewegen kein Geld. Wir bewegen keine Menschen. Wir bewegen keine Truppen."
+            },
+            "work": {
+                "sup": "Wie wir arbeiten",
+                "h1": "Beratend",
+                "h2": "Begrenzt",
+                "h3": "Austauschbar",
+                "p1bold": "Engagements beginnen mit einem Briefing, nicht mit einem Pitch.",
+                "p1": "Wir hören zuerst zu: Ihrer Datenarchitektur, Ihren regulatorischen Einschränkungen, Ihrer operativen Realität, den Entscheidungen, die Sie wirklich verteidigen müssen. Das erste Gespräch ist beratend; wenn Davion nicht die richtige Antwort ist, sagen wir es.",
+                "p2bold": "Piloten sind begrenzt.",
+                "p2": "Die meisten Engagements beginnen mit einem 6- bis 12-wöchigen Piloten, der auf ein spezifisches, messbares Ergebnis zugeschnitten ist, typischerweise eine einzelne Entscheidungsklasse (z. B. AML-Alarm-Triage, Anomalieerkennung in operativer Telemetrie, OSINT-Briefing-Generierung). Das Ergebnis ist ein funktionierender Einsatz innerhalb Ihres Perimeters, plus der operative Nachweis, um über eine Erweiterung zu entscheiden.",
+                "p3bold": "Der Einsatz passt zur Einsatzhaltung.",
+                "p3Before": "On-premise, air-gapped oder souveräne Cloud, Ihre Wahl. Davions Aufgabe ist es, alle drei aus Sicht der Oberfläche operativ identisch zu machen. Die Einsatzmatrix lebt auf",
+                "p3Link": "der Vertrauensseite",
+                "p3After": ".",
+                "p4bold": "Wir beabsichtigen, ein Anbieter zu sein, den Sie verlassen können.",
+                "p4": "Davion ist durchgängig modular. Datenerfassung, Ontologie, Analyse, agentische Schicht, Aktion; jede ist eine austauschbare Komponente. Die Daten, die Gewichte und das Audit-Log gehören Ihnen vom ersten Tag an. So bleiben Anbieter, die es verdienen zu bleiben."
+            },
+            "team": {
+                "sup": "Wer steht dahinter",
+                "headline": "Ein kleines Team. Operatoren, keine Verkäufer",
+                "bodyBefore": "Davion ist in einer frühen Phase und operiert aus",
+                "bodyBold": "Zürich und Istanbul",
+                "bodyAfter": " heraus: Schweizer Neutralität für die Datenebene, NATO-Perimeter-Tiefe für das Feld. Das Team wird dort benannt, wo eine Benennung angemessen ist; der Rest wird aufgebaut. Pressekontakt und weitere Führungsbiografien folgen, sobald sie für öffentliche Bezugnahme freigegeben sind.",
+                "ceoRole": "CEO",
+                "berkanName": "Berkan Altun",
+                "berkanBlurb": "Bestimmt die Produktrichtung, verantwortet die Architektur der Plattform und nimmt persönlich an jedem Kundengespräch teil.",
+                "readBio": "Vollständige Biografie lesen",
+                "bioP1": "Berkan führt Davion als Chief Executive Officer. Er bestimmt die Produktrichtung, verantwortet die Architektur der Plattform und nimmt persönlich an jedem Kundengespräch teil.",
+                "bioP2Before": "Er operiert zwischen",
+                "bioP2Bold": "Zürich und Istanbul",
+                "bioP2After": " und richtet Schweizer Neutralität auf der Datenebene an NATO-Perimeter-Tiefe im Feld aus.",
+                "bioP3Before": "Detaillierter Hintergrund und frühere Arbeit werden veröffentlicht, sobald sie für öffentliche Bezugnahme freigegeben sind. Für Engagements auf Vorstandsebene erreichen Sie uns über",
+                "bioP3Link": "die Kontaktseite",
+                "bioP3After": ".",
+                "hiringSeLabel": "Einstellung · Solutions Engineering",
+                "openName": "Offen",
+                "hiringSeBody": "Wir stellen Senior-Ingenieure mit Einsatzerfahrung innerhalb regulierter Institutionen ein. Erreichen Sie uns über die Engagement-Seite.",
+                "hiringFieldLabel": "Einstellung · Field",
+                "hiringFieldBody": "Solutions Architects und Field Engineers, die die Mission gelebt haben: Banken, Ministerien, Verteidigung; nicht nur an sie verkauft, sondern darin gelebt."
+            },
+            "cta": {
+                "sup": "Engagement",
+                "headline1": "Wenn die Meinung trifft",
+                "headline2": "ist der nächste Schritt ein Gespräch",
+                "button": "Mit einem Experten sprechen"
+            }
         }
     }
 }

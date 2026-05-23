@@ -179,14 +179,31 @@
         },
         "cycle": {
             "sup": "Yapay zekâ döngüsü",
-            "headlineParts": ["Veri al", "Modelle", "Akıl yürüt", "Eylem"],
+            "headlineParts": [
+                "Veri al",
+                "Modelle",
+                "Akıl yürüt",
+                "Eylem"
+            ],
             "body": "Her Davion konuşlanması aynı egemen döngüyü çalıştırır: ham veriden operasyonel eyleme. Platform sabit kalır; yüzey kullanım senaryosuna göre değişir.",
             "stepLabel": "Adım",
             "steps": {
-                "01": { "title": "Veri al", "body": "Her ilgili sinyali tek bir yönetilen veri hattından geçirin." },
-                "02": { "title": "Modelle", "body": "Ontolojinizde varlıklar, olaylar ve ilişkiler olarak şekillendirin." },
-                "03": { "title": "Akıl yürüt", "body": "Kaynağa kadar atıf zinciriyle, ontolojiye karşı yapay zekâ çalıştırın." },
-                "04": { "title": "Eylem", "body": "Kararı operatörlerin ve kayıt sistemlerinin içine gömün." }
+                "01": {
+                    "title": "Veri al",
+                    "body": "Her ilgili sinyali tek bir yönetilen veri hattından geçirin."
+                },
+                "02": {
+                    "title": "Modelle",
+                    "body": "Ontolojinizde varlıklar, olaylar ve ilişkiler olarak şekillendirin."
+                },
+                "03": {
+                    "title": "Akıl yürüt",
+                    "body": "Kaynağa kadar atıf zinciriyle, ontolojiye karşı yapay zekâ çalıştırın."
+                },
+                "04": {
+                    "title": "Eylem",
+                    "body": "Kararı operatörlerin ve kayıt sistemlerinin içine gömün."
+                }
             }
         },
         "sovereignty": {
@@ -194,9 +211,18 @@
             "headline": "Gereken yerde, yalnızca gereken yerde çalıştırın",
             "modeLabel": "Mod",
             "modes": {
-                "onprem": { "name": "Yerinde", "body": "Sizin donanımınız. Sizin ağınız." },
-                "airgapped": { "name": "Hava boşluklu", "body": "Bağlantısız çalışma, imzalı güncellemeler." },
-                "cloud": { "name": "Egemen bulut", "body": "Sizin sağlayıcınız, sizin bölgeniz, sözleşmeyle bağlı." }
+                "onprem": {
+                    "name": "Yerinde",
+                    "body": "Sizin donanımınız. Sizin ağınız."
+                },
+                "airgapped": {
+                    "name": "Hava boşluklu",
+                    "body": "Bağlantısız çalışma, imzalı güncellemeler."
+                },
+                "cloud": {
+                    "name": "Egemen bulut",
+                    "body": "Sizin sağlayıcınız, sizin bölgeniz, sözleşmeyle bağlı."
+                }
             },
             "cta": "Güven ve Egemenlik"
         },
@@ -218,6 +244,99 @@
             "line2": "Sizin yapay zekânız",
             "line3": "Sizin kararlarınız",
             "body": "Brifingler danışmanlık niteliğindedir ve özelleştirilir. Veri mimarinizi, kısıtlarınızı ve operasyonel gerçekliğinizi getirin. Bizim tarafımızdan doğru kişileri biz getiririz."
+        }
+    },
+    "pages": {
+        "about": {
+            "hero": {
+                "sup": "Şirket · Hakkımızda",
+                "headline1": "Egemenlik bir özellik değildir",
+                "headline2": "Egemenlik, işin gerçekleştiği yerdir",
+                "body": "Davion'u inşa eden ekipten, kanaate dayalı bir not: ürünün altındaki görüş, sonra ne inşa edeceğimize karar veren değerler ve bundan sorumlu olan insanlar."
+            },
+            "sovereignAI": {
+                "sup": "Bu terime yeniyseniz",
+                "headline": "Egemen yapay zekâ nedir",
+                "p1Before": "Egemen yapay zekâ, ",
+                "p1Bold": "verinin yaşadığı yerde",
+                "p1After": " çalışan, bir tedarikçinin bulutunda değil, kurumun kendi yönetişimi altında çalışan yapay zekâdır.",
+                "p2": "Bugün kendine \"egemen yapay zekâ\" diyen platformların çoğu, Avrupa fatura adresleri olan barındırılan hizmetlerdir. Veri hâlâ tedarikçinin ağından geçer, çıkarım hâlâ tedarikçinin donanımında çalışır ve denetim izi hâlâ tedarikçiye aittir. Bu, operasyonel egemenlik değil, düzenleyici ikametgâhtır.",
+                "p3": "Davion operasyonel olarak egemendir: konuşlanmalar müşterinin çevresinde, hava boşluklu, yerinde veya sözleşmeyle bağlı egemen bulutta çalışır. Veri dışarı çıkmaz. Ağırlıklar yerinde denetlenebilirdir. Her karar, üzerinde alındığı kaynağa kadar izlenir."
+            },
+            "why": {
+                "sup": "Davion neden var",
+                "p1": "Bu kategori düzenleyici ikametgâhı operasyonel egemenlikle karıştırdı.",
+                "p2": "Bugün kendine \"egemen yapay zekâ\" diyen platformların çoğu, Avrupa fatura adresleri olan barındırılan hizmetlerdir. Veri tedarikçinin ağından geçer. Çıkarım tedarikçinin donanımında çalışır. Denetim izi tedarikçinin bulutunda kalır. Posta kodu Avrupa olduğu için sözleşme \"egemen\" der.",
+                "p3": "Bankalar, bakanlıklar ve kritik altyapı operatörleri için bu egemenlik değildir. Bu, satın alma tiyatrosudur. Veri hâlâ dışarı çıkıyor. Kararlar hâlâ operatörün kontrol etmediği bir yerde alınıyor. Denetim izi hâlâ tedarikçiye ait.",
+                "p4Before": "Davion var çünkü",
+                "p4Em1": "AB faturalı barındırılan",
+                "p4Mid": "ile",
+                "p4Em2": "operasyonel olarak egemen",
+                "p4After": " arasındaki boşluk, bir savunma bakanlığının kullanabileceği bir platform ile kullanamayacağı bir platform arasındaki boşluktur. Biz ikincisini inşa ediyoruz.",
+                "p5": "Konuşlanmalarımız müşterinin çevresi içinde çalışır. Veri dışarı çıkmaz. Ağırlıklar yerinde denetlenebilirdir. Çıkarım işin gerçekleştiği yerde çalışır: hava boşluklu, yerinde veya sözleşmeyle bağlı egemen bulutta. Her karar, üzerinde alındığı veriye, uyguladığı politikaya ve onu üreten modelin sürümüne kadar izlenebilir.",
+                "p6": "Bu pazarlama kopyası değildir. Kullanılabilen bir platform ile kullanılamayan bir platform arasındaki operasyonel farktır."
+            },
+            "believe": {
+                "sup": "İnandıklarımız",
+                "headline": "Kamuda savunacağımız beş iddia",
+                "body": "Davion'un her ürün kararı bunlardan birine geri döner. Bunları okuyup katılmıyorsanız, muhtemelen doğru tedarikçi biz değiliz ve bunu erken öğrenmek faydalı bir şeydir.",
+                "claimLabel": "İddia",
+                "c01t": "Egemenlik, işin gerçekleştiği yerdir",
+                "c01b": "Düzenleyici ikametgâh egemenlik değildir. Avrupa posta koduna sahip barındırılan yapay zekâ egemenlik değildir. Egemenlik, verinin nerede yaşadığı, ağırlıkların nerede depolandığı ve çıkarımın nerede çalıştığı tarafından belirlenir. Davion işin gerçekleştiği yerde çalışır.",
+                "c02t": "Bir karar ancak yeniden inşa edilebildiğinde savunulabilirdir",
+                "c02b": "Denetim izi olmayan yapay zekâ, bir kurumun kullanabileceği yapay zekâ değildir. Davion'un ürettiği her çıktı, üzerinde alındığı veriye, uyguladığı politikaya ve onu üreten modelin sürümüne geri işaret eder. Bir düzenleyici \"neden\" diye sorarsa, platformun bir cevabı vardır.",
+                "c03t": "Zor vakalar uç vakalar değildir",
+                "c03b": "Hava boşluklu. Yerinde. Kontrol ettiğiniz bir çevre içinde. Bunlar kategorinin istisnaları değildir; kararların gerçekten önemli olduğu her kurumun operasyonel gerçekliğidir. Önce zor vakaya göre tasarlıyoruz; daha kolay konuşlanmalar sonra gelir.",
+                "c04t": "Modülerlik bağımlılığı değiştirir",
+                "c04b": "Davion uçtan uca bestelenebilir ve uçtan uca değiştirilebilir. Veri alımı, ontoloji, analiz, eylemci katman, eylem; her biri değiştirilebilir. Terk edebileceğiniz bir tedarikçi olmayı amaçlıyoruz. Kalmayı hak eden tedarikçiler böyle kalır.",
+                "c05t": "Operatör sistemi çalıştırır. Biz kararları çalıştırmayız.",
+                "c05b": "Davion bir platformdur, otonom bir ajan değil. Kararlar bundan sorumlu kişilere aittir: analiste, uyum görevlisine, operatöre, komutana. Platform önerir, kaynaklarını gösterir ve onay bekler. Para hareket ettirmeyiz. İnsan hareket ettirmeyiz. Asker hareket ettirmeyiz."
+            },
+            "work": {
+                "sup": "Nasıl çalışıyoruz",
+                "h1": "Danışmanlık niteliğinde",
+                "h2": "Sınırlı",
+                "h3": "Değiştirilebilir",
+                "p1bold": "Görüşmeler bir satış sunumuyla değil, bir brifingle başlar.",
+                "p1": "Önce dinleriz: veri mimarinizi, düzenleyici kısıtlarınızı, operasyonel gerçekliğinizi, gerçekten savunmanız gereken kararları. İlk sohbet danışmanlık niteliğindedir; eğer Davion doğru cevap değilse, bunu söyleriz.",
+                "p2bold": "Pilot uygulamalar sınırlıdır.",
+                "p2": "Çoğu görüşme, belirli ve ölçülebilir bir sonuca, genellikle tek bir karar sınıfına (örneğin AML uyarı önceliklendirmesi, operasyonel telemetride anomali tespiti, OSINT brifing üretimi) yönelik 6 ila 12 haftalık bir pilotla başlar. Teslimat, çevreniz içinde çalışan bir konuşlanma ve genişletme kararı için operasyonel kanıttır.",
+                "p3bold": "Konuşlanma, konuşlanma duruşuna uyar.",
+                "p3Before": "Yerinde, hava boşluklu veya egemen bulut, seçim sizin. Davion'un işi, yüzeyden bakıldığında üçünü de operasyonel olarak özdeş kılmaktır. Konuşlanma matrisi şurada yaşar:",
+                "p3Link": "Güven sayfası",
+                "p3After": ".",
+                "p4bold": "Terk edebileceğiniz bir tedarikçi olmayı amaçlıyoruz.",
+                "p4": "Davion uçtan uca modülerdir. Veri alımı, ontoloji, analiz, eylemci katman, eylem; her biri değiştirilebilir bir bileşendir. Veri, ağırlıklar ve denetim günlüğü ilk günden itibaren sizindir. Kalmayı hak eden tedarikçiler böyle kalır."
+            },
+            "team": {
+                "sup": "Bunun arkasında kimler var",
+                "headline": "Küçük bir ekip. Satıcılar değil, operatörler",
+                "bodyBefore": "Davion erken aşamadadır ve",
+                "bodyBold": "Zürih ve İstanbul'dan",
+                "bodyAfter": " operasyon yürütür: veri katmanı için İsviçre tarafsızlığı, saha için NATO-çevre operasyonel derinliği. Ekip uygun olan yerde adlandırılır; gerisi inşa ediliyor. Basın iletişimi ve ek yönetici biyografileri kamuya açık referans için onaylandığında eklenecek.",
+                "ceoRole": "CEO",
+                "berkanName": "Berkan Altun",
+                "berkanBlurb": "Ürün yönünü belirler, platformun mimarisine sahip çıkar ve her müşteri görüşmesine bizzat katılır.",
+                "readBio": "Tam biyografiyi oku",
+                "bioP1": "Berkan, Davion'u Genel Müdür olarak yönetir. Ürün yönünü belirler, platformun mimarisine sahip çıkar ve her müşteri görüşmesine bizzat katılır.",
+                "bioP2Before": "Operasyonlarını",
+                "bioP2Bold": "Zürih ve İstanbul",
+                "bioP2After": " arasında yürütür; veri katmanında İsviçre tarafsızlığını sahada NATO-çevre operasyonel derinliğiyle hizalar.",
+                "bioP3Before": "Ayrıntılı geçmiş ve önceki çalışmalar, kamuya açık referans için onaylandığında yayınlanacaktır. Kurul düzeyinde görüşmeler için",
+                "bioP3Link": "iletişim sayfası",
+                "bioP3After": " üzerinden bize ulaşın.",
+                "hiringSeLabel": "İşe alım · Çözüm Mühendisliği",
+                "openName": "Açık",
+                "hiringSeBody": "Düzenlemeye tabi kurumlar içinde konuşlanma deneyimi olan kıdemli mühendisler arıyoruz. Görüşme sayfası üzerinden bize ulaşın.",
+                "hiringFieldLabel": "İşe alım · Saha",
+                "hiringFieldBody": "Misyonu yaşamış çözüm mimarları ve saha mühendisleri; bankalar, bakanlıklar, savunma; sadece bunlara satış yapmış değil, içinde yaşamış olanlar."
+            },
+            "cta": {
+                "sup": "Görüşme",
+                "headline1": "Görüş yerine oturuyorsa",
+                "headline2": "sonraki adım bir konuşmadır",
+                "button": "Uzmanla konuşun"
+            }
         }
     }
 }

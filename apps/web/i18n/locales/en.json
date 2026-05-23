@@ -179,14 +179,31 @@
         },
         "cycle": {
             "sup": "The AI cycle",
-            "headlineParts": ["Ingest", "Model", "Reason", "Act"],
+            "headlineParts": [
+                "Ingest",
+                "Model",
+                "Reason",
+                "Act"
+            ],
             "body": "Every Davion deployment runs the same sovereign cycle, from raw data to operational action. The platform stays constant; the surface adapts to the use case.",
             "stepLabel": "Step",
             "steps": {
-                "01": { "title": "Ingest", "body": "Pull every relevant signal through a single governed pipeline." },
-                "02": { "title": "Model", "body": "Shape it as entities, events, and relationships in your ontology." },
-                "03": { "title": "Reason", "body": "Run AI against the ontology with citations back to source." },
-                "04": { "title": "Act", "body": "Embed the decision into operators and systems of record." }
+                "01": {
+                    "title": "Ingest",
+                    "body": "Pull every relevant signal through a single governed pipeline."
+                },
+                "02": {
+                    "title": "Model",
+                    "body": "Shape it as entities, events, and relationships in your ontology."
+                },
+                "03": {
+                    "title": "Reason",
+                    "body": "Run AI against the ontology with citations back to source."
+                },
+                "04": {
+                    "title": "Act",
+                    "body": "Embed the decision into operators and systems of record."
+                }
             }
         },
         "sovereignty": {
@@ -194,9 +211,18 @@
             "headline": "Run where you require, only where you require",
             "modeLabel": "Mode",
             "modes": {
-                "onprem": { "name": "On-premise", "body": "Your hardware. Your network." },
-                "airgapped": { "name": "Air-gapped", "body": "Disconnected operation, signed updates." },
-                "cloud": { "name": "Sovereign cloud", "body": "Your provider, your region, bound by contract." }
+                "onprem": {
+                    "name": "On-premise",
+                    "body": "Your hardware. Your network."
+                },
+                "airgapped": {
+                    "name": "Air-gapped",
+                    "body": "Disconnected operation, signed updates."
+                },
+                "cloud": {
+                    "name": "Sovereign cloud",
+                    "body": "Your provider, your region, bound by contract."
+                }
             },
             "cta": "Trust & Sovereignty"
         },
@@ -218,6 +244,99 @@
             "line2": "Your AI",
             "line3": "Your decisions",
             "body": "Briefings are consultative and tailored. Bring your data architecture, your constraints, and your operational reality. We will bring the right people from our side."
+        }
+    },
+    "pages": {
+        "about": {
+            "hero": {
+                "sup": "Company · About",
+                "headline1": "Sovereignty isn't a feature",
+                "headline2": "It's where the work happens",
+                "body": "A conviction-led note from the team building Davion, the opinion underneath the product, the values that decide what we build next, and the people accountable for it."
+            },
+            "sovereignAI": {
+                "sup": "If you are new to the term",
+                "headline": "What is sovereign AI",
+                "p1Before": "Sovereign AI is AI that runs",
+                "p1Bold": "where the data lives",
+                "p1After": ", under the institution's own governance, not in a vendor's cloud.",
+                "p2": "Most platforms calling themselves \"sovereign AI\" today are hosted services with European billing addresses. The data still crosses the vendor's network, the inference still runs on the vendor's hardware, and the audit trail still belongs to the vendor. That is regulatory residency, not operational sovereignty.",
+                "p3": "Davion is operationally sovereign: deployments run inside the customer's perimeter, air-gapped, on-prem, or in a sovereign cloud bound by contract. The data does not leave. The weights are auditable on-prem. Every decision traces back to the source it was made on."
+            },
+            "why": {
+                "sup": "Why Davion exists",
+                "p1": "The category has confused regulatory residency with operational sovereignty.",
+                "p2": "Most platforms calling themselves \"sovereign AI\" today are hosted services with European billing addresses. The data crosses the vendor's network. The inference runs on the vendor's hardware. The audit trail lives in the vendor's cloud. The contract says \"sovereign\" because the postcode is European.",
+                "p3": "For banks, ministries, and operators of critical infrastructure, that is not sovereignty. It is procurement theatre. The data is still leaving. The decisions are still being made somewhere the operator doesn't control. The audit trail still belongs to the vendor.",
+                "p4Before": "Davion exists because the gap between",
+                "p4Em1": "hosted with EU billing",
+                "p4Mid": "and",
+                "p4Em2": "operationally sovereign",
+                "p4After": "is the gap between a platform a defense ministry can use and a platform it cannot. We build for the second.",
+                "p5": "Our deployments run inside the customer's perimeter. The data does not leave. The weights are auditable on-prem. The inference runs where the work runs, air-gapped, on-prem, or in a sovereign cloud bound by contract. Every decision is traceable to the data it was made on, the policy it applied, and the version of the model that produced it.",
+                "p6": "This is not marketing copy. It is the operational difference between a platform that can be used and one that cannot."
+            },
+            "believe": {
+                "sup": "What we believe",
+                "headline": "Five claims we will defend in public",
+                "body": "Every product decision Davion makes traces back to one of these. If you read them and disagree, we're probably not the right vendor, and that's a useful thing to learn early.",
+                "claimLabel": "Claim",
+                "c01t": "Sovereignty is where the work happens",
+                "c01b": "Regulatory residency is not sovereignty. Hosted AI with a European postcode is not sovereignty. Sovereignty is determined by where the data lives, where the weights are stored, and where the inference runs. Davion runs where the work runs.",
+                "c02t": "A decision is only defensible when it can be reconstructed",
+                "c02b": "AI without an audit trail is not AI an institution can use. Every output Davion produces points back to the data it was made on, the policy it applied, and the version of the model that produced it. If a regulator asks \"why\", the platform has an answer.",
+                "c03t": "The hard cases are not edge cases",
+                "c03b": "Air-gapped. On-prem. Inside a perimeter you control. These are not exceptions to the category, they are the operational reality of every institution where decisions actually matter. We design for the hard case first; the easier deployments are downstream.",
+                "c04t": "Modular replaces lock-in",
+                "c04b": "Davion is composable end to end and replaceable end to end. Ingestion, ontology, analytics, agentic layer, action, each is replaceable. We intend to be a vendor you can leave. That is how vendors who deserve to stay get to stay.",
+                "c05t": "The operator runs the system. We do not run the decisions.",
+                "c05b": "Davion is a platform, not an autonomous agent. The decisions belong to the people accountable for them: the analyst, the compliance officer, the operator, the commander. The platform proposes, cites its sources, and waits for approval. We do not move money. We do not move people. We do not move troops."
+            },
+            "work": {
+                "sup": "How we work",
+                "h1": "Consultative",
+                "h2": "Bounded",
+                "h3": "Replaceable",
+                "p1bold": "Engagements begin with a briefing, not a pitch.",
+                "p1": "We listen first, to your data architecture, your regulatory constraints, your operational reality, the decisions you actually need to defend. The first conversation is consultative; if Davion isn't the right answer, we will say so.",
+                "p2bold": "Pilots are bounded.",
+                "p2": "Most engagements start with a 6 to 12 week pilot scoped against a specific, measurable outcome, typically a single decision class (e.g. AML alert triage, anomaly detection on operational telemetry, OSINT brief generation). The deliverable is a working deployment inside your perimeter, plus the operational evidence to decide whether to expand.",
+                "p3bold": "Deployment matches the deployment posture.",
+                "p3Before": "On-prem, air-gapped, or sovereign cloud, your choice. Davion's job is to make all three operationally identical from the surface. The deployment matrix lives on",
+                "p3Link": "the Trust page",
+                "p3After": ".",
+                "p4bold": "We intend to be a vendor you can leave.",
+                "p4": "Davion is modular end to end. Ingestion, ontology, analytics, agentic layer, action, each is a replaceable component. The data, the weights, and the audit log are yours from day one. That is how vendors who deserve to stay get to stay."
+            },
+            "team": {
+                "sup": "Who's behind this",
+                "headline": "A small team. Operators, not pitchmen",
+                "bodyBefore": "Davion is early-stage and operates from",
+                "bodyBold": "Zurich and Istanbul",
+                "bodyAfter": ", Swiss neutrality for the data layer, NATO-perimeter operational depth for the field. The team is named where named is appropriate; the rest is being built. Press contact and additional executive bios will land once approved for public reference.",
+                "ceoRole": "CEO",
+                "berkanName": "Berkan Altun",
+                "berkanBlurb": "Sets product direction, owns the platform's architecture, and personally sits in on every customer engagement.",
+                "readBio": "Read full bio",
+                "bioP1": "Berkan leads Davion as Chief Executive Officer. He sets product direction, owns the platform's architecture, and personally sits in on every customer engagement.",
+                "bioP2Before": "He operates between",
+                "bioP2Bold": "Zurich and Istanbul",
+                "bioP2After": ", aligning Swiss neutrality at the data layer with NATO-perimeter operational depth in the field.",
+                "bioP3Before": "Detailed background and prior work published once approved for public reference. For board-level engagements, reach out via",
+                "bioP3Link": "the contact page",
+                "bioP3After": ".",
+                "hiringSeLabel": "Hiring · Solutions Engineering",
+                "openName": "Open",
+                "hiringSeBody": "We are hiring senior engineers with deployment experience inside regulated institutions. Reach out via the engagement page.",
+                "hiringFieldLabel": "Hiring · Field",
+                "hiringFieldBody": "Solutions architects and field engineers who have lived the mission, banks, ministries, defense, not just sold to it."
+            },
+            "cta": {
+                "sup": "Engage",
+                "headline1": "If the opinion lands",
+                "headline2": "the next move is a conversation",
+                "button": "Speak to an expert"
+            }
         }
     }
 }
