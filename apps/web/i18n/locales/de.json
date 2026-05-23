@@ -1817,6 +1817,148 @@
                 "a4Detail": "Ziel Q4 2026, vorbehaltlich Gründer-Bestätigung zu Commit/Rechtsperson.",
                 "alignFootnote": "Zusätzliche Zertifizierungen (SOC 2, regionale souveräne-Cloud-Akkreditierungen) folgen, sobald die Kundenbasis es verlangt. Status hier veröffentlicht — niemals aspirational."
             }
+        },
+        "careers": {
+            "meta": {
+                "title": "Karriere",
+                "description": "Davion stellt für die Mission ein. Senior-Ingenieure und Operatoren, die in regulierten Institutionen gelebt haben — Banken, Ministerien, Verteidigung —, nicht nur an sie verkauft haben.",
+                "ogTitle": "Davion · Karriere",
+                "ogDescription": "Souveräne KI ist Operator-Arbeit. Rollen für Ingenieure und Feld-Operatoren, die die Mission gelebt haben."
+            },
+            "hero": {
+                "sup": "Unternehmen · Karriere",
+                "headline": "Souveräne KI ist Operator-Arbeit",
+                "body": "Davion stellt Personen ein, die in regulierten Institutionen gelebt haben — Banken, Ministerien, Verteidigung, Energie, kritische Infrastruktur —, nicht nur an sie verkauft haben. Wir sind in einer frühen Phase. Die Arbeit ist folgenreich. Die Vergütung beinhaltet sinnvolle Equity und ist gegen Top-Dezil institutioneller Anbieter benchmarked."
+            },
+            "evp": {
+                "sup": "Wie es ist, hier zu arbeiten",
+                "headline": "Fünf Versprechen",
+                "p1": "<strong class=\"font-semibold\">Folgenreiche Probleme.</strong> Die Kunden sind Institutionen, in denen Entscheidungen wirklich zählen. Die Bugs, die Sie beheben, schaffen es aus den richtigen Gründen in die Nachrichten; die, die Sie ausliefern, zählen aus den falschen.",
+                "p2": "<strong class=\"font-semibold\">Lange Zeit kleines Team.</strong> Wir stellen bewusst ein. Sie werden jeden kennen. Sie werden bei etwas tief tragend sein. Sie werden nicht in einer Prozessorganisation verwässert.",
+                "p3": "<strong class=\"font-semibold\">Operator-Kultur.</strong> Ingenieure gehen vor Ort. Feld-Rollen lesen den Code. Wir haben keine Mauer zwischen \"Bauen\" und \"Einsetzen.\"",
+                "p4": "<strong class=\"font-semibold\">Echte Equity.</strong> Sinnvolle Frühphasen-Grants mit gründerfreundlichem Vesting. Wir bauen ein Unternehmen mit echten Kunden, kein Markup-Karussell.",
+                "p5": "<strong class=\"font-semibold\">Ehrliche Einstellung.</strong> Bezahlte Arbeitssitzungen statt unbezahlter Take-Homes. Echte Gespräche statt Fangfragen. Entscheidungen innerhalb einer Woche."
+            },
+            "roles": {
+                "sup": "Offene Stellen",
+                "headline": "Fünf offene Plätze",
+                "intro": "Alle Rollen mit Sitz in Zürich oder Istanbul, mit remote-freundlichen Arrangements für CET ±2. Feldrollen reisen 40–60 %.",
+                "signalsLabel": "Signale, nach denen wir suchen",
+                "r1Title": "Founding Engineer · Plattform",
+                "r1Team": "Engineering",
+                "r1Location": "Zürich · Istanbul · Remote (CET ±2)",
+                "r1Body": "AlpOS bauen — die souveräne KI-Plattform. Verteilte Systeme, Ontologie, Retrieval, agentisches Reasoning. Sie schreiben die Architekturdokumente und den Produktions-Code, der sie umsetzt.",
+                "r1s1": "Tiefe in verteilten Systemen (Kafka- / Postgres- / Flink-Klasse)",
+                "r1s2": "Komfort mit End-to-End-Verantwortung für ein System — von On-Call bis Interview-Pipeline",
+                "r1s3": "Hat KI/ML in Produktion gegen echte adversarielle Eingaben ausgeliefert",
+                "r2Title": "Solutions Engineer · Feld",
+                "r2Team": "Feld",
+                "r2Location": "Zürich · Istanbul · Reisen (40-60%)",
+                "r2Body": "Engagements innerhalb von Institutionen führen. Ihre Datenarchitektur kartieren, den Pilot-Einsatz bauen, neben ihren Analysten sitzen, an ihre Operatoren übergeben. Sie sind das operative Gesicht von Davion in einem bestimmten Account.",
+                "r2s1": "Hat Software innerhalb einer Bank, eines Ministeriums, in Verteidigung oder bei einem kritisch-Infrastruktur-Betreiber eingesetzt",
+                "r2s2": "Liest Architekturdokumente und Threat-Models zum Spaß",
+                "r2s3": "Kann in derselben Woche einen Workshop führen und eine Ausschreibungsantwort schreiben",
+                "r3Title": "Sales Engineer · Pre-Sales",
+                "r3Team": "Go-to-Market",
+                "r3Location": "Zürich · Remote (EU)",
+                "r3Body": "Technische Evaluierungen mit potenziellen Kunden durchführen. Proof-of-Concept-Einsätze architektieren. Die technischen Antworten in RFI- / RFP-Antworten schreiben, die institutionelle Ausschreibungen gewinnen.",
+                "r3s1": "Hintergrund in Solutions Engineering bei einem Enterprise-Daten- oder KI-Anbieter",
+                "r3s2": "Komfortabel mit On-Premise- und Air-gapped-Einsatztopologie",
+                "r3s3": "Spricht die Sprache von CIOs, CISOs und Beschaffungsleitern",
+                "r4Title": "Senior ML Engineer · Retrieval & RAG",
+                "r4Team": "Engineering",
+                "r4Location": "Zürich · Istanbul · Remote (CET ±2)",
+                "r4Body": "Den Retrieval- und RAG-Stack innerhalb von AlpOS verantworten. Index-Design, Embedding-Strategie, zugriffsgesteuertes Retrieval, Evaluierung gegen echte institutionelle Korpora. Sie liefern das System aus; Sie verteidigen es auch in einem Kunden-Audit.",
+                "r4s1": "Hat Retrieval in Skala (≥ 100M Dokumente) in Produktion ausgeliefert",
+                "r4s2": "Starke Evaluierungs-Disziplin — Golden-Sets, retrieval@k, Faithfulness",
+                "r4s3": "Liest adversarielle Prompt-Forschung und wendet sie auf Kundenumgebungen an",
+                "r5Title": "Founding Designer",
+                "r5Team": "Brand · Produkt",
+                "r5Location": "Zürich · Remote (CET ±2)",
+                "r5Body": "Davions visuelle Identität und Produkt-Oberfläche gestalten. Logo, Typo, Produkt-UI, Raum-Dokumente. Sie sind der Kalibrator von Davions Ästhetik; Ihre Arbeit geht von dieser Site bis in den Briefing-Raum.",
+                "r5s1": "Starke Identitäts- / Brand-Arbeit in Ihrem Portfolio",
+                "r5s2": "Hat Produkt-UI auf echten Oberflächen ausgeliefert (nicht nur Dribbble-Shots)",
+                "r5s3": "Komfortabel, ein Jahr lang einziger Designer zu sein"
+            },
+            "process": {
+                "sup": "Wie wir einstellen",
+                "headline": "Drei Schritte. Eine Woche bis zur Entscheidung",
+                "stepLabel": "Schritt",
+                "p1Title": "Gespräch",
+                "p1Body": "Ein 30-minütiges Telefonat mit dem Gründer oder einem Einstellungs-Lead. Wir besprechen die Mission, die Rolle, Ihre Arbeit — und ob die Chemie da ist, um fortzufahren. Kein Pitch-Deck. Keine Hausaufgaben.",
+                "p2Title": "Arbeitssitzung",
+                "p2Body": "Eine echte Arbeitssitzung an einem echten Davion-Problem — meist 2–4 Stunden, bezahlt. Sie sehen, wie wir denken; wir sehen, wie Sie denken. Wir glauben nicht an unbezahlte Take-Homes.",
+                "p3Title": "Entscheidung",
+                "p3Body": "Referenzgespräche auf beiden Seiten. Angebot oder ehrliche Absage innerhalb einer Woche nach der Arbeitssitzung. Wir respektieren Ihre Zeit."
+            },
+            "cta": {
+                "sup": "Bewerben oder in Kontakt bleiben",
+                "headline": "Wenn die Arbeit passt, schicken Sie eine Nachricht",
+                "body": "Bewerben Sie sich direkt über die Engagement-Seite. Geben Sie die Rolle an, an der Sie interessiert sind, einen Link zu einer Arbeit, auf die Sie stolz sind, und was Sie zuerst bauen würden, wenn Sie dazustoßen.",
+                "applyCta": "Bewerben",
+                "aboutCta": "Über uns lesen"
+            }
+        },
+        "events": {
+            "meta": {
+                "title": "Veranstaltungen",
+                "description": "Wo Davion auftritt: Verteidigungsmessen, Gipfel, Foren und bilaterale Briefings.",
+                "ogTitle": "Davion · Veranstaltungen",
+                "ogDescription": "Wo Davion auftritt."
+            },
+            "hero": {
+                "sup": "Unternehmen · Veranstaltungen",
+                "headline": "Wo Davion auftritt",
+                "body": "Verteidigungsmessen, Gipfel, Foren und bilaterale Briefings am Rande dieser Räume. Das Veranstaltungsprogramm läuft auf Einladung; der öffentliche Index listet, was wir nennen können, und ergänzt Kontext für das, was wir nicht nennen können."
+            },
+            "empty": {
+                "eyebrow": "Programm im Flug",
+                "headline": "Der öffentliche Veranstaltungs-Index landet, sobald wir etwas zu teilen haben",
+                "body": "Aktuelle und kürzliche Teilnahmen werden in Newsroom-Einträgen referenziert, wenn wir einen Veranstaltungsort nennen können. Für Treffen am Rande einer bestimmten Veranstaltung schreiben Sie an die Pressestelle; wir leiten die Anfrage an den richtigen Operator weiter.",
+                "ctaPrimary": "Aktuelle Einträge"
+            }
+        },
+        "newsroom": {
+            "meta": {
+                "title": "Newsroom",
+                "description": "Ankündigungen, Einsichten und technische Notizen vom Davion-Team.",
+                "ogTitle": "Davion · Newsroom",
+                "ogDescription": "Einträge aus der Arbeit — Ankündigungen, Einsichten und technische Notizen."
+            },
+            "hero": {
+                "sup": "Unternehmen · Newsroom",
+                "headline": "Einträge aus der Arbeit",
+                "body": "Ankündigungen, Einsichten und technische Notizen vom Davion-Team."
+            },
+            "categories": {
+                "all": "Alle",
+                "announcement": "Ankündigung",
+                "announcements": "Ankündigungen",
+                "insight": "Einsicht",
+                "technical": "Technisch",
+                "recognition": "Anerkennung"
+            },
+            "featuredSup": "Hervorgehoben",
+            "readDispatchCta": "Eintrag lesen",
+            "allSup": "Alle Einträge",
+            "loadingSup": "Lädt",
+            "loadingSr": "Einträge laden",
+            "emptyEyebrow": "Noch nichts",
+            "emptyHeadline": "In dieser Kategorie noch nichts",
+            "emptyBody": "Die anderen Kategorien haben Inhalte. Wechseln Sie den Filter, oder schreiben Sie der Pressestelle, wonach Sie gesucht haben.",
+            "showAllBtn": "Alle anzeigen",
+            "pressSup": "Pressekit · Medienkontakt",
+            "pressHeadline": "Für Journalisten und Analysten",
+            "pressBody": "Logos, Geschäftsleitungs-Biografien, Fact Sheets und Briefing-Memos auf Anfrage. Sperrfrist-Material wird mit Diskretion behandelt. Routing über die Pressestelle.",
+            "post": {
+                "sup": "Newsroom-Eintrag",
+                "byLabel": "Von",
+                "loadingMsg": "Eintrag lädt…",
+                "relatedSup": "Verwandt",
+                "moreSup": "Mehr aus dem Newsroom",
+                "backHeadline": "Zurück zu allen Einträgen",
+                "allCta": "Alle Einträge"
+            }
         }
     }
 }

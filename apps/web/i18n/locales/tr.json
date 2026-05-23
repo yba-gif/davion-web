@@ -1817,6 +1817,148 @@
                 "a4Detail": "Hedef Ç4 2026, taahhüt/tüzel kişilik üzerine kurucu onayı bekleniyor.",
                 "alignFootnote": "Ek sertifikalar (SOC 2, bölgesel egemen-bulut akreditasyonları); müşteri tabanı talep ettikçe gelir. Burada yayınlanan durum asla özlemsel değildir."
             }
+        },
+        "careers": {
+            "meta": {
+                "title": "Kariyer",
+                "description": "Davion misyon için işe alır. Düzenlemeye tabi kurumların (bankalar, bakanlıklar, savunma) içinde yaşamış kıdemli mühendisler ve operatörler; sadece onlara satmış olanlar değil.",
+                "ogTitle": "Davion · Kariyer",
+                "ogDescription": "Egemen yapay zekâ operatör işidir. Misyonu yaşamış mühendisler ve saha operatörleri için roller."
+            },
+            "hero": {
+                "sup": "Şirket · Kariyer",
+                "headline": "Egemen yapay zekâ operatör işidir",
+                "body": "Davion; düzenlemeye tabi kurumların (bankalar, bakanlıklar, savunma, enerji, kritik altyapı) içinde yaşamış kişileri işe alır; sadece onlara satmış olanları değil. Erken aşamadayız. İş sonuçludur. Tazminat anlamlı hisse içerir ve üst-onluk kurumsal tedarikçilerle kıyaslanır."
+            },
+            "evp": {
+                "sup": "Burada çalışmak neye benzer",
+                "headline": "Beş söz",
+                "p1": "<strong class=\"font-semibold\">Sonuçlu problemler.</strong> Müşteriler, kararların gerçekten önemli olduğu kurumlardır. Düzelttiğiniz hatalar doğru nedenlerle haber olur; teslim ettikleriniz yanlış nedenlerle önem kazanır.",
+                "p2": "<strong class=\"font-semibold\">Uzun süre küçük ekip.</strong> Bilinçli olarak işe alıyoruz. Herkesi tanıyacaksınız. Bir şey üzerinde derin bir biçimde yük taşıyacaksınız. Bir süreç organizasyonunda sulandırılmayacaksınız.",
+                "p3": "<strong class=\"font-semibold\">Operatör kültürü.</strong> Mühendisler sahaya gider. Saha rolleri kodu okur. \"İnşa et\" ile \"konuşlandır\" arasında duvar yoktur.",
+                "p4": "<strong class=\"font-semibold\">Gerçek hisse.</strong> Kurucu-dostu hak ediş ile anlamlı erken-aşama hisseler. Bir pazarlama-değerleme atlıkarıncası değil, gerçek müşterileri olan bir şirket inşa ediyoruz.",
+                "p5": "<strong class=\"font-semibold\">Dürüst işe alım.</strong> Ücretsiz ev ödevleri yerine ücretli çalışma seansları. Tuzak sorular yerine gerçek konuşmalar. Bir hafta içinde kararlar."
+            },
+            "roles": {
+                "sup": "Açık roller",
+                "headline": "Beş açık koltuk",
+                "intro": "Tüm roller Zürih veya İstanbul merkezli, CET ±2 için uzaktan-dostu düzenlemelerle. Saha rolleri %40–60 seyahat eder.",
+                "signalsLabel": "Aradığımız sinyaller",
+                "r1Title": "Kurucu Mühendis · Platform",
+                "r1Team": "Mühendislik",
+                "r1Location": "Zürih · İstanbul · Uzaktan (CET ±2)",
+                "r1Body": "AlpOS'u, egemen yapay zekâ platformunu inşa edin. Dağıtık sistemler, ontoloji, geri-erişim, etmen-temelli muhakeme. Mimari belgeleri ve onları üretime taşıyan kodu yazarsınız.",
+                "r1s1": "Dağıtık-sistemler derinliği (Kafka / Postgres / Flink sınıfı)",
+                "r1s2": "Bir sistemi uçtan uca sahiplenmekten konfor; nöbetten görüşme süreçlerine kadar",
+                "r1s3": "Gerçek düşmanca girdilere karşı üretimde YZ/ML teslim etmiş",
+                "r2Title": "Çözüm Mühendisi · Saha",
+                "r2Team": "Saha",
+                "r2Location": "Zürih · İstanbul · Seyahat (%40-60)",
+                "r2Body": "Kurumların içinde görüşmeleri yönetin. Veri mimarilerini haritalandırın, pilot konuşlanmayı inşa edin, analistlerinin yanında oturun, operatörlerine devredin. Belirli bir hesapta Davion'un operasyonel yüzüsünüz.",
+                "r2s1": "Bir bankaya, bakanlığa, savunmaya veya kritik-altyapı operatörüne yazılım konuşlandırmış",
+                "r2s2": "Mimari belgeleri ve tehdit modellerini eğlence için okur",
+                "r2s3": "Aynı haftada bir atölye yürütebilir ve bir ihale yanıtı yazabilir",
+                "r3Title": "Satış Mühendisi · Ön-satış",
+                "r3Team": "Pazara-açılma",
+                "r3Location": "Zürih · Uzaktan (AB)",
+                "r3Body": "Olası müşterilerle teknik değerlendirmeler yürütün. Kavram-kanıtı konuşlanmaları mimarisini kurun. Kurumsal ihaleyi kazanan RFI / RFP yanıtlarındaki teknik cevapları yazın.",
+                "r3s1": "Kurumsal veri veya YZ tedarikçisinde çözüm mühendisliği geçmişi",
+                "r3s2": "Yerinde ve air-gapped konuşlanma topolojisiyle rahat",
+                "r3s3": "CIO, CISO ve ihale liderlerinin dilini konuşur",
+                "r4Title": "Kıdemli ML Mühendisi · Geri-erişim ve RAG",
+                "r4Team": "Mühendislik",
+                "r4Location": "Zürih · İstanbul · Uzaktan (CET ±2)",
+                "r4Body": "AlpOS içindeki geri-erişim ve RAG yığınını sahiplenin. İndeks tasarımı, gömme stratejisi, erişim-denetimli geri-erişim, gerçek kurumsal külliyatlara karşı değerlendirme. Sistemi teslim edersiniz; ayrıca bir müşteri denetiminde onu savunursunuz.",
+                "r4s1": "Üretimde ölçekte geri-erişim teslim etmiş (≥ 100M belge)",
+                "r4s2": "Güçlü değerlendirme disiplini; altın kümeler, retrieval@k, sadakat",
+                "r4s3": "Düşmanca-istem araştırmalarını okur ve müşteri ortamlarına uygular",
+                "r5Title": "Kurucu Tasarımcı",
+                "r5Team": "Marka · Ürün",
+                "r5Location": "Zürih · Uzaktan (CET ±2)",
+                "r5Body": "Davion'un görsel kimliğini ve ürün yüzeyini şekillendirin. Logo, yazı tipi, ürün UI, oda-içi belgeler. Davion'un estetik kalibratörüsünüz; çalışmanız bu siteden brifing odasına gider.",
+                "r5s1": "Portföyünüzde güçlü kimlik / marka çalışması",
+                "r5s2": "Gerçek yüzeylerde ürün UI teslim etmiş (sadece dribbble görselleri değil)",
+                "r5s3": "Bir yıl boyunca tek tasarımcı olmaktan rahat"
+            },
+            "process": {
+                "sup": "Nasıl işe alıyoruz",
+                "headline": "Üç adım. Karara bir hafta",
+                "stepLabel": "Adım",
+                "p1Title": "Konuşma",
+                "p1Body": "Kurucu veya işe alım lideriyle 30 dakikalık bir görüşme. Misyonu, rolü, çalışmanızı ve devam etmeye yetecek kimyanın olup olmadığını tartışırız. Pitch deck yok. Ev ödevi yok.",
+                "p2Title": "Çalışma seansı",
+                "p2Body": "Gerçek bir Davion problemine karşı gerçek bir çalışma seansı; genellikle 2-4 saat, ücretli. Nasıl düşündüğümüzü görürsünüz; nasıl düşündüğünüzü görürüz. Ücretsiz ev ödevlerine inanmıyoruz.",
+                "p3Title": "Karar",
+                "p3Body": "Her iki taraftan referans görüşmeleri. Çalışma seansından bir hafta içinde teklif veya dürüst red. Zamanınıza saygı duyarız."
+            },
+            "cta": {
+                "sup": "Başvurun veya temasta kalın",
+                "headline": "İş uyuyorsa bir not yollayın",
+                "body": "Görüşme sayfası üzerinden doğrudan başvurun. İlgilendiğiniz rolü, gurur duyduğunuz bir çalışmanın bağlantısını ve katılırsanız önce neyi inşa edeceğinizi ekleyin.",
+                "applyCta": "Başvur",
+                "aboutCta": "Hakkımızda'yı okuyun"
+            }
+        },
+        "events": {
+            "meta": {
+                "title": "Etkinlikler",
+                "description": "Davion'un göründüğü yerler: savunma fuarları, zirveler, forumlar ve ikili brifingler.",
+                "ogTitle": "Davion · Etkinlikler",
+                "ogDescription": "Davion'un göründüğü yerler."
+            },
+            "hero": {
+                "sup": "Şirket · Etkinlikler",
+                "headline": "Davion'un göründüğü yerler",
+                "body": "Savunma fuarları, zirveler, forumlar ve o odaların kenarlarındaki ikili brifingler. Etkinlik programı davetiyle yürür; kamu indeksi adlandırabildiklerimizi listeler ve adlandıramadıklarımız için bağlam ekler."
+            },
+            "empty": {
+                "eyebrow": "Program uçuşta",
+                "headline": "Kamu etkinlik indeksi paylaşacak bir şeyimiz olduğunda yayınlanacak",
+                "body": "Mevcut ve son katılım; bir mekânı adlandırabildiğimizde Basın Odası bildirimlerinde referans alınır. Belirli bir etkinliğin kenarındaki görüşmeler için basın masasına yazın; talebi doğru operatöre yönlendiririz.",
+                "ctaPrimary": "Son bildirimler"
+            }
+        },
+        "newsroom": {
+            "meta": {
+                "title": "Basın Odası",
+                "description": "Davion ekibinden duyurular, içgörüler ve teknik notlar.",
+                "ogTitle": "Davion · Basın Odası",
+                "ogDescription": "İşin içinden bildirimler: duyurular, içgörüler ve teknik notlar."
+            },
+            "hero": {
+                "sup": "Şirket · Basın Odası",
+                "headline": "İşin içinden bildirimler",
+                "body": "Davion ekibinden duyurular, içgörüler ve teknik notlar."
+            },
+            "categories": {
+                "all": "Tümü",
+                "announcement": "Duyuru",
+                "announcements": "Duyurular",
+                "insight": "İçgörü",
+                "technical": "Teknik",
+                "recognition": "Takdir"
+            },
+            "featuredSup": "Öne çıkan",
+            "readDispatchCta": "Bildirimi oku",
+            "allSup": "Tüm bildirimler",
+            "loadingSup": "Yükleniyor",
+            "loadingSr": "Bildirimler yükleniyor",
+            "emptyEyebrow": "Henüz yok",
+            "emptyHeadline": "Bu kategoride henüz bir şey yok",
+            "emptyBody": "Diğer kategorilerde içerik var. Filtreyi değiştirin veya aradığınız şey için basın masasına yazın.",
+            "showAllBtn": "Tümünü göster",
+            "pressSup": "Basın seti · Medya iletişimi",
+            "pressHeadline": "Gazeteciler ve analistler için",
+            "pressBody": "Logolar, yönetici biyografileri, bilgi sayfaları ve brifing notları talep üzerine sunulur. Ambargolu materyal takdirle ele alınır. Basın masası üzerinden yönlendirme.",
+            "post": {
+                "sup": "Basın Odası bildirimi",
+                "byLabel": "Yazan",
+                "loadingMsg": "Bildirim yükleniyor…",
+                "relatedSup": "İlgili",
+                "moreSup": "Basın Odası'ndan daha fazlası",
+                "backHeadline": "Tüm bildirimlere dön",
+                "allCta": "Tüm bildirimler"
+            }
         }
     }
 }

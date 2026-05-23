@@ -1,5 +1,7 @@
 <script setup lang="ts">
 // Davion Newsroom article template, also intended to power Events detail.
+const { t } = useI18n()
+const localePath = useLocalePath()
 const route = useRoute()
 const slug = route.params.slug as string
 const { trackBlogRead } = useAnalytics()
@@ -52,9 +54,9 @@ onBeforeUnmount(() => {
 })
 
 useSeoMeta({
-    title: post.value?.title || 'Dispatch',
+    title: post.value?.title || t('pages.newsroom.post.sup'),
     description: post.value?.excerpt || '',
-    ogTitle: post.value?.title || 'Dispatch',
+    ogTitle: post.value?.title || t('pages.newsroom.post.sup'),
     ogDescription: post.value?.excerpt || '',
     ogImage: post.value?.featuredImage || undefined,
 })
@@ -63,20 +65,20 @@ useSeoMeta({
 <template>
     <div class="flex flex-col gap-4">
         <div v-if="pending" class="bg-white rounded-3xl px-6 md:px-16 py-32">
-            <p class="text-b2 text-drygray-default">Loading dispatch…</p>
+            <p class="text-b2 text-drygray-default">{{ $t('pages.newsroom.post.loadingMsg') }}</p>
         </div>
 
         <template v-else-if="post">
             <!-- Hero -->
             <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
-                <CommonSup title="Newsroom dispatch" />
+                <CommonSup :title="$t('pages.newsroom.post.sup')" />
                 <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[36px] leading-[1.05] md:text-[52px] md:leading-[1.02] lg:text-[72px] tracking-tight max-w-4xl">
                     {{ post.title }}
                 </h1>
                 <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] font-medium text-drygray-default">
                     <span class="inline-flex items-center gap-2">
                         <span class="text-primary-text" aria-hidden="true">·</span>
-                        By {{ post.author }}
+                        {{ $t('pages.newsroom.post.byLabel') }} {{ post.author }}
                     </span>
                     <span v-if="formattedDate">{{ formattedDate }}</span>
                     <span v-if="post.readTime">{{ post.readTime }}</span>
@@ -102,12 +104,12 @@ useSeoMeta({
 
             <!-- Related -->
             <section v-if="related.length" class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
-                <CommonSup title="Related" />
+                <CommonSup :title="$t('pages.newsroom.post.relatedSup')" />
                 <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     <NuxtLink
                         v-for="r in related"
                         :key="r.id"
-                        :to="`/company/newsroom/${r.slug}`"
+                        :to="localePath(`/company/newsroom/${r.slug}`)"
                         class="bg-white card-hover hover:bg-whitesmoke-200 rounded-2xl p-6 transition-colors block group"
                     >
                         <div class="flex items-center gap-3 text-[12px] text-drygray-default font-medium mb-3">
@@ -129,13 +131,13 @@ useSeoMeta({
             <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
                 <div class="grid lg:grid-cols-12 gap-6 items-end">
                     <div class="lg:col-span-8">
-                        <CommonSup title="More from the Newsroom" />
+                        <CommonSup :title="$t('pages.newsroom.post.moreSup')" />
                         <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[36px] md:leading-[1.1]">
-                            Back to all dispatches.
+                            {{ $t('pages.newsroom.post.backHeadline') }}<span class="text-primary-text">.</span>
                         </h2>
                     </div>
                     <div class="lg:col-span-4 lg:text-right">
-                        <NuxtLink to="/company/newsroom"><CommonButton variant="primary" icon="base:arrow">All dispatches</CommonButton></NuxtLink>
+                        <NuxtLink :to="localePath('/company/newsroom')"><CommonButton variant="primary" icon="base:arrow">{{ $t('pages.newsroom.post.allCta') }}</CommonButton></NuxtLink>
                     </div>
                 </div>
             </section>

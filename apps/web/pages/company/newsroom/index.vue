@@ -1,9 +1,12 @@
 <script setup lang="ts">
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 useSeoMeta({
-    title: 'Newsroom',
-    description: 'Announcements, insight, and technical notes from the Davion team.',
-    ogTitle: 'Davion · Newsroom',
-    ogDescription: 'Dispatches from the work, announcements, insight, and technical notes.',
+    title: () => t('pages.newsroom.meta.title'),
+    description: () => t('pages.newsroom.meta.description'),
+    ogTitle: () => t('pages.newsroom.meta.ogTitle'),
+    ogDescription: () => t('pages.newsroom.meta.ogDescription'),
 })
 
 interface Post {
@@ -20,13 +23,14 @@ interface Post {
 }
 
 // P2.7: client-side category filter chips. Server supports `?category=` filtering
-// too; we fetch all and filter on the client so chip clicks are instant.
+// too; we fetch all and filter on the client so chip clicks are instant. Labels
+// resolve through pages.newsroom.categories.* so /tr and /de render in-language.
 const categories = [
-    { slug: 'all', label: 'All' },
-    { slug: 'announcement', label: 'Announcements' },
-    { slug: 'insight', label: 'Insight' },
-    { slug: 'technical', label: 'Technical' },
-    { slug: 'recognition', label: 'Recognition' },
+    { slug: 'all',          labelKey: 'all' },
+    { slug: 'announcement', labelKey: 'announcements' },
+    { slug: 'insight',      labelKey: 'insight' },
+    { slug: 'technical',    labelKey: 'technical' },
+    { slug: 'recognition',  labelKey: 'recognition' },
 ] as const
 
 const activeCategory = ref<string>('all')
@@ -50,27 +54,26 @@ const categoryCount = (slug: string) => {
     return allPosts.value.filter(p => p.category === slug).length
 }
 
+// Category label for posts (singular form), used in card chips.
 function categoryLabel(slug: string) {
-    if (slug === 'announcement') return 'Announcement'
-    if (slug === 'insight') return 'Insight'
-    if (slug === 'technical') return 'Technical'
-    if (slug === 'recognition') return 'Recognition'
+    if (slug === 'announcement') return t('pages.newsroom.categories.announcement')
+    if (slug === 'insight')      return t('pages.newsroom.categories.insight')
+    if (slug === 'technical')    return t('pages.newsroom.categories.technical')
+    if (slug === 'recognition')  return t('pages.newsroom.categories.recognition')
     return slug
 }
-
-// P1.U5: formatDate auto-imported from composables/useFormatDate.ts.
 </script>
 
 <template>
     <div class="flex flex-col gap-4">
         <!-- Hero -->
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
-            <CommonSup title="Company · Newsroom" />
+            <CommonSup :title="$t('pages.newsroom.hero.sup')" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
-                Dispatches from the work<span class="text-primary-text">.</span>
+                {{ $t('pages.newsroom.hero.headline') }}<span class="text-primary-text">.</span>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
-                Announcements, insight, and technical notes from the Davion team.
+                {{ $t('pages.newsroom.hero.body') }}
             </p>
 
             <!-- Category chips -->
@@ -86,7 +89,7 @@ function categoryLabel(slug: string) {
                     :aria-pressed="activeCategory === c.slug"
                     @click="activeCategory = c.slug"
                 >
-                    {{ c.label }}
+                    {{ $t(`pages.newsroom.categories.${c.labelKey}`) }}
                     <span class="ml-1.5 text-[11px] opacity-60">{{ categoryCount(c.slug) }}</span>
                 </button>
             </div>
@@ -94,8 +97,8 @@ function categoryLabel(slug: string) {
 
         <!-- Loading state (P1.U2) -->
         <section v-if="pending" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
-            <CommonSup title="Loading" />
-            <h2 class="sr-only">Loading dispatches</h2>
+            <CommonSup :title="$t('pages.newsroom.loadingSup')" />
+            <h2 class="sr-only">{{ $t('pages.newsroom.loadingSr') }}</h2>
             <div class="mt-10">
                 <SkeletonBlock variant="card" :count="3" />
             </div>
@@ -103,8 +106,8 @@ function categoryLabel(slug: string) {
 
         <!-- Featured dispatch -->
         <section v-else-if="featured" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
-            <CommonSup title="Featured" />
-            <NuxtLink :to="`/company/newsroom/${featured.slug}`" class="block mt-6 group">
+            <CommonSup :title="$t('pages.newsroom.featuredSup')" />
+            <NuxtLink :to="localePath(`/company/newsroom/${featured.slug}`)" class="block mt-6 group">
                 <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
                     <div class="lg:col-span-7">
                         <NuxtImg
@@ -133,7 +136,7 @@ function categoryLabel(slug: string) {
                         </h2>
                         <p v-if="featured.excerpt" class="text-b2 text-drygray-default mt-4">{{ featured.excerpt }}</p>
                         <p class="text-drygray-100 group-hover:text-primary-text mt-6 inline-flex items-center gap-2 transition-colors font-medium">
-                            Read dispatch
+                            {{ $t('pages.newsroom.readDispatchCta') }}
                             <span aria-hidden="true">→</span>
                         </p>
                     </div>
@@ -143,12 +146,12 @@ function categoryLabel(slug: string) {
 
         <!-- Index -->
         <section v-if="rest.length" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
-            <CommonSup title="All dispatches" />
+            <CommonSup :title="$t('pages.newsroom.allSup')" />
             <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <NuxtLink
                     v-for="post in rest"
                     :key="post.id"
-                    :to="`/company/newsroom/${post.slug}`"
+                    :to="localePath(`/company/newsroom/${post.slug}`)"
                     class="bg-whitesmoke-100 hover:bg-whitesmoke-200 rounded-2xl p-6 transition-colors block group card-hover"
                 >
                     <NuxtImg
@@ -177,15 +180,15 @@ function categoryLabel(slug: string) {
         <EmptyState
             v-if="!pending && !posts.length"
             variant="soft"
-            eyebrow="Nothing yet"
-            headline="Nothing in this category yet"
-            body="The other categories have content. Switch the filter, or write us at the press desk for what you were looking for."
+            :eyebrow="$t('pages.newsroom.emptyEyebrow')"
+            :headline="$t('pages.newsroom.emptyHeadline')"
+            :body="$t('pages.newsroom.emptyBody')"
         >
             <button type="button" class="text-[13px] font-medium px-5 py-3 rounded-full border border-drygray-100 bg-drygray-100 text-white min-h-[44px]" @click="activeCategory = 'all'">
-                Show all
+                {{ $t('pages.newsroom.showAllBtn') }}
             </button>
             <template #extra>
-                <a href="mailto:press@davion.com"><CommonButton variant="outline" size="xs" icon="base:arrow">press@davion.com</CommonButton></a>
+                <a href="mailto:press@davion.com"><CommonButton variant="outline" size="xs" icon="base:arrow">press{{ '@' }}davion.com</CommonButton></a>
             </template>
         </EmptyState>
 
@@ -193,16 +196,16 @@ function categoryLabel(slug: string) {
         <section class="bg-honeydew rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <div class="grid lg:grid-cols-12 gap-10 items-end">
                 <div class="lg:col-span-8">
-                    <CommonSup title="Press kit · Media contact" />
+                    <CommonSup :title="$t('pages.newsroom.pressSup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        For journalists and analysts<span class="text-primary-text">.</span>
+                        {{ $t('pages.newsroom.pressHeadline') }}<span class="text-primary-text">.</span>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
-                        Logos, executive bios, fact sheets, and briefing memos available on request. Embargoed material handled with discretion. Routing through the press desk.
+                        {{ $t('pages.newsroom.pressBody') }}
                     </p>
                 </div>
                 <div class="lg:col-span-4 lg:text-right">
-                    <a href="mailto:press@davion.com"><CommonButton variant="primary" icon="base:arrow">press@davion.com</CommonButton></a>
+                    <a href="mailto:press@davion.com"><CommonButton variant="primary" icon="base:arrow">press{{ '@' }}davion.com</CommonButton></a>
                 </div>
             </div>
         </section>

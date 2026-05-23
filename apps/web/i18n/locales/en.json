@@ -1817,6 +1817,148 @@
                 "a4Detail": "Target Q4 2026, placeholder pending founder confirmation on commit/legal entity.",
                 "alignFootnote": "Additional certifications (SOC 2, regional sovereign-cloud accreditations) land as the customer base demands. Status published here, never aspirational."
             }
+        },
+        "careers": {
+            "meta": {
+                "title": "Careers",
+                "description": "Davion hires for the mission. Senior engineers and operators who have lived inside regulated institutions, banks, ministries, defense, not just sold to them.",
+                "ogTitle": "Davion · Careers",
+                "ogDescription": "Sovereign AI is operator work. Roles for engineers and field operators who have lived the mission."
+            },
+            "hero": {
+                "sup": "Company · Careers",
+                "headline": "Sovereign AI is operator work",
+                "body": "Davion hires people who have lived inside regulated institutions, banks, ministries, defense, energy, critical infrastructure, not just sold to them. We are early. The work is consequential. Compensation includes meaningful equity and is benchmarked against top-decile institutional vendors."
+            },
+            "evp": {
+                "sup": "What working here looks like",
+                "headline": "Five things we promise",
+                "p1": "<strong class=\"font-semibold\">Consequential problems.</strong> The customers are institutions where decisions actually matter. The bugs you fix make the news for the right reasons; the ones you ship matter for the wrong ones.",
+                "p2": "<strong class=\"font-semibold\">Small team for a long time.</strong> We hire deliberately. You will know everyone. You will be deeply load-bearing on something. You will not get diluted into a process org.",
+                "p3": "<strong class=\"font-semibold\">Operator culture.</strong> Engineers go on-site. Field roles read the code. We do not have a wall between \"build\" and \"deploy.\"",
+                "p4": "<strong class=\"font-semibold\">Real equity.</strong> Meaningful early-stage grants with founder-friendly vesting. We are building a company with real customers, not a markup carousel.",
+                "p5": "<strong class=\"font-semibold\">Honest hiring.</strong> Paid work sessions instead of unpaid take-homes. Real conversations instead of trick questions. Decisions inside a week."
+            },
+            "roles": {
+                "sup": "Open roles",
+                "headline": "Five open seats",
+                "intro": "All roles based in Zurich or Istanbul with remote-friendly arrangements for CET ±2. Field roles travel 40–60%.",
+                "signalsLabel": "Signals we look for",
+                "r1Title": "Founding Engineer · Platform",
+                "r1Team": "Engineering",
+                "r1Location": "Zurich · Istanbul · Remote (CET ±2)",
+                "r1Body": "Build AlpOS, the sovereign AI platform. Distributed systems, ontology, retrieval, agentic reasoning. You write the architecture documents and the production code that lands them.",
+                "r1s1": "Distributed-systems depth (Kafka / Postgres / Flink class)",
+                "r1s2": "Comfort owning a system end to end, from on-call to interview pipeline",
+                "r1s3": "Has shipped AI/ML in production against real adversarial inputs",
+                "r2Title": "Solutions Engineer · Field",
+                "r2Team": "Field",
+                "r2Location": "Zurich · Istanbul · Travel (40-60%)",
+                "r2Body": "Lead engagements inside institutions. Map their data architecture, build the pilot deployment, sit beside their analysts, hand off to their operators. You are the operational face of Davion in a specific account.",
+                "r2s1": "Has deployed software inside a bank, ministry, defense or critical-infrastructure operator",
+                "r2s2": "Reads architecture documents and threat models for fun",
+                "r2s3": "Can run a workshop and write a procurement response in the same week",
+                "r3Title": "Sales Engineer · Pre-sales",
+                "r3Team": "Go-to-market",
+                "r3Location": "Zurich · Remote (EU)",
+                "r3Body": "Run technical evaluations with prospective customers. Architect proof-of-concept deployments. Write the technical answers in RFI / RFP responses that win institutional procurement.",
+                "r3s1": "Background in solutions engineering at an enterprise data or AI vendor",
+                "r3s2": "Comfortable with on-prem and air-gapped deployment topology",
+                "r3s3": "Speaks the language of CIOs, CISOs, and procurement leaders",
+                "r4Title": "Senior ML Engineer · Retrieval & RAG",
+                "r4Team": "Engineering",
+                "r4Location": "Zurich · Istanbul · Remote (CET ±2)",
+                "r4Body": "Own the retrieval and RAG stack inside AlpOS. Index design, embedding strategy, access-controlled retrieval, evaluation against real institutional corpora. You ship the system; you also defend it in a customer audit.",
+                "r4s1": "Has shipped retrieval at scale (≥ 100M docs) in production",
+                "r4s2": "Strong evaluation discipline, golden sets, retrieval@k, faithfulness",
+                "r4s3": "Reads adversarial-prompt research and applies it to customer environments",
+                "r5Title": "Founding Designer",
+                "r5Team": "Brand · Product",
+                "r5Location": "Zurich · Remote (CET ±2)",
+                "r5Body": "Shape Davion's visual identity and product surface. Logo, type, product UI, in-room documents. You are the calibrator of Davion's aesthetic; your work goes from this site to the briefing room.",
+                "r5s1": "Strong identity / brand work in your portfolio",
+                "r5s2": "Has shipped product UI on real surfaces (not just dribbble shots)",
+                "r5s3": "Comfortable being the lone designer for a year"
+            },
+            "process": {
+                "sup": "How we hire",
+                "headline": "Three steps. One week to a decision",
+                "stepLabel": "Step",
+                "p1Title": "Conversation",
+                "p1Body": "A 30-minute call with the founder or a hiring lead. We discuss the mission, the role, your work, and whether the chemistry is there to keep going. No pitch deck. No homework.",
+                "p2Title": "Work session",
+                "p2Body": "A real working session against a real Davion problem, usually 2-4 hours, paid. You see how we think; we see how you think. We do not believe in unpaid take-homes.",
+                "p3Title": "Decision",
+                "p3Body": "Reference conversations on both sides. Offer or honest decline within a week of the work session. We respect your time."
+            },
+            "cta": {
+                "sup": "Apply or stay in touch",
+                "headline": "If the work fits, send a note",
+                "body": "Apply directly via the engagement page. Include the role you're interested in, a link to a piece of work you're proud of, and what you would build first if you joined.",
+                "applyCta": "Apply",
+                "aboutCta": "Read About"
+            }
+        },
+        "events": {
+            "meta": {
+                "title": "Events",
+                "description": "Where Davion shows up: defense expos, summits, forums, and bilateral briefings.",
+                "ogTitle": "Davion · Events",
+                "ogDescription": "Where Davion shows up."
+            },
+            "hero": {
+                "sup": "Company · Events",
+                "headline": "Where Davion shows up",
+                "body": "Defense expos, summits, forums, and bilateral briefings on the margins of those rooms. The events programme is run by invitation; the public index lists what we can name and adds context for what we can't."
+            },
+            "empty": {
+                "eyebrow": "Programme in flight",
+                "headline": "The public events index lands once we have something to share",
+                "body": "Current and recent participation is referenced in Newsroom dispatches when we can name a venue. For meetings on the margins of a specific event, write to the press desk and we will route the request to the right operator.",
+                "ctaPrimary": "Recent dispatches"
+            }
+        },
+        "newsroom": {
+            "meta": {
+                "title": "Newsroom",
+                "description": "Announcements, insight, and technical notes from the Davion team.",
+                "ogTitle": "Davion · Newsroom",
+                "ogDescription": "Dispatches from the work, announcements, insight, and technical notes."
+            },
+            "hero": {
+                "sup": "Company · Newsroom",
+                "headline": "Dispatches from the work",
+                "body": "Announcements, insight, and technical notes from the Davion team."
+            },
+            "categories": {
+                "all": "All",
+                "announcement": "Announcement",
+                "announcements": "Announcements",
+                "insight": "Insight",
+                "technical": "Technical",
+                "recognition": "Recognition"
+            },
+            "featuredSup": "Featured",
+            "readDispatchCta": "Read dispatch",
+            "allSup": "All dispatches",
+            "loadingSup": "Loading",
+            "loadingSr": "Loading dispatches",
+            "emptyEyebrow": "Nothing yet",
+            "emptyHeadline": "Nothing in this category yet",
+            "emptyBody": "The other categories have content. Switch the filter, or write us at the press desk for what you were looking for.",
+            "showAllBtn": "Show all",
+            "pressSup": "Press kit · Media contact",
+            "pressHeadline": "For journalists and analysts",
+            "pressBody": "Logos, executive bios, fact sheets, and briefing memos available on request. Embargoed material handled with discretion. Routing through the press desk.",
+            "post": {
+                "sup": "Newsroom dispatch",
+                "byLabel": "By",
+                "loadingMsg": "Loading dispatch…",
+                "relatedSup": "Related",
+                "moreSup": "More from the Newsroom",
+                "backHeadline": "Back to all dispatches",
+                "allCta": "All dispatches"
+            }
         }
     }
 }
