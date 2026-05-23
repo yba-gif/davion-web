@@ -64,9 +64,9 @@ export default defineNuxtConfig({
     //   translated strings on the about page.
     i18n: {
         locales: [
-            { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
-            { code: 'tr', iso: 'tr-TR', name: 'Türkçe', file: 'tr.json' },
-            { code: 'de', iso: 'de-DE', name: 'Deutsch', file: 'de.json' },
+            { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+            { code: 'tr', language: 'tr-TR', name: 'Türkçe', file: 'tr.json' },
+            { code: 'de', language: 'de-DE', name: 'Deutsch', file: 'de.json' },
         ],
         defaultLocale: 'en',
         strategy: 'prefix_except_default',
