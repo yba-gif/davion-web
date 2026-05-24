@@ -1,5 +1,15 @@
 <script setup lang="ts">
-const { settings, loading } = useSettings()
+// Settings come from /api/settings (Postgres-backed). They override head meta
+// when present and gate maintenance mode. They MUST NOT block page rendering:
+// previously this file had `<div v-if="loading">Loading...</div>` wrapping
+// <NuxtPage>, which meant:
+//   - SSR HTML was just the loading spinner (no page body, no SEO content)
+//   - Mobile users saw white-screen + spinner for the full 1.4s the
+//     /api/settings round-trip took before any content rendered
+//   - "Scroll down full white screen" reports mapped to this
+// Now: the page renders immediately, settings hydrate async, watchEffect
+// applies head overrides + maintenance redirect when ready.
+const { settings } = useSettings()
 
 watchEffect(() => {
     if (settings.value?.siteName) {
@@ -18,19 +28,10 @@ watchEffect(() => {
 
 <template>
     <NuxtLayout>
-        <!-- Loading State -->
-        <div v-if="loading" class="flex items-center justify-center min-h-screen">
-            <div class="text-center">
-                <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4" />
-                <p class="text-gray-600 font-degular">
-                    Loading...
-                </p>
-            </div>
-        </div>
-
-        <!-- Maintenance Mode -->
+        <!-- Maintenance Mode (only renders once settings have arrived AND the
+             flag is true; until then settings?.maintenanceMode is undefined → falsy → NuxtPage renders) -->
         <div
-            v-else-if="settings?.maintenanceMode"
+            v-if="settings?.maintenanceMode"
             class="flex items-center justify-center min-h-screen bg-gray-50"
         >
             <div class="max-w-md w-full mx-auto text-center p-8">

@@ -89,16 +89,20 @@ onBeforeUnmount(() => {
                     <NuxtLink :to="localePath('/legal/cookies')" class="text-primary-text underline underline-offset-2 hover:no-underline">{{ $t('cookies.policyLink') }}</NuxtLink>.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-2">
+                    <!-- min-h-[44px] hits the iOS tap-target minimum (44px),
+                         touch-action:manipulation kills the 300ms double-tap-zoom
+                         delay so the banner dismisses on first tap. Same on the
+                         outline button below. -->
                     <button
                         type="button"
-                        class="text-[13px] font-semibold px-4 py-2.5 bg-drygray-100 text-white rounded-lg hover:bg-drygray-100/90 transition-colors"
+                        class="text-[13px] font-semibold px-4 py-2.5 min-h-[44px] bg-drygray-100 text-white rounded-lg hover:bg-drygray-100/90 transition-colors [touch-action:manipulation]"
                         @click="choose('accept')"
                     >
                         {{ $t('cookies.acceptAll') }}
                     </button>
                     <button
                         type="button"
-                        class="text-[13px] font-semibold px-4 py-2.5 bg-white text-drygray-100 border border-drygray-200 rounded-lg hover:border-drygray-100 transition-colors"
+                        class="text-[13px] font-semibold px-4 py-2.5 min-h-[44px] bg-white text-drygray-100 border border-drygray-200 rounded-lg hover:border-drygray-100 transition-colors [touch-action:manipulation]"
                         @click="choose('essential')"
                     >
                         {{ $t('cookies.essentialOnly') }}
