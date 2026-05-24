@@ -133,7 +133,7 @@ useSeoMeta({
                     <div class="lg:col-span-8">
                         <CommonSup :title="$t('pages.newsroom.post.moreSup')" />
                         <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[36px] md:leading-[1.1]">
-                            {{ $t('pages.newsroom.post.backHeadline') }}<span class="text-primary-text">.</span>
+                            {{ $t('pages.newsroom.post.backHeadline') }}<DotAccent />
                         </h2>
                     </div>
                     <div class="lg:col-span-4 lg:text-right">

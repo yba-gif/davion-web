@@ -35,7 +35,7 @@ const alignment = [
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup :title="$t('pages.legal.rai.sup')" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[72px] tracking-tight max-w-5xl">
-                {{ $t('pages.legal.rai.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.legal.rai.headline') }}<DotAccent />
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl" v-html="$t('pages.legal.rai.intro')" />
             <p class="text-[13px] font-mono uppercase tracking-[0.15em] text-drygray-default mt-8">
@@ -52,7 +52,7 @@ const alignment = [
                 <li v-for="c in commitments" :key="c.n" class="grid md:grid-cols-12 gap-4 md:gap-8 border-t border-drygray-200 pt-8 first:border-t-0 first:pt-0">
                     <div class="md:col-span-3">
                         <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">{{ $t('pages.legal.shared.commitmentLabel') }} {{ c.n }}</p>
-                        <p class="font-degular font-bold text-drygray-100 text-[22px] md:text-[24px] leading-tight mt-2">{{ $t(`pages.legal.rai.${c.t}`) }}<span class="text-primary-text">.</span></p>
+                        <p class="font-degular font-bold text-drygray-100 text-[22px] md:text-[24px] leading-tight mt-2">{{ $t(`pages.legal.rai.${c.t}`) }}<DotAccent /></p>
                     </div>
                     <div class="md:col-span-9">
                         <p class="text-b1 text-drygray-100 leading-relaxed">{{ $t(`pages.legal.rai.${c.b}`) }}</p>
@@ -92,7 +92,7 @@ const alignment = [
                 <div class="lg:col-span-8">
                     <CommonSup :title="$t('pages.legal.shared.otherSup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[32px] md:leading-[1.05]">
-                        {{ $t('pages.legal.shared.relatedHeadline') }}<span class="text-primary-text">.</span>
+                        {{ $t('pages.legal.shared.relatedHeadline') }}<DotAccent />
                     </h2>
                 </div>
                 <div class="lg:col-span-4 lg:text-right flex flex-wrap gap-3 lg:justify-end">

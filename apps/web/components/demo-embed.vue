@@ -17,7 +17,7 @@ const hasDemo = computed(() => !!demoUrl.value)
     <div class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
         <CommonSup title="See AlpOS in motion" />
         <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-            A {{ demoLength }} walkthrough<span class="text-primary-text">.</span>
+            A {{ demoLength }} walkthrough<DotAccent />
         </h2>
         <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
             One self-contained tour through the AlpOS spine: data ingest, ontology, analyse, decide, act. Recorded against an anonymised demo deployment.

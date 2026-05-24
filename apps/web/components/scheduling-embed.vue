@@ -22,7 +22,7 @@ const hasScheduler = computed(() => !!schedulingUrl.value)
     <div class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
         <CommonSup title="Book a demo" />
         <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-            Pick a time<span class="text-primary-text">.</span> 30 minutes<span class="text-primary-text">.</span> Consultative<span class="text-primary-text">.</span>
+            Pick a time<DotAccent /> 30 minutes<DotAccent /> Consultative<DotAccent />
         </h2>
         <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
             The first conversation is a briefing, not a pitch. We listen first, to your data architecture, your regulatory constraints, your operational reality. If Davion is not the right answer, we will say so.

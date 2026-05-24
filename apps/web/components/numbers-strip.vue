@@ -33,7 +33,7 @@ withDefaults(defineProps<{ title?: string, sub?: string, stats?: Stat[] }>(), {
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
             <div v-for="s in stats" :key="s.label" class="bg-whitesmoke-100 rounded-2xl px-6 py-7 flex flex-col gap-2 min-h-[140px]">
                 <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-drygray-default">{{ s.label }}</p>
-                <p class="font-degular font-bold text-drygray-100 text-[32px] md:text-[36px] leading-none tracking-tight">{{ s.value }}<span class="text-primary-text">.</span></p>
+                <p class="font-degular font-bold text-drygray-100 text-[32px] md:text-[36px] leading-none tracking-tight">{{ s.value }}<DotAccent /></p>
                 <p class="text-[13px] text-drygray-default leading-snug mt-auto">{{ s.detail }}</p>
             </div>
         </div>

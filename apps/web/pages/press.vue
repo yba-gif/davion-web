@@ -56,7 +56,7 @@ const facts = [
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup :title="$t('pages.press.hero.sup')" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[72px] tracking-tight max-w-4xl">
-                {{ $t('pages.press.hero.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.press.hero.headline') }}<DotAccent />
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 {{ $t('pages.press.hero.body') }}
@@ -71,7 +71,7 @@ const facts = [
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup :title="$t('pages.press.factsheet.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                {{ $t('pages.press.factsheet.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.press.factsheet.headline') }}<DotAccent />
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 {{ $t('pages.press.factsheet.body') }}
@@ -90,7 +90,7 @@ const facts = [
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup :title="$t('pages.press.assets.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                {{ $t('pages.press.assets.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.press.assets.headline') }}<DotAccent />
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 {{ $t('pages.press.assets.body') }}
@@ -128,7 +128,7 @@ const facts = [
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup :title="$t('pages.press.colours.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                {{ $t('pages.press.colours.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.press.colours.headline') }}<DotAccent />
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 {{ $t('pages.press.colours.body') }}
@@ -151,7 +151,7 @@ const facts = [
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup :title="$t('pages.press.executives.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                {{ $t('pages.press.executives.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.press.executives.headline') }}<DotAccent />
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 {{ $t('pages.press.executives.body') }}
@@ -164,6 +164,7 @@ const facts = [
                         :alt="`${e.name}, ${e.role}`"
                         width="600"
                         height="600"
+                        loading="lazy"
                         class="aspect-square w-full rounded-xl mb-4 object-cover"
                     />
                     <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">{{ $t('pages.about.team.ceoRole') }}</p>
@@ -180,7 +181,7 @@ const facts = [
                 <div class="lg:col-span-8">
                     <CommonSup :title="$t('pages.press.contact.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                        {{ $t('pages.press.contact.headline') }}<span class="text-primary-text">.</span>
+                        {{ $t('pages.press.contact.headline') }}<DotAccent />
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
                         {{ $t('pages.press.contact.body') }}

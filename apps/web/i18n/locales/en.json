@@ -238,6 +238,12 @@
             "headline": "Dispatches from the work",
             "viewAll": "All dispatches"
         },
+        "proof": {
+            "sup": "Stage",
+            "headline": "Early-stage. Contract-bound.",
+            "body": "We don't publish customer logos until they're contracted to be published. The engineering claims on this site are claims we'll defend in an RFI response. References — when you're ready for them — are real.",
+            "cta": "Trust & Sovereignty"
+        },
         "cta": {
             "sup": "Engage",
             "line1": "Your data",

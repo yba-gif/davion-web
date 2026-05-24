@@ -22,7 +22,7 @@ const cookies = [
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup :title="$t('pages.legal.cookies.sup')" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[72px] tracking-tight max-w-4xl">
-                {{ $t('pages.legal.cookies.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.legal.cookies.headline') }}<DotAccent />
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 {{ $t('pages.legal.cookies.intro') }}
@@ -43,7 +43,7 @@ const cookies = [
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup :title="$t('pages.legal.cookies.inventorySup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                {{ $t('pages.legal.cookies.inventoryHeadline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.legal.cookies.inventoryHeadline') }}<DotAccent />
             </h2>
             <div class="mt-10 space-y-4">
                 <div v-for="c in cookies" :key="c.key" class="bg-white rounded-2xl p-6 md:p-8">
@@ -77,7 +77,7 @@ const cookies = [
                 <div class="lg:col-span-8">
                     <CommonSup :title="$t('pages.legal.shared.otherSup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[32px] md:leading-[1.05]">
-                        {{ $t('pages.legal.shared.relatedHeadline') }}<span class="text-primary-text">.</span>
+                        {{ $t('pages.legal.shared.relatedHeadline') }}<DotAccent />
                     </h2>
                 </div>
                 <div class="lg:col-span-4 lg:text-right flex flex-wrap gap-3 lg:justify-end">

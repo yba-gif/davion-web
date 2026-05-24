@@ -238,6 +238,12 @@
             "headline": "Sahadan haberler",
             "viewAll": "Tüm haberler"
         },
+        "proof": {
+            "sup": "Aşama",
+            "headline": "Erken aşama. Sözleşmeyle bağlı.",
+            "body": "Müşteri logolarını, yayımlanmaları sözleşmeyle bağlanmadan yayımlamayız. Bu sitedeki mühendislik iddiaları, bir RFI yanıtında savunacağımız iddialardır. Referanslar — siz hazır olduğunuzda — gerçektir.",
+            "cta": "Güven ve Egemenlik"
+        },
         "cta": {
             "sup": "Görüşme",
             "line1": "Sizin veriniz",

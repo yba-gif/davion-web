@@ -82,7 +82,7 @@ onBeforeUnmount(() => {
                     {{ $t('cookies.label') }}
                 </p>
                 <h2 class="font-degular font-bold text-drygray-100 text-[20px] leading-tight mb-3">
-                    {{ $t('cookies.title') }}<span class="text-primary-text">.</span>
+                    {{ $t('cookies.title') }}<DotAccent />
                 </h2>
                 <p id="cookie-consent-body" class="text-[14px] leading-[1.5] text-drygray-default mb-5">
                     {{ $t('cookies.body') }}

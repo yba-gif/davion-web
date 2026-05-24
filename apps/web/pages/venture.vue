@@ -16,7 +16,7 @@ useSeoMeta({
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup :title="$t('pages.venture.hero.sup')" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[72px] tracking-tight max-w-4xl">
-                {{ $t('pages.venture.hero.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.venture.hero.headline') }}<DotAccent />
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 {{ $t('pages.venture.hero.body') }}

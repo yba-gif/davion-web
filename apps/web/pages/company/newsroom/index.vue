@@ -70,7 +70,7 @@ function categoryLabel(slug: string) {
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup :title="$t('pages.newsroom.hero.sup')" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-4xl">
-                {{ $t('pages.newsroom.hero.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.newsroom.hero.headline') }}<DotAccent />
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 {{ $t('pages.newsroom.hero.body') }}
@@ -114,10 +114,11 @@ function categoryLabel(slug: string) {
                             v-if="featured.featuredImage"
                             :src="featured.featuredImage"
                             :alt="featured.title"
+                            loading="lazy"
                             class="w-full aspect-[16/10] object-cover rounded-2xl"
                         />
                         <div v-else class="w-full aspect-[16/10] bg-white rounded-2xl flex items-center justify-center">
-                            <NuxtImg src="/logo-64.png" alt="" width="64" height="64" class="size-16 opacity-50" />
+                            <NuxtImg src="/logo-64.png" alt="" width="64" height="64" loading="lazy" class="size-16 opacity-50" />
                         </div>
                     </div>
                     <div class="lg:col-span-5">
@@ -158,6 +159,7 @@ function categoryLabel(slug: string) {
                         v-if="post.featuredImage"
                         :src="post.featuredImage"
                         :alt="post.title"
+                        loading="lazy"
                         class="w-full aspect-[16/10] object-cover rounded-xl mb-5"
                     />
                     <p class="text-[11px] font-mono uppercase tracking-[0.15em] text-primary-text mb-2">{{ categoryLabel(post.category) }}</p>
@@ -198,7 +200,7 @@ function categoryLabel(slug: string) {
                 <div class="lg:col-span-8">
                     <CommonSup :title="$t('pages.newsroom.pressSup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        {{ $t('pages.newsroom.pressHeadline') }}<span class="text-primary-text">.</span>
+                        {{ $t('pages.newsroom.pressHeadline') }}<DotAccent />
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
                         {{ $t('pages.newsroom.pressBody') }}

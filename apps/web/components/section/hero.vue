@@ -21,12 +21,13 @@ function navigateToAlpos() {
 <template>
     <section
         id="hero-section"
-        class="w-full bg-azure h-[640px] relative min-[980px]:h-[700px] flex flex-col items-start justify-start py-[122px] px-24 max-[980px]:py-10 max-[980px]:px-6 box-border gap-2.5 text-left text-drygray-100 font-switzer rounded-3xl overflow-hidden"
+        class="w-full bg-azure h-[640px] max-[400px]:h-[520px] relative min-[980px]:h-[700px] flex flex-col items-start justify-start py-[122px] px-24 max-[980px]:py-10 max-[980px]:px-6 max-[400px]:py-8 box-border gap-2.5 text-left text-drygray-100 font-switzer rounded-3xl overflow-hidden"
     >
         <!-- P2.U7: mobile-tight crop served at <=768px; full master variants on larger viewports.
-             Mobile responsive: hero box reduced from 847px to 640px (was taller than
-             iPhone viewport), padding bumped from py-4 (16px) to py-10 (40px) so text
-             has breathing room above the spiral. -->
+             P1.1 (2026-05-24 audit): hero stays 640px on >400px screens, but drops to 520px
+             at ≤400px so the section underneath is visible without scroll on iPhone SE
+             (375×667) and Galaxy Fold cover (280×653). Spiral background scale tightened
+             to 1.4 at the smallest size so the art doesn't dominate the headline. -->
         <picture>
             <source
                 media="(max-width: 768px)"
@@ -34,7 +35,7 @@ function navigateToAlpos() {
                 type="image/webp"
             >
             <img
-                class="min-[980px]:w-[1176px] absolute pointer-events-none top-0 max-[980px]:top-32 min-[980px]:-right-80 scale-150 max-[980px]:scale-[1.7]"
+                class="min-[980px]:w-[1176px] absolute pointer-events-none top-0 max-[980px]:top-32 max-[400px]:top-24 min-[980px]:-right-80 scale-150 max-[980px]:scale-[1.7] max-[400px]:scale-[1.4]"
                 src="/section_background-1600.webp"
                 srcset="
                     /section_background-480.webp 480w,
@@ -49,11 +50,14 @@ function navigateToAlpos() {
                 fetchpriority="high"
             >
         </picture>
-        <div class="min-[980px]:w-[676px] max-[980px]:w-full flex flex-col items-start justify-end max-[980px]:h-full gap-8 z-[1]">
-            <h1 class="font-degular font-semibold tracking-[-0.02em] leading-[1.02] m-0 text-[68px] max-[980px]:text-[40px] min-[980px]:w-[676px] max-[980px]:w-full">
-                {{ $t('hero.headline') }}<span class="text-primary-text font-degular">.</span>
+        <div class="min-[980px]:w-[676px] max-[980px]:w-full flex flex-col items-start justify-end max-[980px]:h-full gap-8 max-[400px]:gap-5 z-[1]">
+            <!-- H1 ladder: 68px desktop → 40px tablet/mobile → 32px on ≤400px screens.
+                 At 32px the headline 'Decision infrastructure for data that can't leave'
+                 wraps to 3 lines on 320px viewport without 'infrastructure' overflowing. -->
+            <h1 class="font-degular font-semibold tracking-[-0.02em] leading-[1.02] m-0 text-[68px] max-[980px]:text-[40px] max-[400px]:text-[32px] min-[980px]:w-[676px] max-[980px]:w-full">
+                {{ $t('hero.headline') }}<DotAccent />
             </h1>
-            <p class="min-[980px]:w-[560px] max-[980px]:w-full leading-[150%] font-medium text-[18px] max-[980px]:text-[16px] m-0">
+            <p class="min-[980px]:w-[560px] max-[980px]:w-full leading-[150%] font-medium text-[18px] max-[980px]:text-[16px] max-[400px]:text-[15px] m-0">
                 {{ $t('hero.body') }}
             </p>
             <div class="w-full flex flex-row max-[980px]:flex-col items-center justify-start gap-3 text-center text-[15px]">

@@ -109,7 +109,7 @@ function resetForm() {
         <div v-if="ticketCode">
             <CommonSup :title="$t('form.received')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                {{ $t('form.thankYouTitle') }}<span class="text-primary-text">.</span>
+                {{ $t('form.thankYouTitle') }}<DotAccent />
             </h2>
             <i18n-t keypath="form.thankYouBody" tag="p" class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 <template #ref>
@@ -131,7 +131,7 @@ function resetForm() {
         <form v-else novalidate @submit.prevent="onSubmit">
             <CommonSup :title="$t('form.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05] max-w-3xl">
-                {{ $t('form.title') }}<span class="text-primary-text">.</span>
+                {{ $t('form.title') }}<DotAccent />
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 {{ $t('form.body') }}

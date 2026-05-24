@@ -74,7 +74,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup :title="data.eyebrow" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[68px] tracking-tight max-w-5xl">
-                <template v-for="(seg, i) in heroSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><span class="text-primary-text">.</span></template>
+                <template v-for="(seg, i) in heroSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><DotAccent /></template>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">{{ data.body }}</p>
             <div class="mt-10 flex flex-wrap gap-3">
@@ -89,7 +89,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
                 <div class="lg:col-span-4">
                     <CommonSup :title="$t('pages.capabilities.shared.whatItDoesEyebrow')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                        <template v-for="(seg, i) in whatItDoesSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><span class="text-primary-text">.</span></template>
+                        <template v-for="(seg, i) in whatItDoesSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><DotAccent /></template>
                     </h2>
                 </div>
                 <ul class="lg:col-span-8 space-y-3">
@@ -106,7 +106,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
             <div class="mb-10 md:mb-14 max-w-3xl">
                 <CommonSup :title="$t('pages.capabilities.shared.howItWorksEyebrow')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                    <template v-for="(seg, i) in howItWorksSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><span class="text-primary-text">.</span></template>
+                    <template v-for="(seg, i) in howItWorksSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><DotAccent /></template>
                 </h2>
             </div>
             <ol class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -124,7 +124,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
                 <div class="lg:col-span-5">
                     <CommonSup :title="$t('pages.capabilities.shared.whenToUseEyebrow')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                        <template v-for="(seg, i) in whenToUseSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><span class="text-primary-text">.</span></template>
+                        <template v-for="(seg, i) in whenToUseSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><DotAccent /></template>
                     </h2>
                 </div>
                 <ul class="lg:col-span-7 space-y-3">
@@ -140,7 +140,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
         <section v-reveal class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup :title="$t('pages.capabilities.shared.industriesEyebrow')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                <template v-for="(seg, i) in industriesSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><span class="text-primary-text">.</span></template>
+                <template v-for="(seg, i) in industriesSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><DotAccent /></template>
             </h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-8">
                 <NuxtLink v-for="i in data.industries" :key="i.slug" :to="localePath(`/industries/${i.slug}`)" class="bg-whitesmoke-100 card-hover hover:bg-whitesmoke-200 rounded-2xl p-5 transition-colors block group">
@@ -156,7 +156,7 @@ const ctaSegments = computed(() => splitHeadlineSegments(props.data.ctaHeadline)
                 <div class="lg:col-span-8">
                     <CommonSup :title="ctaEyebrow" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[40px] leading-[1.05] md:text-[56px] md:leading-[1.02] tracking-tight">
-                        <template v-for="(seg, i) in ctaSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><span class="text-primary-text">.</span></template>
+                        <template v-for="(seg, i) in ctaSegments" :key="i"><span>{{ i > 0 ? " " : "" }}{{ seg }}</span><DotAccent /></template>
                     </h2>
                 </div>
                 <div class="lg:col-span-4 lg:text-right flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">

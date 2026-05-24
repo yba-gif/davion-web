@@ -32,7 +32,7 @@ const process = [
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup :title="$t('pages.careers.hero.sup')" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[72px] tracking-tight max-w-4xl">
-                {{ $t('pages.careers.hero.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.careers.hero.headline') }}<DotAccent />
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 {{ $t('pages.careers.hero.body') }}
@@ -45,7 +45,7 @@ const process = [
                 <div class="lg:col-span-4">
                     <CommonSup :title="$t('pages.careers.evp.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                        {{ $t('pages.careers.evp.headline') }}<span class="text-primary-text">.</span>
+                        {{ $t('pages.careers.evp.headline') }}<DotAccent />
                     </h2>
                 </div>
                 <ol class="lg:col-span-8 space-y-3 text-b1 text-drygray-100">
@@ -63,7 +63,7 @@ const process = [
                 <div>
                     <CommonSup :title="$t('pages.careers.roles.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                        {{ $t('pages.careers.roles.headline') }}<span class="text-primary-text">.</span>
+                        {{ $t('pages.careers.roles.headline') }}<DotAccent />
                     </h2>
                 </div>
                 <p class="text-b2 text-drygray-default max-w-md">
@@ -98,7 +98,7 @@ const process = [
             <div class="mb-10 md:mb-14 max-w-3xl">
                 <CommonSup :title="$t('pages.careers.process.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                    {{ $t('pages.careers.process.headline') }}<span class="text-primary-text">.</span>
+                    {{ $t('pages.careers.process.headline') }}<DotAccent />
                 </h2>
             </div>
             <ol class="grid md:grid-cols-3 gap-4">
@@ -116,7 +116,7 @@ const process = [
                 <div class="lg:col-span-8">
                     <CommonSup :title="$t('pages.careers.cta.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[40px] leading-[1.05] md:text-[56px] md:leading-[1.02] tracking-tight">
-                        {{ $t('pages.careers.cta.headline') }}<span class="text-primary-text">.</span>
+                        {{ $t('pages.careers.cta.headline') }}<DotAccent />
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
                         {{ $t('pages.careers.cta.body') }}

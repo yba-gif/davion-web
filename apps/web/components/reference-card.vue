@@ -25,7 +25,19 @@ const imageClass = computed(() => {
     <div
         class="w-32 h-36 mx-1 rounded-xl bg-drygray-default/20 text-xs text-drygray-100 font-switzer flex flex-col justify-between items-center p-4">
         <div class="flex-1 flex items-center justify-center">
-            <img :class="imageClass" alt="reference" :src="src">
+            <!-- P1.7 (2026-05-24 audit): NuxtImg gives us automatic format
+                 conversion (webp/avif when supported) and IPX-served srcset.
+                 alt uses the title prop so screen readers announce the
+                 reference name, not a generic "reference". loading="lazy"
+                 because reference cards live below the fold in a marquee. -->
+            <NuxtImg
+                :class="imageClass"
+                :alt="title || 'reference logo'"
+                :src="src"
+                width="73"
+                height="48"
+                loading="lazy"
+            />
         </div>
         <!-- <div class="tracking-[-0.5px] leading-[150%] font-medium text-whitesmoke-100 capitalize">
             {{ title }}

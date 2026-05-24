@@ -49,7 +49,7 @@ const values = [
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup :title="$t('pages.about.hero.sup')" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[64px] md:leading-[0.98] lg:text-[76px] tracking-tight max-w-4xl">
-                {{ $t('pages.about.hero.headline1') }}<span class="text-primary-text">.</span><br>{{ $t('pages.about.hero.headline2') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.about.hero.headline1') }}<DotAccent /><br>{{ $t('pages.about.hero.headline2') }}<DotAccent />
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 {{ $t('pages.about.hero.body') }}
@@ -103,7 +103,7 @@ const values = [
             <div class="mb-12 md:mb-16 max-w-3xl">
                 <CommonSup :title="$t('pages.about.believe.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    {{ $t('pages.about.believe.headline') }}<span class="text-primary-text">.</span>
+                    {{ $t('pages.about.believe.headline') }}<DotAccent />
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
                     {{ $t('pages.about.believe.body') }}
@@ -113,7 +113,7 @@ const values = [
                 <li v-for="v in values" :key="v.n" class="grid lg:grid-cols-12 gap-6 lg:gap-10 border-t border-drygray-200 pt-8">
                     <div class="lg:col-span-3">
                         <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">{{ $t('pages.about.believe.claimLabel') }} {{ v.n }}</p>
-                        <p class="font-degular font-bold text-drygray-100 text-[22px] md:text-[26px] leading-[1.15] mt-3">{{ $t(v.titleKey) }}<span class="text-primary-text">.</span></p>
+                        <p class="font-degular font-bold text-drygray-100 text-[22px] md:text-[26px] leading-[1.15] mt-3">{{ $t(v.titleKey) }}<DotAccent /></p>
                     </div>
                     <div class="lg:col-span-9">
                         <p class="text-b1 text-drygray-100 leading-[1.55]">{{ $t(v.bodyKey) }}</p>
@@ -128,7 +128,7 @@ const values = [
                 <div class="lg:col-span-4">
                     <CommonSup :title="$t('pages.about.work.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                        {{ $t('pages.about.work.h1') }}<span class="text-primary-text">.</span><br>{{ $t('pages.about.work.h2') }}<span class="text-primary-text">.</span><br>{{ $t('pages.about.work.h3') }}<span class="text-primary-text">.</span>
+                        {{ $t('pages.about.work.h1') }}<DotAccent /><br>{{ $t('pages.about.work.h2') }}<DotAccent /><br>{{ $t('pages.about.work.h3') }}<DotAccent />
                     </h2>
                 </div>
                 <div class="lg:col-span-8 space-y-6 text-[17px] leading-[1.55] text-drygray-100">
@@ -153,7 +153,7 @@ const values = [
             <div class="mb-10 md:mb-14 max-w-3xl">
                 <CommonSup :title="$t('pages.about.team.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    {{ $t('pages.about.team.headline') }}<span class="text-primary-text">.</span>
+                    {{ $t('pages.about.team.headline') }}<DotAccent />
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
                     {{ $t('pages.about.team.bodyBefore') }} <strong class="font-semibold text-drygray-100">{{ $t('pages.about.team.bodyBold') }}</strong>{{ $t('pages.about.team.bodyAfter') }}
@@ -166,6 +166,7 @@ const values = [
                         :alt="`${$t('pages.about.team.berkanName')}, ${$t('pages.about.team.ceoRole')} of Davion`"
                         width="240"
                         height="240"
+                        loading="lazy"
                         class="size-20 rounded-2xl object-cover mb-4"
                     />
                     <p class="text-[11px] font-mono font-semibold uppercase tracking-[0.15em] text-primary-text">{{ $t('pages.about.team.ceoRole') }}</p>
@@ -206,7 +207,7 @@ const values = [
                 <div class="lg:col-span-8">
                     <CommonSup :title="$t('pages.about.cta.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        {{ $t('pages.about.cta.headline1') }}<span class="text-primary-text">,</span> {{ $t('pages.about.cta.headline2') }}<span class="text-primary-text">.</span>
+                        {{ $t('pages.about.cta.headline1') }}<span class="text-primary-text">,</span> {{ $t('pages.about.cta.headline2') }}<DotAccent />
                     </h2>
                 </div>
                 <div class="lg:col-span-4 lg:text-right">
@@ -246,6 +247,7 @@ const values = [
                                 :alt="`${$t('pages.about.team.berkanName')}, ${$t('pages.about.team.ceoRole')} of Davion`"
                                 width="600"
                                 height="600"
+                                loading="lazy"
                                 class="size-40 md:size-48 rounded-2xl object-cover flex-shrink-0"
                             />
                             <div class="flex-1 min-w-0">

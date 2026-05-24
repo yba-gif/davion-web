@@ -110,7 +110,15 @@ const lifecycle = [
                     {{ $t('pages.trust.matrix.body') }}
                 </p>
             </div>
-            <div class="bg-whitesmoke-100 rounded-2xl overflow-x-auto">
+            <!-- P1.2 (2026-05-24 audit): the 7×5 matrix needs ~900px to render without
+                 wrapping cells. On every viewport <1024px that triggered horizontal
+                 scroll (WCAG 1.4.10 reflow violation at 400% zoom). Now: cards on
+                 mobile/tablet, table on desktop. Same data, different presentation.
+
+                 Card variant: one card per attribute (7 cards) with a 4-row dl listing
+                 each mode + its value. Scannable, accessible to assistive tech via dl,
+                 no horizontal scroll at any viewport. -->
+            <div class="bg-whitesmoke-100 rounded-2xl hidden lg:block overflow-x-auto">
                 <table class="w-full text-left min-w-[900px]">
                     <thead>
                         <tr class="bg-white border-b border-drygray-200">
@@ -131,6 +139,34 @@ const lifecycle = [
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <!-- Mobile/tablet stacked-card variant. 7 cards × 4 dl rows = same 28 cell
+                 values as the desktop table, but reorganized so each attribute reads
+                 as a discrete card. dl/dt/dd is the right semantic shape for
+                 attribute-value pairs and is announced as a list by NVDA/VoiceOver. -->
+            <div class="lg:hidden space-y-3">
+                <div v-for="row in matrixRows" :key="row.a" class="bg-whitesmoke-100 rounded-2xl p-5 sm:p-6">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-primary-text mb-4">{{ $t(`pages.trust.matrix.${row.a}`) }}</p>
+                    <dl class="divide-y divide-drygray-200">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 py-3 first:pt-0 last:pb-0">
+                            <dt class="text-[11px] font-semibold uppercase tracking-[0.15em] text-drygray-default">{{ $t('pages.trust.matrix.onpremHeader') }}</dt>
+                            <dd class="text-b1 text-drygray-100 sm:text-right">{{ $t(`pages.trust.matrix.${row.m.onprem}`) }}</dd>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 py-3">
+                            <dt class="text-[11px] font-semibold uppercase tracking-[0.15em] text-drygray-default">{{ $t('pages.trust.matrix.airgapHeader') }}</dt>
+                            <dd class="text-b1 text-drygray-100 sm:text-right">{{ $t(`pages.trust.matrix.${row.m.airgap}`) }}</dd>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 py-3">
+                            <dt class="text-[11px] font-semibold uppercase tracking-[0.15em] text-drygray-default">{{ $t('pages.trust.matrix.sovereignHeader') }}</dt>
+                            <dd class="text-b1 text-drygray-100 sm:text-right">{{ $t(`pages.trust.matrix.${row.m.sov}`) }}</dd>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 py-3 last:pb-0">
+                            <dt class="text-[11px] font-semibold uppercase tracking-[0.15em] text-drygray-default">{{ $t('pages.trust.matrix.privateHeader') }}</dt>
+                            <dd class="text-b1 text-drygray-100 sm:text-right">{{ $t(`pages.trust.matrix.${row.m.priv}`) }}</dd>
+                        </div>
+                    </dl>
+                </div>
             </div>
         </section>
 

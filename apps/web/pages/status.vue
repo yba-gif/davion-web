@@ -35,7 +35,7 @@ const statusLabel = (s: string) =>
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup :title="$t('pages.status.hero.sup')" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[72px] tracking-tight max-w-4xl">
-                {{ $t('pages.status.hero.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.status.hero.headline') }}<DotAccent />
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 {{ $t('pages.status.hero.body') }}
@@ -53,7 +53,7 @@ const statusLabel = (s: string) =>
                 </div>
                 <div class="lg:col-span-11">
                     <p class="font-degular font-bold text-drygray-100 text-h2 md:text-[36px] leading-tight">
-                        {{ $t('pages.status.summary.headline') }}<span class="text-primary-text">.</span>
+                        {{ $t('pages.status.summary.headline') }}<DotAccent />
                     </p>
                     <p class="text-b1 text-drygray-default mt-3">
                         <i18n-t keypath="pages.status.summary.body" tag="span">
@@ -70,7 +70,7 @@ const statusLabel = (s: string) =>
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20">
             <CommonSup :title="$t('pages.status.services.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[40px] md:leading-[1.05]">
-                {{ $t('pages.status.services.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.status.services.headline') }}<DotAccent />
             </h2>
             <ul class="mt-10 space-y-3">
                 <li v-for="s in services" :key="s.nameKey" class="bg-whitesmoke-100 rounded-2xl p-6">
@@ -94,7 +94,7 @@ const statusLabel = (s: string) =>
         <section class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
             <CommonSup :title="$t('pages.status.history.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[32px] md:leading-[1.05] max-w-3xl">
-                {{ $t('pages.status.history.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.status.history.headline') }}<DotAccent />
             </h2>
             <p class="text-b1 text-drygray-default mt-6 max-w-3xl">
                 {{ $t('pages.status.history.body') }}

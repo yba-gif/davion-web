@@ -41,7 +41,7 @@ const cols = [
             <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-12">
                 <div class="md:max-w-sm">
                     <NuxtLink :to="localePath('/')" class="flex items-center gap-2">
-                        <NuxtImg src="/logo-64.png" alt="Davion" width="20" height="20" class="size-5" />
+                        <NuxtImg src="/logo-64.png" alt="Davion" width="20" height="20" class="size-5" loading="lazy" />
                         <span class="font-degular font-bold text-[18px] text-drygray-100">Davion</span>
                     </NuxtLink>
                     <p class="text-b2 text-drygray-default mt-3 max-w-sm">

@@ -238,6 +238,12 @@
             "headline": "Berichte aus der Arbeit",
             "viewAll": "Alle Berichte"
         },
+        "proof": {
+            "sup": "Stadium",
+            "headline": "Frühphase. Vertraglich gebunden.",
+            "body": "Wir veröffentlichen keine Kundenlogos, bevor sie vertraglich zur Veröffentlichung freigegeben sind. Die Engineering-Ansprüche auf dieser Site sind Ansprüche, die wir in einer RFI-Antwort verteidigen werden. Referenzen sind echt — sobald Sie bereit sind.",
+            "cta": "Vertrauen und Souveränität"
+        },
         "cta": {
             "sup": "Engagement",
             "line1": "Ihre Daten",

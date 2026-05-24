@@ -44,7 +44,7 @@ const wrapperClass = computed(() => {
     >
         <CommonSup v-if="eyebrow" :title="eyebrow" />
         <h3 class="font-degular font-bold text-drygray-100 mt-4 text-h3 md:text-[28px] leading-tight max-w-2xl">
-            {{ headline }}<span class="text-primary-text">.</span>
+            {{ headline }}<DotAccent />
         </h3>
         <p v-if="body" class="text-b1 text-drygray-default mt-4 max-w-2xl">{{ body }}</p>
         <div v-if="$slots.default || $slots.extra" class="mt-6 flex flex-wrap gap-3">

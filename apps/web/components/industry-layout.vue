@@ -98,7 +98,7 @@ const solutionsSegments = computed(() => splitHeadlineSegments(props.data.soluti
             <CommonSup :title="data.eyebrow" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[68px] tracking-tight max-w-5xl">
                 <template v-for="(seg, i) in heroSegments" :key="i"
-                    ><span>{{ i > 0 ? ' ' : '' }}{{ seg }}</span><span class="text-primary-text">.</span></template>
+                    ><span>{{ i > 0 ? ' ' : '' }}{{ seg }}</span><DotAccent /></template>
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">{{ data.body }}</p>
             <div class="mt-10 flex flex-wrap gap-3">
@@ -113,7 +113,7 @@ const solutionsSegments = computed(() => splitHeadlineSegments(props.data.soluti
                 <CommonSup :title="problemAreasEyebrow" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
                     <template v-for="(seg, i) in problemAreasSegments" :key="i"
-                        ><span>{{ i > 0 ? ' ' : '' }}{{ seg }}</span><span class="text-primary-text">.</span></template>
+                        ><span>{{ i > 0 ? ' ' : '' }}{{ seg }}</span><DotAccent /></template>
                 </h2>
             </div>
             <div class="grid md:grid-cols-2 gap-4">
@@ -135,7 +135,7 @@ const solutionsSegments = computed(() => splitHeadlineSegments(props.data.soluti
                 <CommonSup :title="$t('pages.industries.shared.solutionsEyebrow')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
                     <template v-for="(seg, i) in solutionsSegments" :key="i"
-                        ><span>{{ i > 0 ? ' ' : '' }}{{ seg }}</span><span class="text-primary-text">.</span></template>
+                        ><span>{{ i > 0 ? ' ' : '' }}{{ seg }}</span><DotAccent /></template>
                 </h2>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -157,7 +157,7 @@ const solutionsSegments = computed(() => splitHeadlineSegments(props.data.soluti
                     <CommonSup :title="storyEyebrow" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
                         <template v-for="(seg, i) in storySegments" :key="i"
-                            ><span>{{ i > 0 ? ' ' : '' }}{{ seg }}</span><span class="text-primary-text">.</span></template>
+                            ><span>{{ i > 0 ? ' ' : '' }}{{ seg }}</span><DotAccent /></template>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">{{ data.storyBody }}</p>
                     <p v-if="data.storyOutcome" class="text-b1 text-drygray-100 font-medium mt-6 max-w-2xl">{{ data.storyOutcome }}</p>
@@ -182,7 +182,7 @@ const solutionsSegments = computed(() => splitHeadlineSegments(props.data.soluti
                     <CommonSup :title="ctaEyebrow" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[40px] leading-[1.05] md:text-[56px] md:leading-[1.02] tracking-tight">
                         <template v-for="(seg, i) in ctaSegments" :key="i"
-                            ><span>{{ i > 0 ? ' ' : '' }}{{ seg }}</span><span class="text-primary-text">.</span></template>
+                            ><span>{{ i > 0 ? ' ' : '' }}{{ seg }}</span><DotAccent /></template>
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">{{ data.ctaBody }}</p>
                 </div>

@@ -79,7 +79,7 @@ const tocSections = computed(() => [
         <section class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-14 md:py-28">
             <CommonSup :title="$t('pages.solutions.alpos.hero.sup')" />
             <h1 class="font-degular font-bold text-drygray-100 mt-6 text-[44px] leading-[1.05] md:text-[60px] md:leading-[0.98] lg:text-[80px] tracking-tight max-w-5xl">
-                {{ $t('pages.solutions.alpos.hero.headlinePart1') }}<span class="text-primary-text">.</span>{{ $t('pages.solutions.alpos.hero.headlinePart2') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.solutions.alpos.hero.headlinePart1') }}<DotAccent />{{ $t('pages.solutions.alpos.hero.headlinePart2') }}<DotAccent />
             </h1>
             <p class="text-b2 text-drygray-default mt-8 max-w-3xl">
                 {{ $t('pages.solutions.alpos.hero.body') }}
@@ -103,7 +103,7 @@ const tocSections = computed(() => [
         <section id="problem" class="bg-azure rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-24 scroll-mt-20">
             <CommonSup :title="$t('pages.solutions.alpos.problem.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[32px] leading-[1.05] md:text-[44px] md:leading-[1.05] tracking-tight max-w-4xl">
-                {{ $t('pages.solutions.alpos.problem.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.solutions.alpos.problem.headline') }}<DotAccent />
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 {{ $t('pages.solutions.alpos.problem.body') }}
@@ -115,7 +115,7 @@ const tocSections = computed(() => [
             <div class="mb-10 md:mb-14">
                 <CommonSup :title="$t('pages.solutions.alpos.architecture.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    {{ $t('pages.solutions.alpos.architecture.headlinePart1') }}<span class="text-primary-text">.</span>{{ $t('pages.solutions.alpos.architecture.headlinePart2') }}<span class="text-primary-text">.</span>
+                    {{ $t('pages.solutions.alpos.architecture.headlinePart1') }}<DotAccent />{{ $t('pages.solutions.alpos.architecture.headlinePart2') }}<DotAccent />
                 </h2>
             </div>
             <div class="bg-whitesmoke-100 rounded-2xl p-4 sm:p-6 lg:p-10 overflow-x-auto">
@@ -173,7 +173,7 @@ const tocSections = computed(() => [
             <div class="mb-10 md:mb-14">
                 <CommonSup :title="$t('pages.solutions.alpos.layers.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    {{ $t('pages.solutions.alpos.layers.headline') }}<span class="text-primary-text">.</span>
+                    {{ $t('pages.solutions.alpos.layers.headline') }}<DotAccent />
                 </h2>
             </div>
             <div class="space-y-10">
@@ -201,7 +201,7 @@ const tocSections = computed(() => [
             <div class="mb-10 md:mb-14">
                 <CommonSup :title="$t('pages.solutions.alpos.field.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    {{ $t('pages.solutions.alpos.field.headline') }}<span class="text-primary-text">.</span>
+                    {{ $t('pages.solutions.alpos.field.headline') }}<DotAccent />
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                     {{ $t('pages.solutions.alpos.field.body') }}
@@ -222,7 +222,7 @@ const tocSections = computed(() => [
             <div class="mb-10 md:mb-14 max-w-3xl">
                 <CommonSup :title="$t('pages.solutions.alpos.sovereign.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    {{ $t('pages.solutions.alpos.sovereign.headline') }}<span class="text-primary-text">.</span>
+                    {{ $t('pages.solutions.alpos.sovereign.headline') }}<DotAccent />
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
                     {{ $t('pages.solutions.alpos.sovereign.body') }}
@@ -241,7 +241,7 @@ const tocSections = computed(() => [
         <section id="modular" class="bg-white rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-20 scroll-mt-20">
             <CommonSup :title="$t('pages.solutions.alpos.modular.sup')" />
             <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05] max-w-3xl">
-                {{ $t('pages.solutions.alpos.modular.headline') }}<span class="text-primary-text">.</span>
+                {{ $t('pages.solutions.alpos.modular.headline') }}<DotAccent />
             </h2>
             <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                 {{ $t('pages.solutions.alpos.modular.body') }}
@@ -253,7 +253,7 @@ const tocSections = computed(() => [
             <div class="mb-10 md:mb-14">
                 <CommonSup :title="$t('pages.solutions.alpos.matrix.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    {{ $t('pages.solutions.alpos.matrix.headline') }}<span class="text-primary-text">.</span>
+                    {{ $t('pages.solutions.alpos.matrix.headline') }}<DotAccent />
                 </h2>
             </div>
             <div class="bg-white rounded-2xl overflow-hidden">
@@ -275,7 +275,7 @@ const tocSections = computed(() => [
             <div class="mb-10 md:mb-14">
                 <CommonSup :title="$t('pages.solutions.alpos.ai.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    {{ $t('pages.solutions.alpos.ai.headline') }}<span class="text-primary-text">.</span>
+                    {{ $t('pages.solutions.alpos.ai.headline') }}<DotAccent />
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6 max-w-3xl">
                     {{ $t('pages.solutions.alpos.ai.body') }}
@@ -298,7 +298,7 @@ const tocSections = computed(() => [
             <div class="mb-10 md:mb-14">
                 <CommonSup :title="$t('pages.solutions.alpos.outcomes.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    {{ $t('pages.solutions.alpos.outcomes.headline') }}<span class="text-primary-text">.</span>
+                    {{ $t('pages.solutions.alpos.outcomes.headline') }}<DotAccent />
                 </h2>
             </div>
             <div class="grid md:grid-cols-3 gap-4">
@@ -315,7 +315,7 @@ const tocSections = computed(() => [
                 <div>
                     <CommonSup :title="$t('pages.solutions.alpos.served.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        {{ $t('pages.solutions.alpos.served.headline') }}<span class="text-primary-text">.</span>
+                        {{ $t('pages.solutions.alpos.served.headline') }}<DotAccent />
                     </h2>
                 </div>
                 <NuxtLink :to="localePath('/industries')">
@@ -339,7 +339,7 @@ const tocSections = computed(() => [
                 <div class="lg:col-span-8">
                     <CommonSup :title="$t('pages.solutions.alpos.engage.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-[40px] leading-[1.05] md:text-[56px] md:leading-[1.02] tracking-tight">
-                        {{ $t('pages.solutions.alpos.engage.headline') }}<span class="text-primary-text">.</span>
+                        {{ $t('pages.solutions.alpos.engage.headline') }}<DotAccent />
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
                         {{ $t('pages.solutions.alpos.engage.body') }}

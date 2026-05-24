@@ -32,6 +32,7 @@ withDefaults(defineProps<BlogProps>(), {
             class="w-full h-[170px] object-cover rounded-lg transition-transform duration-300 group-hover:opacity-80"
             alt=""
             :src="image"
+            loading="lazy"
         />
 
         <div class="flex items-center gap-5">

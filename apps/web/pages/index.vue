@@ -77,7 +77,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                 <div class="max-w-3xl">
                     <CommonSup :title="$t('home.solutions.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        {{ $t('home.solutions.headline1') }}<span class="text-primary-text">.</span> {{ $t('home.solutions.headline2') }}<span class="text-primary-text">.</span>
+                        {{ $t('home.solutions.headline1') }}<DotAccent /> {{ $t('home.solutions.headline2') }}<DotAccent />
                     </h2>
                 </div>
                 <p class="text-b2 text-drygray-default max-w-md">
@@ -102,7 +102,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                 <div class="lg:col-span-7">
                     <CommonSup :title="$t('home.alposTeaser.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        {{ $t('home.alposTeaser.headline') }}<span class="text-primary-text">.</span>
+                        {{ $t('home.alposTeaser.headline') }}<DotAccent />
                     </h2>
                     <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
                         {{ $t('home.alposTeaser.body') }}
@@ -130,7 +130,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                          each AST back to a string — without it the page renders
                          the literal { "t": 0, "b": {...} } object. -->
                     <span v-for="(part, i) in ($tm('home.cycle.headlineParts') as unknown[])" :key="i">
-                        <span>{{ $rt(part) }}</span><span class="text-primary-text">.</span><template v-if="i < ($tm('home.cycle.headlineParts') as unknown[]).length - 1"> </template>
+                        <span>{{ $rt(part) }}</span><DotAccent /><template v-if="i < ($tm('home.cycle.headlineParts') as unknown[]).length - 1"> </template>
                     </span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
@@ -151,7 +151,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
             <div class="max-w-3xl mb-10 md:mb-14">
                 <CommonSup :title="$t('home.sovereignty.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    {{ $t('home.sovereignty.headline') }}<span class="text-primary-text">.</span>
+                    {{ $t('home.sovereignty.headline') }}<DotAccent />
                 </h2>
             </div>
             <div class="grid sm:grid-cols-3 gap-4">
@@ -176,7 +176,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                 <div class="lg:col-span-4">
                     <CommonSup :title="$t('home.sectors.sup')" />
                     <h2 class="font-degular font-bold text-white mt-4 text-[36px] md:text-[44px] lg:text-[48px] leading-[1.02] tracking-tight">
-                        {{ $t('home.sectors.headline1') }}<span class="text-primary-text">.</span><br>{{ $t('home.sectors.headline2') }}<span class="text-primary-text">.</span>
+                        {{ $t('home.sectors.headline1') }}<DotAccent /><br>{{ $t('home.sectors.headline2') }}<DotAccent />
                     </h2>
                     <p class="text-b2 text-white/60 mt-6 max-w-sm">
                         {{ $t('home.sectors.body') }}
@@ -210,7 +210,7 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
                 <div>
                     <CommonSup :title="$t('home.newsroom.sup')" />
                     <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                        {{ $t('home.newsroom.headline') }}<span class="text-primary-text">.</span>
+                        {{ $t('home.newsroom.headline') }}<DotAccent />
                     </h2>
                 </div>
                 <NuxtLink :to="localePath('/company/newsroom')">
@@ -242,6 +242,29 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
             </div>
         </section>
 
+        <!-- 7b. Proof / stage statement. P1.3 (2026-05-24 audit): honest stop-gap
+             until real customer-logo proof system (P3.1) lands. Sits between
+             newsroom showcase and engage CTA so a B2B reader's natural question
+             ("show me a customer") gets an honest answer in the same eyeline as
+             the engage button. Brand-voiced: no fake logos, no "trusted by"
+             collage with stock photos. -->
+        <section v-reveal class="bg-whitesmoke-100 rounded-3xl px-6 md:px-12 lg:px-16 py-12 md:py-16">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8">
+                    <CommonSup :title="$t('home.proof.sup')" />
+                    <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[36px] md:leading-[1.05]">
+                        {{ $t('home.proof.headline') }}
+                    </h2>
+                    <p class="text-b2 text-drygray-default mt-6 max-w-2xl">
+                        {{ $t('home.proof.body') }}
+                    </p>
+                </div>
+                <div class="lg:col-span-4 lg:text-right">
+                    <NuxtLink :to="localePath('/trust')"><CommonButton variant="outline" icon="base:arrow">{{ $t('home.proof.cta') }}</CommonButton></NuxtLink>
+                </div>
+            </div>
+        </section>
+
         <!-- 8. Consultative CTA, frosted-spiral backdrop, massive 3-line headline -->
         <section v-reveal class="relative rounded-3xl bg-azure overflow-hidden">
             <!-- P0.6: WebP srcset replaces the 27 MB PNG fallback. Lazy because below fold. -->
@@ -257,9 +280,9 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
             <div class="relative w-full flex flex-col items-center text-center py-14 md:py-28 lg:py-32 px-6 md:px-12 lg:px-16 backdrop-blur-[80px] bg-gradient-to-b from-azure/30 to-azure/10">
                 <CommonSup :title="$t('home.cta.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-6 leading-[0.92] tracking-[-0.02em]">
-                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">{{ $t('home.cta.line1') }}<span class="text-primary-text">.</span></span>
-                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">{{ $t('home.cta.line2') }}<span class="text-primary-text">.</span></span>
-                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">{{ $t('home.cta.line3') }}<span class="text-primary-text">.</span></span>
+                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">{{ $t('home.cta.line1') }}<DotAccent /></span>
+                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">{{ $t('home.cta.line2') }}<DotAccent /></span>
+                    <span class="block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[96px]">{{ $t('home.cta.line3') }}<DotAccent /></span>
                 </h2>
                 <p class="text-b2 text-drygray-100 mt-10 max-w-xl font-medium">
                     {{ $t('home.cta.body') }}
