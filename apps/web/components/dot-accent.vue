@@ -16,5 +16,9 @@
 </script>
 
 <template>
-    <DotAccent />
+    <!-- Literal span — DO NOT replace with <DotAccent /> (it'd recurse). The
+         global sed in the P1.6 migration commit hit this file too and made
+         the template self-referential; that broke SSR with a 'Maximum call
+         stack size exceeded' error. -->
+    <span class="text-primary-text">.</span>
 </template>
