@@ -125,8 +125,12 @@ const promises = ['Sovereign', 'Defensible', 'In-perimeter', 'Air-gapped', 'On-p
             <div class="max-w-2xl mb-10 md:mb-14">
                 <CommonSup :title="$t('home.cycle.sup')" />
                 <h2 class="font-degular font-bold text-drygray-100 mt-4 text-h2 md:text-[44px] md:leading-[1.05]">
-                    <span v-for="(part, i) in ($tm('home.cycle.headlineParts') as string[])" :key="i">
-                        <span>{{ part }}</span><span class="text-primary-text">.</span><template v-if="i < ($tm('home.cycle.headlineParts') as string[]).length - 1"> </template>
+                    <!-- $tm returns the raw compiled message AST in this build
+                         (bundle.optimizeTranslationDirective=false). $rt resolves
+                         each AST back to a string — without it the page renders
+                         the literal { "t": 0, "b": {...} } object. -->
+                    <span v-for="(part, i) in ($tm('home.cycle.headlineParts') as unknown[])" :key="i">
+                        <span>{{ $rt(part) }}</span><span class="text-primary-text">.</span><template v-if="i < ($tm('home.cycle.headlineParts') as unknown[]).length - 1"> </template>
                     </span>
                 </h2>
                 <p class="text-b2 text-drygray-default mt-6">
