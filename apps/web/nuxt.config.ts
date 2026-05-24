@@ -133,6 +133,25 @@ export default defineNuxtConfig({
         },
     },
 
+    // P0.1 (2026-05-24 audit): cache the two Postgres-backed endpoints that
+    // gate home-page SSR. Before this, every home pageview blocked on two
+    // sequential Neon round-trips (Hetzner Falkenstein → us-east-1) for a
+    // 1.12s origin TTFB. After: 5min cache on settings (changes ~once a
+    // quarter), 60s cache + stale-while-revalidate on newsroom (acceptable
+    // staleness for marketing-site posts).
+    //
+    // SWR semantics: first hit after maxAge expiry returns the stale value
+    // immediately AND triggers a background refresh, so no visitor pays the
+    // re-fetch latency. Edit a newsroom post in the admin → at most 60s of
+    // stale rendering before the next hit gets fresh data.
+    routeRules: {
+        '/api/settings': { cache: { maxAge: 60 * 5 } },
+        '/api/blog':     { cache: { maxAge: 60, swr: true } },
+        // Per-post detail also hits Postgres on every SSR. Short TTL because
+        // editorial corrections to a published post should propagate fast.
+        '/api/blog/**':  { cache: { maxAge: 60, swr: true } },
+    },
+
     build: {
         transpile: ['@base1/database', 'swiper'],
     },
@@ -182,6 +201,52 @@ export default defineNuxtConfig({
                 // P0.6: preload the LCP hero image (WebP, 1600w variant) to ensure
                 // the spiral lands in the LCP budget on first paint.
                 { rel: 'preload', as: 'image', href: '/section_background-1600.webp', type: 'image/webp', fetchpriority: 'high' },
+            ],
+            // P0.7 (2026-05-24 audit): JSON-LD structured data. Two nodes in one
+            // graph: Organization (the company itself) + WebSite (the site, with
+            // potentialAction so Google can render a sitelink-searchbox in SERP).
+            // Validates via Google Rich Results Test → expect "Organization
+            // detected, WebSite detected, no errors".
+            //
+            // Why inline (not @nuxtjs/schema-org module): single-config, no new
+            // dep, no lockfile churn, no per-page overhead. When the proof
+            // system (P3.1) ships, switch to @nuxtjs/schema-org for per-page
+            // Article / Service / Person nodes.
+            script: [
+                {
+                    type: 'application/ld+json',
+                    innerHTML: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@graph': [
+                            {
+                                '@type': 'Organization',
+                                '@id': 'https://davion.com.tr/#organization',
+                                'name': 'Davion',
+                                'url': 'https://davion.com.tr/',
+                                'logo': {
+                                    '@type': 'ImageObject',
+                                    'url': 'https://davion.com.tr/logo-512.png',
+                                    'width': 512,
+                                    'height': 512,
+                                },
+                                'description': 'Decision infrastructure for data that can\'t leave. Sovereign platform for institutions whose data and decisions must stay inside their perimeter.',
+                                'sameAs': [
+                                    // Add LinkedIn, X/Twitter, GitHub when the brand
+                                    // accounts are claimed. Empty array also valid.
+                                ],
+                            },
+                            {
+                                '@type': 'WebSite',
+                                '@id': 'https://davion.com.tr/#website',
+                                'url': 'https://davion.com.tr/',
+                                'name': 'Davion',
+                                'description': 'Decision infrastructure for data that can\'t leave.',
+                                'publisher': { '@id': 'https://davion.com.tr/#organization' },
+                                'inLanguage': ['en', 'tr', 'de'],
+                            },
+                        ],
+                    }),
+                },
             ],
         },
     },

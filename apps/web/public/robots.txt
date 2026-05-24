@@ -1,0 +1,12 @@
+# Davion robots.txt — generic, GDPR/EU-friendly defaults.
+# Bots are welcome on marketing surfaces; private API routes are off-limits
+# (they're API endpoints, no crawlable HTML — but explicit is better).
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/
+Disallow: /_ipx/
+
+# Sitemap (also served at root for discovery)
+Sitemap: https://davion.com.tr/sitemap.xml
