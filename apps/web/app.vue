@@ -10,6 +10,7 @@
 // Now: the page renders immediately, settings hydrate async, watchEffect
 // applies head overrides + maintenance redirect when ready.
 const { settings } = useSettings()
+const { locale, locales } = useI18n()
 
 watchEffect(() => {
     if (settings.value?.siteName) {
@@ -22,6 +23,33 @@ watchEffect(() => {
                 },
             ],
         })
+    }
+})
+
+// P3.9 (2026-05-25): og:locale + og:locale:alternate for the current locale
+// and the other two. Facebook, LinkedIn, and WhatsApp use og:locale to pick
+// the right preview-card text; without it, TR + DE shares default to en_US
+// regardless of the URL prefix. The alternates tell crawlers the same page
+// has translations available, which Google uses in international SERP.
+//
+// Mapping is small + static so we inline it. Keep it BCP-47 compatible:
+// language_REGION with underscore — that's the OG-spec form.
+const ogLocaleMap: Record<string, string> = {
+    en: 'en_US',
+    tr: 'tr_TR',
+    de: 'de_DE',
+}
+useHead(() => {
+    const current = ogLocaleMap[locale.value] ?? 'en_US'
+    const alternates = (locales.value as { code: string }[])
+        .map(l => l.code)
+        .filter(code => code !== locale.value && ogLocaleMap[code])
+        .map(code => ({ property: 'og:locale:alternate', content: ogLocaleMap[code] }))
+    return {
+        meta: [
+            { property: 'og:locale', content: current },
+            ...alternates,
+        ],
     }
 })
 </script>

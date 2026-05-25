@@ -89,7 +89,14 @@ export default defineNuxtConfig({
     image: {
         dir: 'public',
         quality: 90,
-        format: ['webp', 'png', 'jpg'],
+        // P3.6 (2026-05-25): AVIF added at the front of the format ladder.
+        // @nuxt/image runs IPX content negotiation: the browser's Accept
+        // header is matched against this list in order, so AVIF-capable
+        // clients (Chrome 85+, Safari 16.4+, Firefox 113+ — ~95% of 2026
+        // traffic) get the smaller variant; older browsers fall through to
+        // webp → png/jpg. Build-time cost: one more IPX pass per source
+        // image; payoff: ~25–35% smaller hero + content images.
+        format: ['avif', 'webp', 'png', 'jpg'],
     },
 
     components: {
