@@ -4,7 +4,16 @@
 //   1. Alert, "we found a suspicious pattern"
 //   2. Pipeline, "we ingest a lot, from these sources, in real time"
 //   3. Copilot, "the AI suggests this action, you approve"
+//
+// P2.1 (2026-05-25 audit): Swiper imported locally instead of via the global
+// swiper.client.ts plugin so the lib is scoped to *this* component's chunk.
+// Combined with LazyAlposConsole (defineAsyncComponent) in index.vue, the
+// ~150 KB Swiper payload now only ships when a visitor reaches the AlpOS
+// teaser, not on every page in the main bundle.
+import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 const sources = [
     { name: 'Banking systems', rate: '4.2k / hr' },

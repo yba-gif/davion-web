@@ -1,5 +1,5 @@
 import { defineNuxtPlugin } from '#app'
-import Lenis from '@studio-freight/lenis'
+import type LenisType from '@studio-freight/lenis'
 
 // Lenis smooth-scroll. Desktop only.
 //
@@ -13,14 +13,24 @@ import Lenis from '@studio-freight/lenis'
 // identifies phones and tablets without false-positiving touchscreen
 // laptops. Matched once at mount; we don't re-evaluate on resize because
 // devices don't gain/lose touch capability mid-session.
+//
+// P2.1 (2026-05-25 audit): Lenis (~30 KB) is now dynamic-imported inside
+// the `!isTouch` branch. Mobile visitors download zero Lenis bytes;
+// desktop visitors pay the cost only after `app:mounted`, async, off the
+// critical path. The `type` import above is erased at build time, so the
+// import statement here costs nothing at runtime.
 
 export default defineNuxtPlugin((nuxtApp) => {
-    let lenis: Lenis | null = null
+    let lenis: LenisType | null = null
 
     if (process.client) {
-        nuxtApp.hook('app:mounted', () => {
+        nuxtApp.hook('app:mounted', async () => {
             const isTouch = window.matchMedia('(pointer: coarse) and (hover: none)').matches
             if (isTouch) return
+
+            // Dynamic import — only fetched + parsed on desktop, after the
+            // page is mounted, never blocks first paint.
+            const { default: Lenis } = await import('@studio-freight/lenis')
 
             lenis = new Lenis({
                 duration: 1.2,

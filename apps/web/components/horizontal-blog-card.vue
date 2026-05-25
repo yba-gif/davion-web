@@ -15,7 +15,7 @@ defineProps<BlogProps>()
 <template>
     <NuxtLink
         :to="slug"
-        class="group card-hover w-full relative rounded-xl bg-white flex flex-row items-stretch p-[23px] gap-[49px] transition-all duration-300 shadow-[0px_9px_80px_rgba(0,_0,_0,_0.07),_0px_1.1269396543502808px_10.02px_rgba(0,_0,_0,_0.04)]"
+        class="group card-hover w-full relative rounded-xl bg-white flex flex-row items-stretch p-6 gap-12 transition-all duration-300 shadow-[0px_9px_80px_rgba(0,_0,_0,_0.07),_0px_1.1269396543502808px_10.02px_rgba(0,_0,_0,_0.04)]"
     >
         <div class="w-[440.2px] flex-shrink-0 flex" v-if="image">
             <NuxtImg
@@ -26,7 +26,7 @@ defineProps<BlogProps>()
             />
         </div>
 
-        <div class="flex flex-col justify-between gap-[26px] flex-1">
+        <div class="flex flex-col justify-between gap-6 flex-1">
             <div class="flex items-center gap-10 text-drygray-100">
                 <CommonSup
                     :title="`By ${author}`"

@@ -37,7 +37,7 @@ const cols = [
 <template>
     <div class="w-full max-w-7xl mx-auto relative rounded-3xl bg-white overflow-hidden flex flex-col items-stretch justify-start pt-12 px-2 pb-2 box-border gap-8 text-left text-sm text-drygray-100 font-switzer">
         <!-- Sitemap + brand row -->
-        <div class="px-8 md:px-12 lg:px-[37px] pb-4">
+        <div class="px-8 md:px-12 lg:px-9 pb-4">
             <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-12">
                 <div class="md:max-w-sm">
                     <NuxtLink :to="localePath('/')" class="flex items-center gap-2">
