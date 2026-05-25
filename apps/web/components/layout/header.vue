@@ -8,11 +8,88 @@ const openDropdown = ref<string | null>(null)
 const headerRef = ref<HTMLElement | null>(null)
 const route = useRoute()
 
-// Lock body scroll while the mobile drawer is open so the page underneath
-// doesn't bleed through scrolling on touch devices. Restored on close.
-watch(isMobileMenuOpen, (open) => {
+// Refs for the mobile drawer focus-management. The hamburger button is the
+// return target when the drawer closes; the drawer itself is the focus-trap
+// boundary.
+const mobileMenuButton = ref<HTMLButtonElement | null>(null)
+const mobileDrawer = ref<HTMLElement | null>(null)
+
+// P2.6 (2026-05-25 audit): mobile drawer focus management.
+//
+// Three responsibilities while the drawer is open:
+//   1. Lock body scroll so the page underneath doesn't bleed through
+//      (was already in place; kept).
+//   2. Escape key closes the drawer + returns focus to the hamburger.
+//   3. Tab / Shift+Tab cycle inside the drawer (focus trap). Without this,
+//      an AT user Tabs out of the drawer into the page underneath, which
+//      is also visually obscured by the overlay → disorienting.
+watch(isMobileMenuOpen, async (open) => {
     if (typeof document === 'undefined') return
     document.body.style.overflow = open ? 'hidden' : ''
+
+    if (open) {
+        // Wait for the drawer to mount, then move focus to its first
+        // focusable descendant. Tick #1 is the v-if=true patch, tick #2 is
+        // the Teleport-to-body insertion.
+        await nextTick()
+        await nextTick()
+        const first = mobileDrawer.value?.querySelector<HTMLElement>(
+            'a, button, [tabindex]:not([tabindex="-1"])',
+        )
+        first?.focus()
+    }
+    else {
+        // Return focus to the hamburger so a keyboard user knows where they
+        // landed after closing. nextTick because the button's aria-expanded
+        // needs to settle first.
+        await nextTick()
+        mobileMenuButton.value?.focus()
+    }
+})
+
+function handleDrawerKeydown(e: KeyboardEvent) {
+    if (!isMobileMenuOpen.value) return
+
+    if (e.key === 'Escape') {
+        e.preventDefault()
+        isMobileMenuOpen.value = false
+        return
+    }
+
+    if (e.key !== 'Tab') return
+
+    // Focus trap: when Tab would leave the drawer, wrap to the other end.
+    const drawer = mobileDrawer.value
+    if (!drawer) return
+    const focusable = Array.from(
+        drawer.querySelectorAll<HTMLElement>(
+            'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+    ).filter(el => el.offsetParent !== null) // visible only
+    if (focusable.length === 0) return
+
+    const first = focusable[0]
+    const last = focusable[focusable.length - 1]
+    const active = document.activeElement as HTMLElement | null
+
+    if (e.shiftKey && active === first) {
+        e.preventDefault()
+        last.focus()
+    }
+    else if (!e.shiftKey && active === last) {
+        e.preventDefault()
+        first.focus()
+    }
+}
+
+onMounted(() => {
+    document.addEventListener('keydown', handleDrawerKeydown)
+})
+onBeforeUnmount(() => {
+    if (typeof document !== 'undefined') {
+        document.removeEventListener('keydown', handleDrawerKeydown)
+        document.body.style.overflow = ''
+    }
 })
 
 // Nav model uses i18n keys (labelKey / descKey) instead of literal strings.
@@ -248,9 +325,11 @@ onBeforeUnmount(() => {
             </NuxtLink>
             <CommonLangSwitcher class="lg:hidden" />
             <button
+                ref="mobileMenuButton"
                 type="button"
-                class="lg:hidden p-2"
+                class="lg:hidden p-2 min-h-[44px] min-w-[44px] [touch-action:manipulation]"
                 :aria-expanded="isMobileMenuOpen"
+                aria-controls="mobile-menu-drawer"
                 :aria-label="$t('nav.openMenu')"
                 @click="isMobileMenuOpen = !isMobileMenuOpen"
             >
@@ -261,7 +340,15 @@ onBeforeUnmount(() => {
 
     <!-- Mobile drawer -->
     <Teleport to="body">
-        <div v-if="isMobileMenuOpen" class="fixed inset-0 top-[72px] bg-white/95 backdrop-blur-md z-40 lg:hidden overflow-y-auto">
+        <div
+            v-if="isMobileMenuOpen"
+            id="mobile-menu-drawer"
+            ref="mobileDrawer"
+            role="dialog"
+            aria-modal="true"
+            :aria-label="$t('nav.openMenu')"
+            class="fixed inset-0 top-[72px] bg-white/95 backdrop-blur-md z-40 lg:hidden overflow-y-auto"
+        >
             <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-5">
                 <template v-for="item in nav" :key="item.labelKey">
                     <NuxtLink

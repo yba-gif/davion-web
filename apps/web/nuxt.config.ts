@@ -131,6 +131,42 @@ export default defineNuxtConfig({
                 'cloudflare:email',
             ],
         },
+        // P2.2 (2026-05-25 audit): prerender static-content pages at build time.
+        // Routes listed in `routeRules` with `prerender: true` get crawled at
+        // build and emitted as static HTML under `.output/public/`. crawlLinks
+        // follows internal <NuxtLink>s during prerendering so the locale-prefix
+        // variants (/tr/solutions/alpos, /de/industries/energy, …) are
+        // automatically discovered without enumerating each one here.
+        //
+        // Only home + newsroom stay SSR (they pull DB data). Everything else
+        // serves as a static file from disk — TTFB target <20ms.
+        prerender: {
+            crawlLinks: true,
+            failOnError: false,
+            // Entry points the crawler starts from. Each one yields its full
+            // page tree via internal links.
+            routes: [
+                '/sitemap.xml',
+                '/robots.txt',
+            ],
+            // Routes we never want to prerender even if discovered via crawl —
+            // home + newsroom (dynamic content), api endpoints, IPX image
+            // pipeline, every error / 404 fallback.
+            ignore: [
+                '/',
+                '/tr',
+                '/de',
+                '/company/newsroom',
+                '/company/newsroom/**',
+                '/tr/company/newsroom',
+                '/tr/company/newsroom/**',
+                '/de/company/newsroom',
+                '/de/company/newsroom/**',
+                '/api/**',
+                '/_ipx/**',
+                '/_nuxt/**',
+            ],
+        },
     },
 
     // P0.1 (2026-05-24 audit): cache the two Postgres-backed endpoints that
@@ -140,16 +176,35 @@ export default defineNuxtConfig({
     // quarter), 60s cache + stale-while-revalidate on newsroom (acceptable
     // staleness for marketing-site posts).
     //
-    // SWR semantics: first hit after maxAge expiry returns the stale value
-    // immediately AND triggers a background refresh, so no visitor pays the
-    // re-fetch latency. Edit a newsroom post in the admin → at most 60s of
-    // stale rendering before the next hit gets fresh data.
+    // P2.2: routeRules-driven prerender for the static-content pages. Nuxt
+    // discovers the routes via the page tree + locale variants; for each
+    // matched route it pre-renders the HTML at build time. Serving cost on
+    // the box drops from "spin up SSR per request" to "read file from disk."
     routeRules: {
         '/api/settings': { cache: { maxAge: 60 * 5 } },
         '/api/blog':     { cache: { maxAge: 60, swr: true } },
         // Per-post detail also hits Postgres on every SSR. Short TTL because
         // editorial corrections to a published post should propagate fast.
         '/api/blog/**':  { cache: { maxAge: 60, swr: true } },
+
+        // Static-content pages — prerender at build time. The locale prefixes
+        // (tr/, de/) get the same treatment via crawlLinks (set in nitro
+        // config above).
+        '/solutions':       { prerender: true },
+        '/solutions/**':    { prerender: true },
+        '/industries':      { prerender: true },
+        '/industries/**':   { prerender: true },
+        '/capabilities':    { prerender: true },
+        '/capabilities/**': { prerender: true },
+        '/legal/**':        { prerender: true },
+        '/trust':           { prerender: true },
+        '/venture':         { prerender: true },
+        '/status':          { prerender: true },
+        '/press':           { prerender: true },
+        '/contact':         { prerender: true },
+        '/company/about':   { prerender: true },
+        '/company/careers': { prerender: true },
+        '/company/events':  { prerender: true },
     },
 
     build: {

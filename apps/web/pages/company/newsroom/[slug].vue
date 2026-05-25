@@ -60,6 +60,40 @@ useSeoMeta({
     ogDescription: post.value?.excerpt || '',
     ogImage: post.value?.featuredImage || undefined,
 })
+
+// P2.4 (2026-05-25 audit): per-post JSON-LD Article. Validates via Google
+// Rich Results Test → eligible for Article rich result in SERP, attributes
+// the dispatch to its author, and surfaces publish date + image.
+// `publisher.@id` references the Organization node injected globally from
+// nuxt.config.ts head.script — Google resolves the cross-doc @graph and
+// treats the WebSite + Organization + Article as one connected graph.
+useHead(() => {
+    const p = post.value
+    if (!p) return {}
+    const url = `https://davion.com.tr/company/newsroom/${p.slug}`
+    return {
+        script: [
+            {
+                type: 'application/ld+json',
+                key: 'newsroom-article-schema',
+                innerHTML: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'Article',
+                    '@id': `${url}#article`,
+                    headline: p.title,
+                    description: p.excerpt || '',
+                    image: p.featuredImage ? [`https://davion.com.tr${p.featuredImage}`] : undefined,
+                    datePublished: p.publishedAt || undefined,
+                    dateModified: p.publishedAt || undefined,
+                    author: { '@type': 'Person', name: p.author },
+                    publisher: { '@id': 'https://davion.com.tr/#organization' },
+                    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+                    inLanguage: 'en',
+                }),
+            },
+        ],
+    }
+})
 </script>
 
 <template>
